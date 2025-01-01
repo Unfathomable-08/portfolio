@@ -13,7 +13,7 @@ html {
 
 .active::after {
     content: '';
-    @apply absolute w-full h-1 bg-cyan-600 rounded top-11;
+    @apply absolute w-full h-1 bg-cyan-600 rounded top-12;
     transform: translateX(-75%);
 }
 
@@ -26,7 +26,7 @@ html {
 }
 
 .ring-progress-anim {
-    animation: ring 3.5s ease-in-out;
+    animation: ring 5s ease-in-out;
 }
 
 @keyframes progress {

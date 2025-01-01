@@ -3,19 +3,22 @@ import Header from "./header";
 import Hero from "./hero";
 import About from "./about";
 import Skills from "./skills";
+import Contact from "./contact";
 
 const App = () => {
 
     const heroRef = useRef(null);
     const aboutRef = useRef(null);
     const skillRef = useRef(null);
+    const contactRef = useRef(null);
 
     const [active, setActive] = useState('hero');
 
     const sections = [
         { id: 'hero', ref: heroRef },
         { id: 'about', ref: aboutRef },
-        { id: 'skill', ref: skillRef }
+        { id: 'skill', ref: skillRef },
+        { id: 'contact', ref: contactRef }
     ];
 
     const handleScroll = () => {
@@ -63,6 +66,7 @@ const App = () => {
             <Hero ref={heroRef} />
             <About ref={aboutRef} />
             <Skills ref={skillRef} />
+            <Contact ref={contactRef} />
         </>
     );
 };
