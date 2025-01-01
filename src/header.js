@@ -4,7 +4,7 @@ const Header = (props) => {
             <div className="container flex justify-end">
                 <nav>
                     <ul className="flex text-lg">
-                        <li className={props.active === 'hero' ? 'active px-5' : 'px-5'}><a href="#hero">Home</a></li>
+                        <li className={props.active === 'hero' ? 'active px-5' : 'px-5'}><a href="#home">Home</a></li>
                         <li className={props.active === 'about' ? 'active px-5' : 'px-5'}><a href="#about">About</a></li>
                         <li className={props.active === 'skill' ? 'active px-5' : 'px-5'}><a href="#skill">Skills</a></li>
                         <li className={props.active === 'projects' ? 'active px-5' : 'px-5'}><a href="#project">Projects</a></li>

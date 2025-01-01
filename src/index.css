@@ -25,8 +25,18 @@ html {
     animation: progress 1.5s ease-in-out forwards;
 }
 
+.stroke-cyan-400{
+    animation: ring 2.5s ease-in-out;
+}
+
 @keyframes progress {
     0% {
         width: 0;
+    }
+}
+
+@keyframes ring {
+    0% {
+        stroke-dashoffset: 314;
     }
 }

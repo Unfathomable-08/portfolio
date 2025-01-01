@@ -14,7 +14,7 @@ const Hero = forwardRef((props, ref) => {
 
     return (
         <>
-            <div ref={ref} id="hero" className="hero bg-primary text-white min-h-screen grid grid-cols-1 sm:grid-cols-2 items-center justify-items-center">
+            <div ref={ref} id="home" className="hero bg-primary text-white min-h-screen grid grid-cols-1 sm:grid-cols-2 items-center justify-items-center">
                 <div className="text-center py-16 sm:pt-0">
                     <h1 className="text-3xl py-2 animate__animated animate__slideInLeft animate__slow">Hi, I'm <span className="text-cyan-500 font-medium">Muhammad,</span></h1>
                     <h1 className="text-3xl py-2 animate__animated animate__slideInRight animate__slow">A Full-Stack Web Developer</h1>
