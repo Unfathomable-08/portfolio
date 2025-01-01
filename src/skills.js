@@ -6,12 +6,13 @@ import express from "./images/express.png";
 import mongodb from "./images/mongodb.png";
 import sql from "./images/sql.png";
 import wordpress from "./images/wordpress.png";
+import websocket from "./images/websocket.png";
 
 const Skills = forwardRef((props, ref) => {
     return (
         <>
             <section ref={ref} id="skill" className="min-h-screen py-16 bg-primary text-white">
-                <h1 className="text-3xl font-medium py-8 text-center">Skills</h1>
+                <h1 className="text-3xl font-medium py-10 text-center">My Skills</h1>
                 <div className="grid grid-cols-3">
                     <div className="px-20">
                         <h1 className="text-xl font-medium text-center pb-5">Frontend Skills</h1>
@@ -25,7 +26,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[90%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[90%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
 
@@ -39,7 +40,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[80%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[80%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
 
@@ -53,7 +54,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[85%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[85%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
                         
@@ -67,7 +68,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[85%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[85%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
 
@@ -81,7 +82,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[70%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[70%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
                         
@@ -95,7 +96,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[90%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[90%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
 
@@ -109,7 +110,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[80%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[80%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
 
@@ -128,7 +129,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[85%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[85%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
 
@@ -142,7 +143,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[60%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[60%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
                         
@@ -156,7 +157,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[80%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[80%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
 
@@ -170,39 +171,39 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[65%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[65%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
 
-                        <div className="mt-6">
+                        <div className="mt-5">
                         <span className="flex justify-between">
                                 <span>
-                                    <img src={sql} alt="git" className="h-8 inline px-3 pb-2"/>
+                                    <img src={sql} alt="git" className="h-7 inline px-3 pb-2"/>
                                     <b>MySQL</b>
                                 </span>
                                 <p className="inline text-right pe-1">70%</p>
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[70%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[70%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
 
-                        <div className="mt-6">
+                        <div className="mt-5">
                         <span className="flex justify-between">
                                 <span>
-                                    <img src={sql} alt="git" className="h-8 inline px-3 pb-2"/>
+                                    <img src={websocket} alt="git" className="h-8 inline px-3 pb-2"/>
                                     <b>WebSocket</b>
                                 </span>
                                 <p className="inline text-right pe-1">65%</p>
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[65%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[65%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
 
-                        <div className="mt-6">
+                        <div className="mt-5">
                         <span className="flex justify-between">
                                 <span>
                                     <img src={wordpress} alt="git" className="h-8 inline px-3 pb-2"/>
@@ -212,7 +213,7 @@ const Skills = forwardRef((props, ref) => {
                             </span>
                             <div className="h-2 ">
                                 <div className="h-full border bg-black border-cyan-400 rounded"></div>
-                                <div className="h-full bg-cyan-400 rounded w-[60%] z-10 -translate-y-2 progress"></div>
+                                <div className="h-full bg-cyan-400 rounded w-[60%] z-10 -translate-y-2 wait-progress-skill"></div>
                             </div>
                         </div>
                         
@@ -221,31 +222,31 @@ const Skills = forwardRef((props, ref) => {
                     <div>
                         <h1 className="text-white text-center text-xl font-medium pb-5">Soft Skills</h1>
                         <div className="grid grid-cols-2 w-[60%] mx-[20%] my-8">
-                            <div>
+                            <div className="pb-6">
                                 <svg className="ring-progress transform -rotate-90" width="120px" height="120px">
                                     <circle className="stroke-secondary" cx="60" cy="60" r="50" fill="none" strokeWidth="10"/>
-                                    <circle className="stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*20/100}/>
+                                    <circle className="wait-ring stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*20/100}/>
                                 </svg>
                                 <b>Problem-Solving</b>
                             </div>
-                            <div>
+                            <div className="pb-6">
                                 <svg className="ring-progress transform -rotate-90" width="120px" height="120px">
                                     <circle className="stroke-secondary" cx="60" cy="60" r="50" fill="none" strokeWidth="10"/>
-                                    <circle className="stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*15/100}/>
+                                    <circle className="wait-ring stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*15/100}/>
                                 </svg>
                                 <b>Communication</b>
                             </div>
-                            <div>
+                            <div className="pb-6">
                                 <svg className="ring-progress transform -rotate-90" width="120px" height="120px">
                                     <circle className="stroke-secondary" cx="60" cy="60" r="50" fill="none" strokeWidth="10"/>
-                                    <circle className="stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*30/100}/>
+                                    <circle className="wait-ring stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*30/100}/>
                                 </svg>
                                 <b>Teamwork</b>
                             </div>
-                            <div>
+                            <div className="pb-6">
                                 <svg className="ring-progress transform -rotate-90" width="120px" height="120px">
                                     <circle className="stroke-secondary" cx="60" cy="60" r="50" fill="none" strokeWidth="10"/>
-                                    <circle className="stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*25/100}/>
+                                    <circle className="wait-ring stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*25/100}/>
                                 </svg>
                                 <b>Time Management</b>
                             </div>

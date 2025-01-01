@@ -19,7 +19,7 @@ const App = () => {
     ];
 
     const handleScroll = () => {
-        const scrollPosition = window.scrollY + window.innerHeight / 1.5;
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
 
         sections.forEach(({ id, ref }) => {
             if (ref.current) {
@@ -28,9 +28,25 @@ const App = () => {
 
                 if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
                     setActive(id);
+
+                    const waitingFadeinEl = document.getElementsByClassName(`wait-fadeIn-${id}`);
+                    for(let i=0; i<waitingFadeinEl.length; i++){
+                        waitingFadeinEl[i].classList.add('animate__fadeIn');
+                    };
+                    
+                    const waitingProgressEl = document.getElementsByClassName(`wait-progress-${id}`);
+                        for(let i=0; i<waitingProgressEl.length; i++){
+                            waitingProgressEl[i].classList.add('progress');
+                    };
+                
+                    const waitingRingEl = document.getElementsByClassName(`wait-ring`);
+                        for(let i=0; i<waitingRingEl.length; i++){
+                            waitingRingEl[i].classList.add('ring-progress-anim');
+                    };
                 }
             }
         });
+
     };
 
     useEffect(() => {

@@ -22,11 +22,11 @@ html {
 }
 
 .progress {
-    animation: progress 1.5s ease-in-out forwards;
+    animation: progress 2s ease-in-out forwards;
 }
 
-.stroke-cyan-400{
-    animation: ring 2.5s ease-in-out;
+.ring-progress-anim {
+    animation: ring 3.5s ease-in-out;
 }
 
 @keyframes progress {
