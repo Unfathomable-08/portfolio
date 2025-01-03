@@ -1,5 +1,6 @@
 import { forwardRef, useState, useEffect } from "react";
 import image1 from "./images/avatar2.jpg";
+import cv from "./images/myResume.pdf";
 
 const Hero = forwardRef((props, ref) => {
     const [animationClass, setClass] = useState("invisible");
@@ -19,8 +20,8 @@ const Hero = forwardRef((props, ref) => {
                     <h1 className="text-3xl py-2 animate__animated animate__slideInLeft animate__slow">Hi, I'm <span className="text-cyan-500 font-medium">Muhammad,</span></h1>
                     <h1 className="text-3xl py-2 animate__animated animate__slideInRight animate__slow">A Full-Stack Web Developer</h1>
                     <h4 className="py-3">Building Powerful Websites with Purpose and Precision</h4>
-                    <button className={`hero-btn mx-2 my-5 px-3 py-1.5 border-2 border-cyan-600 rounded-3xl bg-cyan-600 ${animationClass}`}>Download Resume</button>
-                    <button className={`hero-btn mx-2 my-5 px-3 py-1.5 border-2 border-cyan-600 rounded-3xl hover:bg-cyan-600 ${animationClass}`}>Contact Me</button>
+                    <a href={cv} download="resume.pdf" className={`hero-btn mx-2 my-5 px-3 py-1.5 border-2 border-cyan-600 rounded-3xl bg-cyan-600 ${animationClass}`}>Download Resume</a>
+                    <a href="#contact" className={`hero-btn mx-2 my-5 px-3 py-1.5 border-2 border-cyan-600 rounded-3xl hover:bg-cyan-600 ${animationClass}`}>Contact Me</a>
                 </div>
                 <div className="image flex justify-center align-center pb-24 md:pb-0">
                     <img className="rounded-full w-[50%] sm:w-[65%] md:w-[80%] aspect-square border-4 border-cyan-500" src={image1}/>
