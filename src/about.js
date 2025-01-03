@@ -31,7 +31,7 @@ const About = forwardRef((props, ref) => {
     return (
         <>
             <section ref={ref} id="about" className="min-h-screen bg-primary text-white grid grid-cols-1 md:grid-cols-5 lg:grid-cols-2 items-center justify-items-center">
-                <div className="p-16 pb-6 md:pb-16 text-md xl:text-lg md:order-2 md:col-span-3 lg:col-span-1">
+                <div className="p-4 sm:p-16 pb-6 md:pb-16 text-md xl:text-lg md:order-2 md:col-span-3 lg:col-span-1">
                     <h1 className="mt-10 md:mt-0 text-3xl font-medium pb-8">About <span className="text-cyan-500">Me</span></h1>
                     <p className=" animate__animated wait-fadeIn-about animate__slower">Hi, I’m Muhammad, a full-stack developer focused on building intuitive, responsive web apps. I specialize in React for dynamic UIs and use Node.js and Express for scalable back-end systems. I’m also experienced with PHP, and work with both MySQL and MongoDB, selecting the right tool for each project. I’m passionate about creating solutions that solve real-world problems and improve user experiences. Whether designing with Tailwind CSS for custom layouts or using Bootstrap for quick, responsive designs, my goal is to create user-friendly applications.
                         Beyond coding, I’m fascinated by physics and mathematics—fields that challenge my problem-solving skills and inspire my work in development
