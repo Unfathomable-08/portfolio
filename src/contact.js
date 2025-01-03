@@ -1,8 +1,8 @@
-import react, { useEffect, useState } from "react";
+import react, { forwardRef, useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
 
     const { register, handleSubmit } = useForm();
 
@@ -20,9 +20,9 @@ const Contact = () => {
 
     return (
         <>
-            <section id="contact" className="min-h-screen bg-primary grid grid-cols-2 pt-24 text-white">
-                <div className="px-20">
-                    <h1 className="text-center text-2xl mt-24 font-medium">Contact <span className="text-cyan-500">Me</span></h1>
+            <section id="contact" ref={ref} className="min-h-screen bg-primary grid grid-cols-1 md:grid-cols-2 pt-24 text-white">
+                <div className="px-6 sm:px-20">
+                    <h1 className="text-center text-2xl md:mt-24 font-medium">Contact <span className="text-cyan-500">Me</span></h1>
                     <h2 className="pb-3 pt-6 font-medium text-md">Let's Work Together</h2>
                     <p>Feel free to reach out if you have any question, opportunities, or just want to connect. Whether it's a potential project, feedback, or a collaboration idea, I'd love to hear from you and discuss how we can work together.</p>
                     <i className="fa fa-envelope text-cyan-500 text-xl transform translate-y-[3px] pt-8"/><a href="mailto:muhammad124711@gmail.com" className="ps-2 underline">muhammad124711@gmail.com</a><br/>
@@ -35,18 +35,18 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="px-20 mt-24">
+                <div className="px-10 md:px-20 sm:px-32 md:mt-24">
                     <form onSubmit={handleSubmit(onSubmitFn)}>
-                        <input type="text" name="user_name" className="bg-secondary rounded-lg w-full h-10 my-2 px-6" placeholder="Your Name" {...register('user_name')}/><br/>
-                        <input type="text" name="user_email" className="bg-secondary rounded-lg w-full h-10 my-2 px-6" placeholder="Your Email" {...register('user_email')}/><br/>
-                        <input type="text" name="subject" className="bg-secondary rounded-lg w-full h-10 my-2 px-6" placeholder="Your Subject" {...register('subject')}/><br/>
-                        <input type="text" name="message" className="bg-secondary rounded-lg w-full h-36 my-2 px-6" placeholder="Your Message" {...register('message')}/><br/>
+                        <input type="text" name="user_name" className="bg-primary border-b border-gray-500 w-full h-10 my-2" placeholder="Your Name" {...register('user_name')}/><br/>
+                        <input type="text" name="user_email" className="bg-primary border-b border-gray-500 w-full h-10 my-2" placeholder="Your Email" {...register('user_email')}/><br/>
+                        <input type="text" name="subject" className="bg-primary border-b border-gray-500 w-full h-10 my-2" placeholder="Your Subject" {...register('subject')}/><br/>
+                        <textarea type="text" name="message" className="bg-primary border border-gray-500 w-full h-36 mt-6 px-6" placeholder="Your Message" {...register('message')}/><br/>
                         <button className="border-2 border-cyan-500 text-cyan-500 font-medium w-full rounded-lg h-10 hover:bg-cyan-500 hover:text-white my-8">Submit</button>
                     </form>
                 </div>
             </section>
         </>
     );
-};
+});
 
 export default Contact;

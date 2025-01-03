@@ -13,7 +13,7 @@ const Skills = forwardRef((props, ref) => {
         <>
             <section ref={ref} id="skill" className="min-h-screen py-16 bg-primary text-white">
                 <h1 className="text-3xl font-medium py-10 text-center">My Skills</h1>
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                     <div className="px-20">
                         <h1 className="text-xl font-medium text-center pb-5">Frontend Skills</h1>
                         <div>
@@ -117,7 +117,7 @@ const Skills = forwardRef((props, ref) => {
                     </div>
                     
                     <div className="px-20">
-                        <h1 className="text-xl font-medium text-center pb-5">Backend Skills</h1>
+                        <h1 className="text-xl font-medium text-center pb-5 pt-16 sm:pt-0">Backend Skills</h1>
                         
                         <div className="">
                         <span className="flex justify-between">
@@ -219,31 +219,31 @@ const Skills = forwardRef((props, ref) => {
                         
                     </div>
 
-                    <div>
-                        <h1 className="text-white text-center text-xl font-medium pb-5">Soft Skills</h1>
-                        <div className="grid grid-cols-2 w-[60%] mx-[20%] my-8">
-                            <div className="pb-6">
+                    <div className="sm:col-span-2 lg:col-span-1">
+                        <h1 className="text-white text-center text-xl font-medium pb-5 pt-16 md:pt-0">Soft Skills</h1>
+                        <div className="grid grid-cols-2 w-[60%] mx-[20%] sm:w-[50%] sm:mx-[25%] lg:w-[70%] lg:mx-[15%] my-8">
+                            <div className="pb-6 flex flex-col items-center">
                                 <svg className="ring-progress transform -rotate-90" width="120px" height="120px">
                                     <circle className="stroke-secondary" cx="60" cy="60" r="50" fill="none" strokeWidth="10"/>
                                     <circle className="wait-ring stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*20/100}/>
                                 </svg>
                                 <b>Problem-Solving</b>
                             </div>
-                            <div className="pb-6">
+                            <div className="pb-6 flex flex-col items-center">
                                 <svg className="ring-progress transform -rotate-90" width="120px" height="120px">
                                     <circle className="stroke-secondary" cx="60" cy="60" r="50" fill="none" strokeWidth="10"/>
                                     <circle className="wait-ring stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*15/100}/>
                                 </svg>
                                 <b>Communication</b>
                             </div>
-                            <div className="pb-6">
+                            <div className="pb-6 flex flex-col items-center">
                                 <svg className="ring-progress transform -rotate-90" width="120px" height="120px">
                                     <circle className="stroke-secondary" cx="60" cy="60" r="50" fill="none" strokeWidth="10"/>
                                     <circle className="wait-ring stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*30/100}/>
                                 </svg>
                                 <b>Teamwork</b>
                             </div>
-                            <div className="pb-6">
+                            <div className="pb-6 flex flex-col items-center">
                                 <svg className="ring-progress transform -rotate-90" width="120px" height="120px">
                                     <circle className="stroke-secondary" cx="60" cy="60" r="50" fill="none" strokeWidth="10"/>
                                     <circle className="wait-ring stroke-cyan-400" cx="60" cy="60" r="50" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="314" strokeDashoffset={314*25/100}/>
