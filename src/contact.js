@@ -7,7 +7,7 @@ const Contact = forwardRef((props, ref) => {
     const { register, handleSubmit } = useForm();
 
     useEffect(()=>{
-        emailjs.init('tkWMhfTljoEZw4INe'); //PUBLIC_KEY
+        emailjs.init('tkWMhfTljoEZw4INe'); 
     },[]);
 
     const onSubmitFn = (data) => {

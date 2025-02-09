@@ -31,11 +31,6 @@ const App = () => {
 
                 if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
                     setActive(id);
-
-                    const waitingFadeinEl = document.getElementsByClassName(`wait-fadeIn-${id}`);
-                    for(let i=0; i<waitingFadeinEl.length; i++){
-                        waitingFadeinEl[i].classList.add('animate__fadeIn');
-                    };
                     
                     const waitingProgressEl = document.getElementsByClassName(`wait-progress-${id}`);
                         for(let i=0; i<waitingProgressEl.length; i++){
@@ -45,6 +40,12 @@ const App = () => {
                     const waitingRingEl = document.getElementsByClassName(`wait-ring`);
                         for(let i=0; i<waitingRingEl.length; i++){
                             waitingRingEl[i].classList.add('ring-progress-anim');
+                    };
+                }
+                else {
+                    const waitingProgressEl = document.getElementsByClassName(`wait-progress-${id}`);
+                        for(let i=0; i<waitingProgressEl.length; i++){
+                            waitingProgressEl[i].classList.remove('progress');
                     };
                 }
             }
