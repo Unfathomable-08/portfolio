@@ -24,7 +24,6 @@ const Hero = forwardRef((props, ref) => {
           data-aos="fade-right"
           data-aos-duration="1500"
           data-aos-easing="ease-in-out"
-          data-aos-anchor-placement="top-bottom"
           className="text-3xl py-2"
         >
           Hi, I'm <span className="text-cyan-500 font-medium">Muhammad,</span>
@@ -33,7 +32,6 @@ const Hero = forwardRef((props, ref) => {
           data-aos="fade-left"
           data-aos-duration="1500"
           data-aos-easing="ease-in-out"
-          data-aos-anchor-placement="top-bottom"
           className="text-3xl py-2"
         >
           A Full-Stack Web Developer
@@ -45,7 +43,7 @@ const Hero = forwardRef((props, ref) => {
           download="resume.pdf"
           data-aos="fade-up"
           data-aos-duration="2500"
-          className="hero-btn mx-2 px-3 py-1.5 border-2 border-cyan-600 rounded-3xl bg-cyan-600"
+          className="hero-btn mx-2 px-3 py-1.5 border-2 border-cyan-600 rounded-3xl bg-cyan-600 hover-shadow"
         >
           Download Resume
         </a>
@@ -53,7 +51,7 @@ const Hero = forwardRef((props, ref) => {
           href="#contact"
           data-aos="fade-up"
           data-aos-duration="2500"
-          className="hero-btn mx-2 px-3 py-1.5 border-2 border-cyan-600 rounded-3xl hover:bg-cyan-600"
+          className="hero-btn mx-2 px-3 py-1.5 border-2 border-cyan-600 rounded-3xl hover:bg-cyan-600 hover-shadow"
         >
           Contact Me
         </a>

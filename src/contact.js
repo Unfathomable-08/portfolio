@@ -28,20 +28,20 @@ const Contact = forwardRef((props, ref) => {
                     <i className="fa fa-envelope text-cyan-500 text-xl transform translate-y-[3px] pt-8"/><a href="mailto:muhammad124711@gmail.com" className="ps-2 underline">muhammad124711@gmail.com</a><br/>
                     <i className="fab fa-github text-cyan-500 text-xl transform translate-y-[3px]"/><a href="https://github.com/unfathomable-08" target="_blank" className="ps-2 underline">@Unfathomable-08</a><br/>
                     <div className="py-12">
-                        <i className="rounded-full mx-3 px-1 border border-cyan-500 fab fa-twitter text-xl text-cyan-500 hover:bg-cyan-500 hover:text-primary"></i>
-                        <i className="rounded-full me-3 px-[6px] border border-cyan-500 fab fa-instagram text-xl text-cyan-500 hover:bg-cyan-500 hover:text-primary"></i>
-                        <i className="rounded-full me-3 px-2 border border-cyan-500 fab fa-facebook-f text-xl text-cyan-500 hover:bg-cyan-500 hover:text-primary"></i>
-                        <i className="rounded-full me-3 px-[6px] py-[0.2px] border border-cyan-500 fab fa-linkedin-in text-xl text-cyan-500 hover:bg-cyan-500 hover:text-primary"></i>
+                        <i className="hover-shadow rounded-full mx-3 px-1 border border-cyan-500 fab fa-twitter text-xl text-cyan-500 hover:bg-cyan-500 hover:text-primary"></i>
+                        <i className="hover-shadow rounded-full me-3 px-[6px] border border-cyan-500 fab fa-instagram text-xl text-cyan-500 hover:bg-cyan-500 hover:text-primary"></i>
+                        <i className="hover-shadow rounded-full me-3 px-2 border border-cyan-500 fab fa-facebook-f text-xl text-cyan-500 hover:bg-cyan-500 hover:text-primary"></i>
+                        <i className="hover-shadow rounded-full me-3 px-[6px] py-[0.2px] border border-cyan-500 fab fa-linkedin-in text-xl text-cyan-500 hover:bg-cyan-500 hover:text-primary"></i>
                     </div>
                 </div>
 
                 <div className="px-10 md:px-20 sm:px-32 md:mt-24">
                     <form onSubmit={handleSubmit(onSubmitFn)}>
-                        <input type="text" name="user_name" className="bg-primary border-b border-gray-500 w-full h-10 my-2" placeholder="Your Name" {...register('user_name')}/><br/>
-                        <input type="text" name="user_email" className="bg-primary border-b border-gray-500 w-full h-10 my-2" placeholder="Your Email" {...register('user_email')}/><br/>
-                        <input type="text" name="subject" className="bg-primary border-b border-gray-500 w-full h-10 my-2" placeholder="Your Subject" {...register('subject')}/><br/>
-                        <textarea type="text" name="message" className="bg-primary border border-gray-500 w-full h-36 mt-6 px-6" placeholder="Your Message" {...register('message')}/><br/>
-                        <button className="border-2 border-cyan-500 text-cyan-500 font-medium w-full rounded-lg h-10 hover:bg-cyan-500 hover:text-white my-8">Submit</button>
+                        <input type="text" name="user_name" className="bg-primary border-b border-gray-500 w-full h-10 my-2 focus:outline-none  focus:border-gray-300" placeholder="Your Name" {...register('user_name')}/><br/>
+                        <input type="text" name="user_email" className="bg-primary border-b border-gray-500 w-full h-10 my-2 focus:outline-none focus:border-gray-300" placeholder="Your Email" {...register('user_email')}/><br/>
+                        <input type="text" name="subject" className="bg-primary border-b border-gray-500 w-full h-10 my-2 focus:outline-none focus:border-gray-300" placeholder="Your Subject" {...register('subject')}/><br/>
+                        <textarea type="text" name="message" className="bg-primary border border-gray-500 w-full h-36 mt-6 px-4 py-2 focus:outline-none focus:border-gray-300 focus:rounded-xl transition ease-in-out" placeholder="Your Message" {...register('message')}/><br/>
+                        <button className="border-2 border-cyan-500 text-cyan-500 font-medium w-full rounded-lg h-10 hover:bg-cyan-500 hover:text-white my-8 hover-shadow">Submit</button>
                     </form>
                 </div>
             </section>

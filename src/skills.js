@@ -76,7 +76,7 @@ const Skills = forwardRef((props, ref) => {
                             <span className="flex justify-between">
                                 <span>
                                     <i className="fa-brands fa-react text-cyan-500 text-2xl px-3"></i>
-                                    <b>React.js</b>
+                                    <b>React.JS</b>
                                 </span>
                                 <p className="inline text-right pe-1">70%</p>
                             </span>

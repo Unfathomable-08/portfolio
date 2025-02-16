@@ -29,6 +29,10 @@ html {
     animation: ring 5s ease-in-out;
 }
 
+.hover-shadow:hover {
+    box-shadow: 0 0 15px rgb(8, 212, 248);
+}
+
 @keyframes progress {
     0% {
         width: 0;

@@ -8,7 +8,7 @@ const Header = (props) => {
                         <li className={props.active === 'hero' ? 'active px-5' : 'px-5'}><a href="#home">Home</a></li>
                         <li className={props.active === 'about' ? 'active px-5' : 'px-5'}><a href="#about">About</a></li>
                         <li className={props.active === 'skill' ? 'active px-5' : 'px-5'}><a href="#skill">Skills</a></li>
-                        {/* <li className={props.active === 'projects' ? 'active px-5' : 'px-5'}><a href="#project">Projects</a></li> */}
+                        <li className={props.active === 'projects' ? 'active px-5' : 'px-5'}><a href="#projects">Projects</a></li>
                         <li className={props.active === 'contact' ? 'active px-5' : 'px-5'}><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
