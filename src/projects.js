@@ -31,7 +31,7 @@ const Projects = forwardRef((props, ref) => {
                 <div class="md:h-80 h-48 px-2 flex flex-col md:justify-center md:w-[80%] md:me-[20%] order-2 lg:order-2" data-aos='fade-left' data-aos-easing="ease-in-out" data-aos-duration="2000">
                     <h1 class="text-2xl font-medium mb-3">E-Commerce Platform - SkyMart</h1>
                     <p class="mx-auto">
-                        SkyMart is an e-commerce platform I built during my internship. I developed the frontend using React.js, Tailwind CSS, and Bootstrap to create a clean, responsive, and user-friendly interface for browsing products and managing the shopping cart.
+                        SkyMart is an e-commerce platform I built during my internship. I developed the frontend using React.js, Tailwind CSS, and Bootstrap to create a user-friendly interface for browsing products and managing cart.
                     </p>
                 </div>
 
