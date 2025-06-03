@@ -30,13 +30,13 @@ export default function Services() {
 
   return (
     <div className="bg-[var(--primary)] min-h-screen items-center justify-center flex-col flex px-20">
-      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white max-md:translate-y-18 transform text-center">My Services</h1>
-      <div className="grid md:grid-cols-[3fr_2fr] gap-x-16 md:items-center">
-        <div className="grid sm:grid-cols-2 gap-8 transform max-md:scale-80">
+      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white max-md:translate-y-18 py-15 transform text-center">My Services</h1>
+      <div className="grid lg:grid-cols-[3fr_2fr] gap-x-10 md:items-center">
+        <div className="grid sm:grid-cols-2 gap-6 transform max-lg:scale-80">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-services h-56 rounded-lg flex flex-col justify-center gap-y-2 items-center text-center p-4"
+              className="bg-services h-60 rounded-lg flex flex-col justify-center gap-y-2 items-center text-center p-4"
             >
               <div className="w-10 h-10 border-1 rounded-full flex justify-center items-center">
                 <Image src={service.img} width={30} height={30} alt={service.title}/>
@@ -55,7 +55,7 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="max-md:hidden">
+        <div className="max-lg:hidden">
           <h1
             className="font-bold text-[var(--secondary)] text-2xl"
             style={{ padding: "0 0 20px 0" }}
