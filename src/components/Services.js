@@ -30,8 +30,8 @@ export default function Services() {
 
   return (
     <div className="bg-[var(--primary)] min-h-screen items-center justify-center flex-col flex px-20">
-      <h1 className="text-3xl font-bold text-white py-15 text-center">My Services</h1>
-      <div className="grid md:grid-cols-[3fr_2fr] gap-x-16 items-center">
+      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white max-md:translate-y-18 transform text-center">My Services</h1>
+      <div className="grid md:grid-cols-[3fr_2fr] gap-x-16 md:items-center">
         <div className="grid sm:grid-cols-2 gap-8 transform max-md:scale-80">
           {services.map((service, index) => (
             <div

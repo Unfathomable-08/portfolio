@@ -1,5 +1,6 @@
 "use client";
 
+import { useScreenSize } from "@/app/ScreenContext";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -55,9 +56,11 @@ const projects = [
 ];
 
 export default function Projects() {
+    const { screenSize } = useScreenSize()
+
   return (
     <div className="min-h-screen bg-[var(--primary)] px-20">
-      <h1 className="text-3xl font-bold text-white py-15 text-center">My Projects</h1>
+      <h1 className="sm:text-2xl text-xl md:text-3xl font-bold text-white py-15 transform max-md:translate-y-8 text-center">My Projects</h1>
       <div className="grid gap-x-12 gap-y-8 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
         {projects.map((project, index) => (
           <motion.div
@@ -66,18 +69,18 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="rounded-xl shadow-lg overflow-hidden bg-[#1e1e1e] grid grid-cols-2 p-4 items-center gap-4"
+            className="rounded-xl shadow-lg overflow-hidden bg-[#1e1e1e] grid sm:grid-cols-2 p-4 items-center sm:gap-4"
           >
             <Image
               src={project.img}
               alt={project.title}
               width={400}
               height={150}
-              className="w-full aspect-video object-cover rounded-lg"
+              className="w-full aspect-video object-cover rounded-lg max-md:scale-90"
             />
             <div className="p-4 flex flex-col justify-between h-full">
               <div>
-                <h2 className="text-xl font-semibold text-white mb-3">{project.title}</h2>
+                <h2 className="sm:text-xl font-semibold text-white mb-3">{project.title}</h2>
                 <p className="text-sm text-gray-300 mb-3">{project.desc}</p>
                 <div className="flex flex-wrap gap-2 text-xs mb-3">
                   {project.tech.split(',').map((tech, idx) => (
@@ -90,15 +93,15 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-              <div className="flex gap-3 mt-auto mt-3">
+              <div className="flex gap-3 mt-3">
                 <a
                   href={project.link && project.link !== "Not Available" ? project.link : "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`text-sm rounded-md ${
                     project.link && project.link !== "Not Available"
-                      ? "border p-btn border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
-                      : "border p-btn border-gray-600 text-gray-500 cursor-not-allowed"
+                      ? "max-sm:text-sm border p-btn border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
+                      : "max-sm:text-smborder p-btn border-gray-600 text-gray-500 cursor-not-allowed"
                   }`}
                 >
                   {project.link && project.link !== "Not Available" ? "Live Link" : "Not Available"}
@@ -109,8 +112,8 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className={`px-3 py-1 text-sm rounded-md ${
                     project.repo && project.repo !== "Not Available"
-                      ? "border p-btn border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
-                      : "border p-btn border-gray-600 text-gray-500 cursor-not-allowed"
+                      ? "max-sm:text-sm border p-btn border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
+                      : "max-sm:text-sm border p-btn border-gray-600 text-gray-500 cursor-not-allowed"
                   }`}
                 >
                   {project.repo && project.repo !== "Not Available" ? "Repository" : "Not Available"}
