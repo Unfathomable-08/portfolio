@@ -1,0 +1,79 @@
+import Image from "next/image";
+
+export default function Services() {
+  const services = [
+    {
+      title: "Full-Stack Web Development",
+      description:
+        "Responsive websites and web apps using React, Next.js, Node.js, Express, and MongoDB/MySQL.",
+      img: "/web.png"
+    },
+    {
+      title: "Mobile App Development",
+      description:
+      "Cross-platform apps with React Native offering native look and smooth performance.",
+      img: "/app.png"
+    },
+    {
+      title: "Automation & Bots",
+      description:
+      "Custom automation bots for scraping, tasks, and scheduling using Python or Node.js.",
+      img: "/web.png"
+    },
+    {
+      title: "AI & ML (Basic Models)",
+      description:
+      "Simple ML models with scikit-learn and basic chatbots using NLP & cosine similarity.",
+      img: "/ai.png"
+    },
+  ];
+
+  return (
+    <div className="bg-[var(--primary)] min-h-screen items-center flex px-20">
+      <div className="grid grid-cols-[3fr_2fr] gap-x-16 items-center">
+        <div className="grid grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-services h-56 rounded-lg flex flex-col justify-center items-center text-center p-4"
+            >
+              <Image src={service.img} width={30} height={20} alt={service.title}/>
+              <h1 className="font-medium pb-3">{service.title}</h1>
+              <p className="text-sm">{service.description}</p>
+              <div>
+                <button className="bg-black hover:bg-[var(--hover)] rounded text-sm p-btn m-btn-sm">
+                  View Details
+                </button>
+                <button className="bg-black hover:bg-[var(--hover)] rounded text-sm p-btn m-btn-sm">
+                  Get Quote
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div>
+          <h1
+            className="font-bold text-[var(--secondary)] text-2xl"
+            style={{ padding: "0 0 20px 0" }}
+          >
+            What I Do
+          </h1>
+          <p className="leading-relaxed">
+            I specialize in building efficient, user-friendly digital products
+            that scale. Whether it's a powerful full-stack web app, a
+            high-performance mobile app, intelligent automation, or basic AI
+            models — I turn your ideas into reality with modern tools and
+            technologies.
+          </p>
+          <button
+            className="bg-[var(--secondary)] hover:bg-[var(--hover)] rounded p-btn font-medium"
+            style={{ margin: "25px 10px" }}
+          >
+            Contact Me
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
