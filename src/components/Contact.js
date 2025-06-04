@@ -82,7 +82,7 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="p-4 rounded-xl shadow-2xl bg-laptop flex flex-col justify-center items-center"
         >
-          <h2 className="text-md md:text-lg font-semibold text-white text-center">Send a Message</h2>
+          <h2 className="text-md md:text-lg font-semibold text-white text-center max-md:hidden">Send a Message</h2>
           <div className='w-[80%]'>
             <div className="flex flex-col gap-y-2 md:gap-y-4">
               <input

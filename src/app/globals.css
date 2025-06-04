@@ -80,7 +80,18 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .bg-laptop {
+    @apply aspect-square max-h-[380px] h-[100%] 
+  }
+  
   .bg-laptop::before {
-    transform: translateY(10px) scaleX(1.2) scaleY(1.4);
+    background-size: cover;
+    background-position-y: -5px;
+    max-height: 380px;
+    height: 100%;
+    aspect-ratio: 1/1;
+    justify-self: center;
+    align-self: center;
+    display: flex;
   }
 }

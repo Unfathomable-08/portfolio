@@ -1,16 +1,17 @@
 "use client";
 
-import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
-import { useMemo, useRef, useState } from "react";
+import { motion, useAnimationFrame } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 const NUM_DOTS = 70;
 const THRESHOLD = 150;
 
 const generateDots = () => {
+  // Only access window inside useEffect or client-side context
   return Array.from({ length: NUM_DOTS }, (_, i) => ({
     id: i,
-    top: Math.random() * window.innerHeight,
-    left: Math.random() * window.innerWidth,
+    top: typeof window !== "undefined" ? Math.random() * window.innerHeight : 0,
+    left: typeof window !== "undefined" ? Math.random() * window.innerWidth : 0,
     duration: 5 + Math.random() * 5,
     xTarget: Math.random() * 100 - 25,
     yTarget: Math.random() * 100 - 25,
@@ -18,31 +19,61 @@ const generateDots = () => {
 };
 
 export default function DotsBg() {
-  const dots = useMemo(generateDots, []);
-
+  const [dots, setDots] = useState([]);
   const positionsRef = useRef(
     dots.map((dot) => ({
       id: dot.id,
-      x: useMotionValue(0),
-      y: useMotionValue(0),
+      x: 0, // Replace useMotionValue with plain number
+      y: 0,
       top: dot.top,
       left: dot.left,
     }))
   );
-
-  // This triggers a re-render every frame with updated line data
   const [lines, setLines] = useState([]);
 
-  useAnimationFrame(() => {
+  // Generate dots on client-side mount
+  useEffect(() => {
+    setDots(generateDots());
+  }, []);
+
+  // Update positionsRef when dots change
+  useEffect(() => {
+    positionsRef.current = dots.map((dot) => ({
+      id: dot.id,
+      x: 0,
+      y: 0,
+      top: dot.top,
+      left: dot.left,
+    }));
+  }, [dots]);
+
+  // Manual animation loop to update x, y positions
+  useAnimationFrame((time) => {
     const newLines = [];
     const positions = positionsRef.current;
 
+    // Update positions manually based on animation progress
+    positions.forEach((pos, i) => {
+      const dot = dots[i];
+      if (!dot) return;
+
+      // Calculate progress (0 to 1) based on time and duration
+      const progress = ((time / 1000) % dot.duration) / dot.duration;
+      const easedProgress = easeInOut(progress); // Custom easing function
+      const x = dot.xTarget * easedProgress;
+      const y = dot.yTarget * easedProgress;
+
+      pos.x = x;
+      pos.y = y;
+    });
+
+    // Calculate lines
     for (let i = 0; i < positions.length; i++) {
       for (let j = i + 1; j < positions.length; j++) {
-        const xi = positions[i].left + positions[i].x.get();
-        const yi = positions[i].top + positions[i].y.get();
-        const xj = positions[j].left + positions[j].x.get();
-        const yj = positions[j].top + positions[j].y.get();
+        const xi = positions[i].left + positions[i].x;
+        const yi = positions[i].top + positions[i].y;
+        const xj = positions[j].left + positions[j].x;
+        const yj = positions[j].top + positions[j].y;
 
         const dx = xj - xi;
         const dy = yj - yi;
@@ -61,8 +92,13 @@ export default function DotsBg() {
       }
     }
 
-    setLines(newLines); // triggers re-render
+    setLines(newLines);
   });
+
+  // Custom easeInOut function to mimic Framer Motion's easeInOut
+  const easeInOut = (t) => {
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  };
 
   return (
     <div className="absolute inset-0 z-0 pointer-events-none w-full h-full overflow-hidden">
@@ -92,15 +128,10 @@ export default function DotsBg() {
             left: `${dot.left}px`,
             width: "4px",
             height: "4px",
-            x: positionsRef.current[i].x,
-            y: positionsRef.current[i].y,
+            x: positionsRef.current[i]?.x || 0,
+            y: positionsRef.current[i]?.y || 0,
           }}
-          animate={{ x: [0, dot.xTarget, 0], y: [0, dot.yTarget, 0] }}
-          transition={{
-            duration: dot.duration,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+          // Use manual x, y from positionsRef instead of animate
         />
       ))}
     </div>
