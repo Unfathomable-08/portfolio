@@ -103,21 +103,21 @@ export default function Contact() {
                       type="text" 
                       name="user_name" 
                       onChange={handleChange}
-                      className="bg-primary border-b border-gray-500 w-full h-10 mb-3 focus:outline-none  focus:border-gray-300" 
+                      className="bg-primary border-b border-gray-500 w-full h-10 mb-3 focus:outline-none focus:border-[var(--secondary)]" 
                       required
                       placeholder="Your Name"/><br/>
                     <input 
                       type="text" 
                       onChange={handleChange}
                       name="user_email" 
-                      className="bg-primary border-b border-gray-500 w-full h-10 mb-3 focus:outline-none focus:border-gray-300" 
+                      className="bg-primary border-b border-gray-500 w-full h-10 mb-3 focus:outline-none focus:border-[var(--secondary)]" 
                       required
                       placeholder="Your Email"/><br/>
                     <textarea 
                       type="text" 
                       onChange={handleChange}
                       name="message" 
-                      className="bg-primary border border-gray-500 w-full h-36 p-btn px-4 mb-3 focus:outline-none focus:border-gray-300 focus:rounded-xl transition ease-in-out" 
+                      className="bg-primary border border-gray-500 w-full h-36 p-btn px-4 mb-3 focus:outline-none focus:border-[var(--secondary)] focus:rounded-xl transition ease-in-out" 
                       required
                       placeholder="Your Message"/><br/>
                   <button
