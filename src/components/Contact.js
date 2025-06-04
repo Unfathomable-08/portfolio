@@ -31,7 +31,7 @@ export default function Contact() {
           console.error('EmailJS Error:', error);
           alert('Failed to send message.');
         });
-        
+
     // Reset form
     setFormData({ name: '', email: '', message: '' });
   };
@@ -75,10 +75,10 @@ export default function Contact() {
             </div>
           </div>
           <div className="flex gap-4">
-            {['twitter', 'instagram', 'facebook-f', 'linkedin-in'].map((platform) => (
+            {[['twitter', 'twitter.com/unfathomable_08'], ['instagram', 'instagram.com/unfathomable_08'], ['facebook-f', ''], ['linkedin-in', '']].map((platform) => (
               <a 
-                key={platform}
-                href={`https://${platform}.com`} 
+                key={platform[0]}
+                href={platform[1]} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-gray-900 w-[28px] flex justify-center items-center aspect-square rounded-full border border-cyan-400 transition-all duration-300 transform hover:scale-110"
