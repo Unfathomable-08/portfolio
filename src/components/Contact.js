@@ -83,7 +83,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-gray-900 w-[28px] flex justify-center items-center aspect-square rounded-full border border-cyan-400 transition-all duration-300 transform hover:scale-110"
               >
-                <i className={`fab fa-${platform} text-lg hover:text-white text-[var(--secondary)]`} />
+                <i className={`fab fa-${platform[0]} text-lg hover:text-white text-[var(--secondary)]`} />
               </a>
             ))}
           </div>
