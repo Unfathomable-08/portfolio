@@ -1,7 +1,8 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,10 +15,17 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  useEffect(()=>{
+        emailjs.init('tkWMhfTljoEZw4INe'); 
+  },[]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form submission logic here (e.g., API call)
-    console.log('Form submitted:', formData);
+    emailjs.send(
+            'service_124711', 'template_ekjziwa', formData
+        ).then(
+            alert('Message Sent!')
+        );
     // Reset form
     setFormData({ name: '', email: '', message: '' });
   };
@@ -76,49 +84,46 @@ export default function Contact() {
         </motion.div>
 
         {/* Contact Form Section */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="p-4 rounded-xl shadow-2xl bg-laptop flex flex-col justify-center items-center"
-        >
-          <div className='w-[80%]'>
-            <div className="flex flex-col gap-y-2">
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Your Name"
-                className="w-full text-sm md:mb-3 p-btn text-white border border-[var(--tertiary)] rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Your Email"
-                className="w-full text-sm md:mb-3 p-btn text-white border border-[var(--tertiary)] rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all"
-                required
-              />
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Your Message"
-                className="w-full text-sm md:mb-3 p-btn text-white border border-[var(--tertiary)] rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all h-12 md:h-20 resize-none"
-                required
-              />
-              <button
-                onClick={handleSubmit}
-                className="w-full text-sm p-btn bg-[var(--secondary)] text-gray-900 font-semibold rounded-lg hover:bg-[var(--hover)] transition-all duration-300 transform hover:scale-105"
-              >
-                Send Message
-              </button>
+        <div className="">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="p-4 rounded-xl shadow-2xl bg-laptop  flex-col justify-center items-center"
+          >
+            <div className="">
+                <form>
+                    <input 
+                      type="text" 
+                      name="user_name" 
+                      onChange={handleChange}
+                      className="bg-primary border-b border-gray-500 w-full h-10 mb-3 focus:outline-none  focus:border-gray-300" 
+                      required
+                      placeholder="Your Name"/><br/>
+                    <input 
+                      type="text" 
+                      onChange={handleChange}
+                      name="user_email" 
+                      className="bg-primary border-b border-gray-500 w-full h-10 mb-3 focus:outline-none focus:border-gray-300" 
+                      required
+                      placeholder="Your Email"/><br/>
+                    <textarea 
+                      type="text" 
+                      onChange={handleChange}
+                      name="message" 
+                      className="bg-primary border border-gray-500 w-full h-36 p-btn px-4 mb-3 focus:outline-none focus:border-gray-300 focus:rounded-xl transition ease-in-out" 
+                      required
+                      placeholder="Your Message"/><br/>
+                  <button
+                    onClick={handleSubmit}
+                    className="w-full text-sm p-btn bg-[var(--secondary)] text-gray-900 font-semibold rounded-lg hover:bg-[var(--hover)] transition-all duration-300 transform hover:scale-105"
+                  >
+                    Send Message
+                  </button>
+                </form>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

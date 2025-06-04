@@ -48,14 +48,6 @@ body {
 .bg-laptop::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-image: url("../../public/laptop-realistic.png");
-  background-size: cover;
-  background-position: center;
-  filter: invert(1) brightness(100%);
-  z-index: -1;
-  pointer-events: none;
-  transform: translateY(10px) scale(1.3);
 }
 
 .bg-skills {
@@ -77,21 +69,5 @@ body {
   }
   100% {
     width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .bg-laptop {
-    @apply aspect-square max-h-[380px] h-[100%] 
-  }
-  
-  .bg-laptop::before {
-    background-size: cover;
-    background-position-y: -5px;
-    max-height: 380px;
-    height: 100%;
-    aspect-ratio: 1/1;
-    justify-self: center;
-    align-self: center;
-    display: flex;
   }
 }

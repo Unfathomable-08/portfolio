@@ -31,6 +31,9 @@
 .py-15 {
     padding: 60px 0 !important;
 }
+.px-auto {
+    padding: 0 auto !important;
+}
 .text-black {
     color: black !important;
 }
