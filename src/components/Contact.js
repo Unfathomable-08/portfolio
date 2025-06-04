@@ -16,16 +16,22 @@ export default function Contact() {
   };
 
   useEffect(()=>{
-        emailjs.init('tkWMhfTljoEZw4INe'); 
+        emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY); 
   },[]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs.send(
-            'service_124711', 'template_ekjziwa', formData
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+            formData
         ).then(
             alert('Message Sent!')
-        );
+        ).catch((error) => {
+          console.error('EmailJS Error:', error);
+          alert('Failed to send message.');
+        });
+        
     // Reset form
     setFormData({ name: '', email: '', message: '' });
   };
