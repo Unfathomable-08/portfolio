@@ -94,7 +94,10 @@ export default function Contact() {
               },
             }}
           >
-            <motion.div className="flex items-center gap-3" variants={fadeVariant}>
+            <motion.div
+              className="flex items-center gap-3"
+              variants={fadeVariant}
+            >
               <i className="fas fa-envelope text-xl mb-3" />
               <a
                 href="mailto:muhammad124711@gmail.com"
@@ -103,7 +106,10 @@ export default function Contact() {
                 muhammad124711@gmail.com
               </a>
             </motion.div>
-            <motion.div className="flex items-center gap-3" variants={fadeVariant}>
+            <motion.div
+              className="flex items-center gap-3"
+              variants={fadeVariant}
+            >
               <i className="fab fa-github text-xl" />
               <a
                 href="https://github.com/unfathomable-08"
@@ -175,7 +181,7 @@ export default function Contact() {
               onChange={handleChange}
               value={formData.name}
               placeholder="Your Name"
-              className="bg-primary border-b border-gray-500 w-full h-10 p-btn focus:outline-none focus:border-[var(--secondary)]"
+              className="bg-primary border-b border-gray-500 w-full h-10 p-btn mb-3 focus:outline-none focus:border-[var(--secondary)]"
               required
               variants={fadeVariant}
               custom={0.1}
@@ -186,7 +192,7 @@ export default function Contact() {
               onChange={handleChange}
               value={formData.email}
               placeholder="Your Email"
-              className="bg-primary border-b border-gray-500 w-full h-10 px-2 focus:outline-none focus:border-[var(--secondary)]"
+              className="bg-primary border-b border-gray-500 w-full h-10 p-btn mb-3 focus:outline-none focus:border-[var(--secondary)]"
               required
               variants={fadeVariant}
               custom={0.2}
@@ -196,7 +202,7 @@ export default function Contact() {
               onChange={handleChange}
               value={formData.message}
               placeholder="Your Message"
-              className="bg-primary border border-gray-500 w-full h-36 p-btn px-4 focus:outline-none focus:border-[var(--secondary)] focus:rounded-xl transition ease-in-out"
+              className="bg-primary border border-gray-500 w-full h-36 p-btn mb-3 focus:outline-none focus:border-[var(--secondary)] focus:rounded-xl transition ease-in-out"
               required
               variants={fadeVariant}
               custom={0.3}
