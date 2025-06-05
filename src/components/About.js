@@ -59,7 +59,7 @@ export default function About() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
-        className="flex justify-center items-center relative z-10 transform -translate-y-10 max-md:scale-70 max-lg:scale-90"
+        className="flex justify-center items-center relative z-5 transform -translate-y-10 max-md:scale-70 max-lg:scale-90"
       >
         <Image src="/boy.png" alt="" width={400} height={400} />
       </motion.div>
