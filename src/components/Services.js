@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Services() {
@@ -34,12 +35,29 @@ export default function Services() {
       <div className="grid lg:grid-cols-[3fr_2fr] gap-x-10 md:items-center">
         <div className="grid sm:grid-cols-2 gap-6 transform max-lg:scale-80">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-services h-60 rounded-lg flex flex-col justify-center gap-y-2 items-center text-center p-4"
+              initial={{ rotateY: -90, opacity: 0 }}
+              whileInView={{ rotateY: 0, opacity: 1 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: index * 0.2,
+              }}
+              viewport={{ once: false, amount: 0.3 }}
+              style={{
+                transformStyle: "preserve-3d",
+                perspective: 1000,
+              }}
             >
               <div className="w-10 h-10 border-1 rounded-full flex justify-center items-center">
-                <Image src={service.img} width={30} height={30} alt={service.title}/>
+                <Image
+                  src={service.img}
+                  width={30}
+                  height={30}
+                  alt={service.title}
+                />
               </div>
               <h1 className="font-medium">{service.title}</h1>
               <p className="text-sm">{service.description}</p>
@@ -51,11 +69,21 @@ export default function Services() {
                   Get Quote
                 </button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="max-lg:hidden">
+        <motion.div 
+          className="max-lg:hidden"
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+            delay: 0.5,
+          }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           <h1
             className="font-bold text-[var(--secondary)] text-2xl"
             style={{ padding: "0 0 20px 0" }}
@@ -75,7 +103,7 @@ export default function Services() {
           >
             Contact Me
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
