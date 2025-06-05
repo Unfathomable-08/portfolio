@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #121212;
+  --secondary: #00c2ff;
+  --tertiary: #b5b5b5;
+  --hover: #00a2da;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.bg-services {
+  background: linear-gradient(
+    to bottom,
+    black 0%,
+    #121212 30%,
+    #003b4d 60%,
+    var(--secondary) 100%
+  );
+}
+
+.navbar-item > div {
+  @apply w-0 h-[2.9px] rounded-[2px] bg-[var(--secondary)];
+}
+
+.navbar-item:hover > div {
+  animation: navbar-item 500ms ease-in-out;
+  width: 100%;
+}
+
+.bg-laptop {
+  position: relative;
+  z-index: 0;
+}
+
+.bg-laptop::before {
+  content: "";
+  position: absolute;
+}
+
+.bg-skills {
+  background: linear-gradient(145deg, #007aff, var(--secondary));
+}
+
+.bg-skills-hover {
+  background: linear-gradient(transparent, var(--secondary));
+}
+
+.bg-dots {
+  background-image: radial-gradient(rgba(255 255 255 / 0.2) 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+}
+
+@keyframes navbar-item {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

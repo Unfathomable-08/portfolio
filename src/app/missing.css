@@ -1,0 +1,53 @@
+.px-20 {
+    padding: 0 80px !important;
+}
+.p-20 {
+    padding: 80px !important;
+}
+.pb-3 {
+    padding: 0 0 12px 0 !important;
+}
+.mb-3 {
+    margin: 0 0 12px 0 !important;
+}
+.mt-3 {
+    margin: 12px 0 0 0 !important;
+}
+.p-btn {
+    padding: 3px 12px !important;
+}
+.m-btn {
+    margin: 35px 10px !important;
+}
+.m-btn-sm {
+    margin: 15px 5px !important;
+}
+.p-4 {
+    padding: 16px !important;
+}
+.px-2 {
+    padding: 4px 8px !important;
+}
+.py-15 {
+    padding: 60px 0 !important;
+}
+.px-auto {
+    padding: 0 auto !important;
+}
+.text-black {
+    color: black !important;
+}
+
+/* Responsive Classes */
+@media (max-width: 1024px) {
+    .px-20 {
+        padding: 0 40px !important;
+    }
+}
+@media (max-width: 768px) {
+    .px-20 {
+        padding: 0 20px !important;
+    }   
+}
+@media (max-width: 640px) {
+}
