@@ -1,24 +1,30 @@
 "use client";
 
+import { useScreenSize } from "@/app/ScreenContext";
 import { motion, useAnimationFrame } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const NUM_DOTS = 70;
-const THRESHOLD = 150;
-
-const generateDots = () => {
-  // Only access window inside useEffect or client-side context
-  return Array.from({ length: NUM_DOTS }, (_, i) => ({
-    id: i,
-    top: typeof window !== "undefined" ? Math.random() * window.innerHeight : 0,
-    left: typeof window !== "undefined" ? Math.random() * window.innerWidth : 0,
-    duration: 5 + Math.random() * 5,
-    xTarget: Math.random() * 100 - 25,
-    yTarget: Math.random() * 100 - 25,
-  }));
-};
-
 export default function DotsBg() {
+  const { screenSize } = useScreenSize();
+
+  const THRESHOLD = 150;
+  const NUM_DOTS = screenSize == "xs" ? 25 : screenSize == "sm" ? 55 : 70;
+
+  const generateDots = () => {
+    console.log(NUM_DOTS, screenSize);
+    // Only access window inside useEffect or client-side context
+    return Array.from({ length: NUM_DOTS }, (_, i) => ({
+      id: i,
+      top:
+        typeof window !== "undefined" ? Math.random() * window.innerHeight : 0,
+      left:
+        typeof window !== "undefined" ? Math.random() * window.innerWidth : 0,
+      duration: 5 + Math.random() * 5,
+      xTarget: Math.random() * 100 - 25,
+      yTarget: Math.random() * 100 - 25,
+    }));
+  };
+
   const [dots, setDots] = useState([]);
   const positionsRef = useRef(
     dots.map((dot) => ({
@@ -34,7 +40,7 @@ export default function DotsBg() {
   // Generate dots on client-side mount
   useEffect(() => {
     setDots(generateDots());
-  }, []);
+  }, [screenSize]);
 
   // Update positionsRef when dots change
   useEffect(() => {
