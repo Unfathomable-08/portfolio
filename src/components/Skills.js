@@ -27,6 +27,13 @@ const logos = [
   { src: "/pytorch.png", name: "Pytorch" },
 ];
 
+// Get tilt rotation from mouse position
+function getTilt(x, y, rect) {
+  const rotateX = ((y - rect.top) / rect.height - 0.5) * 10; // vertical tilt
+  const rotateY = ((x - rect.left) / rect.width - 0.5) * -10; // horizontal tilt
+  return { rotateX, rotateY };
+}
+
 export default function Skills() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const { screenSize } = useScreenSize();
@@ -41,46 +48,66 @@ export default function Skills() {
 
       <div className="max-sm:scale-75 transform w-full h-full flex flex-col justify-center items-center gap-y-8">
         {breakpoints.map((start, rowIndex) => (
-          <div className="flex gap-x-3 sm:gap-x-4 md:gap-x-6 relative " key={rowIndex}>
+          <motion.div
+            key={rowIndex}
+            className="flex gap-x-3 sm:gap-x-4 md:gap-x-6 relative"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: rowIndex * 0.3, duration: 0.6 }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
             {logos
               .slice(start, start + (rowIndex === 1 ? breakpoints[1]+1 : (rowIndex === 2 && screenSize === 'xs') ? breakpoints[1]+1 : breakpoints[1]))
               .map(({ src, name }, idx) => {
                 const globalIndex = start + idx;
                 const isHovered = hoveredIndex === globalIndex;
                 return (
-                  <div key={globalIndex} className="relative">
-                    <div
+                  <motion.div
+                    key={globalIndex}
+                    className="relative"
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: idx * 0.1 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                  >
+                    <motion.div
                       className="bg-skills w-18 h-24 rounded-lg flex justify-center items-center overflow-hidden cursor-pointer"
+                      whileHover={{ scale: 1.05 }}
                       onMouseEnter={() => setHoveredIndex(globalIndex)}
-                      onMouseLeave={() => setHoveredIndex(null)}
+                      onMouseMove={(e) => {
+                        const card = e.currentTarget;
+                        const { rotateX, rotateY } = getTilt(e.clientX, e.clientY, card.getBoundingClientRect());
+                        card.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+                      }}
+                      onMouseLeave={(e) => {
+                        const card = e.currentTarget;
+                        card.style.transform = `perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)`;
+                        setHoveredIndex(null);
+                      }}
                     >
                       <div className="h-23 w-17 flex rounded justify-center items-center bg-[var(--primary)]">
                         <Image
                           src={src}
-                          width={
-                            name !== "Node.js" && name !== "Pytorch" ? 48 : 32
-                          }
-                          height={
-                            name !== "Node.js" && name !== "Pytorch" ? 48 : 32
-                          }
+                          width={name !== "Node.js" && name !== "Pytorch" ? 48 : 32}
+                          height={name !== "Node.js" && name !== "Pytorch" ? 48 : 32}
                           alt={name}
                         />
                       </div>
-                    </div>
+                    </motion.div>
 
                     {isHovered && (
                       <div
-                        className="absolute top-[2px] left-[2px] h-23 w-17 rounded flex justify-center items-end bg-skills-hover z-10 whitespace-nowrap pointer-events-none"
+                        className="absolute top-[2px] left-0 h-24 w-18 rounded flex justify-center items-end bg-skills-hover z-10 whitespace-nowrap pointer-events-none"
                         role="tooltip"
                         aria-label={name}
                       >
                         {name}
                       </div>
                     )}
-                  </div>
+                  </motion.div>
                 );
               })}
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
