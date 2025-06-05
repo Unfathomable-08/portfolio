@@ -1,5 +1,5 @@
 "use client";
-import Gear from "../sub-components/Gear.js";
+import Image from "next/image";
 import DotsBg from "../sub-components/Dots-bg.js";
 import { motion, useCycle } from "framer-motion";
 import { useEffect } from "react";
@@ -34,14 +34,14 @@ export default function About() {
           responsive web apps. I specialize in React and Next for dynamic UIs
           and use Node.js and Express for scalable back-end systems. I’m also
           experienced with Flask and PHP, and work with both SQL and MongoDB.
-          I’m passionate about creating solutions that solve real-world
-          problems and improve user experiences. Whether designing with Tailwind
-          CSS for custom layouts or using Bootstrap for quick, responsive
-          designs, my goal is to create user-friendly applications. Beyond
-          coding, I’m fascinated by physics and mathematics—fields that
-          challenge my problem-solving skills and inspire my work in
-          development. If you’re looking for someone who loves to solve complex
-          problems, I’d love to collaborate on your next project!
+          I’m passionate about creating solutions that solve real-world problems
+          and improve user experiences. Whether designing with Tailwind CSS for
+          custom layouts or using Bootstrap for quick, responsive designs, my
+          goal is to create user-friendly applications. Beyond coding, I’m
+          fascinated by physics and mathematics—fields that challenge my
+          problem-solving skills and inspire my work in development. If you’re
+          looking for someone who loves to solve complex problems, I’d love to
+          collaborate on your next project!
         </p>
         <motion.button
           className="bg-[var(--secondary)] hover:bg-[var(--hover)] rounded p-btn m-btn z-2 relative"
@@ -59,33 +59,9 @@ export default function About() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
-        className={`flex justify-center transform md:translate-x-4 max-sm:h-48 sm:-translate-y-12 gap-x-6 ${
-          screenSize == "md"
-            ? "scale-80"
-            : screenSize == "sm"
-            ? "scale-70"
-            : screenSize == "xs"
-            ? "scale-70 translate-x-12 -translate-y-20 opacity-40"
-            : ""
-        }`}
+        className="flex justify-center items-center relative z-10 transform -translate-y-10"
       >
-        <motion.div
-          initial={{ rotate: 0 }}
-          animate={{ rotate: -360 * direction }}
-          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-          className="transform h-38 w-auto"
-        >
-          <Gear />
-        </motion.div>
-
-        <motion.div
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 360 * direction }}
-          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-          className="transform rotate-36 scale-75 translate-y-22 gear-2 h-38 w-auto"
-        >
-          <Gear />
-        </motion.div>
+        <Image src="/boy.png" alt="" width={400} height={400} />
       </motion.div>
 
       <DotsBg />
