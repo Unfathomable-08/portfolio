@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Chat Application",
+    title: "TalkSky",
     desc: "A real-time chat application developed using Next.js for the frontend, Tailwind CSS for styling, Firebase for real-time messaging, and MySQL for authentication and storing user data. It includes features like user login/signup, chat rooms, and responsive design for mobile and desktop.",
     tech: "Next.js, Tailwind, Firebase, MySQL",
     img: "/chat.JPG",
