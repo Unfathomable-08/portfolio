@@ -6,6 +6,14 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Fluentyx",
+    desc: "A live Arabic learning platform with over 2,000 monthly views, offering AI-powered tutorials and question-answering tests. Built with Next.js for a dynamic, responsive UI, PyTorch-based CNN for processing Arabic handwriting, and integrates LangChain with HuggingFace models for realtime question-answering.",
+    tech: "Next.js, PyTorch, LangChain, Hugging Face, Tailwind CSS",
+    img: "/fluentyx.JPG",
+    repo: "Not Available",
+    link: "http://fluentyx.vercel.app"
+  },
+  {
     title: "TalkSky",
     desc: "A real-time chat application developed using Next.js for the frontend, Tailwind CSS for styling, Firebase for real-time messaging, and MySQL for authentication and storing user data. It includes features like user login/signup, chat rooms, and responsive design for mobile and desktop.",
     tech: "Next.js, Tailwind, Firebase, MySQL",
