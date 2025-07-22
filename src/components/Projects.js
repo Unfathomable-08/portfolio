@@ -23,8 +23,8 @@ const projects = [
   },
   {
     title: "SkyMart",
-    desc: "An e-commerce frontend project developed during my internship at a software company. I collaborated with a team to build the user interface using Next.js and Bootstrap. The design focused on responsiveness, product listings, filters, and clean UI layout. Only frontend code is available.",
-    tech: "Next.js, Bootstrap",
+    desc: "An e-commerce frontend project developed during my internship at a software company. I collaborated with a team to build the user interface using React.js and Bootstrap. The design focused on responsiveness, product listings, filters, and clean UI layout. Only frontend code is available.",
+    tech: "React.js, Bootstrap",
     img: "/skymart.JPG",
     repo: 'Not Available',
     link: 'http://skytechmart.netlify.app'
