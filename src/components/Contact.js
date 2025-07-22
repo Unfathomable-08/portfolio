@@ -139,8 +139,8 @@ export default function Contact() {
             {[
               ["twitter", "https://twitter.com/unfathomable_08"],
               ["instagram", "https://instagram.com/unfathomable_08"],
-              ["facebook-f", ""],
-              ["linkedin-in", ""],
+              ["facebook-f", "https://facebook.com/"],
+              ["linkedin-in", "https://linkedin.com/in/muhammad-abasi-6b6884350"],
             ].map(([icon, link], i) => (
               <motion.a
                 key={icon}
