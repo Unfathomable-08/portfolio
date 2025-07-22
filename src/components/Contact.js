@@ -66,7 +66,7 @@ export default function Contact() {
           }}
         >
           <motion.h1
-            className="text-3xl font-bold mb-3 text-center lg:text-left"
+            className="text-2xl sm:text-3xl font-bold mb-3 text-center lg:text-left"
             variants={fadeVariant}
             custom={0.2}
           >
