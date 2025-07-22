@@ -41,7 +41,7 @@ export default function Skills() {
   const breakpoints = screenSize == 'xs' ? [0, 4, 9, 14] : [0, 6, 13];
 
   return (
-    <div className="min-h-screen max-md:py-15 bg-[var(--primary)] text-white flex flex-col items-center justify-center gap-y-8 px-20 relative bg-dots">
+    <div id="skills" className="min-h-screen max-md:py-15 bg-[var(--primary)] text-white flex flex-col items-center justify-center gap-y-8 px-20 relative bg-dots">
         {/* Soft blurred circles */}
         <div className="absolute top-10 left-10 w-20 h-20 md:w-40 md:h-40 rounded-full bg-white opacity-40 blur-3xl pointer-events-none z-15"></div>
         <div className="absolute bottom-20 right-20 md:w-56 md:h-56 w-28 h-28 rounded-full bg-[#ffffffaa] opacity-40 blur-3xl pointer-events-none z-15"></div>

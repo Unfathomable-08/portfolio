@@ -52,7 +52,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--primary)] flex items-center justify-center px-4 sm:px-10 md:px-20 overflow-x-hidden">
+    <div id='contact' className="min-h-screen bg-[var(--primary)] flex items-center justify-center px-4 sm:px-10 md:px-20 overflow-x-hidden">
       <div className="max-w-5xl w-full mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 items-center">
         {/* Contact Info */}
         <motion.div

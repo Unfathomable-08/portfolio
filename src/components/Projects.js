@@ -67,7 +67,7 @@ export default function Projects() {
     const { screenSize } = useScreenSize()
 
   return (
-    <div className="min-h-screen bg-[var(--primary)] px-20">
+    <div id="projects" className="min-h-screen bg-[var(--primary)] px-20">
       <h1 className="sm:text-2xl text-xl md:text-3xl font-bold text-white py-15 transform max-md:translate-y-8 text-center">My Projects</h1>
       <div className="grid gap-x-12 gap-y-8 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
         {projects.map((project, index) => (
