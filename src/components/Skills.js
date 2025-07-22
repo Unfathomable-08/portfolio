@@ -53,7 +53,7 @@ export default function Skills() {
 
   // Row generation
   const getRows = () => {
-    const itemsPerRow = screenSize === "xs" ? [4, 5, 5, 5] : [6, 7, 7];
+    const itemsPerRow = screenSize === "xs" ? [4, 5, 5, 5, 4] : [6, 7, 7, 6];
     const rows = [];
     let start = 0;
     for (let count of itemsPerRow) {
