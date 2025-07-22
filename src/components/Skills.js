@@ -68,7 +68,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="min-h-screen max-md:py-15 bg-[var(--primary)] text-white flex flex-col items-center justify-center gap-y-8 px-20 relative bg-dots"
+      className="min-h-screen max-md:py-15 bg-[var(--primary)] text-white flex flex-col items-center justify-center gap-y-6 sm:gap-y-4 px-20 relative bg-dots"
     >
       {/* Soft blurred circles */}
       <div className="absolute top-10 left-10 w-20 h-20 md:w-40 md:h-40 rounded-full bg-white opacity-40 blur-3xl pointer-events-none z-15"></div>
