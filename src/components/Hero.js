@@ -53,7 +53,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-         Creative Developer | AI Enthusiast | Tech Explorer 🚀
+         Fullstack Web Developer & Applied AI Developer 🚀
         </motion.p>
 
         <motion.div
