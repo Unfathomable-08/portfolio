@@ -60,11 +60,11 @@ export default function Experience() {
     <div
       id="experience"
       ref={containerRef}
-      className="min-h-screen bg-[var(--primary)] px-20 py-16 relative overflow-hidden"
+      className="min-h-screen bg-[var(--primary)] p-20 relative overflow-hidden"
     >
       {/* Section Header */}
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-4 md:mb-8 relative z-10"
+        className="text-2xl sm:text-3xl pb-3 mb-3 md:text-4xl font-bold text-white text-center relative z-10"
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
@@ -72,17 +72,19 @@ export default function Experience() {
         Work Experience
       </motion.h1>
       <motion.p
-        className="text-[var(--tertiary)] text-center max-w-md mx-auto mb-12 md:mb-16 relative z-10"
+        className="text-[var(--tertiary)] flex mb-3 pb-3 justify-center text-center relative z-10"
         initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
-        Journey through professional roles where I've built impactful solutions and grown as a developer.
+        <span className="max-w-md pb-3 mb-3">
+          Journey through professional roles where I've built impactful solutions and grown as a developer.
+        </span>
       </motion.p>
 
       {/* Timeline Container */}
       <motion.ul
-        className="relative space-y-8 md:space-y-12 max-w-4xl mx-auto"
+        className="relative space-y-8 md:space-y-12 max-w-4xl"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -101,8 +103,7 @@ export default function Experience() {
               transition={{ delay: index * 0.2 + 0.4, duration: 0.5 }}
             >
               <div className="relative">
-                <div className="w-4 h-4 bg-[var(--secondary)] rounded-full z-20 shadow-lg shadow-[var(--secondary)]/20"></div>
-                <span className="absolute -top-1 -right-1 text-[var(--secondary)] text-lg z-30">
+                <span className="absolute -top-1 -right-1 text-[var(--secondary)] text-lg z-10">
                   <i className={exp.icon}></i>
                 </span>
               </div>
@@ -115,21 +116,21 @@ export default function Experience() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               {/* Role and Company */}
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3">
-                <h2 className="text-xl md:text-2xl font-bold text-white transition-colors">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <h2 className="text-xl pb-3 md:text-2xl font-bold text-white transition-colors">
                   {exp.role}
                 </h2>
-                <span className="text-sm font-medium text-white mt-1 sm:mt-0 min-w-max">
+                <span className="text-sm font-medium text-white  min-w-max">
                   {exp.dates}
                 </span>
               </div>
 
-              <h3 className="text-lg font-semibold mb-4 text-white transition-colors">
+              <h3 className="text-lg pb-3 font-semibold  text-white transition-colors">
                 {exp.company}
               </h3>
 
               {/* Description */}
-              <p className="text-[var(--tertiary)] leading-relaxed mb-5 text-sm md:text-base">
+              <p className="text-[var(--tertiary)] pb-3 leading-relaxed text-sm md:text-base">
                 {exp.description}
               </p>
 
@@ -138,12 +139,12 @@ export default function Experience() {
                 {exp.achievements.map((achievement, idx) => (
                   <motion.li
                     key={idx}
-                    className="flex items-start gap-2 text-sm text-gray-300 pl-4 relative before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[var(--secondary)]/50 before:rounded-full before:mt-0.5"
+                    className="flex items-start gap-2 text-sm text-gray-300 pl-4 relative before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[var(--secondary)]/50 before:rounded-full"
                     initial={{ opacity: 0, x: -10 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: index * 0.2 + 0.5 + idx * 0.1, duration: 0.4 }}
                   >
-                    <span className="text-xs font-medium text-[var(--secondary)] mt-0.5 min-w-[1rem]">
+                    <span className="text-xs font-medium text-[var(--secondary)] min-w-[1rem]">
                       •
                     </span>
                     <span>{achievement}</span>
