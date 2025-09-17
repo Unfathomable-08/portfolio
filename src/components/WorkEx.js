@@ -16,9 +16,9 @@ export default function Experience() {
       description: "Crafting scalable full-stack applications with cutting-edge technologies, focusing on seamless user experiences and robust backend integrations. Collaborating on feature-rich projects that drive business growth and innovation.",
       icon: "fa-solid fa-laptop",
       achievements: [
-        "Led development of real-time chat modules using Socket.io and MongoDB",
-        "Optimized application performance, reducing load times by 40%",
-        "Integrated AI-driven features with LangChain for enhanced user interactions"
+        "Built numerous websites across e-commerce, corporate, portfolio, and agency niches",
+        "Developed and integrated AI chatbots for multiple client-facing web platforms",
+        "Delivered full-stack solutions using React.js, Node.js, and Python"
       ]
     },
     {
@@ -28,9 +28,9 @@ export default function Experience() {
       description: "Contributed to frontend development during a dynamic internship, honing skills in responsive design and interactive UIs. Gained hands-on experience in agile environments, delivering polished components for client-facing web applications.",
       icon: "fa-solid fa-palette",
       achievements: [
-        "Built responsive e-commerce interfaces using React and Bootstrap",
-        "Implemented animations with AOS library for engaging user journeys",
-        "Collaborated on team projects, ensuring cross-browser compatibility"
+        "Built an e-commerce frontend SkyMart, using React.js and Bootstrap during internship",
+        "Developed official business website SkyTech, with animations and EmailJS integration",
+        "Created responsive, production-ready UIs with optimized layouts and smooth UX"
       ]
     }
   ];
@@ -85,7 +85,7 @@ export default function Experience() {
       {/* Timeline Container */}
       <div className="flex justify-center">
         <motion.ul
-          className="relative space-y-8 md:space-y-12 max-w-4xl"
+          className="relative max-w-4xl"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -94,7 +94,7 @@ export default function Experience() {
             <motion.li
               key={index}
               variants={itemVariants}
-              className="relative flex flex-col lg:flex-row items-start gap-6 lg:gap-12"
+              className="relative flex mb-12 flex-col lg:flex-row items-start gap-6 lg:gap-12"
             >
               {/* Timeline dot and icon */}
               <motion.div
@@ -140,12 +140,12 @@ export default function Experience() {
                   {exp.achievements.map((achievement, idx) => (
                     <motion.li
                       key={idx}
-                      className="flex items-start gap-2 text-sm text-gray-300 pl-4 relative before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[var(--secondary)]/50 before:rounded-full"
+                      className="flex items-start gap-2 px-2 text-sm text-gray-300 relative before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[var(--secondary)]/50 before:rounded-full"
                       initial={{ opacity: 0, x: -10 }}
                       animate={isInView ? { opacity: 1, x: 0 } : {}}
                       transition={{ delay: index * 0.2 + 0.5 + idx * 0.1, duration: 0.4 }}
                     >
-                      <span className="text-xs font-medium text-[var(--secondary)] min-w-[1rem]">
+                      <span className="text-xs px-2 font-medium text-[var(--secondary)]">
                         •
                       </span>
                       <span>{achievement}</span>
