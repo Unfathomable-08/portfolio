@@ -60,7 +60,7 @@ export default function Experience() {
     <div
       id="experience"
       ref={containerRef}
-      className="min-h-screen bg-[var(--primary)] p-20 relative overflow-hidden"
+      className="min-h-screen bg-[var(--primary)] px-20 relative overflow-hidden"
     >
       {/* Section Header */}
       <motion.h1
@@ -68,6 +68,7 @@ export default function Experience() {
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
+        style={{marginTop: '80px !important'}}
       >
         Work Experience
       </motion.h1>
