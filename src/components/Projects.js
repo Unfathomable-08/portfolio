@@ -6,6 +6,22 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Sparkio Store",
+    desc: "Sparkio is a modern, high-performance e-commerce platform built for speed and scalability. It offers a clean, intuitive shopping experience, real-time order tracking, personalized recommendations, and full responsiveness across devices. Perfect for businesses ready to grow online.",
+    tech: "Next.js, Tailwind CSS, MongoDB, MUI",
+    img: "/sparkio.webp",
+    repo: 'Not Available',
+    link: 'https://sparkio.store'
+  },
+  {
+    title: "Nexus Ecommerce",
+    desc: "A modern e-commerce platform built with Next.js and Tailwind CSS, featuring a responsive design, product listings, cart functionality, and secure checkout. Designed for seamless user experience and optimized performance.",
+    tech: "Next.js, Tailwind CSS, MongoDB, Shadcn",
+    img: "/nexus.webp",
+    repo: 'Not Available',
+    link: 'https://nexus-ecommerce-nine.vercel.app'
+  },
+  {
     title: "Fluentyx",
     desc: "A live Arabic learning platform with over 2,000 monthly views, offering AI-powered tutorials and question-answering tests. Built with Next.js for a dynamic, responsive UI, PyTorch-based CNN for processing Arabic handwriting, and integrates LangChain with HuggingFace models for realtime question-answering.",
     tech: "Next.js, PyTorch, LangChain, Hugging Face, Tailwind CSS",
@@ -20,14 +36,6 @@ const projects = [
     img: "/chat.JPG",
     repo: 'https://github.com/Unfathomable-08/Chatapp-NextJS',
     link: 'http://talksky.vercel.app'
-  },
-  {
-    title: "SkyMart",
-    desc: "An e-commerce frontend project developed during my internship at a software company. I collaborated with a team to build the user interface using React.js and Bootstrap. The design focused on responsiveness, product listings, filters, and clean UI layout. Only frontend code is available.",
-    tech: "React.js, Bootstrap",
-    img: "/skymart.JPG",
-    repo: 'Not Available',
-    link: 'http://skytechmart.netlify.app'
   },
   {
     title: "SkyTech Official Website",
@@ -124,7 +132,7 @@ export default function Projects() {
                       : "max-sm:text-sm border p-btn border-gray-600 text-gray-500 cursor-not-allowed"
                   }`}
                 >
-                  {project.repo && project.repo !== "Not Available" ? "Repository" : "Not Available"}
+                  {project.repo && project.repo !== "Not Available" ? "Repository" : "No Repository"}
                 </a>
               </div>
             </div>
