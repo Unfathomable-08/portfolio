@@ -30,6 +30,22 @@ const projects = [
     link: "http://fluentyx.vercel.app"
   },
   {
+    title: "Rag Agent",
+    desc: "A Retrieval-Augmented Generation (RAG) agent built using LangChain and Hugging Face models. It allows users to ask questions about a specific document or dataset, leveraging vector databases for efficient retrieval and LLMs for generating accurate responses.",
+    tech: "Python, LangChain, Hugging Face, FAISS",
+    img: "/rag.png",
+    repo: 'https://huggingface.co/spaces/TechDxon/Chatbot/tree/main',
+    link: 'http://techdxon.com/ai'
+  },
+  {
+    title: "Voice Assistant",
+    desc: "An AI-powered voice assistant web application that leverages the Gemini API for natural language processing and LiveKit for real-time audio communication. Built with Next.js, it provides users with an interactive experience to perform tasks and get information through voice commands.",
+    tech: "Python, LiveKit, Gemini API, Next.js",
+    img: "/voice-agent.png",
+    repo: 'https://github.com/Unfathomable-08/calling-agent',
+    link: 'http://techdxon.com/voice-agent'
+  },
+  {
     title: "TalkSky",
     desc: "A real-time chat application developed using Next.js for the frontend, Tailwind CSS for styling, Firebase for real-time messaging, and MySQL for authentication and storing user data. It includes features like user login/signup, chat rooms, and responsive design for mobile and desktop.",
     tech: "Next.js, Tailwind, Firebase, MySQL",
@@ -44,22 +60,6 @@ const projects = [
     img: "/skyteck.JPG",
     repo: 'Not Available',
     link: 'https://skytech.com.pk'
-  },
-  {
-    title: "Disease Predicting System",
-    desc: "A machine learning system that predicts possible diseases based on user-inputted symptoms. Developed using a Support Vector Classifier (SVC) with Scikit-learn, Flask for backend API, and a minimal yet modern frontend using Alpine.js and Tailwind CSS. It includes a symptom dropdown and result display.",
-    tech: "Scikit-learn (SVC), Flask, Alpine.js, Tailwind",
-    img: "/mrs.JPG",
-    repo: 'https://github.com/Unfathomable-08/Medicine-Recommendation-System',
-    link: 'https://unfathomable06.pythonanywhere.com'
-  },
-  {
-    title: "Cosine Similarity AI",
-    desc: "A simple AI Chatbot that calculates the similarity between two pieces of text using the cosine similarity method and gives response. The backend is powered by Flask and Scikit-learn's methods, while the frontend is lightweight using Alpine.js and styled with Tailwind. Good for NLP experiments and demos.",
-    tech: "Scikit-learn, NLTK, Flask, Tailwind, Alpine.js",
-    img: "/chatai.JPG",
-    repo: 'https://github.com/Unfathomable-08/AI-Chatbot',
-    link: 'https://chatai02.pythonanywhere.com'
   },
   {
     title: "Vizuflect",
@@ -92,7 +92,7 @@ export default function Projects() {
               alt={project.title}
               width={400}
               height={150}
-              className="w-full aspect-video object-cover rounded-lg max-md:scale-90"
+              className="w-full aspect-video border border-white/60 object-cover rounded-lg max-md:scale-90"
             />
             <div className="p-4 flex flex-col justify-between h-full">
               <div>
