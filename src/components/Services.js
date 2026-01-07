@@ -10,9 +10,9 @@ export default function Services() {
       img: "/web.png"
     },
     {
-      title: "Mobile App Development",
+      title: "On-Page & Technical SEO",
       description:
-      "Cross-platform apps with React Native offering native look and smooth performance.",
+      "Helping your site rank higher with keyword research, better content and structure, and google indexing.",
       img: "/app.png"
     },
     {
