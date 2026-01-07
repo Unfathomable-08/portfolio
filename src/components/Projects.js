@@ -6,6 +6,14 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Glowfarm",
+    desc: "GlowFarm showcases ethereal lighting products through jaw-dropping animations: theme switching, dynamic light effects, and interactive hover effects that feel alive. Developed with Next.js and Framer Motion for smooth, responsive magic.",
+    tech: "Next.js, Tailwind CSS, Framer Motion",
+    img: "/glowfarm.png",
+    repo: 'Not Available',
+    link: 'https://glowfarm.vercel.app'
+  },
+  {
     title: "Sparkio Store",
     desc: "Sparkio is a modern, high-performance e-commerce platform built for speed and scalability. It offers a clean, intuitive shopping experience, real-time order tracking, personalized recommendations, and full responsiveness across devices. Perfect for businesses ready to grow online.",
     tech: "Next.js, Tailwind CSS, MongoDB, MUI",
