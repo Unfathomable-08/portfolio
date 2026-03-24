@@ -6,20 +6,36 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Glowfarm",
-    desc: "GlowFarm showcases ethereal lighting products through jaw-dropping animations: theme switching, dynamic light effects, and interactive hover effects that feel alive. Developed with Next.js and Framer Motion for smooth, responsive magic.",
-    tech: "Next.js, Tailwind CSS, Framer Motion",
-    img: "/glowfarm.png",
-    repo: 'Not Available',
-    link: 'https://glowfarm.vercel.app'
+    title: "Awaza",
+    desc: "A fully functional social media PWA built with Next.js, firebase and mongodb. It has features like live push notifications, real-time chat, follow system, and full post interactions. Built for a smooth, app-like experience across devices with modern scalable architecture.",
+    tech: "Next.js, Firebase, MongoDB",
+    img: "/awaza.png",
+    repo: "https://github.com/Unfathomable-08/Awaza-web-app",
+    link: "https://awaza-social.vercel.app"
+  },
+  {
+    title: "Fluentyx",
+    desc: "An Arabic learning platform built with Next.js featuring leaderboard, lesson revision algorithm, AI tutor chatbot, translation marking system, and pytorch built CNN-based handwritten alphabet classification.",
+    tech: "Next.js, PyTorch, LangChain, Hugging Face, Tailwind CSS",
+    img: "/fluentyx.JPG",
+    repo: "Not Available",
+    link: "https://fluentyx.vercel.app"
   },
   {
     title: "Sparkio Store",
-    desc: "Sparkio is a modern, high-performance e-commerce platform built for speed and scalability. It offers a clean, intuitive shopping experience, real-time order tracking, personalized recommendations, and full responsiveness across devices. Perfect for businesses ready to grow online.",
+    desc: "Sparkio is a modern e-commerce platform with all essential features, a clean shopping experience, and an eye-catching UI. Includes a powerful admin dashboard and is fully responsive across devices.",
     tech: "Next.js, Tailwind CSS, MongoDB, MUI",
     img: "/sparkio.webp",
     repo: 'Not Available',
     link: 'https://sparkio.store'
+  },
+  {
+    title: "Glowfarm",
+    desc: "GlowFarm showcases ethereal lighting products through jaw-dropping animations: theme switching, dynamic light effects, and interactive hover effects that feel alive. Developed with Next.js and Framer Motion.",
+    tech: "Next.js, Tailwind CSS, Framer Motion",
+    img: "/glowfarm.png",
+    repo: 'Not Available',
+    link: 'https://glowfarm.vercel.app'
   },
   {
     title: "Nexus Ecommerce",
@@ -30,20 +46,12 @@ const projects = [
     link: 'https://nexus-ecommerce-nine.vercel.app'
   },
   {
-    title: "Fluentyx",
-    desc: "A live Arabic learning platform with over 2,000 monthly views, offering AI-powered tutorials and question-answering tests. Built with Next.js for a dynamic, responsive UI, PyTorch-based CNN for processing Arabic handwriting, and integrates LangChain with HuggingFace models for realtime question-answering.",
-    tech: "Next.js, PyTorch, LangChain, Hugging Face, Tailwind CSS",
-    img: "/fluentyx.JPG",
-    repo: "Not Available",
-    link: "http://fluentyx.vercel.app"
-  },
-  {
     title: "Rag Agent",
     desc: "A Retrieval-Augmented Generation (RAG) agent built using LangChain and Hugging Face models. It allows users to ask questions about a specific document or dataset, leveraging vector databases for efficient retrieval and LLMs for generating accurate responses.",
     tech: "Python, LangChain, Hugging Face, FAISS",
     img: "/rag.png",
     repo: 'https://huggingface.co/spaces/TechDxon/Chatbot/tree/main',
-    link: 'http://techdxon.com/ai'
+    link: 'https://techdxon.com/ai'
   },
   {
     title: "Voice Assistant",
@@ -51,7 +59,7 @@ const projects = [
     tech: "Python, LiveKit, Gemini API, Next.js",
     img: "/voice-agent.png",
     repo: 'https://github.com/Unfathomable-08/calling-agent',
-    link: 'http://techdxon.com/voice-agent'
+    link: 'https://techdxon.com/voice-agent'
   },
   {
     title: "TalkSky",
@@ -59,7 +67,7 @@ const projects = [
     tech: "Next.js, Tailwind, Firebase, MySQL",
     img: "/chat.JPG",
     repo: 'https://github.com/Unfathomable-08/Chatapp-NextJS',
-    link: 'http://talksky.vercel.app'
+    link: 'https://talksky.vercel.app'
   },
   {
     title: "SkyTech Official Website",
@@ -75,12 +83,12 @@ const projects = [
     tech: "React, Chart.js, Tailwind",
     img: "/Visu.JPG",
     repo: 'https://github.com/Unfathomable-08/Data-Visualization',
-    link: 'http://vizuflect.netlify.app/'
+    link: 'https://vizuflect.netlify.app/'
   },
 ];
 
 export default function Projects() {
-    const { screenSize } = useScreenSize()
+  const { screenSize } = useScreenSize()
 
   return (
     <div id="projects" className="min-h-screen bg-[var(--primary)] px-20">
@@ -122,11 +130,10 @@ export default function Projects() {
                   href={project.link && project.link !== "Not Available" ? project.link : "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-sm rounded-md ${
-                    project.link && project.link !== "Not Available"
+                  className={`text-sm rounded-md ${project.link && project.link !== "Not Available"
                       ? "max-sm:text-sm border p-btn border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
                       : "max-sm:text-smborder p-btn border-gray-600 text-gray-500 cursor-not-allowed"
-                  }`}
+                    }`}
                 >
                   {project.link && project.link !== "Not Available" ? "Live Link" : "Not Available"}
                 </a>
@@ -134,11 +141,10 @@ export default function Projects() {
                   href={project.repo && project.repo !== "Not Available" ? project.repo : "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`px-3 py-1 text-sm rounded-md ${
-                    project.repo && project.repo !== "Not Available"
+                  className={`px-3 py-1 text-sm rounded-md ${project.repo && project.repo !== "Not Available"
                       ? "max-sm:text-sm border p-btn border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
                       : "max-sm:text-sm border p-btn border-gray-600 text-gray-500 cursor-not-allowed"
-                  }`}
+                    }`}
                 >
                   {project.repo && project.repo !== "Not Available" ? "Repository" : "No Repository"}
                 </a>
