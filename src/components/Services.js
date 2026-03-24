@@ -1,30 +1,31 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Services() {
   const services = [
     {
-      title: "Full-Stack Web Development",
+      title: "Enterprise-Grade Web Development",
       description:
-        "Responsive websites and web apps using React, Next.js, Node.js, Express, and MongoDB/MySQL.",
+        "High-performance, scalable websites built with modern technologies like React, Next.js, and robust backend architectures.",
       img: "/web.png"
     },
     {
-      title: "On-Page & Technical SEO",
+      title: "Progressive Web Applications (PWAs)",
       description:
-      "Helping your site rank higher with keyword research, better content and structure, and google indexing.",
+        "Fast, app-like experiences with offline support, push notifications, and seamless performance on mobile and desktop.",
       img: "/app.png"
     },
     {
-      title: "Automation & Bots",
+      title: "AI-Powered Automation",
       description:
-      "Custom automation bots for scraping, tasks, and scheduling using Python or Node.js.",
+        "Smart automation solutions for workflows, data processing, and repetitive tasks using AI tools, APIs, and custom scripts.",
       img: "/bot.png"
     },
     {
-      title: "AI & ML (Basic Models)",
+      title: "Applied AI & Machine Learning",
       description:
-      "Simple ML models with scikit-learn and basic chatbots using NLP & cosine similarity.",
+        "Practical AI solutions like recommendation systems, text analysis, and lightweight ML models tailored to real business use-cases.",
       img: "/ai.png"
     },
   ];
@@ -37,7 +38,7 @@ export default function Services() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-services h-60 rounded-lg flex flex-col justify-center gap-y-2 items-center text-center p-4"
+              className="bg-services border border-[var(--secondary)]/60 h-60 rounded-lg flex flex-col justify-center gap-y-2 items-center text-center p-4"
               initial={{ rotateY: -90, opacity: 0 }}
               whileInView={{ rotateY: 0, opacity: 1 }}
               transition={{
@@ -62,18 +63,15 @@ export default function Services() {
               <h1 className="font-medium">{service.title}</h1>
               <p className="text-sm">{service.description}</p>
               <div>
-                <button className="bg-black hover:bg-[var(--hover)] rounded text-sm p-btn m-btn-sm">
-                  View Details
-                </button>
-                <button className="bg-black hover:bg-[var(--hover)] rounded text-sm p-btn m-btn-sm">
+                <Link href="/contact" className="bg-black hover:bg-[var(--hover)] rounded font-medium p-btn-md m-btn-sm">
                   Get Quote
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           className="max-lg:hidden"
           initial={{ x: 200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -94,7 +92,7 @@ export default function Services() {
             I specialize in building efficient, user-friendly digital products
             that scale. Whether it is a powerful full-stack web app, a
             high-performance mobile app, intelligent automation, or basic AI
-            models — I turn your ideas into reality with modern tools and
+            models, I turn your ideas into reality with modern tools and
             technologies.
           </p>
           <button

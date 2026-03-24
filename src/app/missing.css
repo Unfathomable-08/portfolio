@@ -16,6 +16,9 @@
 .p-btn {
     padding: 3px 12px !important;
 }
+.p-btn-md {
+    padding: 4px 24px !important;
+}
 .m-btn {
     margin: 35px 10px !important;
 }

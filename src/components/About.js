@@ -38,7 +38,7 @@ export default function About() {
           and improve user experiences. Whether designing with Tailwind CSS for
           custom layouts or using Bootstrap for quick, responsive designs, my
           goal is to create user-friendly applications. Beyond coding, I’m
-          fascinated by physics and mathematics—fields that challenge my
+          fascinated by physics and mathematics, fields that challenge my
           problem-solving skills and inspire my work in development. If you’re
           looking for someone who loves to solve complex problems, I’d love to
           collaborate on your next project!
