@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { ScreenSizeProvider } from "./ScreenContext";
+import NeonTrail from "@/sub-components/NeonTrail";
 import "./globals.css";
 import "./missing.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ScreenSizeProvider>
+          <NeonTrail />
           {children}
         </ScreenSizeProvider>
       </body>
