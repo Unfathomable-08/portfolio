@@ -27,11 +27,11 @@ const logos = [
   { src: "/docker.png", name: "Docker" },
   { src: "/sklearn.png", name: "Scikit-Learn" },
   { src: "/pytorch.png", name: "Pytorch" },
-  { src: "/langchain.png", name: "Langchain" },
+  { src: "/tensorflow.png", name: "TensorFlow" },
+  { src: "/langchain.png", name: "LangChain" },
   { src: "/langgraph.png", name: "LangGraph" },
   { src: "/nlp.png", name: "NLP" },
   { src: "/firebase.png", name: "Firebase" },
-  { src: "/wordpress.png", name: "Wordpress" },
 ];
 
 // Tilt helper
