@@ -13,11 +13,17 @@
 .mt-3 {
     margin: 12px 0 0 0 !important;
 }
+.pb-1 {
+    padding: 0 0 4px 0 !important;
+}
 .p-btn {
     padding: 3px 12px !important;
 }
 .p-btn-md {
     padding: 4px 24px !important;
+}
+.p-btn-contact {
+    padding: 10px 15px !important;
 }
 .m-btn {
     margin: 35px 10px !important;

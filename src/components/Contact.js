@@ -73,7 +73,7 @@ export default function Contact() {
             Get in <span className="text-[var(--secondary)]">Touch</span>
           </motion.h1>
           <motion.p
-            className="mb-3 text-gray-300"
+            className="mb-3 pb-3 text-gray-300"
             variants={fadeVariant}
             custom={0.3}
           >
@@ -95,10 +95,10 @@ export default function Contact() {
             }}
           >
             <motion.div
-              className="flex items-center gap-3"
+              className="flex items-center gap-3 mb-3 pb-1"
               variants={fadeVariant}
             >
-              <i className="fas fa-envelope text-xl mb-3" />
+              <i className="fas fa-envelope text-xl" />
               <a
                 href="mailto:muhammad124711@gmail.com"
                 className="text-gray-300 hover:underline text-sm"
@@ -107,7 +107,19 @@ export default function Contact() {
               </a>
             </motion.div>
             <motion.div
-              className="flex items-center gap-3"
+              className="flex items-center gap-3 mb-3 pb-1"
+              variants={fadeVariant}
+            >
+              <i className="fas fa-phone text-xl" />
+              <a
+                href="tel:+923282279743"
+                className="text-gray-300 hover:underline text-sm"
+              >
+                +92 328 2279743
+              </a>
+            </motion.div>
+            <motion.div
+              className="flex items-center gap-3 mb-3 pb-3"
               variants={fadeVariant}
             >
               <i className="fab fa-github text-xl" />
@@ -115,7 +127,7 @@ export default function Contact() {
                 href="https://github.com/unfathomable-08"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:underline text-sm mb-3"
+                className="text-gray-300 hover:underline text-sm"
               >
                 @Unfathomable-08
               </a>
@@ -209,7 +221,7 @@ export default function Contact() {
             />
             <motion.button
               type="submit"
-              className="w-full text-sm p-btn bg-[var(--secondary)] text-gray-900 font-semibold rounded-lg hover:bg-[var(--hover)] transition-all duration-300 transform hover:scale-105"
+              className="w-full text-sm p-btn-contact bg-[var(--secondary)] text-gray-900 font-bold rounded-lg hover:bg-[var(--hover)] transition-all duration-300 transform hover:scale-105"
               variants={fadeVariant}
               custom={0.4}
             >
