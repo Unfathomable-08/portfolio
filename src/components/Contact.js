@@ -110,10 +110,12 @@ export default function Contact() {
               className="flex items-center gap-3 mb-3 pb-1"
               variants={fadeVariant}
             >
-              <i className="fas fa-phone text-xl" />
+              <i className="fab fa-whatsapp text-2xl" />
               <a
-                href="tel:+923282279743"
+                href="https://wa.me/+923282279743"
                 className="text-gray-300 hover:underline text-sm"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 +92 328 2279743
               </a>
@@ -151,7 +153,7 @@ export default function Contact() {
             {[
               ["twitter", "https://twitter.com/unfathomable_08"],
               ["instagram", "https://instagram.com/unfathomable_08"],
-              ["facebook-f", "https://facebook.com/"],
+              ["whatsapp", "https://wa.me/+923282279743"],
               ["linkedin-in", "https://linkedin.com/in/muhammad-abasi-6b6884350"],
             ].map(([icon, link], i) => (
               <motion.a

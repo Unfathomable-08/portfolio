@@ -6,6 +6,25 @@ import Image from "next/image";
 
 const projects = [
   {
+    id: 1,
+    title: "Sable Build",
+    desc: "A drag-and-drop website builder that lets users create apps visually and export production-ready frontend and backend code in preffered frameworks with preffered database. Includes AI assistance for code generation and suggestions.",
+    tech: "20+ technologies, MERN, Python, Golang, etc",
+    img: "/sable.png",
+    repo: "Not Available",
+    link: "https://sablebuild.vercel.app"
+  },
+  {
+    id: 2,
+    title: "Ember & Oak",
+    desc: "A full-stack restaurant platform with dynamic menu management, table reservations, event booking, and online ordering. Includes a complete admin system for managing operations in real time.",
+    tech: "Next.js, Tailwind CSS, MongoDB, Stripe",
+    img: "/emberoak.png",
+    repo: "Not Available",
+    link: "https://emberoak-two.vercel.app"
+  },
+  {
+    id: 3,
     title: "Awaza",
     desc: "A fully functional social media PWA built with Next.js, firebase and mongodb. It has features like live push notifications, real-time chat, follow system, and full post interactions. Built for a smooth, app-like experience across devices with modern scalable architecture.",
     tech: "Next.js, Firebase, MongoDB",
@@ -14,14 +33,16 @@ const projects = [
     link: "https://awaza-social.vercel.app"
   },
   {
+    id: 4,
     title: "Fluentyx",
     desc: "An Arabic learning platform built with Next.js featuring leaderboard, lesson revision algorithm, AI tutor chatbot, translation marking system, and pytorch built CNN-based handwritten alphabet classification.",
     tech: "Next.js, PyTorch, LangChain, Hugging Face, Tailwind CSS",
     img: "/fluentyx.JPG",
-    repo: "Not Available",
+    repo: "https://github.com/unfathomable-08/fluentyx",
     link: "https://fluentyx.vercel.app"
   },
   {
+    id: 5,
     title: "Sparkio Store",
     desc: "Sparkio is a modern e-commerce platform with all essential features, a clean shopping experience, and an eye-catching UI. Includes a powerful admin dashboard and is fully responsive across devices.",
     tech: "Next.js, Tailwind CSS, MongoDB, MUI",
@@ -30,6 +51,7 @@ const projects = [
     link: 'https://sparkio.store'
   },
   {
+    id: 6,
     title: "Glowfarm",
     desc: "GlowFarm showcases ethereal lighting products through jaw-dropping animations: theme switching, dynamic light effects, and interactive hover effects that feel alive. Developed with Next.js and Framer Motion.",
     tech: "Next.js, Tailwind CSS, Framer Motion",
@@ -38,6 +60,7 @@ const projects = [
     link: 'https://glowfarm.vercel.app'
   },
   {
+    id: 7,
     title: "Nexus Ecommerce",
     desc: "A modern e-commerce platform built with Next.js and Tailwind CSS, featuring a responsive design, product listings, cart functionality, and secure checkout. Designed for seamless user experience and optimized performance.",
     tech: "Next.js, Tailwind CSS, MongoDB, Shadcn",
@@ -46,6 +69,7 @@ const projects = [
     link: 'https://nexus-ecommerce-nine.vercel.app'
   },
   {
+    id: 8,
     title: "Rag Agent",
     desc: "A Retrieval-Augmented Generation (RAG) agent built using LangChain and Hugging Face models. It allows users to ask questions about a specific document or dataset, leveraging vector databases for efficient retrieval and LLMs for generating accurate responses.",
     tech: "Python, LangChain, Hugging Face, FAISS",
@@ -54,6 +78,7 @@ const projects = [
     link: 'https://techdxon.com/ai'
   },
   {
+    id: 9,
     title: "Voice Assistant",
     desc: "An AI-powered voice assistant web application that leverages the Gemini API for natural language processing and LiveKit for real-time audio communication. Built with Next.js, it provides users with an interactive experience to perform tasks and get information through voice commands.",
     tech: "Python, LiveKit, Gemini API, Next.js",
@@ -62,6 +87,7 @@ const projects = [
     link: 'https://techdxon.com/voice-agent'
   },
   {
+    id: 10,
     title: "TalkSky",
     desc: "A real-time chat application developed using Next.js for the frontend, Tailwind CSS for styling, Firebase for real-time messaging, and MySQL for authentication and storing user data. It includes features like user login/signup, chat rooms, and responsive design for mobile and desktop.",
     tech: "Next.js, Tailwind, Firebase, MySQL",
@@ -70,6 +96,7 @@ const projects = [
     link: 'https://talksky.vercel.app'
   },
   {
+    id: 11,
     title: "SkyTech Official Website",
     desc: "An official business website developed for a software house during my internship. This project involved building a multi-section React site with animations using AOS, styled manually with vanilla CSS, and integrated with EmailJS for contact form submissions. The site is fully responsive and production-ready.",
     tech: "React, Vanilla CSS, EmailJS, AOS",
@@ -78,6 +105,7 @@ const projects = [
     link: 'https://skytech.com.pk'
   },
   {
+    id: 12,
     title: "Vizuflect",
     desc: "The most simplest data visualization app built using React that lets users generate a variety of graph types including bar, pie, and line charts. It supports mathematical equations, and manual data entry. The app is styled with Tailwind CSS and uses Chart.js or similar libraries for rendering.",
     tech: "React, Chart.js, Tailwind",
@@ -100,7 +128,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.5, delay: index * 0.07 }}
             className="rounded-xl shadow-lg overflow-hidden bg-[#1e1e1e] grid sm:grid-cols-2 p-4 items-center sm:gap-4"
           >
             <Image

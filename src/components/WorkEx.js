@@ -57,20 +57,19 @@ export default function Experience() {
   };
 
   return (
-    <div
+    <section
       id="experience"
       ref={containerRef}
-      className="min-h-screen bg-[var(--primary)] px-20 relative overflow-hidden"
+      className="min-h-screen bg-[var(--primary)] p-20 relative overflow-hidden"
     >
-      {/* Section Header */}
       <motion.h1
-        className="text-2xl sm:text-3xl pb-3 mb-3 md:text-4xl font-bold text-white text-center relative z-5"
+        className="text-2xl sm:text-3xl pb-3 mb-3 md:text-4xl font-bold text-white! text-center relative z-5"
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
-        style={{marginTop: '80px !important'}}
+        style={{ marginTop: "16px" }}
       >
-        Work Experience
+        Experience That Ships Results
       </motion.h1>
       <motion.p
         className="text-[var(--tertiary)] flex mb-3 pb-3 justify-center text-center relative z-5"
@@ -79,75 +78,139 @@ export default function Experience() {
         transition={{ delay: 0.3, duration: 0.6 }}
       >
         <span className="max-w-md pb-3 mb-3">
-          Journey through professional roles where I've built impactful solutions and grown as a developer.
+          Journey through roles where I transformed ideas into production-grade digital products.
         </span>
       </motion.p>
 
-      {/* Timeline Container */}
-      <div className="flex justify-center">
+      <motion.div
+        className="absolute"
+        style={{
+          width: "360px",
+          height: "360px",
+          borderRadius: "999px",
+          right: "-160px",
+          top: "110px",
+          background: "radial-gradient(circle, rgba(0,194,255,0.22), rgba(0,194,255,0.02) 70%)",
+          filter: "blur(8px)",
+        }}
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : {}}
+        transition={{ duration: 1 }}
+      />
+
+      <div className="flex justify-center relative z-5">
         <motion.ul
-          className="relative max-w-4xl"
+          className="relative max-w-5xl"
+          style={{ paddingLeft: "0px" }}
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
+          <div
+            className="max-md:hidden"
+            style={{
+              position: "absolute",
+              left: "31px",
+              top: "14px",
+              bottom: "20px",
+              width: "2px",
+              background:
+                "linear-gradient(180deg, rgba(0,194,255,0.8) 0%, rgba(0,194,255,0.08) 100%)",
+            }}
+          />
           {experiences.map((exp, index) => (
             <motion.li
               key={index}
               variants={itemVariants}
-              className="relative flex mb-12 flex-col lg:flex-row items-start gap-6 lg:gap-12"
+              className="relative flex mb-12 flex-col md:flex-row items-start gap-4 md:gap-8"
             >
-              {/* Timeline dot and icon */}
               <motion.div
-                className="flex flex-col items-center w-16 flex-shrink-0 lg:w-20"
+                className="flex flex-col items-center w-16 flex-shrink-0 md:w-16"
                 initial={{ scale: 0 }}
                 animate={isInView ? { scale: 1 } : {}}
                 transition={{ delay: index * 0.2 + 0.4, duration: 0.5 }}
               >
-                <div className="relative">
-                  <span className="absolute -top-1 -right-1 text-[var(--secondary)] text-lg z-5">
+                <div
+                  className="relative rounded-full flex justify-center items-center"
+                  style={{
+                    width: "52px",
+                    height: "52px",
+                    border: "1px solid rgba(0, 194, 255, 0.45)",
+                    background: "rgba(0, 0, 0, 0.5)",
+                    boxShadow: "0 0 25px rgba(0,194,255,0.2)",
+                  }}
+                >
+                  <span className="text-[var(--secondary)] text-lg z-5">
                     <i className={exp.icon}></i>
                   </span>
                 </div>
               </motion.div>
 
-              {/* Experience Card */}
               <motion.div
-                className="bg-[#1a1a1a]/80 backdrop-blur-sm border border-[var(--secondary)]/20 rounded-xl p-4 w-full lg:flex-1 shadow-lg shadow-black/20 hover:shadow-[0_0_20px_var(--secondary)/10] transition-all duration-300 group"
-                whileHover={{ y: -4, scale: 1.02 }}
+                className="rounded-xl p-4 w-full"
+                style={{
+                  background:
+                    "linear-gradient(160deg, rgba(0,0,0,0.86), rgba(0,59,77,0.25) 70%, rgba(0,194,255,0.16))",
+                  border: "1px solid rgba(0, 194, 255, 0.28)",
+                  boxShadow: "0 14px 34px rgba(0, 0, 0, 0.35)",
+                }}
+                whileHover={{ y: -4, scale: 1.01 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                {/* Role and Company */}
                 <div className="flex flex-col p-4 sm:flex-row justify-between items-start sm:items-center">
-                  <h2 className="text-xl pb-3 md:text-2xl font-bold text-white transition-colors">
+                  <h2 className="text-xl pb-3 md:text-2xl font-bold text-white">
                     {exp.role}
                   </h2>
-                  <span className="text-sm font-medium text-white">
+                  <span
+                    className="text-sm font-medium rounded"
+                    style={{
+                      border: "1px solid rgba(0, 194, 255, 0.4)",
+                      padding: "4px 10px",
+                      background: "rgba(0,0,0,0.35)",
+                    }}
+                  >
                     {exp.dates}
                   </span>
                 </div>
 
-                <h3 className="text-lg pb-3 px-2 font-semibold  text-white transition-colors">
+                <h3 className="text-lg pb-3 px-2 font-semibold text-white">
                   {exp.company}
                 </h3>
 
-                {/* Description */}
                 <p className="text-[var(--tertiary)] px-2 pb-3 leading-relaxed text-sm md:text-base">
                   {exp.description}
                 </p>
 
-                {/* Achievements */}
-                <ul className="space-y-2 px-2">
+                <ul className="px-2" style={{ display: "grid", gap: "10px" }}>
                   {exp.achievements.map((achievement, idx) => (
                     <motion.li
                       key={idx}
-                      className="flex items-start gap-2 px-2 text-sm text-gray-300 relative before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[var(--secondary)]/50 before:rounded-full"
+                      className="flex items-start gap-2 px-2 text-sm rounded"
+                      style={{
+                        border: "1px solid rgba(0, 194, 255, 0.2)",
+                        paddingTop: "8px",
+                        paddingBottom: "8px",
+                        background: "rgba(0,0,0,0.24)",
+                        color: "rgb(209, 213, 219)",
+                      }}
                       initial={{ opacity: 0, x: -10 }}
                       animate={isInView ? { opacity: 1, x: 0 } : {}}
                       transition={{ delay: index * 0.2 + 0.5 + idx * 0.1, duration: 0.4 }}
                     >
-                      <span className="text-xs px-2 font-medium text-[var(--secondary)]">
-                        •
+                      <span
+                        className="text-xs font-medium rounded-full"
+                        style={{
+                          color: "var(--secondary)",
+                          border: "1px solid rgba(0, 194, 255, 0.45)",
+                          width: "22px",
+                          height: "22px",
+                          display: "inline-flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0,
+                        }}
+                      >
+                        ✓
                       </span>
                       <span>{achievement}</span>
                     </motion.li>
@@ -158,6 +221,6 @@ export default function Experience() {
           ))}
         </motion.ul>
       </div>
-    </div>
+    </section>
   );
 }
