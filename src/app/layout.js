@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import { ScreenSizeProvider } from "./ScreenContext";
 import NeonTrail from "@/sub-components/NeonTrail";
 import "./globals.css";
