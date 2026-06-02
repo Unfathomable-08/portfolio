@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <div id="home" className="relative bg-[var(--primary)] h-screen flex items-center justify-center overflow-hidden">
+    <div id="home" className="relative w-full overflow-x-hidden bg-[var(--primary)] h-screen flex items-center justify-center overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)] via-[var(--secondary)]/20 to-[var(--primary)]"></div>
 

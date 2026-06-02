@@ -44,7 +44,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-[var(--primary)] min-h-screen px-20"
+      className="bg-[var(--primary)] w-full overflow-x-hidden min-h-screen px-20"
       style={{ paddingTop: "40px", paddingBottom: "60px" }}
     >
       <motion.div
@@ -152,7 +152,7 @@ export default function Services() {
         </div>
 
         <motion.div
-          className="rounded-xl border max-lg:mt-4"
+          className="rounded-xl border max-md:hidden max-lg:mt-4"
           style={{
             borderColor: "rgba(0, 194, 255, 0.35)",
             background:
@@ -193,8 +193,6 @@ export default function Services() {
                 style={{
                   marginBottom: "10px",
                   padding: "10px 12px",
-                  border: "1px solid rgba(0, 194, 255, 0.28)",
-                  background: "rgba(0, 0, 0, 0.25)",
                 }}
               >
                 <span className="font-medium" style={{ color: "white" }}>

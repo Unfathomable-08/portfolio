@@ -60,7 +60,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={containerRef}
-      className="min-h-screen bg-[var(--primary)] p-20 relative overflow-hidden"
+      className="min-h-screen w-full overflow-x-hidden bg-[var(--primary)] px-20 py-20! relative overflow-hidden"
     >
       <motion.h1
         className="text-2xl sm:text-3xl pb-3 mb-3 md:text-4xl font-bold text-white! text-center relative z-5"
@@ -147,7 +147,7 @@ export default function Experience() {
               </motion.div>
 
               <motion.div
-                className="rounded-xl p-4 w-full"
+                className="rounded-xl px-1! md:px-4! py-4! md:py-6! w-full"
                 style={{
                   background:
                     "linear-gradient(160deg, rgba(0,0,0,0.86), rgba(0,59,77,0.25) 70%, rgba(0,194,255,0.16))",
@@ -185,12 +185,10 @@ export default function Experience() {
                   {exp.achievements.map((achievement, idx) => (
                     <motion.li
                       key={idx}
-                      className="flex items-start gap-2 px-2 text-sm rounded"
+                      className="flex items-start gap-2 px-2! text-sm rounded"
                       style={{
-                        border: "1px solid rgba(0, 194, 255, 0.2)",
                         paddingTop: "8px",
                         paddingBottom: "8px",
-                        background: "rgba(0,0,0,0.24)",
                         color: "rgb(209, 213, 219)",
                       }}
                       initial={{ opacity: 0, x: -10 }}
