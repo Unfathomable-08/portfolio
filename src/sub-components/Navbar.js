@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { useState } from "react";
 import { useScreenSize } from "../app/ScreenContext";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,6 +13,10 @@ export default function Navbar() {
 
   const isMobile = screenSize === "xs" || screenSize === "sm";
 
+  const getPath = (item) => {
+    return item === "Home" ? "/" : `/${item.toLowerCase()}`;
+  }
+
   return (
     <div className="fixed w-full z-10">
       <div className="backdrop-blur bg-[var(--primary)]/60 border-b border-[var(--tertiary)] w-full rounded-2xl h-16 flex items-center justify-between px-20 z-30">
@@ -22,9 +27,9 @@ export default function Navbar() {
           <ul className="flex gap-x-6">
             {navItems.map((item) => (
               <li key={item} className="navbar-item cursor-pointer">
-                <a href={`#${item.toLowerCase()}`} className="hover:text-[var(--tertiary)] transition duration-300">
+                <Link href={getPath(item)} className="hover:text-[var(--tertiary)] transition duration-300">
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -57,12 +62,12 @@ export default function Navbar() {
                   whileTap={{ scale: 0.97 }}
                   className="hover:text-[var(--tertiary)] transition duration-300"
                 >
-                  <a
-                    href={`#${item.toLowerCase()}`}
+                  <Link
+                    href={getPath(item)}
                     onClick={() => setMenuOpen(false)} // Close on click
                   >
                     {item}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
