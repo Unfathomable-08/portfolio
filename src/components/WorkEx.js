@@ -60,7 +60,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={containerRef}
-      className="min-h-screen w-full overflow-x-hidden bg-[var(--primary)] px-20 py-20! relative overflow-hidden"
+      className="min-h-svh w-full overflow-x-hidden bg-[var(--primary)] px-20 py-20! relative overflow-hidden"
     >
       <motion.h1
         className="text-2xl sm:text-3xl pb-3 mb-3 md:text-4xl font-bold text-white! text-center relative z-5"
@@ -81,22 +81,6 @@ export default function Experience() {
           Journey through roles where I transformed ideas into production-grade digital products.
         </span>
       </motion.p>
-
-      <motion.div
-        className="absolute"
-        style={{
-          width: "360px",
-          height: "360px",
-          borderRadius: "999px",
-          right: "-160px",
-          top: "110px",
-          background: "radial-gradient(circle, rgba(0,194,255,0.22), rgba(0,194,255,0.02) 70%)",
-          filter: "blur(8px)",
-        }}
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 1 }}
-      />
 
       <div className="flex justify-center relative z-5">
         <motion.ul
@@ -131,12 +115,10 @@ export default function Experience() {
                 transition={{ delay: index * 0.2 + 0.4, duration: 0.5 }}
               >
                 <div
-                  className="relative rounded-full flex justify-center items-center"
+                  className="relative rounded-full flex border-[var(--secondary)]/50 border bg-[var(--primary)] justify-center items-center"
                   style={{
                     width: "52px",
                     height: "52px",
-                    border: "1px solid rgba(0, 194, 255, 0.45)",
-                    background: "rgba(0, 0, 0, 0.5)",
                     boxShadow: "0 0 25px rgba(0,194,255,0.2)",
                   }}
                 >
@@ -147,12 +129,9 @@ export default function Experience() {
               </motion.div>
 
               <motion.div
-                className="rounded-xl px-1! md:px-4! py-4! md:py-6! w-full"
+                className="rounded-xl bg-[var(--primary)] px-1! md:px-4! py-4! md:py-6! w-full"
                 style={{
-                  background:
-                    "linear-gradient(160deg, rgba(0,0,0,0.86), rgba(0,59,77,0.25) 70%, rgba(0,194,255,0.16))",
                   border: "1px solid rgba(0, 194, 255, 0.28)",
-                  boxShadow: "0 14px 34px rgba(0, 0, 0, 0.35)",
                 }}
                 whileHover={{ y: -4, scale: 1.01 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}

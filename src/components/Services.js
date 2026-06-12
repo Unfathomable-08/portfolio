@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-import { FaLaptop, FaMobile, FaRobot } from "react-icons/fa";
+import { FaLaptop, FaMobile } from "react-icons/fa";
 import { GiAutomaticSas } from "react-icons/gi";
+import { SiChromewebstore } from "react-icons/si";
 
 export default function Services() {
   const services = [
@@ -10,6 +10,14 @@ export default function Services() {
       title: "Enterprise-Grade Web Development",
       description:
         "High-performance, scalable websites built with modern technologies like React, Next.js, and robust backend architectures.",
+      icon: SiChromewebstore,
+      accent: "Build",
+      outcome: "Fast, stable, SEO-ready products",
+    },
+    {
+      title: "Desktop Software Development",
+      description:
+        "Development of fast, stable, and SEO-ready desktop software, across different platforms windows, macos, linux.",
       icon: FaLaptop,
       accent: "Build",
       outcome: "Fast, stable, SEO-ready products",
@@ -29,22 +37,13 @@ export default function Services() {
       icon: GiAutomaticSas,
       accent: "Automate",
       outcome: "Less manual effort, more scale",
-    },
-    {
-      title: "Applied AI & Machine Learning",
-      description:
-        "Practical AI solutions like recommendation systems, text analysis, and lightweight ML models tailored to real business use-cases.",
-      icon: FaRobot,
-      accent: "Optimize",
-      outcome: "Data-driven experiences that convert",
-    },
-    
+    }    
   ];
 
   return (
     <section
       id="services"
-      className="bg-[var(--primary)] w-full overflow-x-hidden min-h-screen px-20"
+      className="bg-[var(--primary)] w-full overflow-x-hidden min-h-svh px-20"
       style={{ paddingTop: "40px", paddingBottom: "60px" }}
     >
       <motion.div
@@ -75,13 +74,10 @@ export default function Services() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="rounded-xl border p-4"
+              className="rounded-xl border bg-[var(--primary)] p-4"
               style={{
                 borderColor: "rgba(0, 194, 255, 0.35)",
-                background:
-                  "linear-gradient(165deg, rgba(0,0,0,0.8) 0%, rgba(0,59,77,0.35) 55%, rgba(0,194,255,0.22) 100%)",
-                boxShadow: "0 14px 35px rgba(0, 0, 0, 0.35)",
-                minHeight: "280px",
+                minHeight: "240px",
               }}
               initial={{ opacity: 0, y: 30, scale: 0.96 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -122,18 +118,6 @@ export default function Services() {
               <p className="text-sm" style={{ color: "var(--tertiary)", lineHeight: "1.7" }}>
                 {service.description}
               </p>
-
-              <div
-                className="rounded"
-                style={{
-                  marginTop: "8px",
-                  padding: "10px 12px",
-                }}
-              >
-                <p className="text-sm" style={{ color: "white" }}>
-                  {service.outcome}
-                </p>
-              </div>
 
               <div style={{ marginTop: "16px" }}>
                 <Link

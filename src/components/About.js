@@ -20,7 +20,7 @@ export default function About() {
   return (
     <motion.div
       id="about"
-      className="min-h-screen bg-[var(--primary)] grid md:grid-cols-[1fr_1fr] items-center px-20 relative"
+      className="min-h-svh bg-[var(--primary)] grid md:grid-cols-[1fr_1fr] items-center px-20 relative"
     >
       <motion.div
         initial={{ opacity: 0, x: -40 }}
