@@ -11,7 +11,7 @@ export default function Services() {
       description:
         "High-performance, scalable websites built with modern technologies like React, Next.js, and robust backend architectures.",
       icon: SiChromewebstore,
-      accent: "Build",
+      accent: "WEB",
       outcome: "Fast, stable, SEO-ready products",
     },
     {
@@ -19,7 +19,7 @@ export default function Services() {
       description:
         "Development of fast, stable, and SEO-ready desktop software, across different platforms windows, macos, linux.",
       icon: FaLaptop,
-      accent: "Build",
+      accent: "DESKTOP",
       outcome: "Fast, stable, SEO-ready products",
     },
     {
@@ -27,15 +27,15 @@ export default function Services() {
       description:
         "Fast, app-like experiences with offline support, push notifications, and seamless performance on mobile and desktop.",
       icon: FaMobile,
-      accent: "Launch",
+      accent: "APP",
       outcome: "Installable experiences across devices",
     },
     {
-      title: "AI-Powered Automation",
+      title: "AI Agents",
       description:
-        "Smart automation solutions for workflows, data processing, and repetitive tasks using AI tools, APIs, and custom scripts.",
+        "Building smart agents that can automate tasks, process data, and handle repetitive work using AI tools, APIs, and custom scripts.",
       icon: GiAutomaticSas,
-      accent: "Automate",
+      accent: "AI",
       outcome: "Less manual effort, more scale",
     }    
   ];
@@ -43,7 +43,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-[var(--primary)] w-full overflow-x-hidden min-h-svh px-20"
+      className="bg-[var(--primary)] w-full min-h-svh px-20"
       style={{ paddingTop: "40px", paddingBottom: "60px" }}
     >
       <motion.div

@@ -32,7 +32,7 @@ export default function Home(){
     }, [pathname]);
 
     return (
-        <>
+        <main className="w-screen overflow-x-hidden">
             <Navbar />
             <Hero />
             <About />
@@ -41,6 +41,6 @@ export default function Home(){
             <Experience />
             <Services />
             <Contact />
-        </>
+        </main>
     )
 }

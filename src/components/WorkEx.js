@@ -60,7 +60,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={containerRef}
-      className="min-h-svh w-full overflow-x-hidden bg-[var(--primary)] px-20 py-20! relative overflow-hidden"
+      className="min-h-svh w-full bg-[var(--primary)] px-20 py-20! relative overflow-hidden"
     >
       <motion.h1
         className="text-2xl sm:text-3xl pb-3 mb-3 md:text-4xl font-bold text-white! text-center relative z-5"
