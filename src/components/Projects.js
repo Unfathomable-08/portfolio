@@ -119,8 +119,8 @@ export default function Projects() {
   const { screenSize } = useScreenSize()
 
   return (
-    <div id="projects" className="min-h-svh w-full bg-[var(--primary)] px-20">
-      <h1 className="sm:text-2xl text-xl md:text-3xl font-bold text-white py-15 transform max-md:translate-y-8 text-center">My Projects</h1>
+    <div id="projects" className="min-h-svh w-full bg-[var(--primary)] px-5! md:px-20!">
+      <h1 className="sm:text-2xl text-xl md:text-3xl font-bold text-white py-15! transform max-md:translate-y-8 text-center">My Projects</h1>
       <div className="grid gap-x-12 gap-y-8 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
         {projects.map((project, index) => (
           <motion.div
@@ -129,7 +129,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.5, delay: index * 0.07 }}
-            className="rounded-xl shadow-lg overflow-hidden bg-[#1e1e1e] grid sm:grid-cols-2 p-4 items-center sm:gap-4"
+            className="rounded-xl shadow-lg overflow-hidden bg-[#1e1e1e] grid sm:grid-cols-2 p-4! items-center sm:gap-4"
           >
             <Image
               src={project.img}
@@ -138,40 +138,42 @@ export default function Projects() {
               height={150}
               className="w-full aspect-video border border-white/60 object-cover rounded-lg max-md:scale-90"
             />
-            <div className="p-4 flex flex-col justify-between h-full">
+            <div className="p-4! flex flex-col justify-between h-full">
               <div>
-                <h2 className="sm:text-xl font-semibold text-white mb-3">{project.title}</h2>
-                <p className="text-sm text-gray-300 mb-3">{project.desc}</p>
-                <div className="flex flex-wrap gap-2 text-xs mb-3">
+                <h2 className="sm:text-xl font-semibold text-white mb-3!">{project.title}</h2>
+                <p className="text-sm text-gray-300 mb-3!">{project.desc}</p>
+                <div className="flex flex-wrap gap-2 text-xs mb-3!">
                   {project.tech.split(',').map((tech, idx) => (
                     <span
                       key={idx}
-                      className="bg-[var(--secondary)]/20 border p-btn border-[var(--secondary)] text-[var(--secondary)] rounded-full"
+                      className="bg-[var(--secondary)]/20 border py-[3px]! px-3! border-[var(--secondary)] text-[var(--secondary)] rounded-full"
                     >
                       {tech.trim()}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="flex gap-3 mt-3">
+              <div className="flex gap-3 mt-3! font-medium">
                 <a
-                  href={project.link && project.link !== "Not Available" ? project.link : "#"}
+                  href={project.link && project.link !== "Not Available" ? project.link : "/"}
+                  disabled={project.link === "Not Available"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-sm rounded-md ${project.link && project.link !== "Not Available"
-                      ? "max-sm:text-sm border p-btn border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
-                      : "max-sm:text-smborder p-btn border-gray-600 text-gray-500 cursor-not-allowed"
+                  className={`text-sm rounded-sm ${project.link && project.link !== "Not Available"
+                    ? "max-sm:text-sm border py-2! px-5! border-[var(--secondary)] text-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] transition"
+                    : "max-sm:text-smborder py-2! px-5! border-gray-600 text-gray-500 cursor-not-allowed"
                     }`}
                 >
                   {project.link && project.link !== "Not Available" ? "Live Link" : "Not Available"}
                 </a>
                 <a
-                  href={project.repo && project.repo !== "Not Available" ? project.repo : "#"}
+                  href={project.repo !== "Not Available" && project.repo}
+                  disabled={project.repo === "Not Available"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`px-3 py-1 text-sm rounded-md ${project.repo && project.repo !== "Not Available"
-                      ? "max-sm:text-sm border p-btn border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
-                      : "max-sm:text-sm border p-btn border-gray-600 text-gray-500 cursor-not-allowed"
+                  className={`px-3 py-1 text-sm rounded-sm ${project.repo !== "Not Available" 
+                    ? "max-sm:text-sm border py-2! px-5! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
+                    : "max-sm:text-sm border py-2! px-5! border-gray-600 text-gray-500 cursor-not-allowed"
                     }`}
                 >
                   {project.repo && project.repo !== "Not Available" ? "Repository" : "No Repository"}

@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/next"
 import { ScreenSizeProvider } from "./ScreenContext";
 import NeonTrail from "@/sub-components/NeonTrail";
 import "./globals.css";
-import "./missing.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

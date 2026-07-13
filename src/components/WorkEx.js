@@ -60,10 +60,10 @@ export default function Experience() {
     <section
       id="experience"
       ref={containerRef}
-      className="min-h-svh w-full bg-[var(--primary)] px-20 py-20! relative overflow-hidden"
+      className="min-h-svh w-full bg-[var(--primary)] px-5! md:px-20! py-20! relative overflow-hidden"
     >
       <motion.h1
-        className="text-2xl sm:text-3xl pb-3 mb-3 md:text-4xl font-bold text-white! text-center relative z-5"
+        className="text-2xl sm:text-3xl pb-3! mb-3! md:text-4xl font-bold text-white! text-center relative z-5"
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
@@ -72,12 +72,12 @@ export default function Experience() {
         Experience That Ships Results
       </motion.h1>
       <motion.p
-        className="text-[var(--tertiary)] flex mb-3 pb-3 justify-center text-center relative z-5"
+        className="text-[var(--tertiary)] flex mb-3! pb-3! justify-center text-center relative z-5"
         initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
-        <span className="max-w-md pb-3 mb-3">
+        <span className="max-w-md pb-3! mb-3!">
           Journey through roles where I transformed ideas into production-grade digital products.
         </span>
       </motion.p>
@@ -106,7 +106,7 @@ export default function Experience() {
             <motion.li
               key={index}
               variants={itemVariants}
-              className="relative flex mb-12 flex-col md:flex-row items-start gap-4 md:gap-8"
+              className="relative flex mb-12! flex-col md:flex-row items-start gap-4 md:gap-8"
             >
               <motion.div
                 className="flex flex-col items-center w-16 flex-shrink-0 md:w-16"
@@ -136,8 +136,8 @@ export default function Experience() {
                 whileHover={{ y: -4, scale: 1.01 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <div className="flex flex-col p-4 sm:flex-row justify-between items-start sm:items-center">
-                  <h2 className="text-xl pb-3 md:text-2xl font-bold text-white">
+                <div className="flex flex-col p-4! sm:flex-row justify-between items-start sm:items-center">
+                  <h2 className="text-xl pb-3! md:text-2xl font-bold text-white">
                     {exp.role}
                   </h2>
                   <span
@@ -152,19 +152,19 @@ export default function Experience() {
                   </span>
                 </div>
 
-                <h3 className="text-lg pb-3 px-2 font-semibold text-white">
+                <h3 className="text-lg pb-3! px-2! py-1! font-semibold text-white">
                   {exp.company}
                 </h3>
 
-                <p className="text-[var(--tertiary)] px-2 pb-3 leading-relaxed text-sm md:text-base">
+                <p className="text-[var(--tertiary)] px-2! py-1! pb-3! leading-relaxed text-sm md:text-base">
                   {exp.description}
                 </p>
 
-                <ul className="px-2" style={{ display: "grid", gap: "10px" }}>
+                <ul className="px-2! py-1!" style={{ display: "grid", gap: "10px" }}>
                   {exp.achievements.map((achievement, idx) => (
                     <motion.li
                       key={idx}
-                      className="flex items-start gap-2 px-2! text-sm rounded"
+                      className="flex items-start gap-2 px-2! py-1! text-sm rounded"
                       style={{
                         paddingTop: "8px",
                         paddingBottom: "8px",

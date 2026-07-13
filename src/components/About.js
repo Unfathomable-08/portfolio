@@ -20,7 +20,7 @@ export default function About() {
   return (
     <motion.div
       id="about"
-      className="min-h-svh bg-[var(--primary)] grid md:grid-cols-[1fr_1fr] items-center px-20 relative"
+      className="min-h-svh bg-[var(--primary)] grid md:grid-cols-[1fr_1fr] items-center px-5! md:px-20! relative"
     >
       <motion.div
         initial={{ opacity: 0, x: -40 }}
@@ -28,7 +28,7 @@ export default function About() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <h4 className="font-medium text-xl pb-3">Hi, I’m Muhammad,</h4>
+        <h4 className="font-medium text-xl pb-3!">Hi, I’m Muhammad,</h4>
         <p className="text-md max-lg:text-sm">
           A full-stack web and app developer focused on building intuitive,
           responsive web apps. I specialize in React and Next for dynamic UIs
@@ -44,7 +44,7 @@ export default function About() {
           collaborate on your next project!
         </p>
         <motion.button
-          className="bg-[var(--secondary)] hover:bg-[var(--hover)] rounded p-btn m-btn z-2 relative"
+          className="bg-[var(--secondary)] hover:bg-[var(--hover)] rounded py-[3px]! px-3! m-btn z-2 relative"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 100, delay: 1 }}

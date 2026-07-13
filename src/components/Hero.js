@@ -39,7 +39,7 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-5 text-center text-white max-w-4xl space-y-6 px-4">
         <motion.h1
-          className="text-3xl sm:text-5xl font-extrabold leading-tight pb-3 drop-shadow-[0_0_10px_var(--secondary)]"
+          className="text-3xl sm:text-5xl font-extrabold leading-tight pb-3! drop-shadow-[0_0_10px_var(--secondary)]"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -48,12 +48,12 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-md sm:text-xl text-[var(--tertiary)] pb-3 mb-3"
+          className="text-md sm:text-xl text-[var(--tertiary)] pb-3! mb-3!"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-         Fullstack Web Developer & Applied AI Developer 🚀
+          Fullstack Web Developer & Applied AI Developer 🚀
         </motion.p>
 
         <motion.div
@@ -65,7 +65,7 @@ export default function Hero() {
           {["React", "Next.js", "Node.js", "MongoDB", "Python"].map((skill, index) => (
             <span
               key={index}
-              className="bg-[var(--secondary)]/20 border border-[var(--secondary)] text-[var(--secondary)] p-btn rounded-full text-sm font-medium mb-3"
+              className="bg-[var(--secondary)]/20 border border-[var(--secondary)] text-[var(--secondary)] py-[3px]! px-3! rounded-full text-sm font-medium mb-3!"
             >
               {skill}
             </span>
@@ -74,7 +74,7 @@ export default function Hero() {
 
         <motion.a
           href="#projects"
-          className="inline-block mt-3 p-btn text-sm font-semibold text-white bg-[var(--secondary)] rounded-full shadow-md hover:bg-[var(--hover)] transition"
+          className="inline-block mt-6! py-2! px-6! text-sm font-semibold text-white bg-[var(--secondary)] rounded-full shadow-md hover:bg-[var(--hover)] transition"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.2, duration: 0.5 }}

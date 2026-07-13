@@ -52,7 +52,7 @@ export default function Contact() {
   };
 
   return (
-    <div id='contact' className="min-h-svh w-full bg-[var(--primary)] flex items-center justify-center px-20 py-20!">
+    <div id='contact' className="min-h-svh w-full bg-[var(--primary)] flex items-center justify-center px-5! md:px-20! py-20!">
       <div className="max-w-5xl w-full mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 items-center">
         {/* Contact Info */}
         <motion.div
@@ -66,14 +66,14 @@ export default function Contact() {
           }}
         >
           <motion.h1
-            className="text-2xl sm:text-3xl font-bold mb-3 text-center lg:text-left"
+            className="text-2xl sm:text-3xl font-bold mb-3! text-center lg:text-left"
             variants={fadeVariant}
             custom={0.2}
           >
             Get in <span className="text-[var(--secondary)]">Touch</span>
           </motion.h1>
           <motion.p
-            className="mb-3 pb-3 text-gray-300"
+            className="mb-3! pb-3! text-gray-300"
             variants={fadeVariant}
             custom={0.3}
           >
@@ -95,7 +95,7 @@ export default function Contact() {
             }}
           >
             <motion.div
-              className="flex items-center gap-3 mb-3 pb-1"
+              className="flex items-center gap-3 mb-3! pb-1!"
               variants={fadeVariant}
             >
               <i className="fas fa-envelope text-xl" />
@@ -107,7 +107,7 @@ export default function Contact() {
               </a>
             </motion.div>
             <motion.div
-              className="flex items-center gap-3 mb-3 pb-1"
+              className="flex items-center gap-3 mb-3! pb-1!"
               variants={fadeVariant}
             >
               <i className="fab fa-whatsapp text-2xl" />
@@ -121,7 +121,7 @@ export default function Contact() {
               </a>
             </motion.div>
             <motion.div
-              className="flex items-center gap-3 mb-3 pb-3"
+              className="flex items-center gap-3 mb-3! pb-3!"
               variants={fadeVariant}
             >
               <i className="fab fa-github text-xl" />
@@ -138,7 +138,7 @@ export default function Contact() {
 
           {/* Social Icons */}
           <motion.div
-            className="flex gap-4 mt-3"
+            className="flex gap-4 mt-3!"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
@@ -173,7 +173,7 @@ export default function Contact() {
 
         {/* Contact Form */}
         <motion.div
-          className="p-4 rounded-xl shadow-2xl bg-laptop"
+          className="p-4! rounded-xl shadow-2xl bg-laptop"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
@@ -195,7 +195,7 @@ export default function Contact() {
               onChange={handleChange}
               value={formData.name}
               placeholder="Your Name"
-              className="bg-primary border-b border-gray-500 w-full h-10 p-btn mb-3 focus:outline-none focus:border-[var(--secondary)]"
+              className="bg-primary border-b border-gray-500 w-full h-10 py-[3px]! px-3! mb-3! focus:outline-none focus:border-[var(--secondary)]"
               required
               variants={fadeVariant}
               custom={0.1}
@@ -206,7 +206,7 @@ export default function Contact() {
               onChange={handleChange}
               value={formData.email}
               placeholder="Your Email"
-              className="bg-primary border-b border-gray-500 w-full h-10 p-btn mb-3 focus:outline-none focus:border-[var(--secondary)]"
+              className="bg-primary border-b border-gray-500 w-full h-10 py-[3px]! px-3! mb-3! focus:outline-none focus:border-[var(--secondary)]"
               required
               variants={fadeVariant}
               custom={0.2}
@@ -216,14 +216,14 @@ export default function Contact() {
               onChange={handleChange}
               value={formData.message}
               placeholder="Your Message"
-              className="bg-primary border border-gray-500 w-full h-36 p-btn mb-3 focus:outline-none focus:border-[var(--secondary)] focus:rounded-xl transition ease-in-out"
+              className="bg-primary border border-gray-500 w-full h-36 py-[3px]! px-3! mb-3! focus:outline-none focus:border-[var(--secondary)] focus:rounded-xl transition ease-in-out"
               required
               variants={fadeVariant}
               custom={0.3}
             />
             <motion.button
               type="submit"
-              className="w-full text-sm p-btn-contact bg-[var(--secondary)] text-gray-900 font-bold rounded-lg hover:bg-[var(--hover)] transition-all duration-300 transform hover:scale-105"
+              className="w-full text-sm py-2.5! px-4! bg-[var(--secondary)] text-gray-900 font-bold rounded-lg hover:bg-[var(--hover)] transition-all duration-300 transform hover:scale-105"
               variants={fadeVariant}
               custom={0.4}
             >

@@ -37,13 +37,13 @@ export default function Services() {
       icon: GiAutomaticSas,
       accent: "AI",
       outcome: "Less manual effort, more scale",
-    }    
+    }
   ];
 
   return (
     <section
       id="services"
-      className="bg-[var(--primary)] w-full min-h-svh px-20"
+      className="bg-[var(--primary)] w-full min-h-svh px-5! md:px-20!"
       style={{ paddingTop: "40px", paddingBottom: "60px" }}
     >
       <motion.div
@@ -64,7 +64,7 @@ export default function Services() {
         >
           Services
         </p>
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white py-15">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white py-15!">
           Extraordinary solutions, built for real impact
         </h1>
       </motion.div>
@@ -74,7 +74,7 @@ export default function Services() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="rounded-xl border bg-[var(--primary)] p-4"
+              className="rounded-xl border bg-[var(--primary)] p-4!"
               style={{
                 borderColor: "rgba(0, 194, 255, 0.35)",
                 minHeight: "240px",
@@ -122,7 +122,7 @@ export default function Services() {
               <div style={{ marginTop: "16px" }}>
                 <Link
                   href="/contact"
-                  className="bg-[var(--secondary)] hover:bg-[var(--hover)] rounded font-medium p-btn-md"
+                  className="bg-[var(--secondary)] hover:bg-[var(--hover)] rounded font-medium py-1! p-6!"
                   style={{
                     border: "1px solid rgba(0, 194, 255, 0.45)",
                     display: "inline-block",
@@ -189,7 +189,7 @@ export default function Services() {
 
           <Link
             href="/contact"
-            className="bg-[var(--secondary)] hover:bg-[var(--hover)] text-white rounded p-btn-md font-medium"
+            className="bg-[var(--secondary)] hover:bg-[var(--hover)] text-white rounded py-1.5! px-6! font-medium"
             style={{ marginTop: "18px", display: "inline-block" }}
           >
             Start a Project

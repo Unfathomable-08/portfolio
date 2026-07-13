@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed w-full z-10">
-      <div className="backdrop-blur bg-[var(--primary)]/60 border-b border-[var(--tertiary)] w-full rounded-2xl h-16 flex items-center justify-between px-20 z-30">
+      <div className="backdrop-blur bg-[var(--primary)]/60 border-b border-[var(--tertiary)] w-full rounded-2xl h-16 flex items-center justify-between px-5! md:px-20! z-30">
         <h1 className="font-bold text-xl">Portfolio.</h1>
 
         {/* Desktop Menu */}
@@ -53,7 +53,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-20 left-4 right-4 bg-[var(--primary)]/90 backdrop-blur border border-[var(--tertiary)] rounded-2xl shadow-xl p-4 z-40"
+            className="absolute top-20 left-4 right-4 bg-[var(--primary)]/90 backdrop-blur border border-[var(--tertiary)] rounded-2xl shadow-xl p-4! z-40"
           >
             <ul className="flex flex-col gap-4 text-lg font-medium">
               {navItems.map((item) => (
