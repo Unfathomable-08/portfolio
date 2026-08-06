@@ -6,6 +6,8 @@ import Hero from "../(components)/Hero";
 import About from "../(components)/Info";
 import Mockup from "../(components)/Mockup";
 import FlowMap from "../(components)/FlowMap";
+import CaseStudyCTA from "../(components)/CaseStudyCTA";
+import Contact from "@/components/Contact";
 
 export default function CaseStudyPage() {
     const searchParams = useSearchParams();
@@ -20,6 +22,8 @@ export default function CaseStudyPage() {
                 <Mockup />
                 <FlowMap />
             </section>
+            <CaseStudyCTA />
+            <Contact />
         </main>
     );
 }
