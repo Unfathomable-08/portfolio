@@ -5,6 +5,7 @@ import Navbar from "@/sub-components/Navbar";
 import Hero from "../(components)/Hero";
 import About from "../(components)/Info";
 import Mockup from "../(components)/Mockup";
+import FlowMap from "../(components)/FlowMap";
 
 export default function CaseStudyPage() {
     const searchParams = useSearchParams();
@@ -17,6 +18,7 @@ export default function CaseStudyPage() {
             <section id="mockup" className="bg-[var(--primary)] py-20!">
                 <About />
                 <Mockup />
+                <FlowMap />
             </section>
         </main>
     );

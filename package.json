@@ -11,6 +11,7 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.2",
     "@vercel/analytics": "^1.6.1",
+    "@xyflow/react": "^12.11.2",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.12.1",
     "next": "16.0.10",
