@@ -14,14 +14,14 @@ export default function Hero() {
       {/* Floating Icons */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         {[
-          { src: "/react.png", top: "15%", left: "20%", duration: 9 },
-          { src: "/node.png", top: "30%", left: "60%", duration: 11 },
-          { src: "/python.png", top: "70%", left: "25%", duration: 10 },
-          { src: "/next.png", top: "50%", left: "40%", duration: 8 },
-          { src: "/socket.png", top: "15%", left: "75%", duration: 9 },
-          { src: "/redis.png", top: "80%", left: "60%", duration: 12 },
-          { src: "/express.png", top: "35%", left: "10%", duration: 10 },
-          { src: "/tailwind.png", top: "65%", left: "80%", duration: 11 },
+          { src: "/skills/react.png", top: "15%", left: "20%", duration: 9 },
+          { src: "/skills/node.png", top: "30%", left: "60%", duration: 11 },
+          { src: "/skills/python.png", top: "70%", left: "25%", duration: 10 },
+          { src: "/skills/next.png", top: "50%", left: "40%", duration: 8 },
+          { src: "/skills/socket.png", top: "15%", left: "75%", duration: 9 },
+          { src: "/skills/redis.png", top: "80%", left: "60%", duration: 12 },
+          { src: "/skills/express.png", top: "35%", left: "10%", duration: 10 },
+          { src: "/skills/tailwind.png", top: "65%", left: "80%", duration: 11 },
         ].map((item, i) => (
           <motion.img
             key={i}

@@ -1,21 +1,9 @@
 "use client";
 import Image from "next/image";
 import DotsBg from "../sub-components/Dots-bg.js";
-import { motion, useCycle } from "framer-motion";
-import { useEffect } from "react";
-import { useScreenSize } from "../app/ScreenContext";
+import { motion } from "framer-motion";
 
 export default function About() {
-  const [direction, cycleDirection] = useCycle(1, -1); // 1 for clockwise, -1 for counter-clockwise
-  const { screenSize } = useScreenSize();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      cycleDirection(); // Flip direction every 18s
-    }, 18000); // Match the duration
-
-    return () => clearInterval(interval);
-  }, [cycleDirection]);
 
   return (
     <motion.div

@@ -3,6 +3,7 @@
 import { useScreenSize } from "@/app/ScreenContext";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -10,7 +11,7 @@ const projects = [
     title: "Sable Build",
     desc: "A drag-and-drop website builder that lets users create apps visually and export production-ready frontend and backend code in preffered frameworks with preffered database. Includes AI assistance for code generation and suggestions.",
     tech: "20+ technologies, MERN, Python, Golang, etc",
-    img: "/sable.png",
+    img: "/project/sable.png",
     repo: "Not Available",
     link: "https://sablebuild.vercel.app"
   },
@@ -19,7 +20,7 @@ const projects = [
     title: "Ember & Oak",
     desc: "A full-stack restaurant platform with dynamic menu management, table reservations, event booking, and online ordering. Includes a complete admin system for managing operations in real time.",
     tech: "Next.js, Tailwind CSS, MongoDB, Stripe",
-    img: "/emberoak.png",
+    img: "/project/emberoak.png",
     repo: "Not Available",
     link: "https://emberoak-two.vercel.app"
   },
@@ -28,7 +29,7 @@ const projects = [
     title: "Awaza",
     desc: "A fully functional social media PWA built with Next.js, firebase and mongodb. It has features like live push notifications, real-time chat, follow system, and full post interactions. Built for a smooth, app-like experience across devices with modern scalable architecture.",
     tech: "Next.js, Firebase, MongoDB",
-    img: "/awaza.png",
+    img: "/project/awaza.png",
     repo: "https://github.com/Unfathomable-08/Awaza-web-app",
     link: "https://awaza-social.vercel.app"
   },
@@ -37,7 +38,7 @@ const projects = [
     title: "Fluentyx",
     desc: "An Arabic learning platform built with Next.js featuring leaderboard, lesson revision algorithm, AI tutor chatbot, translation marking system, and pytorch built CNN-based handwritten alphabet classification.",
     tech: "Next.js, PyTorch, LangChain, Hugging Face, Tailwind CSS",
-    img: "/fluentyx.JPG",
+    img: "/project/fluentyx.JPG",
     repo: "https://github.com/unfathomable-08/fluentyx",
     link: "https://fluentyx.vercel.app"
   },
@@ -46,7 +47,7 @@ const projects = [
     title: "Sparkio Store",
     desc: "Sparkio is a modern e-commerce platform with all essential features, a clean shopping experience, and an eye-catching UI. Includes a powerful admin dashboard and is fully responsive across devices.",
     tech: "Next.js, Tailwind CSS, MongoDB, MUI",
-    img: "/sparkio.webp",
+    img: "/project/sparkio.webp",
     repo: 'Not Available',
     link: 'https://sparkio.store'
   },
@@ -55,7 +56,7 @@ const projects = [
     title: "Glowfarm",
     desc: "GlowFarm showcases ethereal lighting products through jaw-dropping animations: theme switching, dynamic light effects, and interactive hover effects that feel alive. Developed with Next.js and Framer Motion.",
     tech: "Next.js, Tailwind CSS, Framer Motion",
-    img: "/glowfarm.png",
+    img: "/project/glowfarm.png",
     repo: 'Not Available',
     link: 'https://glowfarm.vercel.app'
   },
@@ -64,7 +65,7 @@ const projects = [
     title: "Rag Agent",
     desc: "A Retrieval-Augmented Generation (RAG) agent built using LangChain and Hugging Face models. It allows users to ask questions about a specific document or dataset, leveraging vector databases for efficient retrieval and LLMs for generating accurate responses.",
     tech: "Python, LangChain, Hugging Face, FAISS",
-    img: "/rag.png",
+    img: "/project/rag.png",
     repo: 'https://huggingface.co/spaces/TechDxon/Chatbot/tree/main',
     link: 'https://techdxon.com/ai'
   },
@@ -73,15 +74,13 @@ const projects = [
     title: "SkyTech Official Website",
     desc: "An official business website developed for a software house during my internship. This project involved building a multi-section React site with animations using AOS, styled manually with vanilla CSS, and integrated with EmailJS for contact form submissions. The site is fully responsive and production-ready.",
     tech: "React, Vanilla CSS, EmailJS, AOS",
-    img: "/skyteck.JPG",
+    img: "/project/skyteck.JPG",
     repo: 'Not Available',
     link: 'https://skytech.com.pk'
   },
 ];
 
 export default function Projects() {
-  const { screenSize } = useScreenSize()
-
   return (
     <div id="projects" className="min-h-svh w-full bg-[var(--primary)] px-5! md:px-20!">
       <h1 className="sm:text-2xl text-xl md:text-3xl font-bold text-white py-15! transform max-md:translate-y-8 text-center">My Projects</h1>
@@ -117,15 +116,15 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-              <div className="flex gap-3 mt-3! font-medium">
+              <div className="flex flex-wrap gap-2 mt-3! font-medium">
                 <a
                   href={project.link && project.link !== "Not Available" ? project.link : "/"}
                   disabled={project.link === "Not Available"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-sm rounded-sm ${project.link && project.link !== "Not Available"
-                    ? "max-sm:text-sm border py-2! px-5! border-[var(--secondary)] text-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] transition"
-                    : "max-sm:text-smborder py-2! px-5! border-gray-600 text-gray-500 cursor-not-allowed"
+                  className={`text-xs rounded-sm ${project.link && project.link !== "Not Available"
+                    ? "border py-1.5! px-3.5! border-[var(--secondary)] text-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] transition"
+                    : "border py-1.5! px-3.5! border-gray-600 text-gray-500 cursor-not-allowed"
                     }`}
                 >
                   {project.link && project.link !== "Not Available" ? "Live Link" : "Not Available"}
@@ -135,9 +134,9 @@ export default function Projects() {
                   disabled={project.repo === "Not Available"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`px-3 py-1 text-sm rounded-sm ${project.repo !== "Not Available" 
-                    ? "max-sm:text-sm border py-2! px-5! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
-                    : "max-sm:text-sm border py-2! px-5! border-gray-600 text-gray-500 cursor-not-allowed"
+                  className={`text-xs rounded-sm ${project.repo !== "Not Available" 
+                    ? "border py-1.5! px-3.5! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
+                    : "border py-1.5! px-3.5! border-gray-600 text-gray-500 cursor-not-allowed"
                     }`}
                 >
                   {project.repo && project.repo !== "Not Available" ? "Repository" : "No Repository"}
