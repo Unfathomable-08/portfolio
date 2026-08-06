@@ -28,7 +28,7 @@ export default function About() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <h4 className="font-medium text-xl pb-3!">Hi, I’m Muhammad,</h4>
+        <h4 className="font-medium text-2xl pb-4!">Hi, I’m Muhammad,</h4>
         <p className="text-md max-lg:text-sm">
           A full-stack web and app developer focused on building intuitive,
           responsive web apps. I specialize in React and Next for dynamic UIs
@@ -43,15 +43,17 @@ export default function About() {
           looking for someone who loves to solve complex problems, I’d love to
           collaborate on your next project!
         </p>
-        <motion.button
-          className="bg-[var(--secondary)] hover:bg-[var(--hover)] rounded py-[3px]! px-3! m-btn z-2 relative"
+        <motion.a
+          href="https://wa.me/923282279743"
+          target="_blank"
+          className="bg-[var(--secondary)] inline-block hover:bg-[var(--hover)] rounded py-1.5! px-5! mt-5! z-2 relative"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 100, delay: 1 }}
           viewport={{ once: false, amount: 0.3 }}
         >
           Connect Now
-        </motion.button>
+        </motion.a>
       </motion.div>
 
       <motion.div

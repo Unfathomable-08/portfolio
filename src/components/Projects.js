@@ -61,15 +61,6 @@ const projects = [
   },
   {
     id: 7,
-    title: "Nexus Ecommerce",
-    desc: "A modern e-commerce platform built with Next.js and Tailwind CSS, featuring a responsive design, product listings, cart functionality, and secure checkout. Designed for seamless user experience and optimized performance.",
-    tech: "Next.js, Tailwind CSS, MongoDB, Shadcn",
-    img: "/nexus.webp",
-    repo: 'Not Available',
-    link: 'https://nexus-ecommerce-nine.vercel.app'
-  },
-  {
-    id: 8,
     title: "Rag Agent",
     desc: "A Retrieval-Augmented Generation (RAG) agent built using LangChain and Hugging Face models. It allows users to ask questions about a specific document or dataset, leveraging vector databases for efficient retrieval and LLMs for generating accurate responses.",
     tech: "Python, LangChain, Hugging Face, FAISS",
@@ -78,40 +69,13 @@ const projects = [
     link: 'https://techdxon.com/ai'
   },
   {
-    id: 9,
-    title: "Voice Assistant",
-    desc: "An AI-powered voice assistant web application that leverages the Gemini API for natural language processing and LiveKit for real-time audio communication. Built with Next.js, it provides users with an interactive experience to perform tasks and get information through voice commands.",
-    tech: "Python, LiveKit, Gemini API, Next.js",
-    img: "/voice-agent.png",
-    repo: 'https://github.com/Unfathomable-08/calling-agent',
-    link: 'https://techdxon.com/voice-agent'
-  },
-  {
-    id: 10,
-    title: "TalkSky",
-    desc: "A real-time chat application developed using Next.js for the frontend, Tailwind CSS for styling, Firebase for real-time messaging, and MySQL for authentication and storing user data. It includes features like user login/signup, chat rooms, and responsive design for mobile and desktop.",
-    tech: "Next.js, Tailwind, Firebase, MySQL",
-    img: "/chat.JPG",
-    repo: 'https://github.com/Unfathomable-08/Chatapp-NextJS',
-    link: 'https://talksky.vercel.app'
-  },
-  {
-    id: 11,
+    id: 8,
     title: "SkyTech Official Website",
     desc: "An official business website developed for a software house during my internship. This project involved building a multi-section React site with animations using AOS, styled manually with vanilla CSS, and integrated with EmailJS for contact form submissions. The site is fully responsive and production-ready.",
     tech: "React, Vanilla CSS, EmailJS, AOS",
     img: "/skyteck.JPG",
     repo: 'Not Available',
     link: 'https://skytech.com.pk'
-  },
-  {
-    id: 12,
-    title: "Vizuflect",
-    desc: "The most simplest data visualization app built using React that lets users generate a variety of graph types including bar, pie, and line charts. It supports mathematical equations, and manual data entry. The app is styled with Tailwind CSS and uses Chart.js or similar libraries for rendering.",
-    tech: "React, Chart.js, Tailwind",
-    img: "/Visu.JPG",
-    repo: 'https://github.com/Unfathomable-08/Data-Visualization',
-    link: 'https://vizuflect.netlify.app/'
   },
 ];
 
