@@ -103,7 +103,7 @@ export default function FlowMap() {
                     ( 04 )
                 </div>
                 <h2 className="text-xl font-bold drop-shadow-[0_0_10px_var(--secondary)]">
-                    Learning flow
+                    Project Workflow
                 </h2>
                 <p className="max-w-xl text-sm leading-relaxed text-neutral-400">
                     Every route leads back to learning: start a lesson, reinforce
