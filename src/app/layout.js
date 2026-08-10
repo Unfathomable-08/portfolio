@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next"
 import { ScreenSizeProvider } from "./ScreenContext";
 import NeonTrail from "@/sub-components/NeonTrail";
+import { structuredData } from "@/lib/schema";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,20 +15,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Muhammad",
-  url: "https://dev-muhammad.vercel.app",
-  image: "https://dev-muhammad.vercel.app/og-square.png",
-  sameAs: [
-    "https://github.com/Unfathomable-08",
-    "https://x.com/unfathomable_08",
-    "https://instagram.com/unfathomable_08",
-    "https://linkedin.com/in/muhammad-abasi-6b6884350"
-  ]
-};
 
 export const metadata = {
   title: "Muhammad Portfolio | Fullstack Web & Applied AI Developer",
@@ -87,7 +74,7 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(personSchema),
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
           }}
         />
         {/* Google Search Console Verification */}

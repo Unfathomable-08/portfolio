@@ -160,8 +160,8 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`text-sm rounded-sm ${project.link && project.link !== "Not Available"
-                    ? "max-sm:text-sm border py-2! px-5! border-[var(--secondary)] text-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] transition"
-                    : "max-sm:text-smborder py-2! px-5! border-gray-600 text-gray-500 cursor-not-allowed"
+                    ? "max-sm:text-sm border py-2! px-3! border-[var(--secondary)] text-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] transition"
+                    : "max-sm:text-smborder py-2! px-3! border-gray-600 text-gray-500 cursor-not-allowed"
                     }`}
                 >
                   {project.link && project.link !== "Not Available" ? "Live Link" : "Not Available"}
@@ -172,8 +172,8 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`px-3 py-1 text-sm rounded-sm ${project.repo !== "Not Available" 
-                    ? "max-sm:text-sm border py-2! px-5! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
-                    : "max-sm:text-sm border py-2! px-5! border-gray-600 text-gray-500 cursor-not-allowed"
+                    ? "max-sm:text-sm border py-2! px-3! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
+                    : "max-sm:text-sm border py-2! px-3! border-gray-600 text-gray-500 cursor-not-allowed"
                     }`}
                 >
                   {project.repo && project.repo !== "Not Available" ? "Repository" : "No Repository"}
