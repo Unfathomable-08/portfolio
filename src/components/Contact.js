@@ -65,13 +65,13 @@ export default function Contact() {
             visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
           }}
         >
-          <motion.h1
+          <motion.h2
             className="text-2xl sm:text-3xl font-bold mb-3! text-center lg:text-left"
             variants={fadeVariant}
             custom={0.2}
           >
             Get in <span className="text-[var(--secondary)]">Touch</span>
-          </motion.h1>
+          </motion.h2>
           <motion.p
             className="mb-3! pb-3! text-gray-300"
             variants={fadeVariant}

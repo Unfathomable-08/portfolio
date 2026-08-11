@@ -64,9 +64,9 @@ export default function Services() {
         >
           Services
         </p>
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white py-15!">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white py-15!">
           Extraordinary solutions, built for real impact
-        </h1>
+        </h2>
       </motion.div>
 
       <div className="grid lg:grid-cols-[3fr_2fr] gap-8 md:items-start">

@@ -1,6 +1,5 @@
 "use client";
 
-import { useScreenSize } from "@/app/ScreenContext";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -116,11 +115,9 @@ const projects = [
 ];
 
 export default function Projects() {
-  const { screenSize } = useScreenSize()
-
   return (
     <div id="projects" className="min-h-svh w-full bg-[var(--primary)] px-5! md:px-20!">
-      <h1 className="sm:text-2xl text-xl md:text-3xl font-bold text-white py-15! transform max-md:translate-y-8 text-center">My Projects</h1>
+      <h2 className="sm:text-2xl text-xl md:text-3xl font-bold text-white py-15! transform max-md:translate-y-8 text-center">My Projects</h2>
       <div className="grid gap-x-12 gap-y-8 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
         {projects.map((project, index) => (
           <motion.div
