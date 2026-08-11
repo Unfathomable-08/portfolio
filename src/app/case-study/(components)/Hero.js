@@ -8,19 +8,29 @@ const reveal = {
     visible: { opacity: 1, y: 0 },
 };
 
-export default function Hero() {
+export default function Hero({ caseStudy }) {
+    const right = caseStudy?.right;
+
     return (
         <section
             id="home"
             className="relative flex min-h-svh lg:h-svh items-center overflow-hidden bg-[var(--primary)] px-3! pb-16! pt-28! sm:px-8! md:px-20! md:pt-32!"
         >
-            <div
-                lang="ar"
-                dir="rtl"
-                className="pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/20! md:text-white!"
-            >
-                طلاقة
-            </div>
+            {right && (
+                typeof right === "string" ? (
+                    <div className="pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/20! md:text-white!">
+                        {right}
+                    </div>
+                ) : (
+                    <div
+                        lang={right.lang}
+                        dir={right.dir}
+                        className={right.className}
+                    >
+                        {right.text}
+                    </div>
+                )
+            )}
 
             <div className="relative z-1 mx-auto grid w-full max-w-[1440px] items-center gap-10 sm:gap-12 lg:grid-cols-[1.05fr_.95fr] lg:gap-10">
                 <motion.div
@@ -44,7 +54,7 @@ export default function Hero() {
                         transition={{ duration: 0.65 }}
                         className="text-[clamp(3.5rem,10vw,8rem)] font-extrabold leading-[0.85] sm:leading-[0.76] tracking-[-0.075em] text-white"
                     >
-                        Fluent<span className="text-[var(--secondary)]">yx</span>
+                        {caseStudy.name}
                     </motion.h1>
 
                     <motion.div
@@ -53,12 +63,7 @@ export default function Hero() {
                         className="mt-4! max-w-xl pt-4! sm:pt-6!"
                     >
                         <p className="max-w-xl text-xs leading-6 text-neutral-400 sm:text-sm sm:leading-7 md:text-[15px]">
-                            An Arabic learning platform for complete beginners,
-                            designed to make lessons easier to understand and new
-                            vocabulary easier to remember. Learners can study in
-                            English, Urdu, or Hindi, practise through interactive
-                            exercises, and ask an AI tutor for help whenever they
-                            get stuck.
+                            {caseStudy.description}
                         </p>
                     </motion.div>
 
@@ -92,7 +97,7 @@ export default function Hero() {
                     <div className="absolute left-[6%] top-[22%] w-[42%] -rotate-6 overflow-hidden rounded-[1.25rem] sm:rounded-[1.6rem] border border-white/10 bg-[#090b0d] p-1.5! opacity-65 shadow-[0_30px_80px_rgba(0,0,0,.5)]">
                         <div className="relative aspect-[9/16] overflow-hidden rounded-[1rem] sm:rounded-[1.25rem]">
                             <Image
-                                src="/case-studies/fluentyx/exercise.png"
+                                src={caseStudy.images?.[0]}
                                 alt="Fluentyx vocabulary exercise"
                                 fill
                                 sizes="(min-width: 768px) 220px, 42vw"
@@ -104,7 +109,7 @@ export default function Hero() {
                     <div className="absolute right-[7%] top-[10%] w-[52%] rotate-3 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] border border-[var(--secondary)]/35 bg-[#090b0d] p-1.5! sm:p-2! shadow-[0_35px_100px_rgba(0,0,0,.65)]">
                         <div className="relative aspect-[9/16] overflow-hidden rounded-[1.15rem] sm:rounded-[1.5rem]">
                             <Image
-                                src="/case-studies/fluentyx/home.png"
+                                src={caseStudy.images?.[1]}
                                 alt="Fluentyx learning dashboard"
                                 fill
                                 priority

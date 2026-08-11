@@ -1,33 +1,6 @@
 import Image from "next/image";
 
-const screenshots = [
-    {
-        src: "/case-studies/fluentyx/home.png",
-        alt: "Fluentyx learning dashboard",
-        label: "Your next lesson",
-        note: "A focused home base that turns progress into a clear next step.",
-    },
-    {
-        src: "/case-studies/fluentyx/leaderboard.png",
-        alt: "Fluentyx weekly leaderboard",
-        label: "A reason to return",
-        note: "Weekly progress adds momentum without distracting from learning.",
-    },
-    {
-        src: "/case-studies/fluentyx/exercise.png",
-        alt: "Fluentyx vocabulary exercise",
-        label: "Practice by doing",
-        note: "Short active-recall exercises make new vocabulary stick.",
-    },
-    {
-        src: "/case-studies/fluentyx/ai.png",
-        alt: "Fluentyx AI tutor",
-        label: "Help in the moment",
-        note: "The AI tutor stays close when a learner needs an explanation.",
-    }
-];
-
-export default function Mockup() {
+export default function Mockup({ screenshots }) {
     return (
         <section className="px-3! sm:px-8! md:px-20!">
             <div className="grid gap-y-3 sm:gap-y-4 md:grid-cols-[100px_1fr_2fr]">
