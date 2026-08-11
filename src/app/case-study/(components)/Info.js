@@ -22,11 +22,11 @@ const Text = ({ text }) => {
 export default function Info() {
     return (
         <>
-            <div id="about" className="grid md:grid-cols-[100px_1fr_2fr] px-5! md:px-20! mb-20! relative">
-                <div className="text-[var(--secondary)]! tracking-tighter text-xl font-bold">( 01 )</div>
-                <div className="font-bold text-xl drop-shadow-[0_0_10px_var(--secondary)]">About Project</div>
+            <div id="about" className="grid gap-y-3 sm:gap-y-4 md:grid-cols-[100px_1fr_2fr] px-3! sm:px-8! md:px-20! mb-16! md:mb-20! relative">
+                <div className="text-[var(--secondary)]! tracking-tighter text-lg sm:text-xl font-bold">( 01 )</div>
+                <div className="font-bold text-lg sm:text-xl drop-shadow-[0_0_10px_var(--secondary)]">About Project</div>
                 <div>
-                    <div className="leading-relaxed">
+                    <div className="leading-relaxed text-xs sm:text-sm text-neutral-300">
                         <Text text="_Fluentyx_ is an Arabic learning platform that helps beginners learn Arabic through _English_ or _Urdu/Hindi_ . The platform is designed to take users from learning the Arabic alphabet to building vocabulary and improving reading skills through interactive lessons and practice exercises." />
                         <Text text="Instead of relying on passive reading, Fluentyx includes multiple exercise types that reinforce newly learned words through repetition and active recall, making it easier to remember vocabulary over time. For complete beginners, it offers a dedicated letters section where users can learn the Arabic alphabet, practice pronunciation, and improve handwriting using a _CNN-based_ handwritten character recognition model built with PyTorch that provides instant feedback on written letters." />
                         <Text text="The platform also includes an _AI_ _tutor_ that answers questions, explains concepts, and assists learners whenever they get stuck. To keep learning engaging, Fluentyx features a _weekly_ _leaderboard_ and progress tracking, encouraging users to stay consistent and compete with others while improving their Arabic skills." />
@@ -34,27 +34,27 @@ export default function Info() {
                 </div>
             </div>
 
-            <div id="features" className="grid md:grid-cols-[100px_1fr_2fr] px-5! md:px-20! mb-20! relative">
-                <div className="text-[var(--secondary)]! tracking-tighter text-xl font-bold">( 02 )</div>
-                <div className="font-bold text-xl drop-shadow-[0_0_10px_var(--secondary)]">Tech Stack & Features</div>
-                <div className="space-y-12!">
+            <div id="features" className="grid gap-y-3 sm:gap-y-4 md:grid-cols-[100px_1fr_2fr] px-3! sm:px-8! md:px-20! mb-16! md:mb-20! relative">
+                <div className="text-[var(--secondary)]! tracking-tighter text-lg sm:text-xl font-bold">( 02 )</div>
+                <div className="font-bold text-lg sm:text-xl drop-shadow-[0_0_10px_var(--secondary)]">Tech Stack & Features</div>
+                <div className="space-y-8! sm:space-y-12!">
                     <div>
-                        <h2 className="font-bold text-xl">Technology Stack</h2>
-                        <p className="text-sm my-4!">This project was built using React and Node.js. It uses MongoDB as the database and Express as the framework.</p>
+                        <h2 className="font-bold text-lg sm:text-xl">Technology Stack</h2>
+                        <p className="text-xs sm:text-sm my-3! sm:my-4! text-neutral-400">This project was built using React and Node.js. It uses MongoDB as the database and Express as the framework.</p>
                         <div className="py-4! max-w-md relative">
-                            <div className="absolute w-full h-px bg-[var(--secondary)] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
-                            <div className="flex justify-between relative z-1">
-                                <span className="bg-[var(--secondary)] rounded-full px-4! py-1!">React</span>
-                                <span className="bg-[var(--secondary)] rounded-full px-4! py-1!">Next.js</span>
-                                <span className="bg-[var(--secondary)] rounded-full px-4! py-1!">Node.js</span>
-                                <span className="bg-[var(--secondary)] rounded-full px-4! py-1!">MongoDB</span>
+                            <div className="absolute max-md:hidden w-full h-px bg-[var(--secondary)] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
+                            <div className="flex flex-wrap gap-2 sm:gap-0 justify-between relative z-1">
+                                <span className="bg-[var(--secondary)] text-[#071014] font-medium text-xs sm:text-sm rounded-full px-3! py-1! sm:px-4!">Next.js</span>
+                                <span className="bg-[var(--secondary)] text-[#071014] font-medium text-xs sm:text-sm rounded-full px-3! py-1! sm:px-4!">MongoDB</span>
+                                <span className="bg-[var(--secondary)] text-[#071014] font-medium text-xs sm:text-sm rounded-full px-3! py-1! sm:px-4!">Python</span>
+                                <span className="bg-[var(--secondary)] text-[#071014] font-medium text-xs sm:text-sm rounded-full px-3! py-1! sm:px-4!">PyTorch</span>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div className="mb-6!">
-                            <h2 className="font-bold text-xl">Key Features</h2>
-                            <p className="text-sm mt-2! leading-relaxed">
+                        <div className="mb-4! sm:mb-6!">
+                            <h2 className="font-bold text-lg sm:text-xl">Key Features</h2>
+                            <p className="text-xs sm:text-sm mt-2! leading-relaxed text-neutral-400">
                                 Core features built to support Arabic learning, revision, and practice.
                             </p>
                         </div>
@@ -72,13 +72,13 @@ export default function Info() {
                             ].map((feature, index) => (
                                 <div
                                     key={feature}
-                                    className="group flex items-center gap-4! py-3! transition-all duration-300 hover:pl-2!"
+                                    className="group flex items-center gap-3! sm:gap-4! py-3! transition-all duration-300 hover:pl-2!"
                                 >
-                                    <span className="text-xs font-bold text-[var(--secondary)] opacity-60">
+                                    <span className="text-[11px] sm:text-xs font-bold text-[var(--secondary)] opacity-60">
                                         {String(index + 1).padStart(2, "0")}
                                     </span>
 
-                                    <p className="flex-1 text-sm font-medium leading-relaxed">
+                                    <p className="flex-1 text-xs sm:text-sm font-medium leading-relaxed">
                                         {feature}
                                     </p>
 

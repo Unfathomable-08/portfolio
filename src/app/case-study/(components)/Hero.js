@@ -12,17 +12,17 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative flex md:h-svh items-center overflow-hidden bg-[var(--primary)] px-5! pb-16! pt-28! md:px-20! md:pt-32!"
+            className="relative flex min-h-svh lg:h-svh items-center overflow-hidden bg-[var(--primary)] px-3! pb-16! pt-28! sm:px-8! md:px-20! md:pt-32!"
         >
             <div
                 lang="ar"
                 dir="rtl"
-                className="pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/[0.025]"
+                className="pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/20! md:text-white!"
             >
                 طلاقة
             </div>
 
-            <div className="relative z-1 mx-auto grid w-full max-w-[1440px] items-center gap-16 lg:grid-cols-[1.05fr_.95fr] lg:gap-10">
+            <div className="relative z-1 mx-auto grid w-full max-w-[1440px] items-center gap-10 sm:gap-12 lg:grid-cols-[1.05fr_.95fr] lg:gap-10">
                 <motion.div
                     initial="hidden"
                     animate="visible"
@@ -42,7 +42,7 @@ export default function Hero() {
                     <motion.h1
                         variants={reveal}
                         transition={{ duration: 0.65 }}
-                        className="text-[clamp(4.5rem,9vw,8rem)] font-extrabold leading-[0.76] tracking-[-0.075em] text-white"
+                        className="text-[clamp(3.5rem,10vw,8rem)] font-extrabold leading-[0.85] sm:leading-[0.76] tracking-[-0.075em] text-white"
                     >
                         Fluent<span className="text-[var(--secondary)]">yx</span>
                     </motion.h1>
@@ -50,9 +50,9 @@ export default function Hero() {
                     <motion.div
                         variants={reveal}
                         transition={{ duration: 0.6 }}
-                        className="mt-4! max-w-xl pt-6!"
+                        className="mt-4! max-w-xl pt-4! sm:pt-6!"
                     >
-                        <p className="max-w-xl text-sm leading-7 text-neutral-400 md:text-[15px]">
+                        <p className="max-w-xl text-xs leading-6 text-neutral-400 sm:text-sm sm:leading-7 md:text-[15px]">
                             An Arabic learning platform for complete beginners,
                             designed to make lessons easier to understand and new
                             vocabulary easier to remember. Learners can study in
@@ -62,33 +62,35 @@ export default function Hero() {
                         </p>
                     </motion.div>
 
-                    <motion.a
-                        variants={reveal}
-                        transition={{ duration: 0.55 }}
-                        href="#about"
-                        className="mt-8! inline-flex rounded-full border border-transparent bg-[var(--secondary)] px-4! py-2! text-sm font-medium text-[#071014] transition-colors hover:border-[var(--secondary)] hover:bg-transparent hover:text-[var(--secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
-                    >
-                        Explore Case-Study
-                    </motion.a>
+                    <div className="mt-8! flex flex-wrap gap-3">
+                        <motion.a
+                            variants={reveal}
+                            transition={{ duration: 0.55 }}
+                            href="#about"
+                            className="inline-flex rounded-full border border-transparent bg-[var(--secondary)] px-4! py-2! text-xs sm:text-sm font-medium text-[#071014] transition-colors hover:border-[var(--secondary)] hover:bg-transparent hover:text-[var(--secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
+                        >
+                            Explore Case-Study
+                        </motion.a>
 
-                    <motion.a
-                        variants={reveal}
-                        transition={{ duration: 0.55 }}
-                        href="/portfolio"
-                        className="mt-8! ml-2! inline-flex rounded-full border hover:bg-[var(--secondary)] px-4! py-2! text-sm font-medium text-[#071014] transition-colors border-[var(--secondary)] bg-transparent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
-                    >
-                        View Portfolio
-                    </motion.a>
+                        <motion.a
+                            variants={reveal}
+                            transition={{ duration: 0.55 }}
+                            href="/portfolio"
+                            className="inline-flex rounded-full border hover:bg-[var(--secondary)] px-4! py-2! text-xs sm:text-sm font-medium text-[#071014] transition-colors border-[var(--secondary)] bg-transparent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
+                        >
+                            View Portfolio
+                        </motion.a>
+                    </div>
                 </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.94, y: 30 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative mx-auto h-[490px] w-full max-w-[520px] md:h-[610px]"
+                    className="relative mx-auto h-[360px] xs:h-[420px] sm:h-[490px] w-full max-w-[520px] md:h-[610px]"
                 >
-                    <div className="absolute left-[6%] top-[22%] w-[42%] -rotate-6 overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#090b0d] p-1.5! opacity-65 shadow-[0_30px_80px_rgba(0,0,0,.5)]">
-                        <div className="relative aspect-[9/16] overflow-hidden rounded-[1.25rem]">
+                    <div className="absolute left-[6%] top-[22%] w-[42%] -rotate-6 overflow-hidden rounded-[1.25rem] sm:rounded-[1.6rem] border border-white/10 bg-[#090b0d] p-1.5! opacity-65 shadow-[0_30px_80px_rgba(0,0,0,.5)]">
+                        <div className="relative aspect-[9/16] overflow-hidden rounded-[1rem] sm:rounded-[1.25rem]">
                             <Image
                                 src="/case-studies/fluentyx/exercise.png"
                                 alt="Fluentyx vocabulary exercise"
@@ -99,8 +101,8 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    <div className="absolute right-[7%] top-[10%] w-[52%] rotate-3 overflow-hidden rounded-[2rem] border border-[var(--secondary)]/35 bg-[#090b0d] p-2! shadow-[0_35px_100px_rgba(0,0,0,.65)]">
-                        <div className="relative aspect-[9/16] overflow-hidden rounded-[1.5rem]">
+                    <div className="absolute right-[7%] top-[10%] w-[52%] rotate-3 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] border border-[var(--secondary)]/35 bg-[#090b0d] p-1.5! sm:p-2! shadow-[0_35px_100px_rgba(0,0,0,.65)]">
+                        <div className="relative aspect-[9/16] overflow-hidden rounded-[1.15rem] sm:rounded-[1.5rem]">
                             <Image
                                 src="/case-studies/fluentyx/home.png"
                                 alt="Fluentyx learning dashboard"

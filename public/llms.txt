@@ -1,0 +1,56 @@
+# Muhammad - Fullstack Web & Applied AI Developer
+
+> Portfolio & Professional Information standard markdown format for Large Language Models (LLMs).
+> Site URL: https://dev-muhammad.vercel.app
+
+## About
+Muhammad (Unfathomable-08) is a Fullstack Web and Applied AI Developer specializing in modern interactive web applications, high-performance user interfaces, scalable backend systems, and custom AI agents/automations.
+
+- **Email**: mailto:muhammad124711@gmail.com
+- **Phone**: +92 328 2279743
+- **GitHub**: https://github.com/Unfathomable-08
+- **LinkedIn**: https://linkedin.com/in/muhammad-abasi-6b6884350
+- **Twitter/X**: https://x.com/unfathomable_08
+- **Instagram**: https://instagram.com/unfathomable_08
+
+---
+
+## Core Skills & Technologies
+- **Frontend**: React, Next.js, HTML5, CSS3, Tailwind CSS, Bootstrap, Alpine.js, Framer Motion
+- **Backend & APIs**: Node.js, Express.js, Python, Flask, PHP, Socket.io
+- **Databases**: MongoDB, MySQL, PostgreSQL, Redis
+- **AI & Data Science**: PyTorch, TensorFlow, Scikit-Learn, LangChain, LangGraph, NLP, Hugging Face
+- **DevOps & Tools**: Git, Docker, Firebase
+
+---
+
+## Services Offered
+- **Enterprise-Grade Web Development**: Scalable, high-performance web applications built using React, Next.js, and robust backend architectures.
+- **Desktop Software Development**: Cross-platform desktop software development targeting Windows, macOS, and Linux.
+- **Progressive Web Apps (PWAs)**: Fast, app-like web experiences featuring offline capabilities, push notifications, and responsive performance across mobile & desktop.
+- **AI Agents & Automations**: Custom AI agents designed to automate workflows, integrate vector search/RAG pipelines, and process data efficiently.
+
+---
+
+## Work Experience
+- **Fullstack Web Developer** at *Techno Rivals* (Sep 2025 – Present)
+  - Developed and delivered full-stack web applications using React, Node.js, and Python.
+  - Integrated custom AI chatbots and automated workflow agents for client platforms.
+- **Frontend Web Developer Intern** at *Skytech* (Jan 2025 – Mar 2025)
+  - Developed responsive frontend applications including SkyMart (React + Bootstrap) and SkyTech's official interactive website with EmailJS and animations.
+
+---
+
+## Key Projects
+- **Sable Build**: Drag-and-drop website builder with AI code generation. [Live](https://sablebuild.vercel.app)
+- **Ember & Oak**: Full-stack restaurant platform with real-time ordering and admin portal. [Live](https://emberoak-two.vercel.app)
+- **Awaza**: Social media Progressive Web App with live push notifications, real-time chat, and interactions. [Live](https://awaza-social.vercel.app) | [Repo](https://github.com/Unfathomable-08/Awaza-web-app)
+- **Fluentyx**: Arabic learning platform with AI chatbot tutor, translation scoring, and CNN handwritten classification. [Live](https://fluentyx.vercel.app) | [Repo](https://github.com/unfathomable-08/fluentyx)
+- **Sparkio Store**: E-commerce platform with clean UI and admin dashboard. [Live](https://sparkio.store)
+- **Glowfarm**: Interactive lighting store UI with dynamic theme and light effects. [Live](https://glowfarm.vercel.app)
+- **Nexus Ecommerce**: Modern responsive e-commerce application. [Live](https://nexus-ecommerce-nine.vercel.app)
+- **Rag Agent**: RAG agent powered by LangChain, Hugging Face models, and vector database retrieval. [Live](https://techdxon.com/ai) | [Repo](https://huggingface.co/spaces/TechDxon/Chatbot/tree/main)
+- **Voice Assistant**: Real-time voice interaction web app using Gemini API, LiveKit, and Next.js. [Live](https://techdxon.com/voice-agent) | [Repo](https://github.com/Unfathomable-08/calling-agent)
+- **TalkSky**: Real-time chat application with Firebase, Next.js, and MySQL. [Live](https://talksky.vercel.app) | [Repo](https://github.com/Unfathomable-08/Chatapp-NextJS)
+- **SkyTech Official Website**: Multi-section React website with animations and contact form integration. [Live](https://skytech.com.pk)
+- **Vizuflect**: Interactive data visualization web app supporting charts and math equations. [Live](https://vizuflect.netlify.app/) | [Repo](https://github.com/Unfathomable-08/Data-Visualization)

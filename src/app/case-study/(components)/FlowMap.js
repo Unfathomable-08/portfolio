@@ -38,51 +38,51 @@ const node = (id, label, x, y, accent = false) => ({
 });
 
 const nodes = [
-    node("start", "start", 25, 258),
-    node("onboarding", "onboarding", 125, 258),
-
-    node("learn", "learn", 300, 70, true),
-    node("alphabet", "alphabet", 455, 12),
-    node("vocabulary", "vocabulary", 455, 70),
-    node("lessons", "lessons", 455, 128),
-    node("lesson", "lesson player", 640, 70),
-    node("complete", "complete lesson", 835, 70),
-
-    node("revise", "revise", 300, 258, true),
-    node("new", "new words", 455, 200),
-    node("due", "due today", 455, 258),
-    node("saved", "saved words", 455, 316),
-    node("practice", "practice set", 640, 258),
-    node("exercise", "exercise", 835, 258),
-    node("translation", "translation", 985, 171),
-    node("choice", "multiple choice", 985, 229),
-    node("listening", "listening", 985, 287),
-    node("writing", "handwriting", 985, 345),
-
-    node("help", "get help", 300, 446, true),
-    node("ask", "ask question", 455, 388),
-    node("explain", "explain word", 455, 446),
-    node("check", "check writing", 455, 504),
-    node("response", "AI response", 640, 446),
-    node("retry", "try again", 835, 388),
-    node("continue", "continue lesson", 835, 446),
-    node("save", "save answer", 835, 504),
+    node("account", "Create Account", 20, 300),
+    node("language", "Select Language", 170, 300),
+    node("english", "English", 170, 210),
+    node("urdu", "Urdu Hindi", 170, 390),
+    node("home", "Home", 340, 300, true),
+    node("lesson", "Open Lesson", 450, 300),
+    node("cards", "Flash Cards", 600, 300),
+    node("practice", "Practice", 750, 300, true),
+    node("alphabet", "Alphabet", 900, 150, true),
+    node("words", "Words", 900, 450, true),
+    node("pickSound", "Pick Sound", 1100, 30),
+    node("pickLetter", "Pick Letter", 1100, 90),
+    node("listenLetter", "Listen Sound", 1100, 150),
+    node("drawLetter", "Draw Letter", 1100, 210),
+    node("findLetter", "Find Letter", 1100, 270),
+    node("pickMeaning", "Pick Meaning", 1100, 390),
+    node("pickArabic", "Pick Arabic", 1100, 450),
+    node("listenWord", "Listen Word", 1100, 510),
+    node("findWord", "Find Word", 1100, 570),
+    node("wordContext", "Word Context", 1100, 630),
+    node("complete", "Lesson Done", 820, 700, true),
 ];
 
 const connections = [
-    ["start", "onboarding"],
-    ["onboarding", "learn"], ["onboarding", "revise"], ["onboarding", "help"],
-    ["learn", "alphabet"], ["learn", "vocabulary"], ["learn", "lessons"],
-    ["alphabet", "lesson"], ["vocabulary", "lesson"], ["lessons", "lesson"],
-    ["lesson", "complete"],
-    ["revise", "new"], ["revise", "due"], ["revise", "saved"],
-    ["new", "practice"], ["due", "practice"], ["saved", "practice"],
-    ["practice", "exercise"],
-    ["exercise", "translation"], ["exercise", "choice"],
-    ["exercise", "listening"], ["exercise", "writing"],
-    ["help", "ask"], ["help", "explain"], ["help", "check"],
-    ["ask", "response"], ["explain", "response"], ["check", "response"],
-    ["response", "retry"], ["response", "continue"], ["response", "save"],
+    ["account", "language"],
+    ["language", "english"],
+    ["language", "urdu"],
+    ["language", "home"],
+    ["home", "lesson"],
+    ["lesson", "cards"],
+    ["cards", "practice"],
+    ["practice", "alphabet"],
+    ["practice", "words"],
+    ["alphabet", "pickSound"],
+    ["alphabet", "pickLetter"],
+    ["alphabet", "listenLetter"],
+    ["alphabet", "drawLetter"],
+    ["alphabet", "findLetter"],
+    ["words", "pickMeaning"],
+    ["words", "pickArabic"],
+    ["words", "listenWord"],
+    ["words", "findWord"],
+    ["words", "wordContext"],
+    ["alphabet", "complete"],
+    ["words", "complete"],
 ];
 
 const edges = connections.map(([source, target]) => ({
@@ -97,35 +97,35 @@ const edges = connections.map(([source, target]) => ({
 
 export default function FlowMap() {
     return (
-        <section className="mt-32!">
-            <div className="grid gap-y-8 px-5! md:grid-cols-[100px_1fr_2fr] md:px-20!">
-                <div className="text-xl font-bold tracking-tighter text-[var(--secondary)]!">
+        <section className="mt-20! sm:mt-28! md:mt-32!">
+            <div className="grid gap-y-3 sm:gap-y-4 px-3! sm:px-8! md:grid-cols-[100px_1fr_2fr] md:px-20!">
+                <div className="text-lg sm:text-xl font-bold tracking-tighter text-[var(--secondary)]!">
                     ( 04 )
                 </div>
-                <h2 className="text-xl font-bold drop-shadow-[0_0_10px_var(--secondary)]">
+                <h2 className="text-lg sm:text-xl font-bold drop-shadow-[0_0_10px_var(--secondary)]">
                     Project Workflow
                 </h2>
-                <p className="max-w-xl text-sm leading-relaxed text-neutral-400">
+                <p className="max-w-xl text-xs sm:text-sm leading-relaxed text-neutral-400">
                     Every route leads back to learning: start a lesson, reinforce
                     it through practice, or get help without leaving the flow.
                 </p>
             </div>
 
-            <div className="mt-8! h-[620px] overflow-hidden">
-                <div className="relative h-full w-full">
+            <div className="mt-6! sm:mt-8! w-full overflow-x-auto snap-x snap-mandatory lg:overflow-visible">
+                <div className="h-[620px] min-w-[1200px] lg:min-w-full relative">
                     <ReactFlow
                         nodes={nodes}
                         edges={edges}
                         nodeTypes={nodeTypes}
                         fitView
-                        fitViewOptions={{ padding: 0.08, minZoom: 0.72, maxZoom: 1 }}
+                        fitViewOptions={{ padding: 0.08, minZoom: 0.6, maxZoom: 1 }}
                         nodesDraggable={false}
                         nodesConnectable={false}
                         elementsSelectable={false}
                         zoomOnScroll={false}
                         zoomOnPinch={false}
                         zoomOnDoubleClick={false}
-                        panOnDrag={false}
+                        panOnDrag={true}
                         preventScrolling={false}
                         proOptions={{ hideAttribution: true }}
                     />

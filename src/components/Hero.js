@@ -47,14 +47,14 @@ export default function Hero() {
           Hi, I'm <span className="text-[var(--secondary)] animate-pulse">Muhammad</span>
         </motion.h1>
 
-        <motion.p
+        <motion.h2
           className="text-md sm:text-xl text-[var(--tertiary)] pb-3! mb-3!"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
           Fullstack Web Developer & Applied AI Developer 🚀
-        </motion.p>
+        </motion.h2>
 
         <motion.div
           className="flex justify-center gap-4 flex-wrap"

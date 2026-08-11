@@ -62,7 +62,7 @@ export default function Experience() {
       ref={containerRef}
       className="min-h-svh w-full bg-[var(--primary)] px-5! md:px-20! py-20! relative overflow-hidden"
     >
-      <motion.h1
+      <motion.h2
         className="text-2xl sm:text-3xl pb-3! mb-3! md:text-4xl font-bold text-white! text-center relative z-5"
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -70,7 +70,7 @@ export default function Experience() {
         style={{ marginTop: "16px" }}
       >
         Experience That Ships Results
-      </motion.h1>
+      </motion.h2>
       <motion.p
         className="text-[var(--tertiary)] flex mb-3! pb-3! justify-center text-center relative z-5"
         initial={{ opacity: 0, y: 10 }}
