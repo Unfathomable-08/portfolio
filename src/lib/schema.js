@@ -1,4 +1,97 @@
-const siteUrl = "https://dev-muhammad.vercel.app";
+export const siteUrl = "https://dev-muhammad.vercel.app";
+
+export const projects = [
+  {
+    slug: "sablebuild",
+    name: "Sable Build",
+    seoTitle: "Sable Build | Visual Builder With Multi-Stack Export",
+    description: "An in-progress visual website and application builder with multi-stack code export.",
+    image: "/case-studies/sable/home.png",
+    liveUrl: "https://sablebuild.vercel.app",
+    keywords: ["Next.js", "Zustand", "MongoDB", "Visual website builder", "Code export"],
+  },
+  {
+    slug: "emberoak",
+    name: "Ember Oak",
+    seoTitle: "Ember Oak | Modern Restaurant Operations & Ordering",
+    description: "A restaurant management demo with ordering, reservations, catering, reviews, and admin tools.",
+    image: "/case-studies/emberoak/home.png",
+    liveUrl: "https://emberoak-two.vercel.app",
+    keywords: ["Next.js", "MongoDB", "Stripe", "Restaurant management"],
+  },
+  {
+    slug: "awaza",
+    name: "Awaza",
+    seoTitle: "Awaza | Real-Time Social PWA for Messaging & Sharing",
+    description: "A social media progressive web application with real-time chat, notifications, and social interactions.",
+    image: "/case-studies/awaza/home.png",
+    liveUrl: "https://awaza-social.vercel.app",
+    keywords: ["Next.js", "Firebase", "MongoDB", "Progressive web application"],
+  },
+  {
+    slug: "fluentyx",
+    name: "Fluentyx",
+    seoTitle: "Fluentyx | AI Arabic Learning, Practice & Revision",
+    description: "An Arabic learning platform with interactive exercises, revision tools, an AI tutor, and handwriting classification.",
+    image: "/case-studies/fluentyx/home.png",
+    liveUrl: "https://fluentyx.vercel.app",
+    keywords: ["Next.js", "PyTorch", "LangChain", "Arabic learning", "Artificial intelligence"],
+  },
+  {
+    slug: "sparkio",
+    name: "Sparkio",
+    seoTitle: "Sparkio | Ecommerce With Fuzzy Search & Order Tracking",
+    description: "A full ecommerce store with fuzzy search, advanced filters, cart, orders, tracking, and customer accounts.",
+    image: "/case-studies/sparkio/home.png",
+    liveUrl: "https://sparkio.store",
+    keywords: ["Next.js", "MongoDB", "Nodemailer", "Ecommerce", "Fuzzy search"],
+  },
+  {
+    slug: "glowfarm",
+    name: "GlowFarm",
+    seoTitle: "GlowFarm | Cinematic Lighting Website Built With Motion",
+    description: "An animation-focused concept website for a fictional lighting brand.",
+    image: "/case-studies/glowfarm/hero.png",
+    liveUrl: "https://glowfarm.vercel.app",
+    keywords: ["Next.js", "Framer Motion", "Tailwind CSS", "Web animation"],
+  },
+  {
+    slug: "rag",
+    name: "RAG Agent",
+    seoTitle: "RAG Agent | Grounded AI Answers With LangChain & FAISS",
+    description: "A retrieval-augmented generation assistant that answers questions using indexed knowledge and relevant context.",
+    image: "/case-studies/rag-agent/rag-agent.png",
+    liveUrl: "https://techdxon.com/ai",
+    keywords: ["Python", "LangChain", "Hugging Face", "FAISS", "Retrieval-augmented generation"],
+  },
+  {
+    slug: "skytech",
+    name: "SkyTech Official Website",
+    seoTitle: "SkyTech | Responsive Software Agency Website Experience",
+    description: "A responsive company website presenting software services, packages, careers, and contact options.",
+    image: "/case-studies/skytech/home.png",
+    liveUrl: "https://skytech.com.pk",
+    keywords: ["React", "Vanilla CSS", "EmailJS", "AOS", "Business website"],
+  },
+];
+
+export const createProjectSchema = (project) => ({
+  "@type": ["Project", "SoftwareApplication"],
+  "@id": `${siteUrl}/case-study/${project.slug}#project`,
+  name: project.name,
+  description: project.description,
+  url: `${siteUrl}/case-study/${project.slug}`,
+  mainEntityOfPage: `${siteUrl}/case-study/${project.slug}#webpage`,
+  image: `${siteUrl}${project.image}`,
+  sameAs: project.liveUrl,
+  applicationCategory: "WebApplication",
+  operatingSystem: "Web",
+  author: { "@id": `${siteUrl}/#person` },
+  creator: { "@id": `${siteUrl}/#person` },
+  founder: { "@id": `${siteUrl}/#person` },
+  keywords: project.keywords.join(", "),
+  inLanguage: "en",
+});
 
 export const structuredData = {
   "@context": "https://schema.org",
@@ -154,5 +247,19 @@ export const structuredData = {
         },
       ],
     },
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/projects#project-list`,
+      url: `${siteUrl}/projects`,
+      name: "Featured development projects",
+      description: "Full-stack applications, AI tools, ecommerce platforms, and animated web experiences created by Muhammad.",
+      numberOfItems: projects.length,
+      itemListElement: projects.map((project, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: { "@id": `${siteUrl}/case-study/${project.slug}#project` },
+      })),
+    },
+    ...projects.map(createProjectSchema),
   ],
 };

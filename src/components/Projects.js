@@ -8,6 +8,7 @@ const projects = [
   {
     id: 1,
     title: "Sable Build",
+    caseStudy: "sablebuild",
     desc: "A drag-and-drop website builder that lets users create apps visually and export production-ready frontend and backend code in preffered frameworks with preffered database. Includes AI assistance for code generation and suggestions.",
     tech: "20+ technologies, MERN, Python, Golang, etc",
     img: "/project/sable.png",
@@ -17,6 +18,7 @@ const projects = [
   {
     id: 2,
     title: "Ember & Oak",
+    caseStudy: "emberoak",
     desc: "A full-stack restaurant platform with dynamic menu management, table reservations, event booking, and online ordering. Includes a complete admin system for managing operations in real time.",
     tech: "Next.js, Tailwind CSS, MongoDB, Stripe",
     img: "/project/emberoak.png",
@@ -26,6 +28,7 @@ const projects = [
   {
     id: 3,
     title: "Awaza",
+    caseStudy: "awaza",
     desc: "A fully functional social media PWA built with Next.js, firebase and mongodb. It has features like live push notifications, real-time chat, follow system, and full post interactions. Built for a smooth, app-like experience across devices with modern scalable architecture.",
     tech: "Next.js, Firebase, MongoDB",
     img: "/project/awaza.png",
@@ -35,6 +38,7 @@ const projects = [
   {
     id: 4,
     title: "Fluentyx",
+    caseStudy: "fluentyx",
     desc: "An Arabic learning platform built with Next.js featuring leaderboard, lesson revision algorithm, AI tutor chatbot, translation marking system, and pytorch built CNN-based handwritten alphabet classification.",
     tech: "Next.js, PyTorch, LangChain, Hugging Face, Tailwind CSS",
     img: "/project/fluentyx.JPG",
@@ -44,6 +48,7 @@ const projects = [
   {
     id: 5,
     title: "Sparkio Store",
+    caseStudy: "sparkio",
     desc: "Sparkio is a modern e-commerce platform with all essential features, a clean shopping experience, and an eye-catching UI. Includes a powerful admin dashboard and is fully responsive across devices.",
     tech: "Next.js, Tailwind CSS, MongoDB, MUI",
     img: "/project/sparkio.webp",
@@ -53,6 +58,7 @@ const projects = [
   {
     id: 6,
     title: "Glowfarm",
+    caseStudy: "glowfarm",
     desc: "GlowFarm showcases ethereal lighting products through jaw-dropping animations: theme switching, dynamic light effects, and interactive hover effects that feel alive. Developed with Next.js and Framer Motion.",
     tech: "Next.js, Tailwind CSS, Framer Motion",
     img: "/project/glowfarm.png",
@@ -62,6 +68,7 @@ const projects = [
   {
     id: 7,
     title: "Rag Agent",
+    caseStudy: "rag",
     desc: "A Retrieval-Augmented Generation (RAG) agent built using LangChain and Hugging Face models. It allows users to ask questions about a specific document or dataset, leveraging vector databases for efficient retrieval and LLMs for generating accurate responses.",
     tech: "Python, LangChain, Hugging Face, FAISS",
     img: "/project/rag.png",
@@ -71,6 +78,7 @@ const projects = [
   {
     id: 8,
     title: "SkyTech Official Website",
+    caseStudy: "skytech",
     desc: "An official business website developed for a software house during my internship. This project involved building a multi-section React site with animations using AOS, styled manually with vanilla CSS, and integrated with EmailJS for contact form submissions. The site is fully responsive and production-ready.",
     tech: "React, Vanilla CSS, EmailJS, AOS",
     img: "/project/skyteck.JPG",
@@ -93,14 +101,20 @@ export default function Projects() {
             transition={{ duration: 0.5, delay: index * 0.07 }}
             className="rounded-xl shadow-lg overflow-hidden bg-[#1e1e1e] grid sm:grid-cols-2 p-4! items-center sm:gap-4"
           >
-            <Image
-              src={project.img}
-              alt={project.title}
-              width={400}
-              height={150}
-              className="w-full aspect-video border border-white/60 object-cover rounded-lg max-md:scale-90"
-            />
-            <div className="p-4! flex flex-col justify-between h-full">
+            <Link
+              href={`/case-study/${project.caseStudy}`}
+              aria-label={`View ${project.title} case study`}
+              className="block z-10 cursor-pointer rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
+            >
+              <Image
+                src={project.img}
+                alt={project.title}
+                width={400}
+                height={150}
+                className="w-full cursor-pointer aspect-video border border-white/60 object-cover rounded-lg max-md:scale-90"
+              />
+            </Link>
+            <div className="p-4! z-10 flex flex-col justify-between h-full">
               <div>
                 <h2 className="sm:text-xl font-semibold text-white mb-3!">{project.title}</h2>
                 <p className="text-sm text-gray-300 mb-3!">{project.desc}</p>
@@ -116,29 +130,22 @@ export default function Projects() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 mt-3! font-medium">
+                <Link
+                  href={`/case-study/${project.caseStudy}`}
+                  className="max-sm:text-sm border py-1.5! px-3! text-sm rounded-sm border-[var(--secondary)] text-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] hover:text-[#071014] transition"
+                >
+                  Case Study
+                </Link>
                 <a
                   href={project.link && project.link !== "Not Available" ? project.link : "/"}
-                  disabled={project.link === "Not Available"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`text-sm rounded-sm ${project.link && project.link !== "Not Available"
-                    ? "max-sm:text-sm border py-1.5! px-3! border-[var(--secondary)] text-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] transition"
-                    : "max-sm:text-smborder py-1.5! px-3! border-gray-600 text-gray-500 cursor-not-allowed"
-                    }`}
-                >
-                  {project.link && project.link !== "Not Available" ? "Live Link" : "Not Available"}
-                </a>
-                <a
-                  href={project.repo !== "Not Available" && project.repo}
-                  disabled={project.repo === "Not Available"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`px-3 py-1 text-sm rounded-sm ${project.repo !== "Not Available" 
                     ? "max-sm:text-sm border py-1.5! px-3! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
                     : "max-sm:text-sm border py-1.5! px-3! border-gray-600 text-gray-500 cursor-not-allowed"
                     }`}
                 >
-                  {project.repo && project.repo !== "Not Available" ? "Repository" : "No Repository"}
+                  {project.link && project.link !== "Not Available" ? "Live Demo" : "Not Available"}
                 </a>
               </div>
             </div>
