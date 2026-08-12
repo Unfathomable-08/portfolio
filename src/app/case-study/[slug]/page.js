@@ -20,7 +20,7 @@ export default function CaseStudyPage() {
     return (
         <main className="w-screen overflow-x-hidden">
             <Navbar />
-            <Hero caseStudy={caseStudy.hero} />
+            <Hero caseStudy={caseStudy.hero} device={caseStudy.device} />
             <section id="mockup" className="bg-[var(--primary)] py-20!">
                 <About caseStudy={caseStudy.about} />
                 <Mockup device={caseStudy.device} screenshots={caseStudy.screenshots} />

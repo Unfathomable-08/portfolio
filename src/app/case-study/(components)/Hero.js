@@ -8,8 +8,9 @@ const reveal = {
     visible: { opacity: 1, y: 0 },
 };
 
-export default function Hero({ caseStudy }) {
+export default function Hero({ caseStudy, device }) {
     const right = caseStudy?.right;
+    const isLaptop = device === "laptop";
 
     return (
         <section
@@ -92,10 +93,13 @@ export default function Hero({ caseStudy }) {
                     initial={{ opacity: 0, scale: 0.94, y: 30 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative mx-auto h-[360px] xs:h-[420px] sm:h-[490px] w-full max-w-[520px] md:h-[610px]"
+                    className={`relative mx-auto w-full max-w-[520px] ${isLaptop
+                        ? "h-[260px] xs:h-[310px] sm:h-[390px] md:h-[470px]"
+                        : "h-[360px] xs:h-[420px] sm:h-[490px] md:h-[610px]"
+                        }`}
                 >
-                    <div className="absolute left-[6%] top-[22%] w-[42%] -rotate-6 overflow-hidden rounded-[1.25rem] sm:rounded-[1.6rem] border border-white/10 bg-[#090b0d] p-1.5! opacity-65 shadow-[0_30px_80px_rgba(0,0,0,.5)]">
-                        <div className="relative aspect-[9/16] overflow-hidden rounded-[1rem] sm:rounded-[1.25rem]">
+                    <div className={`absolute left-[6%] -rotate-6 overflow-hidden border border-white/10 bg-[#090b0d] p-1.5! opacity-65 shadow-[0_30px_80px_rgba(0,0,0,.5)] ${isLaptop ? "top-[38%] w-[66%] rounded-lg" : "top-[22%] w-[42%] rounded-[1.25rem] sm:rounded-[1.6rem]"}`}>
+                        <div className={`relative overflow-hidden ${isLaptop ? "aspect-video rounded-md" : "aspect-[9/16] rounded-[1rem] sm:rounded-[1.25rem]"}`}>
                             <Image
                                 src={caseStudy.images?.[0]}
                                 alt="Fluentyx vocabulary exercise"
@@ -106,8 +110,8 @@ export default function Hero({ caseStudy }) {
                         </div>
                     </div>
 
-                    <div className="absolute right-[7%] top-[10%] w-[52%] rotate-3 overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] border border-[var(--secondary)]/35 bg-[#090b0d] p-1.5! sm:p-2! shadow-[0_35px_100px_rgba(0,0,0,.65)]">
-                        <div className="relative aspect-[9/16] overflow-hidden rounded-[1.15rem] sm:rounded-[1.5rem]">
+                    <div className={`absolute right-[7%] top-[10%] rotate-3 overflow-hidden bg-[#090b0d] p-1.5! sm:p-2! shadow-[0_35px_100px_rgba(0,0,0,.65)] ${isLaptop ? "w-[76%] rounded-lg" : "w-[52%] rounded-[1.5rem] sm:rounded-[2rem]"}`}>
+                        <div className={`relative overflow-hidden ${isLaptop ? "aspect-video rounded-md" : "aspect-[9/16] rounded-[1.15rem] sm:rounded-[1.5rem]"}`}>
                             <Image
                                 src={caseStudy.images?.[1]}
                                 alt="Fluentyx learning dashboard"

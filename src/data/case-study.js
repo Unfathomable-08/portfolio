@@ -198,7 +198,7 @@ export const caseStudies = {
         ]
     },
     
-    sparkio: {
+    emberoak: {
         device: "laptop",
         hero: {
             // right: {
@@ -210,7 +210,7 @@ export const caseStudies = {
 
             name: "Awaza",
             description: "A professional social media Progressive Web App (PWA) designed for seamless real-time interactions, post sharing, messaging, and push notifications. Built with modern web architecture to deliver a mobile-like experience.",
-            images: ["/case-studies/awaza/home.png", "/case-studies/awaza/welcome.jpeg"],
+            images: ["/case-studies/emberoak/menu.png", "/case-studies/emberoak/home.png"],
         },
         about: {
             text: [
