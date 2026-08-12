@@ -53,7 +53,7 @@ export default function Hero({ caseStudy, device }) {
                     <motion.h1
                         variants={reveal}
                         transition={{ duration: 0.65 }}
-                        className="text-[clamp(3.5rem,10vw,8rem)] font-extrabold leading-[0.85] sm:leading-[0.76] tracking-[-0.075em] text-white"
+                        className="text-[clamp(3.5rem,9vw,6.5rem)] font-extrabold leading-[0.85] sm:leading-[0.76] tracking-[-0.075em] text-white"
                     >
                         {caseStudy.name}
                     </motion.h1>
