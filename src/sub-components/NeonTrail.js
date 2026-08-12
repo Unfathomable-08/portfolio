@@ -1,8 +1,15 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { useScreenSize } from '@/app/ScreenContext';
 
 export default function NeonTrail() {
+    const { screenSize } = useScreenSize();
+    
+    if (screenSize !== "md" && screenSize !== "lg" && screenSize !== "xl") {
+        return null;
+    }
+
     // canvas ref to store canvas element
     const canvasRef = useRef(null);
 
