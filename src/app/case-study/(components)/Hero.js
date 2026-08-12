@@ -75,16 +75,17 @@ export default function Hero({ caseStudy, device }) {
                             href="#about"
                             className="inline-flex rounded-full border border-transparent bg-[var(--secondary)] px-4! py-2! text-xs sm:text-sm font-medium text-[#071014] transition-colors hover:border-[var(--secondary)] hover:bg-transparent hover:text-[var(--secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
                         >
-                            Explore Case-Study
+                            Explore Portfolio
                         </motion.a>
 
                         <motion.a
                             variants={reveal}
                             transition={{ duration: 0.55 }}
-                            href="/portfolio"
+                            href={caseStudy.live}
+                            target="_blank"
                             className="inline-flex rounded-full border hover:bg-[var(--secondary)] px-4! py-2! text-xs sm:text-sm font-medium text-[#071014] transition-colors border-[var(--secondary)] bg-transparent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
                         >
-                            View Portfolio
+                            Live Demo
                         </motion.a>
                     </div>
                 </motion.div>

@@ -17,10 +17,10 @@ export const caseStudies = {
                 text: "طلاقة",
                 className: "pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/20! md:text-white!"
             },
-            
             name: "Fluentyx",
             description: "An Arabic learning platform for complete beginners, designed to make lessons easier to understand and new vocabulary easier to remember. Learners can study in English, Urdu, or Hindi, practise through interactive exercises, and ask an AI tutor for help whenever they get stuck.",
             images: ["/case-studies/fluentyx/exercise.png", "/case-studies/fluentyx/home.png"],
+            live: "https://fluentyx.vercel.app/",
         },
         about: {
             text: [
@@ -119,10 +119,10 @@ export const caseStudies = {
                 text: "آوازہ",
                 className: "pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/20! md:text-white!"
             },
-            
             name: "Awaza",
             description: "A professional social media Progressive Web App (PWA) designed for seamless real-time interactions, post sharing, messaging, and push notifications. Built with modern web architecture to deliver a mobile-like experience.",
             images: ["/case-studies/awaza/home.png", "/case-studies/awaza/welcome.jpeg"],
+            live: "https://awaza-social.vercel.app/",
         },
         about: {
             text: [
@@ -204,6 +204,7 @@ export const caseStudies = {
             name: "Ember Oak",
             description: "A polished restaurant management demo that brings online ordering, table reservations, menu management, and day-to-day admin tasks into one modern experience. Built to demonstrate an advanced restaurant UI and a complete customer-to-admin workflow.",
             images: ["/case-studies/emberoak/menu.png", "/case-studies/emberoak/home.png"],
+            live: "https://emberoak-two.vercel.app/",
         },
         about: {
             text: [
@@ -321,6 +322,7 @@ export const caseStudies = {
             name: "Sable Build",
             description: "An in-progress website-building platform designed as a more flexible alternative to WordPress, Shopify, and Wix. Its defining feature is complete code export in the user's preferred language, framework, and database stack.",
             images: ["/case-studies/sable/builder.png", "/case-studies/sable/home.png"],
+            live: "https://sablebuild.vercel.app/",
         },
         about: {
             text: [
@@ -436,6 +438,7 @@ export const caseStudies = {
             name: "Sparkio",
             description: "A professional, full-featured ecommerce store built around fast product discovery and a complete shopping journey. Customers can search, filter, purchase, track orders, and manage their account through a polished mobile-first experience.",
             images: ["/case-studies/sparkio/shop.png", "/case-studies/sparkio/home.png"],
+            live: "https://sparkio.store/",
         },
         about: {
             text: [
@@ -517,6 +520,223 @@ export const caseStudies = {
             ["account", "orders"],
             ["account", "settings"],
             ["orders", "tracking"],
+        ]
+    },
+
+    skytech: {
+        device: "laptop",
+        hero: {
+            name: "SkyTech",
+            description: "The official company website for Skytech Dynamics, presenting its software and digital services through a clear, responsive business experience with direct paths to packages, careers, and enquiries.",
+            images: ["/case-studies/skytech/services.png", "/case-studies/skytech/home.png"],
+            live: "https://skytech.com.pk/",
+        },
+        about: {
+            text: [
+                "_SkyTech_ is a responsive company website developed during my internship for a software house and digital agency based in Karachi.",
+                "The website introduces the company, explains its services, presents project packages, lists career opportunities, and gives potential clients a straightforward way to request a quote or send an enquiry."
+            ],
+            stack: "The website is built with React and custom Vanilla CSS. AOS provides scroll-based animations, while EmailJS handles contact form submissions without requiring a separate email backend.",
+            tech: ["React", "Vanilla CSS", "EmailJS", "AOS"],
+            features: [
+                "Responsive company website for desktop, tablet, and mobile screens",
+                "Clear presentation of software, marketing, design, video, and media services",
+                "Dedicated company profile and service pages",
+                "Structured service packages with clear pricing and deliverables",
+                "Career page for open roles and general applications",
+                "Contact and quote forms integrated through EmailJS",
+                "Smooth scroll-based animations powered by AOS"
+            ],
+        },
+        screenshots: [
+            {
+                src: "/case-studies/skytech/home.png",
+                alt: "Skytech Dynamics company homepage",
+                label: "Company Home",
+                note: "Introduces the agency, its core services, business value, and primary enquiry actions.",
+            },
+            {
+                src: "/case-studies/skytech/about.png",
+                alt: "Skytech Dynamics about page",
+                label: "About SkyTech",
+                note: "Presents the company background, working approach, team strengths, and client support values.",
+            },
+            {
+                src: "/case-studies/skytech/services.png",
+                alt: "Skytech Dynamics services page",
+                label: "Services",
+                note: "Organizes software development, marketing, design, video editing, and media services.",
+            },
+            {
+                src: "/case-studies/skytech/packages.png",
+                alt: "Skytech Dynamics website packages page",
+                label: "Service Packages",
+                note: "Compares starter, professional, and enterprise website packages and deliverables.",
+            },
+            {
+                src: "/case-studies/skytech/career.png",
+                alt: "Skytech Dynamics careers page",
+                label: "Careers",
+                note: "Lists current openings and provides a path for general job applications.",
+            },
+            {
+                src: "/case-studies/skytech/contact.png",
+                alt: "Skytech Dynamics contact page",
+                label: "Contact",
+                note: "Collects client enquiries through a simple form alongside direct company contact details.",
+            },
+        ],
+        workflowNote: "Visitors can learn about the company, explore its services and packages, view career opportunities, or contact the team for a tailored quote.",
+        nodes: [
+            node("home", "Home", 20, 250, true),
+            node("about", "About", 220, 70),
+            node("services", "Services", 220, 180, true),
+            node("packages", "Packages", 220, 290),
+            node("career", "Careers", 220, 400),
+            node("serviceDetails", "Service Details", 450, 180),
+            node("quote", "Request a Quote", 680, 180, true),
+            node("contact", "Contact Form", 680, 330, true),
+            node("email", "EmailJS Submission", 900, 250),
+        ],
+        connections: [
+            ["home", "about"],
+            ["home", "services"],
+            ["home", "packages"],
+            ["home", "career"],
+            ["services", "serviceDetails"],
+            ["serviceDetails", "quote"],
+            ["packages", "quote"],
+            ["home", "contact"],
+            ["quote", "email"],
+            ["contact", "email"],
+        ]
+    },
+
+    glowfarm: {
+        device: "laptop",
+        hero: {
+            name: "GlowFarm",
+            description: "A concept lighting website built as an animation-focused demo. The experience uses cinematic transitions, responsive motion, glowing product scenes, and theme controls to turn a simple landing page into an atmospheric visual journey.",
+            images: ["/case-studies/glowfarm/collection.png", "/case-studies/glowfarm/hero.png"],
+            live: "https://glowfarm.vercel.app/",
+        },
+        about: {
+            text: [
+                "_GlowFarm_ is a demo website for a fictional lighting brand, created primarily to explore advanced web animation and visual storytelling.",
+                "Rather than behaving like a conventional store, the page guides visitors through changing light, depth, movement, and product compositions. Its strongest feature is the highly animated opening sequence and the way each section flows into the next."
+            ],
+            stack: "GlowFarm is built with Next.js and Tailwind CSS, with Framer Motion powering the page transitions, scroll-based movement, interactive effects, and animated lighting experience.",
+            tech: ["Next.js", "Framer Motion", "Tailwind", "Responsive"],
+            features: [
+                "Cinematic animated hero with a staged lighting scene",
+                "Scroll-driven transitions between visual sections",
+                "Dynamic glow, shadow, and ambient lighting effects",
+                "Animated product collection presentation",
+                "Interactive hover and movement effects",
+                "Light and dark theme switching",
+                "Responsive animation behavior across screen sizes"
+            ],
+        },
+        screenshots: [
+            {
+                src: "/case-studies/glowfarm/hero.png",
+                alt: "GlowFarm animated lighting hero section",
+                label: "Animated Hero",
+                note: "Opens with a cinematic lamp scene, focused typography, and carefully staged light and shadow.",
+            },
+            {
+                src: "/case-studies/glowfarm/collection.png",
+                alt: "GlowFarm animated lighting product collection",
+                label: "Product Collection",
+                note: "A visual grid presents the lighting range through the site's alternate light theme.",
+            },
+            {
+                src: "/case-studies/glowfarm/about.png",
+                alt: "GlowFarm animated about page",
+                label: "About GlowFarm",
+                note: "An atmospheric brand page uses glowing fixtures, layered shadows, and animated storytelling.",
+            },
+        ],
+        workflowNote: "Visitors move from the animated opening into the brand story and lighting collection, with dedicated About and Contact pages extending the same atmospheric visual experience.",
+        nodes: [
+            node("hero", "Animated Hero", 20, 250, true),
+            node("transition", "Scroll Transition", 180, 250),
+            node("story", "Brand Story", 400, 150, true),
+            node("collection", "Light Collection", 600, 150, true),
+            node("about", "About Page", 800, 180),
+            node("contact", "Contact Page", 960, 250, true),
+            node("theme", "Theme Switch", 400, 390),
+        ],
+        connections: [
+            ["hero", "transition"],
+            ["transition", "story"],
+            ["story", "collection"],
+            ["collection", "about"],
+            ["about", "contact"],
+            ["theme", "story"],
+            ["theme", "collection"],
+        ]
+    },
+
+    rag: {
+        device: "laptop",
+        hero: {
+            name: "RAG Agent",
+            description: "A focused AI assistant that uses retrieval-augmented generation to answer questions from a defined knowledge source. It retrieves relevant context before generating a response, helping produce answers that are more specific and grounded.",
+            images: ["/case-studies/rag-agent/techdxon-home.png", "/case-studies/rag-agent/rag-agent.png"],
+            live: "https://techdxon.com/ai",
+        },
+        about: {
+            text: [
+                "_RAG_ _Agent_ is a simple question-answering assistant built to demonstrate retrieval-augmented generation inside the TechDxon AI experience.",
+                "Instead of relying only on a language model's general knowledge, the agent searches an indexed knowledge base for relevant information and uses that context to generate its response."
+            ],
+            stack: "The agent uses Python and LangChain to manage the retrieval pipeline, Hugging Face models for language processing, and FAISS for efficient similarity search across indexed content.",
+            tech: ["Python", "LangChain", "Hugging Face", "FAISS"],
+            features: [
+                "Question answering from a defined knowledge source",
+                "Retrieval-augmented generation for grounded responses",
+                "FAISS vector similarity search for relevant context",
+                "Simple conversational chat interface",
+                "Hugging Face model integration",
+                "Related voice-based AI interaction demo"
+            ],
+        },
+        screenshots: [
+            {
+                src: "/case-studies/rag-agent/rag-agent.png",
+                alt: "TechDxon retrieval-augmented generation chat agent",
+                label: "RAG Chat Agent",
+                note: "A focused chat interface for asking questions grounded in TechDxon knowledge.",
+            },
+            {
+                src: "/case-studies/rag-agent/techdxon-home.png",
+                alt: "TechDxon digital innovation studio homepage",
+                label: "TechDxon Ecosystem",
+                note: "The company experience that connects web, mobile, design, and AI products under one studio.",
+            },
+            {
+                src: "/case-studies/rag-agent/voice-agent.png",
+                alt: "TechDxon voice conversation agent",
+                label: "Voice Agent",
+                note: "A related AI interface that starts a spoken conversation through one clear action.",
+            },
+        ],
+        workflowNote: "A user submits a question, the system searches the indexed knowledge base for relevant context, and the language model uses that context to produce a grounded response.",
+        nodes: [
+            node("question", "User Question", 520, 0, true),
+            node("embed", "Query Embedding", 520, 100),
+            node("search", "FAISS Search", 520, 200, true),
+            node("context", "Relevant Context", 520, 300),
+            node("model", "Language Model", 520, 400, true),
+            node("answer", "Grounded Answer", 520, 500, true),
+        ],
+        connections: [
+            ["question", "embed"],
+            ["embed", "search"],
+            ["search", "context"],
+            ["context", "model"],
+            ["model", "answer"],
         ]
     },
 }
