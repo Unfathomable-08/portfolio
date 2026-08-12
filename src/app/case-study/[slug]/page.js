@@ -23,8 +23,8 @@ export default function CaseStudyPage() {
             <Hero caseStudy={caseStudy.hero} />
             <section id="mockup" className="bg-[var(--primary)] py-20!">
                 <About caseStudy={caseStudy.about} />
-                <Mockup screenshots={caseStudy.screenshots} />
-                <FlowMap nodes={caseStudy.nodes} connections={caseStudy.connections} />
+                <Mockup device={caseStudy.device} screenshots={caseStudy.screenshots} />
+                <FlowMap note={caseStudy.workflowNote} nodes={caseStudy.nodes} connections={caseStudy.connections} />
             </section>
             <CaseStudyCTA />
             <Contact />

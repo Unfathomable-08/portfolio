@@ -27,7 +27,7 @@ function PillNode({ data }) {
 
 const nodeTypes = { pill: PillNode };
 
-export default function FlowMap({ nodes, connections }) {
+export default function FlowMap({ note, nodes, connections }) {
     const edges = connections.map(([source, target]) => ({
         id: `${source}-${target}`,
         source,
@@ -48,8 +48,7 @@ export default function FlowMap({ nodes, connections }) {
                     Project Workflow
                 </h2>
                 <p className="max-w-xl text-xs sm:text-sm leading-relaxed text-neutral-400">
-                    Every route leads back to learning: start a lesson, reinforce
-                    it through practice, or get help without leaving the flow.
+                    {note}
                 </p>
             </div>
 

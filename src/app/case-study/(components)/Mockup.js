@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Mockup({ screenshots }) {
+export default function Mockup({ screenshots, device }) {
     return (
         <section className="px-3! sm:px-8! md:px-20!">
             <div className="grid gap-y-3 sm:gap-y-4 md:grid-cols-[100px_1fr_2fr]">
