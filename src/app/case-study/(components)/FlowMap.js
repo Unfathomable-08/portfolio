@@ -53,7 +53,7 @@ export default function FlowMap({ note, nodes, connections }) {
             </div>
 
             <div className="mt-6! sm:mt-8! w-full overflow-x-auto snap-x snap-mandatory lg:overflow-visible">
-                <div className="h-[620px] min-w-[1200px] lg:min-w-full relative">
+                <div className="h-[450px] md:h-[620px] min-w-[1200px] lg:min-w-full relative">
                     <ReactFlow
                         nodes={nodes}
                         edges={edges}
