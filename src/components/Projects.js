@@ -118,6 +118,17 @@ const projects = [
     link: null,
     apk: "https://github.com/Unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
   },
+  {
+    id: 11,
+    category: ["AI Agents"],
+    title: "TeBre",
+    caseStudy: "tebre",
+    desc: "An AI-assisted Electron workspace for ebook agencies to manage books, edit and polish manuscripts, create outlines and content, generate covers, and export KDP-ready files.",
+    tech: "React, Electron, Node.js, SQLite, Multi-provider AI",
+    img: "/case-studies/tebre/manuscript.png",
+    link: null,
+    apk: null
+  },
 ];
 
 export default function Projects() {

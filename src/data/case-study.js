@@ -267,6 +267,104 @@ export const caseStudies = {
         ]
     },
 
+    tebre: {
+        device: "laptop",
+        hero: {
+            name: "TeBre",
+            description: "An AI-assisted desktop production workspace built for ebook agencies. It brings multi-book management, manuscript editing, outlining, content generation, cover creation, and KDP-ready exports into one focused application.",
+            images: ["/case-studies/tebre/manuscript.png", "/case-studies/tebre/dashboard.png"],
+        },
+        about: {
+            text: [
+                "_TeBre_ was designed for ebook agencies that deliver services such as content writing, proofreading, editing, book design, and publishing preparation. Its purpose is to reduce the time needed to move a book from an early manuscript to a delivery-ready file.",
+                "The software remains useful without AI: teams can create and manage multiple books, organize chapters and outlines, write in a full rich-text manuscript editor, search content, add images, and export finished work. Users can optionally add their own _OpenAI_ , _Gemini_ , or _Claude_ API key; at least one provider key is required only when they want to use the AI tools.",
+                "AI is integrated directly into the production workflow. A complete chapter or selected passage can be polished in place, outlines can be written manually or generated, the writing assistant can create and revise content in different styles, and _GPT_ _Image_ _2_ can generate book covers. The finished manuscript can then be prepared and exported for Amazon KDP as DOCX, PDF, or EPUB."
+            ],
+            stack: "TeBre uses React for the desktop interface, Electron and Node.js for the native application layer and file workflows, and SQLite for local book and manuscript data. User-provided OpenAI, Gemini, or Claude credentials unlock provider-dependent AI writing and polishing, while GPT Image 2 powers cover generation.",
+            tech: ["React", "Electron", "Node.js", "SQLite", "OpenAI", "Gemini", "Claude"],
+            features: [
+                "Desktop software with no account or sign-up requirement",
+                "Multi-book dashboard with search and publication-status filters",
+                "Create and manage separate book projects",
+                "Chapter-based manuscript editor with headings, bold, italic, lists, images, and advanced search",
+                "AI polishing for a complete manuscript, a chapter, or selected text",
+                "Manual outline creation and AI-generated book outlines",
+                "AI writing assistant for generating, adding, and revising content",
+                "Multiple writing styles and target-chapter selection",
+                "User-supplied OpenAI, Gemini, or Claude API keys",
+                "Core editing and management features remain available without an API key",
+                "GPT Image 2 book-cover generation and active-cover selection",
+                "KDP print options including trim size and margins",
+                "KDP-ready export to DOCX, PDF, and EPUB"
+            ],
+        },
+        screenshots: [
+            {
+                src: "/case-studies/tebre/dashboard.png",
+                alt: "TeBre multi-book ebook agency dashboard",
+                label: "Book Dashboard",
+                note: "Create, search, filter, and manage multiple ebook projects and their production status.",
+            },
+            {
+                src: "/case-studies/tebre/manuscript.png",
+                alt: "TeBre chapter-based rich manuscript editor",
+                label: "Manuscript Editor",
+                note: "Write and format chapters, search the manuscript, add media, or polish a chapter or selected passage with AI.",
+            },
+            {
+                src: "/case-studies/tebre/outlines.png",
+                alt: "TeBre manual and AI-generated book outline workspace",
+                label: "Book Outlines",
+                note: "Build and reorder chapters manually or generate a complete starting outline with AI.",
+            },
+            {
+                src: "/case-studies/tebre/ai.png",
+                alt: "TeBre AI content writing assistant",
+                label: "AI Writing Assistant",
+                note: "Generate content from instructions, choose a writing style, and send the result to a target chapter.",
+            },
+            {
+                src: "/case-studies/tebre/covers.png",
+                alt: "TeBre GPT Image 2 ebook cover generator",
+                label: "Cover Generation",
+                note: "Create cover options with GPT Image 2 and choose the active artwork for the book.",
+            },
+            {
+                src: "/case-studies/tebre/export.png",
+                alt: "TeBre Amazon KDP export options for DOCX PDF and EPUB",
+                label: "KDP Export",
+                note: "Set print dimensions and margins, then export the finished book as DOCX, PDF, or EPUB.",
+            }
+        ],
+        workflowNote: "An agency creates a book, develops its outline and chapters, writes and edits the manuscript with optional provider-powered AI, generates and selects a cover, then applies KDP print settings and exports a delivery-ready DOCX, PDF, or EPUB file.",
+        nodes: [
+            node("install", "Install TeBre", 20, 250, true),
+            node("dashboard", "Book Dashboard", 180, 250, true),
+            node("book", "Create / Open Book", 380, 250, true),
+            node("editor", "Manuscript Editor", 590, 40, true),
+            node("outline", "Outline", 590, 140),
+            node("assistant", "AI Writing", 590, 240, true),
+            node("covers", "Cover Generator", 590, 340),
+            node("settings", "Provider API Keys", 380, 460),
+            node("polish", "Polish All / Selection", 810, 40),
+            node("generateOutline", "Generate Outline", 810, 140),
+            node("providers", "OpenAI / Gemini / Claude", 590, 460, true),
+            node("image", "GPT Image 2", 810, 340),
+            node("export", "KDP Export", 1030, 220, true),
+            node("formats", "DOCX / PDF / EPUB", 1230, 220, true),
+        ],
+        connections: [
+            ["install", "dashboard"], ["dashboard", "book"], ["book", "editor"],
+            ["book", "outline"], ["book", "assistant"], ["book", "covers"],
+            ["settings", "providers"], ["providers", "polish"],
+            ["providers", "generateOutline"], ["providers", "assistant"],
+            ["providers", "image"], ["editor", "polish"],
+            ["outline", "generateOutline"], ["covers", "image"],
+            ["editor", "export"], ["outline", "export"], ["image", "export"],
+            ["export", "formats"],
+        ]
+    },
+
     awaza: {
         device: "mobile",
         hero: {

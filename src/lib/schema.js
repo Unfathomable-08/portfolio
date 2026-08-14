@@ -58,6 +58,16 @@ export const projects = [
     operatingSystem: "Android, iOS",
   },
   {
+    slug: "tebre",
+    name: "TeBre",
+    seoTitle: "TeBre | AI-Assisted Ebook Production Desktop Software",
+    description: "An Electron desktop workspace that helps ebook agencies manage, write, polish, design, and export KDP-ready books.",
+    image: "/case-studies/tebre/dashboard.png",
+    keywords: ["Electron", "React", "SQLite", "AI writing", "Ebook production", "Amazon KDP"],
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Desktop",
+  },
+  {
     slug: "sparkio",
     name: "Sparkio",
     seoTitle: "Sparkio | Ecommerce With Fuzzy Search & Order Tracking",
