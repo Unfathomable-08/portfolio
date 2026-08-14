@@ -132,7 +132,7 @@ export default function Skills() {
 
                   {isHovered && (
                     <div
-                      className="absolute top-[2px] left-0 h-24 w-18 rounded flex justify-center items-end bg-skills-hover z-10 whitespace-nowrap pointer-events-none"
+                      className="absolute top-[2px] left-0 h-24 w-18 rounded flex justify-center items-end bg-skills-hover z-5 whitespace-nowrap pointer-events-none"
                       role="tooltip"
                       aria-label={name}
                     >

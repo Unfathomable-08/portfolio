@@ -1,12 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+
+const categories = ["Website", "Mobile Apps", "AI Agents", "Management Systems"];
 
 const projects = [
   {
     id: 1,
+    category: ["Website"],
     title: "Sable Build",
     caseStudy: "sablebuild",
     desc: "A drag-and-drop website builder that lets users create apps visually and export production-ready frontend and backend code in preffered frameworks with preffered database. Includes AI assistance for code generation and suggestions.",
@@ -17,6 +21,7 @@ const projects = [
   },
   {
     id: 2,
+    category: ["Website", "Management Systems"],
     title: "Ember & Oak",
     caseStudy: "emberoak",
     desc: "A full-stack restaurant platform with dynamic menu management, table reservations, event booking, and online ordering. Includes a complete admin system for managing operations in real time.",
@@ -27,6 +32,7 @@ const projects = [
   },
   {
     id: 3,
+    category: ["Website", "Mobile Apps"],
     title: "Awaza",
     caseStudy: "awaza",
     desc: "A fully functional social media PWA built with Next.js, firebase and mongodb. It has features like live push notifications, real-time chat, follow system, and full post interactions. Built for a smooth, app-like experience across devices with modern scalable architecture.",
@@ -37,6 +43,7 @@ const projects = [
   },
   {
     id: 4,
+    category: ["Website", "Mobile Apps", "AI Agents"],
     title: "Fluentyx",
     caseStudy: "fluentyx",
     desc: "An Arabic learning platform built with Next.js featuring leaderboard, lesson revision algorithm, AI tutor chatbot, translation marking system, and pytorch built CNN-based handwritten alphabet classification.",
@@ -47,6 +54,7 @@ const projects = [
   },
   {
     id: 5,
+    category: ["Website"],
     title: "Sparkio Store",
     caseStudy: "sparkio",
     desc: "Sparkio is a modern e-commerce platform with all essential features, a clean shopping experience, and an eye-catching UI. Includes a powerful admin dashboard and is fully responsive across devices.",
@@ -57,6 +65,7 @@ const projects = [
   },
   {
     id: 6,
+    category: ["Website"],
     title: "Glowfarm",
     caseStudy: "glowfarm",
     desc: "GlowFarm showcases ethereal lighting products through jaw-dropping animations: theme switching, dynamic light effects, and interactive hover effects that feel alive. Developed with Next.js and Framer Motion.",
@@ -67,6 +76,7 @@ const projects = [
   },
   {
     id: 7,
+    category: ["AI Agents"],
     title: "Rag Agent",
     caseStudy: "rag",
     desc: "A Retrieval-Augmented Generation (RAG) agent built using LangChain and Hugging Face models. It allows users to ask questions about a specific document or dataset, leveraging vector databases for efficient retrieval and LLMs for generating accurate responses.",
@@ -77,6 +87,7 @@ const projects = [
   },
   {
     id: 8,
+    category: ["Website"],
     title: "SkyTech Official Website",
     caseStudy: "skytech",
     desc: "An official business website developed for a software house during my internship. This project involved building a multi-section React site with animations using AOS, styled manually with vanilla CSS, and integrated with EmailJS for contact form submissions. The site is fully responsive and production-ready.",
@@ -88,23 +99,77 @@ const projects = [
 ];
 
 export default function Projects() {
+  const [activeCategory, setActiveCategory] = useState(categories[0]);
+  const visibleProjects = projects.filter(
+    (project) => project.category.includes(activeCategory)
+  );
+
   return (
-    <div id="projects" className="min-h-svh w-full bg-[var(--primary)] px-5! md:px-20!">
-      <h2 className="sm:text-2xl text-xl md:text-3xl font-bold text-white py-15! transform max-md:translate-y-8 text-center">My Projects</h2>
-      <div className="grid gap-x-12 gap-y-8 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
-        {projects.map((project, index) => (
+    <div id="projects" className="min-h-svh w-full bg-[var(--primary)] px-5! pb-16! md:px-20!">
+      <h2 className="sm:text-2xl text-xl md:text-3xl font-bold text-white pt-15! pb-8! text-center">My Projects</h2>
+
+      <div
+        role="tablist"
+        aria-label="Project categories"
+        className="mx-auto mb-10! flex w-fit max-w-full gap-1 overflow-x-auto rounded-lg border border-white/35 bg-black/30 p-1.5! shadow-[0_12px_40px_rgba(0,0,0,0.22)]"
+      >
+        {categories.map((category) => {
+          const isActive = activeCategory === category;
+          const projectCount = projects.filter(
+            (project) => project.category.includes(category)
+          ).length;
+
+          return (
+            <button
+              key={category}
+              id={`projects-tab-${category.toLowerCase().replaceAll(" ", "-")}`}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              aria-controls="projects-panel"
+              onClick={() => setActiveCategory(category)}
+              className={`group cursor-pointer z-5 flex shrink-0 items-center gap-2 rounded-md px-3! py-2.5! text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)] sm:px-4! ${
+                isActive
+                  ? "bg-[var(--secondary)] text-[#071014] shadow-[0_0_24px_rgba(0,194,255,0.18)]"
+                  : "text-gray-300 bg-[var(--primary)] border border-white/0 hover:border-[var(--secondary)]/35 hover:text-white"
+              }`}
+            >
+              <span className={isActive ? "text-[#071014]" : "text-inherit"}>{category}</span>
+              <span
+                aria-hidden="true"
+                className={`rounded-full w-4 h-4 flex justify-center items-center text-[10px] leading-none ${
+                  isActive ? "bg-[#071014]/25 text-[#071014]" : "bg-white/25 text-gray-400"
+                }`}
+              >
+                {projectCount}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
+      <motion.div
+        layout
+        id="projects-panel"
+        role="tabpanel"
+        aria-labelledby={`projects-tab-${activeCategory.toLowerCase().replaceAll(" ", "-")}`}
+        className="grid grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2"
+      >
+        <AnimatePresence mode="popLayout">
+        {visibleProjects.map((project, index) => (
           <motion.div
-            key={index}
+            layout
+            key={project.id}
             initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.3 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: index * 0.07 }}
             className="rounded-xl shadow-lg overflow-hidden bg-[#1e1e1e] grid sm:grid-cols-2 p-4! items-center sm:gap-4"
           >
             <Link
               href={`/case-study/${project.caseStudy}`}
               aria-label={`View ${project.title} case study`}
-              className="block z-10 cursor-pointer rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
+              className="block z-5 cursor-pointer rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
             >
               <Image
                 src={project.img}
@@ -114,7 +179,7 @@ export default function Projects() {
                 className="w-full cursor-pointer aspect-video border border-white/60 object-cover rounded-lg max-md:scale-90"
               />
             </Link>
-            <div className="p-4! z-10 flex flex-col justify-between h-full">
+            <div className="p-4! z-5 flex flex-col justify-between h-full">
               <div>
                 <h2 className="sm:text-xl font-semibold text-white mb-3!">{project.title}</h2>
                 <p className="text-sm text-gray-300 mb-3!">{project.desc}</p>
@@ -151,7 +216,8 @@ export default function Projects() {
             </div>
           </motion.div>
         ))}
-      </div>
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 }
