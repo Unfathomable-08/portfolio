@@ -16,8 +16,8 @@ const projects = [
     desc: "A drag-and-drop website builder that lets users create apps visually and export production-ready frontend and backend code in preffered frameworks with preffered database. Includes AI assistance for code generation and suggestions.",
     tech: "20+ technologies, MERN, Python, Golang, etc",
     img: "/project/sable.png",
-    repo: "Not Available",
-    link: "https://sablebuild.vercel.app"
+    link: "https://sablebuild.vercel.app",
+    apk: null
   },
   {
     id: 2,
@@ -27,8 +27,8 @@ const projects = [
     desc: "A full-stack restaurant platform with dynamic menu management, table reservations, event booking, and online ordering. Includes a complete admin system for managing operations in real time.",
     tech: "Next.js, Tailwind CSS, MongoDB, Stripe",
     img: "/project/emberoak.png",
-    repo: "Not Available",
-    link: "https://emberoak-two.vercel.app"
+    link: "https://emberoak-two.vercel.app",
+    apk: null
   },
   {
     id: 3,
@@ -38,8 +38,8 @@ const projects = [
     desc: "A fully functional social media PWA built with Next.js, firebase and mongodb. It has features like live push notifications, real-time chat, follow system, and full post interactions. Built for a smooth, app-like experience across devices with modern scalable architecture.",
     tech: "Next.js, Firebase, MongoDB",
     img: "/project/awaza.png",
-    repo: "https://github.com/Unfathomable-08/Awaza-web-app",
-    link: "https://awaza-social.vercel.app"
+    link: "https://awaza-social.vercel.app",
+    apk: null
   },
   {
     id: 4,
@@ -49,8 +49,8 @@ const projects = [
     desc: "An Arabic learning platform built with Next.js featuring leaderboard, lesson revision algorithm, AI tutor chatbot, translation marking system, and pytorch built CNN-based handwritten alphabet classification.",
     tech: "Next.js, PyTorch, LangChain, Hugging Face, Tailwind CSS",
     img: "/project/fluentyx.JPG",
-    repo: "https://github.com/unfathomable-08/fluentyx",
-    link: "https://fluentyx.vercel.app"
+    link: "https://fluentyx.vercel.app",
+    apk: null
   },
   {
     id: 5,
@@ -60,8 +60,8 @@ const projects = [
     desc: "Sparkio is a modern e-commerce platform with all essential features, a clean shopping experience, and an eye-catching UI. Includes a powerful admin dashboard and is fully responsive across devices.",
     tech: "Next.js, Tailwind CSS, MongoDB, MUI",
     img: "/project/sparkio.webp",
-    repo: 'Not Available',
-    link: 'https://sparkio.store'
+    link: 'https://sparkio.store',
+    apk: null
   },
   {
     id: 6,
@@ -71,8 +71,8 @@ const projects = [
     desc: "GlowFarm showcases ethereal lighting products through jaw-dropping animations: theme switching, dynamic light effects, and interactive hover effects that feel alive. Developed with Next.js and Framer Motion.",
     tech: "Next.js, Tailwind CSS, Framer Motion",
     img: "/project/glowfarm.png",
-    repo: 'Not Available',
-    link: 'https://glowfarm.vercel.app'
+    link: 'https://glowfarm.vercel.app',
+    apk: null
   },
   {
     id: 7,
@@ -82,8 +82,8 @@ const projects = [
     desc: "A Retrieval-Augmented Generation (RAG) agent built using LangChain and Hugging Face models. It allows users to ask questions about a specific document or dataset, leveraging vector databases for efficient retrieval and LLMs for generating accurate responses.",
     tech: "Python, LangChain, Hugging Face, FAISS",
     img: "/project/rag.png",
-    repo: 'https://huggingface.co/spaces/TechDxon/Chatbot/tree/main',
-    link: 'https://techdxon.com/ai'
+    link: 'https://techdxon.com/ai',
+    apk: null
   },
   {
     id: 8,
@@ -93,8 +93,30 @@ const projects = [
     desc: "An official business website developed for a software house during my internship. This project involved building a multi-section React site with animations using AOS, styled manually with vanilla CSS, and integrated with EmailJS for contact form submissions. The site is fully responsive and production-ready.",
     tech: "React, Vanilla CSS, EmailJS, AOS",
     img: "/project/skyteck.JPG",
-    repo: 'Not Available',
-    link: 'https://skytech.com.pk'
+    link: 'https://skytech.com.pk',
+    apk: null
+  },
+  {
+    id: 9,
+    category: ["Mobile Apps"],
+    title: "Expense Tracker",
+    caseStudy: "expense-tracker",
+    desc: "A simple mobile finance app for recording income and expenses, organizing transactions by wallet, and reviewing spending through weekly, monthly, and yearly charts.",
+    tech: "React Native, Expo, Firebase, Cloudinary",
+    img: "/project/expense-tracker.png",
+    link: null,
+    apk: "https://github.com/Unfathomable-08/Expense-Tracker-React-Native/releases/download/v1.0.0/expense-tracker.apk"
+  },
+  {
+    id: 10,
+    category: ["Mobile Apps"],
+    title: "Macrozone",
+    caseStudy: "macrozone",
+    desc: "A lightweight nutrition tracker built while learning React Native. It records meals, totals daily calories and macros, and supports reminders and sharing.",
+    tech: "React Native, Expo, AsyncStorage, Expo APIs",
+    img: "/project/macrozone.png",
+    link: null,
+    apk: "https://github.com/Unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
   },
 ];
 
@@ -197,21 +219,26 @@ export default function Projects() {
               <div className="flex flex-wrap gap-2 mt-3! font-medium">
                 <Link
                   href={`/case-study/${project.caseStudy}`}
-                  className="max-sm:text-sm border py-1.5! px-3! text-sm rounded-sm border-[var(--secondary)] text-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] hover:text-[#071014] transition"
+                  className="max-sm:text-sm border py-1.5! px-2.5! text-sm rounded-sm border-[var(--secondary)] text-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] hover:text-[#071014] transition"
                 >
                   Case Study
                 </Link>
-                <a
-                  href={project.link && project.link !== "Not Available" ? project.link : "/"}
+                {project.link && project.link !== null && <a
+                  href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-sm rounded-sm ${project.link && project.link !== "Not Available"
-                    ? "max-sm:text-sm border py-1.5! px-3! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition"
-                    : "max-sm:text-sm border py-1.5! px-3! border-gray-600 text-gray-500 cursor-not-allowed"
-                    }`}
+                  className={`text-sm rounded-sm border py-1.5! px-2.5! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition`}
                 >
-                  {project.link && project.link !== "Not Available" ? "Live Demo" : "Not Available"}
-                </a>
+                  Live Demo
+                </a>}
+                {project.apk && project.apk !== null && <a
+                  href={project.apk}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-sm rounded-sm border py-1.5! px-2! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition`}
+                >
+                  Download APK
+                </a>}
               </div>
             </div>
           </motion.div>

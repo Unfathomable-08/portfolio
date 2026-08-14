@@ -78,7 +78,7 @@ export default function Hero({ caseStudy, device }) {
                             Explore Portfolio
                         </motion.a>
 
-                        <motion.a
+                        {caseStudy.live && <motion.a
                             variants={reveal}
                             transition={{ duration: 0.55 }}
                             href={caseStudy.live}
@@ -86,7 +86,16 @@ export default function Hero({ caseStudy, device }) {
                             className="inline-flex rounded-full border hover:bg-[var(--secondary)] px-4! py-2! text-xs sm:text-sm font-medium text-[#071014] transition-colors border-[var(--secondary)] bg-transparent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
                         >
                             Live Demo
-                        </motion.a>
+                        </motion.a>}
+                        {caseStudy.apk && <motion.a
+                            variants={reveal}
+                            transition={{ duration: 0.55 }}
+                            href={caseStudy.apk}
+                            target="_blank"
+                            className="inline-flex rounded-full border hover:bg-[var(--secondary)] px-4! py-2! text-xs sm:text-sm font-medium text-[#071014] transition-colors border-[var(--secondary)] bg-transparent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
+                        >
+                            Download APK
+                        </motion.a>}
                     </div>
                 </motion.div>
 

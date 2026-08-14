@@ -110,6 +110,163 @@ export const caseStudies = {
         ]
     },
     
+    "expense-tracker": {
+        device: "mobile",
+        hero: {
+            name: "Expense Tracker",
+            description: "A simple personal finance app for recording income and expenses, separating money across wallets, and understanding spending through clear weekly, monthly, and yearly statistics.",
+            images: ["/case-studies/expense/welcome.png", "/case-studies/expense/home.png"],
+            apk: "https://github.com/Unfathomable-08/Expense-Tracker-React-Native/releases/download/v1.0.0/expense-tracker.apk"
+        },
+        about: {
+            text: [
+                "_Expense_ _Tracker_ is a mobile app that keeps everyday money management in one place. Users can record income and categorized expenses, attach a receipt when needed, and see their current balance and latest activity from the home screen.",
+                "The statistics area compares all transactions—income and every expense category—across _weekly_ , _monthly_ , and _yearly_ views. A bar chart shows income against expenses over time, while a category pie chart explains where expense money is going.",
+                "Users can also create multiple _wallets_ and link every transaction to the correct wallet. Profile photos, wallet images, and transaction receipts are uploaded to _Cloudinary_ , while account and application data are handled through Firebase."
+            ],
+            stack: "The mobile app is built with React Native and Expo. Firebase handles authentication and application data, Cloudinary stores profile photos, wallet images, and transaction receipts, and React Native Gifted Charts powers the bar and pie chart visualizations.",
+            tech: ["React Native", "Expo", "Firebase", "Cloudinary", "Gifted Charts"],
+            features: [
+                "Welcome, sign-up, and login screens",
+                "Home summary for total balance, income, and expenses",
+                "Recent transaction list with income and expense categories",
+                "Create transactions and attach receipt images",
+                "Weekly, monthly, and yearly transaction bar charts",
+                "Expense category breakdown with a pie chart",
+                "Multiple wallets with a wallet assigned to each transaction",
+                "Profile details, profile picture, settings, and logout",
+                "Cloudinary storage for profile, wallet, and receipt images"
+            ],
+        },
+        screenshots: [
+            {
+                src: "/case-studies/expense/home.png",
+                alt: "Expense Tracker balance summary and recent transactions",
+                label: "Home Summary",
+                note: "Balance, income, expenses, and recent transactions are visible in one glance.",
+            },
+            {
+                src: "/case-studies/expense/stats.png",
+                alt: "Expense Tracker bar and pie chart statistics",
+                label: "Spending Statistics",
+                note: "Weekly, monthly, and yearly comparisons pair transaction bars with an expense-category breakdown.",
+            },
+            {
+                src: "/case-studies/expense/wallets.png",
+                alt: "Expense Tracker wallet list and balances",
+                label: "Wallets",
+                note: "Separate balances into named wallets and connect each transaction to its source.",
+            },
+            {
+                src: "/case-studies/expense/profile.png",
+                alt: "Expense Tracker user profile and settings",
+                label: "Profile",
+                note: "Manage the profile picture, display name, email, settings, privacy, and logout.",
+            }
+        ],
+        workflowNote: "After signing in, users can review their balance, add an income or expense transaction to a selected wallet, attach a receipt, and then inspect the result by time period or expense category.",
+        nodes: [
+            node("welcome", "Welcome", 20, 250, true),
+            node("auth", "Sign Up / Login", 180, 250, true),
+            node("home", "Home", 380, 70, true),
+            node("stats", "Statistics", 380, 190, true),
+            node("wallets", "Wallets", 380, 310, true),
+            node("profile", "Profile", 380, 430, true),
+            node("transaction", "Add Transaction", 590, 70),
+            node("receipt", "Receipt Upload", 790, 20),
+            node("selectWallet", "Select Wallet", 790, 100),
+            node("timeRange", "Week / Month / Year", 590, 180),
+            node("charts", "Bar & Pie Charts", 790, 180),
+            node("addWallet", "Add Wallet", 590, 310),
+            node("walletImage", "Wallet Image", 790, 310),
+            node("editProfile", "Edit Profile", 590, 410),
+            node("logout", "Logout", 590, 480),
+        ],
+        connections: [
+            ["welcome", "auth"], ["auth", "home"], ["auth", "stats"],
+            ["auth", "wallets"], ["auth", "profile"], ["home", "transaction"],
+            ["transaction", "receipt"], ["transaction", "selectWallet"],
+            ["stats", "timeRange"], ["timeRange", "charts"],
+            ["wallets", "addWallet"], ["addWallet", "walletImage"],
+            ["profile", "editProfile"], ["profile", "logout"],
+        ]
+    },
+
+    macrozone: {
+        device: "mobile",
+        hero: {
+            name: "Macrozone",
+            description: "A lightweight meal and macro tracker built as a practical React Native learning project. It keeps daily calories, protein, carbohydrates, and fat easy to record, review, copy, and share.",
+            images: ["/case-studies/macrozone/add.png", "/case-studies/macrozone/home.png"],
+            apk: "https://github.com/Unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
+        },
+        about: {
+            text: [
+                "_Macrozone_ is a small mobile project built to learn the fundamentals of _React_ _Native_ and Expo through a useful, focused feature set.",
+                "The app has three tabs: _Home_ shows the day's calorie and macronutrient totals with recent meals, _Add_ _Meal_ captures a meal's calories, protein, carbohydrates, and fat, and _All_ _Meals_ displays the saved list with an option to clear it.",
+                "Meal data stays on the device through _AsyncStorage_. The project also explores native capabilities through local meal-reminder notifications, summary sharing and copying, and haptic feedback for interactions."
+            ],
+            stack: "Macrozone is built with React Native and Expo. AsyncStorage provides simple on-device persistence, while the notification, share, and clipboard APIs and Expo Haptics add a small set of native mobile interactions.",
+            tech: ["React Native", "Expo", "AsyncStorage", "Notifications", "Expo Haptics"],
+            features: [
+                "Three-tab navigation: Home, Add Meal, and All Meals",
+                "Daily calorie, protein, carbohydrate, and fat totals",
+                "Simple form for recording meals and macro values",
+                "Recent meals summary on the home screen",
+                "Saved meal list with a clear-all action",
+                "Local meal persistence with AsyncStorage",
+                "Meal reminder notifications",
+                "Copy and share actions for the daily summary",
+                "Haptic feedback for mobile interactions"
+            ],
+        },
+        screenshots: [
+            {
+                src: "/case-studies/macrozone/home.png",
+                alt: "Macrozone daily calorie and macronutrient dashboard",
+                label: "Daily Summary",
+                note: "Calories and macros sit alongside recent meals, reminder controls, and quick copy or share actions.",
+            },
+            {
+                src: "/case-studies/macrozone/add.png",
+                alt: "Macrozone add meal form",
+                label: "Add a Meal",
+                note: "Record a meal name, calories, protein, carbohydrates, and fat through one compact form.",
+            },
+            {
+                src: "/case-studies/macrozone/meals.png",
+                alt: "Macrozone saved meals list",
+                label: "All Meals",
+                note: "Review locally saved meals or clear the complete list when starting over.",
+            },
+            {
+                src: "/case-studies/macrozone/github.png",
+                alt: "Macrozone Github Release",
+                label: "Github Release",
+                note: "Macrozone is available for download on Github as an APK file. Users can install the app on their Android devices.",
+            }
+        ],
+        workflowNote: "A meal is entered once, saved locally, and immediately reflected in the daily macro summary and meal list; that summary can then be copied or shared, while optional notifications provide meal reminders.",
+        nodes: [
+            node("home", "Home Summary", 20, 250, true),
+            node("add", "Add Meal", 240, 100, true),
+            node("form", "Macro Form", 460, 100),
+            node("storage", "AsyncStorage", 680, 190, true),
+            node("meals", "All Meals", 240, 390, true),
+            node("clear", "Clear All", 460, 390),
+            node("copy", "Copy Summary", 240, 210),
+            node("share", "Share Summary", 460, 260),
+            node("reminders", "Meal Reminders", 240, 300),
+            node("haptics", "Haptic Feedback", 680, 330),
+        ],
+        connections: [
+            ["home", "add"], ["add", "form"], ["form", "storage"],
+            ["storage", "home"], ["home", "meals"], ["storage", "meals"],
+            ["meals", "clear"], ["clear", "storage"], ["home", "copy"],
+            ["copy", "share"], ["home", "reminders"], ["form", "haptics"],
+        ]
+    },
+
     awaza: {
         device: "mobile",
         hero: {
