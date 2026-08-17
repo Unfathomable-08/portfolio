@@ -43,6 +43,17 @@ const projects = [
   },
   {
     id: 4,
+    category: ["AI Agents"],
+    title: "TeBre",
+    caseStudy: "tebre",
+    desc: "An AI-assisted Electron workspace for ebook agencies to manage books, edit and polish manuscripts, create outlines and content, generate covers, and export KDP-ready files.",
+    tech: "React, Electron, Node.js, SQLite, Multi-provider AI",
+    img: "/case-studies/tebre/manuscript.png",
+    link: null,
+    apk: null
+  },
+  {
+    id: 5,
     category: ["Website", "Mobile Apps", "AI Agents"],
     title: "Fluentyx",
     caseStudy: "fluentyx",
@@ -53,7 +64,7 @@ const projects = [
     apk: null
   },
   {
-    id: 5,
+    id: 6,
     category: ["Website"],
     title: "Sparkio Store",
     caseStudy: "sparkio",
@@ -64,7 +75,7 @@ const projects = [
     apk: null
   },
   {
-    id: 6,
+    id: 7,
     category: ["Website"],
     title: "Glowfarm",
     caseStudy: "glowfarm",
@@ -75,7 +86,7 @@ const projects = [
     apk: null
   },
   {
-    id: 7,
+    id: 8,
     category: ["AI Agents"],
     title: "Rag Agent",
     caseStudy: "rag",
@@ -86,7 +97,7 @@ const projects = [
     apk: null
   },
   {
-    id: 8,
+    id: 9,
     category: ["Website"],
     title: "SkyTech Official Website",
     caseStudy: "skytech",
@@ -97,7 +108,7 @@ const projects = [
     apk: null
   },
   {
-    id: 9,
+    id: 10,
     category: ["Mobile Apps"],
     title: "Expense Tracker",
     caseStudy: "expense-tracker",
@@ -108,7 +119,7 @@ const projects = [
     apk: "https://github.com/Unfathomable-08/Expense-Tracker-React-Native/releases/download/v1.0.0/expense-tracker.apk"
   },
   {
-    id: 10,
+    id: 11,
     category: ["Mobile Apps"],
     title: "Macrozone",
     caseStudy: "macrozone",
@@ -117,17 +128,6 @@ const projects = [
     img: "/project/macrozone.png",
     link: null,
     apk: "https://github.com/Unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
-  },
-  {
-    id: 11,
-    category: ["AI Agents"],
-    title: "TeBre",
-    caseStudy: "tebre",
-    desc: "An AI-assisted Electron workspace for ebook agencies to manage books, edit and polish manuscripts, create outlines and content, generate covers, and export KDP-ready files.",
-    tech: "React, Electron, Node.js, SQLite, Multi-provider AI",
-    img: "/case-studies/tebre/manuscript.png",
-    link: null,
-    apk: null
   },
 ];
 
