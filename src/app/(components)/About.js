@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import DotsBg from "../sub-components/Dots-bg.js";
+import DotsBg from "@/components/ui/Dots-bg.js";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -18,18 +18,15 @@ export default function About() {
       >
         <h4 className="font-medium text-2xl pb-4!">Hi, I’m Muhammad,</h4>
         <p className="text-md max-lg:text-sm">
-          A full-stack web and app developer focused on building intuitive,
-          responsive web apps. I specialize in React and Next for dynamic UIs
-          and use Node.js and Express for scalable back-end systems. I’m also
-          experienced with Flask and PHP, and work with both SQL and MongoDB.
-          I’m passionate about creating solutions that solve real-world problems
-          and improve user experiences. Whether designing with Tailwind CSS for
-          custom layouts or using Bootstrap for quick, responsive designs, my
-          goal is to create user-friendly applications. Beyond coding, I’m
-          fascinated by physics and mathematics, fields that challenge my
-          problem-solving skills and inspire my work in development. If you’re
-          looking for someone who loves to solve complex problems, I’d love to
-          collaborate on your next project!
+          I am a Full-Stack Web & Applied AI Developer with 2 years of experience
+          crafting modern digital applications and intelligent systems. From building
+          responsive websites and cross-platform mobile apps to training AI models and
+          engineering autonomous AI agents, I deliver scalable end-to-end solutions.
+          My core web stack includes React, Next.js, Node.js, Express, Flask, FastAPI,
+          and Alpine.js, paired with React Native and Expo for mobile development. For AI
+          engineering, I leverage Python, PyTorch, TensorFlow, and Keras, backended by
+          SQL, MongoDB, Firebase, and vector databases. Passionate about tackling complex
+          technical challenges and creating high-impact software!
         </p>
         <motion.a
           href="https://wa.me/923282279743"

@@ -2,16 +2,16 @@
 
 import { useEffect } from "react"
 import { usePathname } from "next/navigation"
-import Navbar from "@/sub-components/Navbar"
-import Hero from "@/components/Hero"
-import About from "../components/About"
-import Skills from "@/components/Skills"
-import Projects from "@/components/Projects"
-import Services from "@/components/Services"
+import Navbar from "@/components/Navbar"
+import Hero from "@/app/(components)/Hero"
+import About from "@/app/(components)/About"
+import Skills from "@/app/(components)/Skills"
+import Projects from "@/app/(components)/Projects"
+import Services from "@/app/(components)/Services"
+// import Experience from "@/app/(components)/WorkEx"
 import Contact from "@/components/Contact"
-import Experience from "@/components/WorkEx"
 
-export default function Home(){
+export default function Home() {
     const pathname = usePathname();
 
     useEffect(() => {
@@ -19,7 +19,7 @@ export default function Home(){
             // Remove the leading slash to get the section id
             const sectionId = pathname.substring(1).toLowerCase();
             const element = document.getElementById(sectionId);
-            
+
             if (element) {
                 // Smooth scroll to the element after a short delay to ensure rendering
                 setTimeout(() => {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import Navbar from "@/sub-components/Navbar";
+import Navbar from "@/components/Navbar";
 import Hero from "../(components)/Hero";
 import About from "../(components)/Info";
 import Mockup from "../(components)/Mockup";
@@ -14,7 +14,7 @@ export default function CaseStudyPage() {
     const { slug } = useParams();
     const caseStudy = caseStudies[slug];
 
-    if (!caseStudy) return null; 
+    if (!caseStudy) return null;
 
     return (
         <main className="w-screen overflow-x-hidden">

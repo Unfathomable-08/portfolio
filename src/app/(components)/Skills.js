@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useScreenSize } from "../app/ScreenContext";
+import { useScreenSize } from "@/app/ScreenContext";
 
 const logos = [
   { src: "/skills/html.png", name: "HTML" },
