@@ -55,7 +55,7 @@ export default function Info({ caseStudy }) {
                         <div className="mb-4! sm:mb-6!">
                             <h2 className="font-bold text-lg sm:text-xl">Key Features</h2>
                             <p className="text-xs sm:text-sm mt-2! leading-relaxed text-neutral-400">
-                                Core features built to support Arabic learning, revision, and practice.
+                                {caseStudy.featureIntro || "The core capabilities that shape this project's experience and workflow."}
                             </p>
                         </div>
 

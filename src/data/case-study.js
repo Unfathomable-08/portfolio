@@ -933,6 +933,143 @@ export const caseStudies = {
         ]
     },
 
+    vendra: {
+        device: "laptop",
+        hero: {
+            name: "Vendra",
+            description: "A connected retail operations platform for running sales, stock, purchasing, customers, employees, and multiple branches from one focused workspace. Role-based demo access gives administrators, managers, cashiers, and inventory staff the tools relevant to their work.",
+            images: ["/case-studies/vendra/pos.png", "/case-studies/vendra/dashboard.png"],
+            live: "https://vendra-pos.vercel.app/",
+        },
+        about: {
+            text: [
+                "_Vendra_ brings the daily work of a retail business into one management system. Its dashboard connects live sales, transaction volume, average order value, gross profit, payment methods, recent transactions, and low-stock alerts so operators can understand the state of a branch at a glance.",
+                "At the counter, the _point-of-sale_ workspace is built around speed: staff can search or scan products, filter by category, attach a customer, build the current sale, and move directly into payment. Completed sales feed the same inventory and reporting system, keeping stock movement and commercial performance connected.",
+                "The platform also covers products, auditable _inventory_ adjustments, promotions, purchases, suppliers, customers, shifts, employees, and branches. Role-specific demo accounts for administrators, store managers, cashiers, and inventory staff demonstrate how one system can support different responsibilities without exposing every control to every user."
+            ],
+            stack: "Vendra is built as a responsive Next.js and React web application, styled with Tailwind CSS. The public demo keeps its seeded retail data in the browser, making the complete multi-role workflow safe to explore and reset without a production back end.",
+            tech: ["Next.js", "React", "Zustand", "IndexedDB"],
+            featureIntro: "Connected tools for selling, tracking stock, managing teams, and understanding retail performance across every branch.",
+            features: [
+                "Role-based access for administrators, managers, cashiers, and inventory staff",
+                "Multi-branch dashboard with sales, profit, payment, and stock signals",
+                "Point-of-sale flow with product search, barcode entry, customers, and payments",
+                "Product catalog, stock levels, reorder points, and auditable adjustments",
+                "Purchasing and supplier management",
+                "Customer records, loyalty points, and promotion rules",
+                "Shift, employee, and branch operations",
+                "Sales, payment mix, transaction health, and cashier performance reports",
+                "Configurable business profile, currency, tax, receipts, and notifications",
+                "CSV exports for operational analysis"
+            ],
+        },
+        screenshots: [
+            {
+                src: "/case-studies/vendra/login.png",
+                alt: "Vendra role-based demo login page",
+                label: "Role-based entry",
+                note: "Four demo roles make permissions and responsibilities easy to explore.",
+            },
+            {
+                src: "/case-studies/vendra/dashboard.png",
+                alt: "Vendra retail operations dashboard",
+                label: "Operations at a glance",
+                note: "Sales, profit, payments, transactions, and low-stock alerts share one view.",
+            },
+            {
+                src: "/case-studies/vendra/pos.png",
+                alt: "Vendra point-of-sale workspace",
+                label: "Build the sale",
+                note: "Search or scan products, choose a customer, and take payment from one counter view.",
+            },
+            {
+                src: "/case-studies/vendra/inventory.png",
+                alt: "Vendra inventory management and activity ledger",
+                label: "Auditable inventory",
+                note: "Stock status, reorder points, adjustments, and movement history stay connected.",
+            },
+            {
+                src: "/case-studies/vendra/reports.png",
+                alt: "Vendra sales and performance reports",
+                label: "One retail ledger",
+                note: "Revenue, profit, payment mix, transaction health, and cashier performance are ready to act on.",
+            },
+            {
+                src: "/case-studies/vendra/settings.png",
+                alt: "Vendra business, loyalty, tax, and receipt settings",
+                label: "Business rules",
+                note: "Organization details, loyalty, promotions, tax, receipts, and notifications are configurable together.",
+            }
+        ],
+        workflowNote: "Vendra connects four role-based workspaces to the complete retail loop: catalog and customer setup, counter sales and payments, transaction records, live stock movement, procurement, branch staffing, reporting, and organization-wide business rules.",
+        nodes: [
+            node("login", "Role Login", 10, 270, true),
+
+            node("dashboard", "Dashboard", 180, 20, true),
+            node("pos", "Point of Sale", 180, 190, true),
+            node("branches", "Branches", 180, 410, true),
+            node("settings", "Settings", 180, 540, true),
+
+            node("products", "Products", 370, 20),
+            node("inventory", "Inventory", 550, 20, true),
+            node("stockControl", "Stock & Reorder", 740, 20),
+            node("purchases", "Purchases", 910, 20, true),
+            node("suppliers", "Suppliers", 1080, 20),
+
+            node("customers", "Customers", 370, 180),
+            node("promotions", "Promotions & Loyalty", 550, 150),
+            node("cart", "Sale & Cart", 550, 230),
+            node("payment", "Payment", 740, 220, true),
+            node("transactions", "Transactions", 910, 190, true),
+            node("afterSale", "Receipt / Refund", 1080, 190),
+
+            node("shifts", "Shifts", 370, 380),
+            node("employees", "Employees", 370, 450),
+            node("permissions", "Role Permissions", 550, 415),
+            node("reports", "Reports", 740, 380, true),
+            node("performance", "Sales & Performance", 930, 380),
+            node("csv", "CSV Export", 1100, 380),
+
+            node("businessProfile", "Business Profile", 370, 540),
+            node("businessRules", "Tax, Receipts & Alerts", 570, 540),
+        ],
+        connections: [
+            ["login", "dashboard"],
+            ["login", "pos"],
+            ["login", "branches"],
+            ["login", "settings"],
+
+            ["dashboard", "products"],
+            ["products", "inventory"],
+            ["inventory", "stockControl"],
+            ["stockControl", "purchases"],
+            ["purchases", "suppliers"],
+
+            ["pos", "customers"],
+            ["pos", "cart"],
+            ["customers", "promotions"],
+            ["promotions", "cart"],
+            ["cart", "payment"],
+            ["payment", "transactions"],
+            ["transactions", "afterSale"],
+            ["payment", "inventory"],
+
+            ["branches", "shifts"],
+            ["branches", "employees"],
+            ["shifts", "permissions"],
+            ["employees", "permissions"],
+            ["permissions", "reports"],
+            ["transactions", "reports"],
+            ["inventory", "reports"],
+            ["reports", "performance"],
+            ["performance", "csv"],
+
+            ["settings", "businessProfile"],
+            ["businessProfile", "businessRules"],
+            ["businessRules", "promotions"],
+        ]
+    },
+
     rag: {
         device: "laptop",
         hero: {

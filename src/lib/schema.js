@@ -95,6 +95,17 @@ export const projects = [
     keywords: ["Python", "LangChain", "Hugging Face", "FAISS", "Retrieval-augmented generation"],
   },
   {
+    slug: "vendra",
+    name: "Vendra",
+    seoTitle: "Vendra | Multi-Branch Retail POS & Inventory System",
+    description: "A retail operations platform connecting point-of-sale, inventory, purchasing, customers, staff, branches, and performance reporting.",
+    image: "/case-studies/vendra/dashboard.png",
+    liveUrl: "https://vendra-pos.vercel.app/",
+    keywords: ["Next.js", "React", "Tailwind CSS", "Retail POS", "Inventory management", "Multi-branch retail"],
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+  },
+  {
     slug: "skytech",
     name: "SkyTech Official Website",
     seoTitle: "SkyTech | Responsive Software Agency Website Experience",

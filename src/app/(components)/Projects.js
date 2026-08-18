@@ -129,6 +129,17 @@ const projects = [
     link: null,
     apk: "https://github.com/Unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
   },
+  {
+    id: 12,
+    category: ["Website", "Management Systems"],
+    title: "Vendra – POS",
+    caseStudy: "vendra",
+    desc: "A multi-branch retail management system that connects point-of-sale, inventory, purchasing, customers, staff, promotions, and reporting in one role-aware workspace.",
+    tech: "Next.js, React, Zustand, IndexedDB",
+    img: "/case-studies/vendra/dashboard.png",
+    link: "https://vendra-pos.vercel.app/",
+    apk: null
+  },
 ];
 
 export default function Projects() {
