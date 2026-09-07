@@ -71,14 +71,14 @@ export default function Skills() {
       className="min-h-svh w-full max-md:py-12! bg-[var(--primary)] text-white flex flex-col items-center justify-center gap-y-6 sm:gap-y-4 px-5! md:px-20! relative bg-dots"
     >
       {/* Soft blurred circles */}
-      <div className="absolute top-10 left-10 w-20 h-20 md:w-40 md:h-40 rounded-full bg-white opacity-40 blur-3xl pointer-events-none z-15"></div>
-      <div className="absolute bottom-20 right-20 md:w-56 md:h-56 w-28 h-28 rounded-full bg-[#ffffffaa] opacity-40 blur-3xl pointer-events-none z-15"></div>
+      <div className="absolute top-10 left-10 w-20 h-20 md:w-40 md:h-40 rounded-full bg-white opacity-40 blur-3xl pointer-events-none z-1"></div>
+      <div className="absolute bottom-20 right-20 md:w-56 md:h-56 w-28 h-28 rounded-full bg-[#ffffffaa] opacity-40 blur-3xl pointer-events-none z-1"></div>
 
       <div className="max-sm:scale-75 transform w-full h-full flex flex-col justify-center items-center gap-y-8">
         {rows.map((row, rowIndex) => (
           <motion.div
             key={rowIndex}
-            className="flex gap-x-3 sm:gap-x-4 md:gap-x-6 relative"
+            className="flex relative z-1 gap-x-3 sm:gap-x-4 md:gap-x-6 relative"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: rowIndex * 0.3, duration: 0.6 }}
@@ -132,7 +132,7 @@ export default function Skills() {
 
                   {isHovered && (
                     <div
-                      className="absolute top-[2px] left-0 h-24 w-18 rounded flex justify-center items-end bg-skills-hover z-5 whitespace-nowrap pointer-events-none"
+                      className="absolute top-[2px] left-0 h-24 w-18 rounded flex justify-center items-end bg-skills-hover z-1 whitespace-nowrap pointer-events-none"
                       role="tooltip"
                       aria-label={name}
                     >

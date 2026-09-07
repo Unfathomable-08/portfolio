@@ -90,7 +90,7 @@ export default function Mockup({ screenshots, device }) {
                     {screenshots.map((screenshot, index) => (
                         <figure
                             key={screenshot.src}
-                            className={`group z-5 relative shrink-0 snap-center lg:w-auto ${isLaptop
+                            className={`group z-1 relative shrink-0 snap-center lg:w-auto ${isLaptop
                                 ? "w-[86vw] sm:w-[68vw] md:w-[56vw]"
                                 : `w-[75vw] xs:w-[60vw] sm:w-[45vw] md:w-[38vw] ${index % 2 === 0 ? "lg:translate-y-0" : "lg:translate-y-28"}`
                                 }`}

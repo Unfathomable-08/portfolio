@@ -1,13 +1,16 @@
-# Muhammad - Fullstack Web & Applied AI Developer
+# Dev Muhammad - Fullstack Web & Applied AI Developer (Karachi, Pakistan)
 
-> Portfolio & Professional Information standard markdown format for Large Language Models (LLMs).
-> Site URL: https://dev-muhammad.vercel.app
+> Portfolio & Professional Information in standard Markdown format for Large Language Models (LLMs), AI Agents, and Search Engines.
+> Primary Site: https://dev-muhammad.vercel.app
+> Aliases: Dev Muhammad, developer muhammad, Unfathomable-08, unfathomable_08, Muhammad Abasi
 
 ## About
-Muhammad (Unfathomable-08) is a Fullstack Web and Applied AI Developer specializing in modern interactive web applications, high-performance user interfaces, scalable backend systems, and custom AI agents/automations.
+Muhammad (known professionally as Dev Muhammad, and online as Unfathomable-08 / unfathomable_08) is a Full-Stack Web and Applied AI Developer based in Karachi, Pakistan. With over 2 years of professional experience and 35+ production projects shipped, he specializes in building high-performance Next.js and React applications, scalable Node.js/Python backends, and custom AI agents/automations (LangChain, PyTorch, FAISS).
 
+- **Location**: Karachi, Sindh, Pakistan (Available for Remote Worldwide Contracts)
+- **Status**: Open to Freelance Contracts & Full-time Engineering Roles
 - **Email**: mailto:muhammad124711@gmail.com
-- **Phone**: +92 328 2279743
+- **Phone / WhatsApp**: +92 328 2279743
 - **GitHub**: https://github.com/Unfathomable-08
 - **LinkedIn**: https://linkedin.com/in/muhammad-abasi-6b6884350
 - **Twitter/X**: https://x.com/unfathomable_08
@@ -16,7 +19,7 @@ Muhammad (Unfathomable-08) is a Fullstack Web and Applied AI Developer specializ
 ---
 
 ## Core Skills & Technologies
-- **Frontend**: React, Next.js, HTML5, CSS3, Tailwind CSS, Bootstrap, Alpine.js, Framer Motion
+- **Frontend & Mobile**: React, Next.js, React Native, Expo, HTML5, CSS3, Tailwind CSS, Bootstrap, Alpine.js, Framer Motion
 - **Backend & APIs**: Node.js, Express.js, Python, Flask, PHP, Socket.io
 - **Databases**: MongoDB, MySQL, PostgreSQL, Redis
 - **AI & Data Science**: PyTorch, TensorFlow, Scikit-Learn, LangChain, LangGraph, NLP, Hugging Face
@@ -26,8 +29,8 @@ Muhammad (Unfathomable-08) is a Fullstack Web and Applied AI Developer specializ
 
 ## Services Offered
 - **Enterprise-Grade Web Development**: Scalable, high-performance web applications built using React, Next.js, and robust backend architectures.
+- **Mobile App Development**: Cross-platform iOS and Android mobile apps engineered with React Native and Expo, featuring offline support, push notifications, and native performance.
 - **Desktop Software Development**: Cross-platform desktop software development targeting Windows, macOS, and Linux.
-- **Progressive Web Apps (PWAs)**: Fast, app-like web experiences featuring offline capabilities, push notifications, and responsive performance across mobile & desktop.
 - **AI Agents & Automations**: Custom AI agents designed to automate workflows, integrate vector search/RAG pipelines, and process data efficiently.
 
 ---
@@ -44,7 +47,7 @@ Muhammad (Unfathomable-08) is a Fullstack Web and Applied AI Developer specializ
 ## Key Projects
 - **Sable Build**: Drag-and-drop website builder with AI code generation. [Live](https://sablebuild.vercel.app)
 - **Ember & Oak**: Full-stack restaurant platform with real-time ordering and admin portal. [Live](https://emberoak-two.vercel.app)
-- **Awaza**: Social media Progressive Web App with live push notifications, real-time chat, and interactions. [Live](https://awaza-social.vercel.app) | [Repo](https://github.com/Unfathomable-08/Awaza-web-app)
+- **Awaza**: Social media web and mobile application with live push notifications, real-time chat, and interactions. [Live](https://awaza-social.vercel.app) | [Repo](https://github.com/Unfathomable-08/Awaza-web-app)
 - **Fluentyx**: Arabic learning platform with AI chatbot tutor, translation scoring, and CNN handwritten classification. [Live](https://fluentyx.vercel.app) | [Repo](https://github.com/unfathomable-08/fluentyx)
 - **Sparkio Store**: E-commerce platform with clean UI and admin dashboard. [Live](https://sparkio.store)
 - **Glowfarm**: Interactive lighting store UI with dynamic theme and light effects. [Live](https://glowfarm.vercel.app)

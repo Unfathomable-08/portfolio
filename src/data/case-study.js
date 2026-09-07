@@ -375,20 +375,20 @@ export const caseStudies = {
                 className: "pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/20! md:text-white!"
             },
             name: "Awaza",
-            description: "A professional social media Progressive Web App (PWA) designed for seamless real-time interactions, post sharing, messaging, and push notifications. Built with modern web architecture to deliver a mobile-like experience.",
+            description: "A professional social media web and mobile application designed for seamless real-time interactions, post sharing, messaging, and push notifications. Built with modern web architecture to deliver a fast, responsive mobile experience.",
             images: ["/case-studies/awaza/home.png", "/case-studies/awaza/welcome.jpeg"],
             live: "https://awaza-social.vercel.app/",
         },
         about: {
             text: [
-                "_Awaza_ is a feature-rich, professional social media Progressive Web App (PWA) that connects users through real-time communication, social networking features, and instant push notifications.",
+                "_Awaza_ is a feature-rich, professional social media web and mobile application that connects users through real-time communication, social networking features, and instant push notifications.",
                 "Designed around four core hubs: _Home_ feed, _Inbox_ for direct messages, _Notifications_ , and _Account_ settings. Awaza brings essential social interactions together into a clean, installable app experience.",
                 "Users can follow creators, like and comment on posts, engage in real-time direct conversations, receive instant Firebase push notifications, and customize their account settings seamlessly across mobile and desktop devices."
             ],
-            stack: "The app is engineered as a PWA with React.js on the frontend and Node.js with Express.js powers the server backend. Firebase integration provides real-time data sync and cross-platform push notifications.",
+            stack: "The app is engineered with React.js on the frontend and Node.js with Express.js on the server backend. Firebase integration provides real-time data sync and cross-platform push notifications.",
             tech: ["React.js", "Node.js", "MongoDB", "Firebase"],
             features: [
-                "Progressive Web App (PWA) with installable native-like experience",
+                "Fast, installable responsive mobile and desktop experience",
                 "4 core navigation tabs: Home, Inbox, Notification, and Account",
                 "Real-time direct messaging & inbox updates",
                 "Firebase-powered push notifications & activity alerts",

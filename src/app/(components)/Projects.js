@@ -172,7 +172,7 @@ export default function Projects() {
               aria-selected={isActive}
               aria-controls="projects-panel"
               onClick={() => setActiveCategory(category)}
-              className={`group cursor-pointer z-5 flex shrink-0 items-center gap-2 rounded-md px-3! py-2.5! text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)] sm:px-4! ${
+              className={`group cursor-pointer flex shrink-0 items-center gap-2 rounded-md px-3! py-2.5! text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)] sm:px-4! ${
                 isActive
                   ? "bg-[var(--secondary)] text-[#071014] shadow-[0_0_24px_rgba(0,194,255,0.18)]"
                   : "text-gray-300 bg-[var(--primary)] border border-white/0 hover:border-[var(--secondary)]/35 hover:text-white"
@@ -213,7 +213,7 @@ export default function Projects() {
             <Link
               href={`/case-study/${project.caseStudy}`}
               aria-label={`View ${project.title} case study`}
-              className="block z-5 cursor-pointer rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
+              className="block cursor-pointer rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
             >
               <Image
                 src={project.img}
@@ -223,7 +223,7 @@ export default function Projects() {
                 className="w-full cursor-pointer aspect-video border border-white/60 object-cover rounded-lg max-md:scale-90"
               />
             </Link>
-            <div className="p-4! z-5 flex flex-col justify-between h-full">
+            <div className="p-4! flex flex-col justify-between h-full">
               <div>
                 <h2 className="sm:text-xl font-semibold text-white mb-3!">{project.title}</h2>
                 <p className="text-sm text-gray-300 mb-3!">{project.desc}</p>

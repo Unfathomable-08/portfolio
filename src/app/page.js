@@ -8,7 +8,8 @@ import About from "@/app/(components)/About"
 import Skills from "@/app/(components)/Skills"
 import Projects from "@/app/(components)/Projects"
 import Services from "@/app/(components)/Services"
-// import Experience from "@/app/(components)/WorkEx"
+import Experience from "@/app/(components)/WorkEx"
+import FAQ from "@/app/(components)/FAQ"
 import Contact from "@/components/Contact"
 
 export default function Home() {
@@ -38,8 +39,9 @@ export default function Home() {
             <About />
             <Skills />
             <Projects />
-            {/* <Experience /> */}
+            <Experience />
             <Services />
+            <FAQ />
             <Contact />
         </main>
     )

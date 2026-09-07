@@ -22,11 +22,11 @@ export const projects = [
   {
     slug: "awaza",
     name: "Awaza",
-    seoTitle: "Awaza | Real-Time Social PWA for Messaging & Sharing",
-    description: "A social media progressive web application with real-time chat, notifications, and social interactions.",
+    seoTitle: "Awaza | Real-Time Social Web & Mobile App for Messaging & Sharing",
+    description: "A social media web and mobile application with real-time chat, notifications, and social interactions.",
     image: "/case-studies/awaza/home.png",
     liveUrl: "https://awaza-social.vercel.app",
-    keywords: ["Next.js", "Firebase", "MongoDB", "Progressive web application"],
+    keywords: ["Next.js", "Firebase", "MongoDB", "React", "Mobile application"],
   },
   {
     slug: "fluentyx",
@@ -154,15 +154,19 @@ export const structuredData = {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
-      name: "Muhammad Portfolio",
+      name: "Dev Muhammad Portfolio",
       alternateName: [
+        "Dev Muhammad",
+        "dev Muhammad",
+        "developer muhammad",
+        "Muhammad Portfolio",
         "Unfathomable",
         "Unfathomable-08",
         "Unfathomable_08",
-        "Unfathomable08",
+        "unfathomable08",
       ],
       description:
-        "Portfolio of Muhammad, a full-stack web and applied AI developer.",
+        "Portfolio of Dev Muhammad, a full-stack web and applied AI developer based in Karachi, Pakistan.",
       publisher: { "@id": `${siteUrl}/#person` },
       author: { "@id": `${siteUrl}/#person` },
       inLanguage: "en",
@@ -172,19 +176,59 @@ export const structuredData = {
       "@id": `${siteUrl}/#person`,
       name: "Muhammad",
       alternateName: [
+        "Dev Muhammad",
+        "dev Muhammad",
+        "developer muhammad",
         "Unfathomable",
         "Unfathomable-08",
         "Unfathomable_08",
-        "Unfathomable08",
+        "unfathomable08",
+        "Muhammad Abasi",
       ],
       identifier: "Unfathomable-08",
       url: siteUrl,
-      image: { "@id": `${siteUrl}/#profile-image` },
-      jobTitle: ["Fullstack Web Developer", "Applied AI Developer"],
+      image: [
+        `${siteUrl}/og-square.png`,
+        `${siteUrl}/og.png`,
+        `${siteUrl}/boy.png`,
+      ],
+      jobTitle: [
+        "Fullstack Web Developer",
+        "Applied AI Developer",
+        "Full Stack Developer in Pakistan",
+        "Full Stack Developer in Karachi",
+        "Next.js & React Specialist",
+      ],
       description:
-        "Full-stack web and app developer specializing in modern user interfaces, scalable back-end systems, and applied AI solutions.",
+        "From building modern full-stack web applications to training intelligent AI models and autonomous agents, Dev Muhammad (Unfathomable-08) is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan. Available for freelance contracts, custom web applications, and full-time remote roles.",
       email: "mailto:muhammad124711@gmail.com",
       telephone: "+92 328 2279743",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Karachi",
+        addressRegion: "Sindh",
+        addressCountry: "Pakistan",
+      },
+      seeks: {
+        "@type": "Demand",
+        name: "Freelance Full-Stack Web Development, AI Integration, and Remote Engineering Roles",
+        description:
+          "Available for hire for full-stack web applications, AI agent integration, Next.js development, and contract engineering.",
+      },
+      areaServed: [
+        "Worldwide",
+        "Pakistan",
+        "United States",
+        "United Kingdom",
+        "United Arab Emirates",
+      ],
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "Full Stack Web & AI Developer",
+        occupationalCategory: "15-1254.00",
+        skills:
+          "Next.js, React, React Native, Node.js, Express.js, Python, Applied AI, MongoDB, SQL, Mobile App Development",
+      },
       sameAs: [
         "https://github.com/Unfathomable-08",
         "https://x.com/unfathomable_08",
@@ -201,9 +245,13 @@ export const structuredData = {
         "Python",
         "MongoDB",
         "SQL",
-        "Progressive web applications",
+        "React Native",
+        "Mobile app development",
         "React Native",
         "AI agents",
+        "UI/UX Design",
+        "REST APIs",
+        "Tailwind CSS",
       ],
       worksFor: [
         {
@@ -264,11 +312,11 @@ export const structuredData = {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            "@id": `${siteUrl}/#pwa-development`,
-            name: "Progressive Web Apps (PWAs)",
-            serviceType: "Progressive web application development",
+            "@id": `${siteUrl}/#mobile-app-development`,
+            name: "Mobile App Development",
+            serviceType: "Cross-platform mobile app development",
             description:
-              "App-like web experiences with offline support, push notifications, and responsive performance across devices.",
+              "Cross-platform iOS and Android mobile apps engineered with React Native and Expo, featuring offline support, notifications, and native device performance.",
             provider: { "@id": `${siteUrl}/#person` },
             url: `${siteUrl}/services`,
           },
@@ -300,6 +348,52 @@ export const structuredData = {
         position: index + 1,
         item: { "@id": `${siteUrl}/case-study/${project.slug}#project` },
       })),
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faq`,
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Who is Dev Muhammad?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Muhammad (known online as Dev Muhammad and Unfathomable-08) is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan. With over 2 years of professional experience and 35+ delivered projects, he builds high-performance Next.js web applications, scalable backend architectures, and intelligent AI automation agents for businesses worldwide.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What technical stack does developer Muhammad specialize in?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "He specializes in full-stack web and AI engineering: React, Next.js, Node.js, Express, Python (Flask, FastAPI), MongoDB, SQL, and Tailwind CSS, paired with modern AI frameworks including PyTorch, LangChain, FAISS, and vector database integrations.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I hire developer Muhammad for freelance or remote contract roles?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, Dev Muhammad is actively available for freelance contracts, custom web application development, AI agent integration, and full-time remote engineering positions worldwide.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Where is developer Muhammad located?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Dev Muhammad is based in Karachi, Sindh, Pakistan, and collaborates seamlessly with remote teams, startups, and enterprise clients across Pakistan, the United States, the UK, the UAE, and internationally.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What notable full-stack and AI projects has Muhammad delivered?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Key projects include Sable Build (visual website builder with multi-stack code export), Fluentyx (AI-powered language learning platform), Vendra (multi-branch retail POS system), Sparkio (e-commerce store with fuzzy search), and Rag Agent (LangChain RAG assistant).",
+          },
+        },
+      ],
     },
     ...projects.map(createProjectSchema),
   ],

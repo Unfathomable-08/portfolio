@@ -1,9 +1,32 @@
-# *
+# Robots.txt for dev-muhammad.vercel.app
 User-agent: *
+Allow: /
+
+# AI Crawlers for Search & Citation (AEO / GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 # Host
 Host: https://dev-muhammad.vercel.app
 
-# Sitemaps
+# Sitemaps & Machine-Readable Context
 Sitemap: https://dev-muhammad.vercel.app/sitemap.xml
+# LLM Context: https://dev-muhammad.vercel.app/llms.txt

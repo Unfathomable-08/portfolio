@@ -4,6 +4,7 @@ import DotsBg from "@/components/ui/Dots-bg.js";
 import { motion } from "framer-motion";
 
 export default function About() {
+  const currentYear = new Date().getFullYear();
 
   return (
     <motion.div
@@ -16,22 +17,26 @@ export default function About() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <h4 className="font-medium text-2xl pb-4!">Hi, I’m Muhammad,</h4>
-        <p className="text-md max-lg:text-sm">
-          I am a Full-Stack Web & Applied AI Developer with 2 years of experience
-          crafting modern digital applications and intelligent systems. From building
-          responsive websites and cross-platform mobile apps to training AI models and
-          engineering autonomous AI agents, I deliver scalable end-to-end solutions.
-          My core web stack includes React, Next.js, Node.js, Express, Flask, FastAPI,
-          and Alpine.js, paired with React Native and Expo for mobile development. For AI
-          engineering, I leverage Python, PyTorch, TensorFlow, and Keras, backended by
-          SQL, MongoDB, Firebase, and vector databases. Passionate about tackling complex
-          technical challenges and creating high-impact software!
+        <div className="inline-flex items-center gap-2 px-3! py-1! mb-4! rounded-full bg-[var(--secondary)]/10 border border-[var(--secondary)]/30 text-xs text-[var(--secondary)] font-medium">
+          <span>Available for Freelance & Contracts ({currentYear})</span>
+        </div>
+
+        <h3 className="font-semibold text-2xl md:text-3xl pb-3! text-white">
+          Hi, I'm Muhammad,
+          <span className="sr-only"> (Unfathomable-08 / unfathomable_08)</span>
+        </h3>
+
+        <p className="text-md max-lg:text-sm text-[var(--tertiary)] mb-4!">
+          Muhammad is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan, with over 2 years of professional experience and 35+ delivered projects. Specializing in React, Next.js, Node.js, Python, and autonomous AI agents, he engineers scalable, high-performance web applications and intelligent systems for clients worldwide.
+        </p>
+
+        <p className="text-md max-lg:text-sm text-[var(--tertiary)]">
+          From building responsive web platforms and cross-platform mobile apps to training machine learning models and implementing RAG pipelines with LangChain, his focus is on shipping robust, production-grade software that drives measurable results.
         </p>
         <motion.a
           href="https://wa.me/923282279743"
           target="_blank"
-          className="bg-[var(--secondary)] inline-block hover:bg-[var(--hover)] rounded py-1.5! px-5! mt-5! z-2 relative"
+          className="bg-[var(--secondary)] inline-block hover:bg-[var(--hover)] rounded py-1.5! px-5! mt-5!"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 100, delay: 1 }}
@@ -46,7 +51,7 @@ export default function About() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
-        className="flex justify-center items-center relative z-5 transform -translate-y-10 max-md:scale-70 max-lg:scale-90"
+        className="flex justify-center items-center relative z-1 transform -translate-y-10 max-md:scale-70 max-lg:scale-90"
       >
         <Image src="/boy.png" alt="Hacker Illustration" width={400} height={400} />
       </motion.div>

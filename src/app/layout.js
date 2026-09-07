@@ -17,12 +17,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Muhammad Portfolio | Fullstack Web & Applied AI Developer",
-  description: "Explore My professional portfolio, featuring full-stack projects, AI tools, and modern web apps. Built with Next.js and passion.",
-  keywords: ["Muhammad", "Portfolio", "Unfathomable-08", "Unfathomable_08", "Unfathomable 08", "unfathomable08", "unfathomable", "GitHub Muhammad", "Fullstack Developer", "AI Developer", "React Developer", "Web Developer Portfolio", "AI Projects", "Full Stack Projects", "Web Developer"],
+  title: "Dev Muhammad | Fullstack Web & Applied AI Developer in Karachi, Pakistan",
+  description: "From building high-performance web apps to training custom AI models and autonomous agents, Developer Muhammad is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan.",
+  keywords: [
+    "Dev Muhammad",
+    "dev Muhammad",
+    "developer muhammad",
+    "Muhammad",
+    "developer in pakistan",
+    "developer in karachi",
+    "Fullstack Developer Karachi",
+    "AI Developer Pakistan",
+    "Unfathomable-08",
+    "Unfathomable_08",
+    "unfathomable08",
+    "Portfolio",
+    "Next.js Developer",
+    "React Developer",
+    "AI Projects",
+    "Full Stack Projects"
+  ],
+  authors: [{ name: "Muhammad", url: "https://dev-muhammad.vercel.app" }],
+  creator: "Muhammad",
+  publisher: "Muhammad",
   openGraph: {
-    title: "Muhammad Portfolio | Fullstack Web & Applied AI Developer",
-    description: "Explore My professional portfolio, featuring full-stack projects, AI tools, and modern web apps. Built with Next.js and passion.",
+    title: "Dev Muhammad | Fullstack Web & Applied AI Developer in Karachi, Pakistan",
+    description: "From building high-performance web apps to training custom AI models and autonomous agents, Developer Muhammad is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan.",
     type: "website",
     url: "https://dev-muhammad.vercel.app",
     siteName: "Muhammad Portfolio",
@@ -31,20 +51,20 @@ export const metadata = {
         url: "https://dev-muhammad.vercel.app/og.png",
         width: 1200,
         height: 630,
-        alt: "Muhammad Portfolio",
+        alt: "Dev Muhammad Portfolio",
       },
       {
         url: "https://dev-muhammad.vercel.app/og-square.png",
         width: 1200,
         height: 1200,
-        alt: "Muhammad Portfolio",
+        alt: "Dev Muhammad Portfolio",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Portfolio | Fullstack Web & Applied AI Developer",
-    description: "Explore My professional portfolio, featuring full-stack projects, AI tools, and modern web apps. Built with Next.js and passion.",
+    title: "Dev Muhammad | Fullstack Web & Applied AI Developer in Karachi, Pakistan",
+    description: "From building high-performance web apps to training custom AI models and autonomous agents, Developer Muhammad is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan.",
     images: ["https://dev-muhammad.vercel.app/twitter.png"],
   },
   alternates: {
@@ -56,6 +76,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Context" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
         {/* Google Analytics */}
         <Script

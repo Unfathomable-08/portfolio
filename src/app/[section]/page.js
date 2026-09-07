@@ -67,8 +67,12 @@ export async function generateMetadata({ params }) {
       description: data.description,
       images: ["https://dev-muhammad.vercel.app/twitter.png"],
     },
+    robots: {
+      index: false,
+      follow: true,
+    },
     alternates: {
-      canonical: `https://dev-muhammad.vercel.app/${section}`,
+      canonical: "https://dev-muhammad.vercel.app",
     }
   };
 }

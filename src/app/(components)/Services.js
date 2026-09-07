@@ -23,12 +23,12 @@ export default function Services() {
       outcome: "Fast, stable, SEO-ready products",
     },
     {
-      title: "Progressive Web Apps (PWAs)",
+      title: "Mobile App Development",
       description:
-        "Fast, app-like experiences with offline support, push notifications, and seamless performance on mobile and desktop.",
+        "Cross-platform iOS and Android mobile apps engineered with React Native and Expo, featuring offline support, notifications, and native performance.",
       icon: FaMobile,
       accent: "APP",
-      outcome: "Installable experiences across devices",
+      outcome: "High-performance iOS & Android apps",
     },
     {
       title: "AI Agents",
@@ -74,7 +74,7 @@ export default function Services() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="rounded-xl border bg-[var(--primary)] p-4!"
+              className="rounded-xl relative z-1 border bg-[var(--primary)] p-4!"
               style={{
                 borderColor: "rgba(0, 194, 255, 0.35)",
                 minHeight: "240px",
@@ -136,7 +136,7 @@ export default function Services() {
         </div>
 
         <motion.div
-          className="rounded-xl border max-md:hidden max-lg:mt-4"
+          className="rounded-xl relative z-1 border max-md:hidden max-lg:mt-4"
           style={{
             borderColor: "rgba(0, 194, 255, 0.35)",
             background:

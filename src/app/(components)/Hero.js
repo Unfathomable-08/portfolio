@@ -37,7 +37,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-5 text-center text-white max-w-4xl space-y-6 px-4">
+      <div className="text-center text-white max-w-4xl space-y-6 px-4">
         <motion.h1
           className="text-3xl sm:text-5xl font-extrabold leading-tight pb-3! drop-shadow-[0_0_10px_var(--secondary)]"
           initial={{ opacity: 0, y: -50 }}
@@ -45,6 +45,7 @@ export default function Hero() {
           transition={{ duration: 1 }}
         >
           Hi, I'm <span className="text-[var(--secondary)] animate-pulse">Muhammad</span>
+          <span className="sr-only"> (Unfathomable-08 | unfathomable_08)</span>
         </motion.h1>
 
         <motion.h2
@@ -84,8 +85,8 @@ export default function Hero() {
       </div>
 
       {/* Gradient Overlays */}
-      <div className="absolute bg-gradient-to-b from-transparent to-[var(--primary)] h-36 bottom-0 w-full z-5" />
-      <div className="absolute bg-gradient-to-b from-[var(--primary)] to-transparent h-36 top-0 w-full z-5" />
+      <div className="absolute bg-gradient-to-b from-transparent to-[var(--primary)] h-36 bottom-0 w-full z-0" />
+      <div className="absolute bg-gradient-to-b from-[var(--primary)] to-transparent h-36 top-0 w-full z-0" />
 
       {/* Scroll Indicator */}
       <motion.div
