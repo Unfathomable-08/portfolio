@@ -56,7 +56,7 @@ export default function FAQ() {
         viewport={{ once: false, amount: 0.2 }}
       >
         <p
-          className="font-semibold text-xs tracking-[2px] uppercase text-[var(--secondary)] mb-2!"
+          className="font-semibold text-xs tracking-[2px] uppercase text-[var(--secondary)]! mb-2!"
         >
           Questions
         </p>
@@ -88,7 +88,7 @@ export default function FAQ() {
                   {faq.srOnly && <span className="sr-only"> ({faq.srOnly})</span>}
                 </span>
                 <span
-                  className={`text-[var(--secondary)] text-xs transition-transform duration-300 ${
+                  className={`text-xs transition-transform duration-300 ${
                     isOpen ? "rotate-180" : ""
                   }`}
                 >

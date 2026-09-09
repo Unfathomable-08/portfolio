@@ -17,7 +17,7 @@ export default function About() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="inline-flex items-center gap-2 px-3! py-1! mb-4! rounded-full bg-[var(--secondary)]/10 border border-[var(--secondary)]/30 text-xs text-[var(--secondary)] font-medium">
+        <div className="inline-flex items-center gap-2 px-3! py-1! mb-4! rounded-full bg-[var(--secondary)]/10 border border-[var(--secondary)]/30 text-xs font-medium">
           <span>Available for Freelance & Contracts ({currentYear})</span>
         </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { GiRocket } from "react-icons/gi";
 
 export default function Hero() {
   return (
@@ -44,7 +45,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Hi, I'm <span className="text-[var(--secondary)] animate-pulse">Muhammad</span>
+          Hi, I'm <span className="animate-pulse">Muhammad</span>
           <span className="sr-only"> (Unfathomable-08 | unfathomable_08)</span>
         </motion.h1>
 
@@ -54,7 +55,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Fullstack Web Developer & Applied AI Developer 🚀
+          Fullstack Web Developer & Applied AI Developer <GiRocket className="inline ml-1! -rotate-80" size={24} />
         </motion.h2>
 
         <motion.div
@@ -66,7 +67,7 @@ export default function Hero() {
           {["React", "Next.js", "Node.js", "MongoDB", "Python"].map((skill, index) => (
             <span
               key={index}
-              className="bg-[var(--secondary)]/20 border border-[var(--secondary)] text-[var(--secondary)] py-[3px]! px-3! rounded-full text-sm font-medium mb-3!"
+              className="bg-[var(--secondary)]/20 border border-[var(--secondary)] py-[3px]! px-3! rounded-full text-sm font-medium mb-3!"
             >
               {skill}
             </span>

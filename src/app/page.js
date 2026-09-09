@@ -11,6 +11,7 @@ import Services from "@/app/(components)/Services"
 import Experience from "@/app/(components)/WorkEx"
 import FAQ from "@/app/(components)/FAQ"
 import Contact from "@/components/Contact"
+import Footer from "@/components/Footer"
 
 export default function Home() {
     const pathname = usePathname();
@@ -43,6 +44,7 @@ export default function Home() {
             <Services />
             <FAQ />
             <Contact />
+            <Footer />
         </main>
     )
 }

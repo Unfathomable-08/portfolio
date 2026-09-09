@@ -149,13 +149,13 @@ export default function Projects() {
   );
 
   return (
-    <div id="projects" className="min-h-svh w-full bg-[var(--primary)] px-5! pb-16! md:px-20!">
+    <div id="projects" className="min-h-svh w-full bg-[var(--primary)] px-3! pb-16! md:px-20!">
       <h2 className="sm:text-2xl text-xl md:text-3xl font-bold text-white pt-15! pb-8! text-center">My Projects</h2>
 
       <div
         role="tablist"
         aria-label="Project categories"
-        className="mx-auto mb-10! flex w-fit max-w-full gap-1 overflow-x-auto rounded-lg border border-white/35 bg-black/30 p-1.5! shadow-[0_12px_40px_rgba(0,0,0,0.22)]"
+        className="mx-auto mb-10! flex flex-wrap w-fit max-w-full gap-1 rounded-lg border border-white/35 bg-black/30 p-1.5! shadow-[0_12px_40px_rgba(0,0,0,0.22)]"
       >
         {categories.map((category) => {
           const isActive = activeCategory === category;
@@ -172,7 +172,7 @@ export default function Projects() {
               aria-selected={isActive}
               aria-controls="projects-panel"
               onClick={() => setActiveCategory(category)}
-              className={`group cursor-pointer flex shrink-0 items-center gap-2 rounded-md px-3! py-2.5! text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)] sm:px-4! ${
+              className={`group cursor-pointer flex shrink-0 items-center gap-2 rounded-sm md:rounded-md px-3! py-2! md:py-2.5! text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)] sm:px-4! ${
                 isActive
                   ? "bg-[var(--secondary)] text-[#071014] shadow-[0_0_24px_rgba(0,194,255,0.18)]"
                   : "text-gray-300 bg-[var(--primary)] border border-white/0 hover:border-[var(--secondary)]/35 hover:text-white"
@@ -197,7 +197,7 @@ export default function Projects() {
         id="projects-panel"
         role="tabpanel"
         aria-labelledby={`projects-tab-${activeCategory.toLowerCase().replaceAll(" ", "-")}`}
-        className="grid grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2"
+        className="max-md:px-2! grid grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2"
       >
         <AnimatePresence mode="popLayout">
         {visibleProjects.map((project, index) => (
@@ -231,7 +231,7 @@ export default function Projects() {
                   {project.tech.split(',').map((tech, idx) => (
                     <span
                       key={idx}
-                      className="bg-[var(--secondary)]/20 border py-[3px]! px-3! border-[var(--secondary)] text-[var(--secondary)] rounded-full"
+                      className="bg-[var(--secondary)]/20 border py-[3px]! px-3! border-[var(--secondary)] rounded-full"
                     >
                       {tech.trim()}
                     </span>
@@ -241,7 +241,7 @@ export default function Projects() {
               <div className="flex flex-wrap gap-2 mt-3! font-medium">
                 <Link
                   href={`/case-study/${project.caseStudy}`}
-                  className="max-sm:text-sm border py-1.5! px-2.5! text-sm rounded-sm border-[var(--secondary)] text-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] hover:text-[#071014] transition"
+                  className="max-sm:text-sm border py-1.5! px-2.5! text-sm rounded-sm border-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] hover:text-[#071014] transition"
                 >
                   Case Study
                 </Link>
@@ -249,7 +249,7 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-sm rounded-sm border py-1.5! px-2.5! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition`}
+                  className={`text-sm rounded-sm border py-1.5! px-2.5! border-[var(--secondary)] hover:bg-[var(--hover)] transition`}
                 >
                   Live Demo
                 </a>}
@@ -257,7 +257,7 @@ export default function Projects() {
                   href={project.apk}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-sm rounded-sm border py-1.5! px-2! border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--hover)] transition`}
+                  className={`text-sm rounded-sm border py-1.5! px-2! border-[var(--secondary)] hover:bg-[var(--hover)] transition`}
                 >
                   Download APK
                 </a>}

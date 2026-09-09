@@ -45,7 +45,7 @@ export default function Experience() {
         viewport={{ once: false, amount: 0.2 }}
       >
         <p
-          className="font-semibold text-xs tracking-[2px] uppercase text-[var(--secondary)] mb-2!"
+          className="font-semibold text-xs tracking-[2px] uppercase text-[var(--secondary)]! mb-2!"
         >
           Career
         </p>
@@ -70,7 +70,7 @@ export default function Experience() {
           >
             <div>
               <div className="flex items-center justify-between gap-2 mb-3!">
-                <span className="text-xs font-semibold text-[var(--secondary)] tracking-wider">
+                <span className="text-xs font-semibold tracking-wider">
                   0{index + 1} · {exp.company}
                 </span>
                 <span className="text-xs text-[var(--tertiary)] border border-white/10 px-2.5! py-0.5! rounded-full">
@@ -93,7 +93,7 @@ export default function Experience() {
                   key={idx}
                   className="flex items-start gap-2 text-xs sm:text-sm text-[var(--tertiary)]"
                 >
-                  <span className="text-[var(--secondary)] text-sm mt-0.5 select-none">
+                  <span className="text-[var(--secondary)]! text-sm mt-0.5 select-none">
                     ▸
                   </span>
                   <span>{item}</span>

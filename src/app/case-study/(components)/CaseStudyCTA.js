@@ -23,7 +23,7 @@ export default function CaseStudyCTA() {
 
                     <a
                         href="#contact"
-                        className="inline-flex w-fit shrink-0 rounded-full border border-transparent bg-[var(--secondary)] px-4! py-2! text-xs sm:text-sm font-medium text-[#071014] transition-colors hover:border-[var(--secondary)] hover:bg-transparent hover:text-[var(--secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
+                        className="inline-flex w-fit shrink-0 rounded-full border border-transparent bg-[var(--secondary)] px-4! py-2! text-xs sm:text-sm font-medium text-[#071014] transition-colors hover:border-[var(--secondary)] hover:bg-transparent hover:text-[var(--secondary)]! focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
                     >
                         Start a conversation
                     </a>

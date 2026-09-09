@@ -65,7 +65,7 @@ export default function Info({ caseStudy }) {
                                     key={feature}
                                     className="group flex items-center gap-3! sm:gap-4! py-3! transition-all duration-300 hover:pl-2!"
                                 >
-                                    <span className="text-[11px] sm:text-xs font-bold text-[var(--secondary)] opacity-60">
+                                    <span className="text-[11px] sm:text-xs font-bold opacity-60">
                                         {String(index + 1).padStart(2, "0")}
                                     </span>
 
@@ -73,7 +73,7 @@ export default function Info({ caseStudy }) {
                                         {feature}
                                     </p>
 
-                                    <span className="text-[var(--secondary)] opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1">
+                                    <span className="opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1">
                                         <GoArrowUpRight />
                                     </span>
                                 </div>

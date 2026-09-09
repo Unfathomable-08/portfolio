@@ -45,7 +45,7 @@ export default function Hero({ caseStudy, device }) {
                         className="mb-8! flex items-center gap-3!"
                     >
                         <span className="h-px w-10 bg-[var(--secondary)]" />
-                        <span className="text-sm text-[var(--secondary)]">
+                        <span className="text-sm">
                             Product case study · {new Date().getFullYear()}
                         </span>
                     </motion.div>
@@ -73,7 +73,7 @@ export default function Hero({ caseStudy, device }) {
                             variants={reveal}
                             transition={{ duration: 0.55 }}
                             href="#about"
-                            className="inline-flex rounded-full border border-transparent bg-[var(--secondary)] px-4! py-2! text-xs sm:text-sm font-medium text-[#071014] transition-colors hover:border-[var(--secondary)] hover:bg-transparent hover:text-[var(--secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
+                            className="inline-flex rounded-full border border-transparent bg-[var(--secondary)] px-4! py-2! text-xs sm:text-sm font-medium text-[#071014] transition-colors hover:border-[var(--secondary)] hover:bg-transparent hover:text-[var(--secondary)]! focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
                         >
                             Explore Portfolio
                         </motion.a>

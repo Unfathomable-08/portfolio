@@ -70,7 +70,7 @@ export default function Contact() {
             variants={fadeVariant}
             custom={0.2}
           >
-            Get in <span className="text-[var(--secondary)]">Touch</span>
+            Get in <span>Touch</span>
           </motion.h2>
           <motion.p
             className="mb-3! pb-3! text-gray-300"
@@ -163,7 +163,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 variants={fadeVariant}
                 custom={i}
-                className="text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-gray-900 w-[28px] flex justify-center items-center aspect-square rounded-full border border-cyan-400 transition-all duration-300 transform hover:scale-110"
+                className="hover:bg-[var(--secondary)] hover:text-gray-900 w-[28px] flex justify-center items-center aspect-square rounded-full border border-cyan-400 transition-all duration-300 transform hover:scale-110"
               >
                 <i className={`fab fa-${icon} text-lg`} />
               </motion.a>

@@ -8,6 +8,7 @@ import Mockup from "../(components)/Mockup";
 import FlowMap from "../(components)/FlowMap";
 import CaseStudyCTA from "../(components)/CaseStudyCTA";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import { caseStudies } from "@/data/case-study";
 
 export default function CaseStudyPage() {
@@ -27,6 +28,7 @@ export default function CaseStudyPage() {
             </section>
             <CaseStudyCTA />
             <Contact />
+            <Footer />
         </main>
     );
 }

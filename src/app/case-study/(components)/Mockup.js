@@ -117,7 +117,7 @@ export default function Mockup({ screenshots, device }) {
                             </button>
 
                             <figcaption className="mt-3! sm:mt-4! grid grid-cols-[1.75rem_1fr] border-t border-white/50 pt-3!">
-                                <span className="font-mono text-[10px] text-[var(--secondary)]">
+                                <span className="font-mono text-[10px] text-[var(--secondary)]!">
                                     {String(index + 1).padStart(2, "0")}
                                 </span>
                                 <div>
@@ -164,7 +164,7 @@ export default function Mockup({ screenshots, device }) {
                             autoFocus
                             onClick={() => setActiveScreenshot(null)}
                             aria-label="Close screenshot preview"
-                            className="absolute right-3 top-3 z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-black/70 text-sm leading-none text-white transition hover:border-[var(--secondary)] hover:text-[var(--secondary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)]"
+                            className="absolute right-3 top-3 z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-black/70 text-sm leading-none text-white transition hover:border-[var(--secondary)] hover:text-[var(--secondary)]! focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)]"
                         >
                             <RxCross1 />
                         </button>
