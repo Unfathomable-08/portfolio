@@ -20,7 +20,7 @@ export default function Footer() {
     { name: "Awaza", href: "/case-study/awaza" },
     { name: "TeBre AI", href: "/case-study/tebre" },
     { name: "Fluentyx", href: "/case-study/fluentyx" },
-    { name: "Sparkio Store", href: "/case-study/sparkio" },
+    { name: "M&M Selections", href: "/case-study/mmselections" },
     { name: "GlowFarm", href: "/case-study/glowfarm" },
     { name: "RAG Agent", href: "/case-study/rag" },
     { name: "SkyTech", href: "/case-study/skytech" },

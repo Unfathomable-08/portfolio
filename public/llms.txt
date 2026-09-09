@@ -49,7 +49,7 @@ Muhammad (known professionally as Dev Muhammad, and online as Unfathomable-08 / 
 - **Ember & Oak**: Full-stack restaurant platform with real-time ordering and admin portal. [Live](https://emberoak-two.vercel.app)
 - **Awaza**: Social media web and mobile application with live push notifications, real-time chat, and interactions. [Live](https://awaza-social.vercel.app) | [Repo](https://github.com/Unfathomable-08/Awaza-web-app)
 - **Fluentyx**: Arabic learning platform with AI chatbot tutor, translation scoring, and CNN handwritten classification. [Live](https://fluentyx.vercel.app) | [Repo](https://github.com/unfathomable-08/fluentyx)
-- **Sparkio Store**: E-commerce platform with clean UI and admin dashboard. [Live](https://sparkio.store)
+- **M&M Selections**: Full-stack e-commerce store & admin CMS with multi-variant products, wholesale pricing, dynamic delivery settings, order tracking, and Meezan Bank gateway. [Live](https://mmselections.com)
 - **Glowfarm**: Interactive lighting store UI with dynamic theme and light effects. [Live](https://glowfarm.vercel.app)
 - **Nexus Ecommerce**: Modern responsive e-commerce application. [Live](https://nexus-ecommerce-nine.vercel.app)
 - **Rag Agent**: RAG agent powered by LangChain, Hugging Face models, and vector database retrieval. [Live](https://techdxon.com/ai) | [Repo](https://huggingface.co/spaces/TechDxon/Chatbot/tree/main)

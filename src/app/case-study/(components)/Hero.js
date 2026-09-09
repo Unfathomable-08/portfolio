@@ -19,7 +19,7 @@ export default function Hero({ caseStudy, device }) {
         >
             {right && (
                 typeof right === "string" ? (
-                    <div className="pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/20! md:text-white!">
+                    <div className="pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/20!">
                         {right}
                     </div>
                 ) : (
@@ -53,7 +53,7 @@ export default function Hero({ caseStudy, device }) {
                     <motion.h1
                         variants={reveal}
                         transition={{ duration: 0.65 }}
-                        className="text-[clamp(3.5rem,9vw,6.5rem)] font-extrabold leading-[0.85] sm:leading-[0.76] tracking-[-0.075em] text-white"
+                        className="text-[clamp(3rem,8vw,6rem)] font-extrabold leading-[0.85] sm:leading-[0.76] tracking-[-0.05em] text-white"
                     >
                         {caseStudy.name}
                     </motion.h1>

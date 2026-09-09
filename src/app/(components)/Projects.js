@@ -21,6 +21,28 @@ const projects = [
   },
   {
     id: 2,
+    category: ["Website"],
+    title: "M&M Selections",
+    caseStudy: "mmselections",
+    desc: "A modern full-stack e-commerce store and admin CMS. Features multi-variant products, separate wholesale pricing, dynamic delivery fee & time settings, order tracking, and Meezan Bank payment gateway.",
+    tech: "Next.js, MongoDB, Zustand, Meezan Bank, Tailwind CSS",
+    img: "/project/mmselections.png",
+    link: 'https://mmselections.com',
+    apk: null
+  },
+  {
+    id: 12,
+    category: ["Website", "Management Systems"],
+    title: "Vendra – POS",
+    caseStudy: "vendra",
+    desc: "A multi-branch retail management system that connects point-of-sale, inventory, purchasing, customers, staff, promotions, and reporting in one role-aware workspace.",
+    tech: "Next.js, React, Zustand, IndexedDB",
+    img: "/case-studies/vendra/dashboard.png",
+    link: "https://vendra-pos.vercel.app/",
+    apk: null
+  },
+  {
+    id: 6,
     category: ["Website", "Management Systems"],
     title: "Ember & Oak",
     caseStudy: "emberoak",
@@ -61,17 +83,6 @@ const projects = [
     tech: "Next.js, PyTorch, LangChain, Hugging Face, Tailwind CSS",
     img: "/project/fluentyx.JPG",
     link: "https://fluentyx.vercel.app",
-    apk: null
-  },
-  {
-    id: 6,
-    category: ["Website"],
-    title: "Sparkio Store",
-    caseStudy: "sparkio",
-    desc: "Sparkio is a modern e-commerce platform with all essential features, a clean shopping experience, and an eye-catching UI. Includes a powerful admin dashboard and is fully responsive across devices.",
-    tech: "Next.js, Tailwind CSS, MongoDB, MUI",
-    img: "/project/sparkio.webp",
-    link: 'https://sparkio.store',
     apk: null
   },
   {
@@ -128,17 +139,6 @@ const projects = [
     img: "/project/macrozone.png",
     link: null,
     apk: "https://github.com/Unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
-  },
-  {
-    id: 12,
-    category: ["Website", "Management Systems"],
-    title: "Vendra – POS",
-    caseStudy: "vendra",
-    desc: "A multi-branch retail management system that connects point-of-sale, inventory, purchasing, customers, staff, promotions, and reporting in one role-aware workspace.",
-    tech: "Next.js, React, Zustand, IndexedDB",
-    img: "/case-studies/vendra/dashboard.png",
-    link: "https://vendra-pos.vercel.app/",
-    apk: null
   },
 ];
 

@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "What notable full-stack and AI projects has Muhammad delivered?",
     answer:
-      "Key projects include Sable Build (visual website builder with multi-stack code export), Fluentyx (AI-powered language learning platform), Vendra (multi-branch retail POS system), Sparkio (e-commerce store with fuzzy search), and Rag Agent (LangChain RAG assistant).",
+      "Key projects include Sable Build (visual website builder with multi-stack code export), Fluentyx (AI-powered language learning platform), Vendra (multi-branch retail POS system), M&M Selections (full-stack e-commerce & custom CMS platform with wholesale pricing and Meezan Bank gateway), and Rag Agent (LangChain RAG assistant).",
     srOnly: "Unfathomable-08 projects, dev muhammad portfolio projects",
   },
 ];

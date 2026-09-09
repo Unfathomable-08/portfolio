@@ -109,7 +109,7 @@ export const caseStudies = {
             ["selectLanguage", "urduHindi"],
         ]
     },
-    
+
     "expense-tracker": {
         device: "mobile",
         hero: {
@@ -452,7 +452,7 @@ export const caseStudies = {
             ["account", "settings"],
         ]
     },
-    
+
     emberoak: {
         device: "laptop",
         hero: {
@@ -687,94 +687,131 @@ export const caseStudies = {
         ]
     },
 
-    sparkio: {
-        device: "mobile",
+    mmselections: {
+        device: "laptop",
         hero: {
-            name: "Sparkio",
-            description: "A professional, full-featured ecommerce store built around fast product discovery and a complete shopping journey. Customers can search, filter, purchase, track orders, and manage their account through a polished mobile-first experience.",
-            images: ["/case-studies/sparkio/shop.png", "/case-studies/sparkio/home.png"],
-            live: "https://sparkio.store/",
+            right: "M&M",
+            name: "M&M Selections",
+            description: "A modern full-stack ecommerce store and custom CMS built for both retail and wholesale customers. Features multi-variant products, separate wholesale pricing, live delivery settings, order tracking, and Meezan Bank payment integration.",
+            images: ["/case-studies/mm/shop.png", "/case-studies/mm/home.png"],
+            live: "https://mmselections.com",
         },
         about: {
             text: [
-                "_Sparkio_ is a complete _ecommerce_ _platform_ designed to make browsing, ordering, and account management feel clear and dependable across devices.",
-                "Customers can create an account, sign in securely, explore products by category, use _advanced_ _filters_, manage a cart, place orders, and follow order progress from their account.",
-                "Product discovery is strengthened by _advanced_ _fuzzy_ _search_ , which can return relevant results even when a customer misspells a product name or enters an approximate query. _Transactional_ _emails_ powered by Nodemailer support important account and order communication."
+                "_M&M_ _Selections_ is an _ecommerce_ store and custom _admin_ _CMS_ built to serve both retail shoppers and bulk wholesale buyers.",
+                "The storefront gives customers an easy way to browse products across dedicated sections: Home, About Us, Contact, Categories, Brands, a specialized _Fragrance_ _hub_ , and a dedicated _Wholesale_ _portal_ . Shoppers can choose from multiple product variants, check live stock, view retail or wholesale prices, and enjoy quick cart updates powered by _Zustand_ .",
+                "For store owners, the custom _CMS_ makes daily management simple. Admins can add or edit products with variants, track inventory, view orders, and change order statuses. A dynamic _Settings_ _page_ allows the admin to update the delivery fee and estimated delivery time whenever needed, while payments are handled securely through the _Meezan_ _Bank_ merchant gateway with live order tracking."
             ],
-            stack: "Sparkio is built with Next.js for the storefront and application experience, MongoDB for customer, product, cart, and order data, Nodemailer for transactional email, and Tailwind CSS for its responsive interface.",
-            tech: ["Next.js", "MongoDB", "Nodemailer", "Tailwind CSS"],
+            stack: "M&M Selections is built with Next.js for the storefront and API routes, MongoDB to manage products, variants, orders, and site settings, Zustand for instant shopping cart state, Tailwind CSS for clean styling, and Meezan Bank for direct payments.",
+            tech: ["Next.js", "MongoDB", "Zustand", "Meezan Bank"],
             features: [
-                "Responsive, mobile-first ecommerce storefront with a polished shopping interface",
-                "Advanced fuzzy search that tolerates misspellings and approximate product queries",
-                "Advanced catalog filters for price range, categories, and other product attributes",
-                "Shopping cart with item selection, quantity updates, totals, and removal controls",
-                "Complete checkout and order placement workflow",
-                "Order tracking for monitoring purchase progress and fulfillment status",
-                "Account settings for updating customer details and managing the shopping profile",
-                "Transactional email notifications powered by Nodemailer",
+                "Fast Next.js storefront with a custom administrative CMS dashboard",
+                "Products with multiple variants, live stock limits, and image galleries",
+                "Dual pricing system with separate wholesale rates and retail prices",
+                "Dedicated shopping sections: Fragrance hub, Brands, Categories, and Wholesale",
+                "Complete CMS to add and edit products, configure variants, and track stock",
+                "Dynamic Settings page to update delivery fees and delivery timeframes anytime",
+                "Order management dashboard with status updates (Pending, Processing, Shipped, Delivered)",
+                "Real-time order tracking page for customer self-service",
+                "Direct and secure payment checkout with Meezan Bank Merchant Gateway",
+                "Instant cart updates and responsive experience across all devices",
             ],
         },
         screenshots: [
             {
-                src: "/case-studies/sparkio/home.png",
-                alt: "Sparkio ecommerce home and category discovery screen",
+                src: "/case-studies/mm/home.png",
+                alt: "M&M Selections modern ecommerce storefront homepage",
                 label: "Storefront Home",
-                note: "Discover featured collections and jump into clearly organized shopping categories.",
+                note: "Clean landing page showcasing featured brands, fragrance highlights, and main categories.",
             },
             {
-                src: "/case-studies/sparkio/shop.png",
-                alt: "Sparkio product catalog with advanced filters",
-                label: "Shop & Filters",
-                note: "Browse products and narrow results through price, category, and advanced filter controls.",
+                src: "/case-studies/mm/shop.png",
+                alt: "M&M Selections product catalog and collection browse screen",
+                label: "Catalog & Filtering",
+                note: "Product browsing page with easy category navigation and price filters.",
             },
             {
-                src: "/case-studies/sparkio/login.png",
-                alt: "Sparkio customer sign-in page",
-                label: "Customer Sign In",
-                note: "Secure account access with remembered sessions, password recovery, and sign-up routing.",
+                src: "/case-studies/mm/fragrance.png",
+                alt: "M&M Selections dedicated fragrance collection department",
+                label: "Fragrance Department",
+                note: "Dedicated perfume and fragrance collection page with curated scents.",
             },
             {
-                src: "/case-studies/sparkio/account.png",
-                alt: "Sparkio protected customer account screen",
-                label: "Customer Account",
-                note: "Access profile settings, order history, tracking, and personal shopping information.",
+                src: "/case-studies/mm/item.png",
+                alt: "M&M Selections multi-variant product details with wholesale and retail pricing",
+                label: "Product & Variants",
+                note: "Product details page showing variant selection, live stock, and wholesale vs. retail pricing.",
+            },
+            {
+                src: "/case-studies/mm/products.png",
+                alt: "M&M Selections administrative CMS product inventory table",
+                label: "CMS Product Manager",
+                note: "Admin dashboard to view all products, search, filter, and monitor stock levels.",
+            },
+            {
+                src: "/case-studies/mm/product-form.png",
+                alt: "M&M Selections administrative product editor and variant configuration form",
+                label: "CMS Product Editor",
+                note: "Simple form for admins to add products, configure variants, and set wholesale rates.",
             },
         ],
-        workflowNote: "Customers move from category discovery or typo-tolerant search into filtered product results, cart, checkout, and order tracking, while authentication and account settings keep the full purchase history connected to one profile.",
+        workflowNote: "The platform is organized into two main parts: the customer storefront (browsing products, selecting variants, checkout via Meezan Bank, and tracking orders) and the admin CMS (managing products, inventory, orders, and delivery settings).",
         nodes: [
-            node("home", "Storefront Home", 20, 250, true),
-            node("categories", "Categories", 200, 100),
-            node("search", "Fuzzy Search", 200, 250, true),
-            node("shop", "Product Catalog", 390, 180, true),
-            node("filters", "Advanced Filters", 390, 330),
-            node("product", "Product Details", 560, 180),
-            node("cart", "Shopping Cart", 730, 180, true),
-            node("auth", "Sign Up / Sign In", 560, 420, true),
-            node("checkout", "Checkout", 890, 180),
-            node("order", "Place Order", 1030, 180, true),
-            node("email", "Email Confirmation", 1210, 100),
-            node("tracking", "Order Tracking", 1210, 250),
-            node("account", "Customer Account", 830, 420, true),
-            node("orders", "Order History", 1040, 380),
-            node("settings", "Account Settings", 1040, 470),
+            node("home", "Storefront Home", 20, 130, true),
+
+            node("shop", "Shop", 220, 40),
+            node("categories", "Categories & Brands", 220, 100),
+            node("fragrance", "Fragrance Hub", 220, 160),
+            node("wholesale", "Wholesale Portal", 220, 220),
+
+            node("catalog", "Product Catalog", 440, 130, true),
+            node("product", "Product & Multi-Variants", 650, 70, true),
+            node("pricing", "Retail & Wholesale Rates", 650, 170),
+
+            node("cart", "Zustand Cart", 870, 120, true),
+            node("payment", "Meezan Bank Gateway", 1060, 60, true),
+            node("order", "Order Placed", 1060, 170),
+            node("tracking", "Track Order Page", 1260, 120, true),
+
+            node("cms", "Admin CMS Portal", 20, 420, true),
+
+            node("cmsProducts", "Products Management", 230, 340, true),
+            node("cmsForm", "Product & Variant Editor", 440, 340),
+            node("cmsStock", "Stock & Rates Control", 660, 340),
+
+            node("cmsSettings", "CMS Settings Page", 340, 470, true),
+            node("deliveryRules", "Delivery Fee & Time Settings", 590, 470, true),
+
+            node("cmsOrders", "Orders Management", 910, 420, true),
+            node("cmsStatus", "Change Order Status", 1130, 420, true),
         ],
         connections: [
+            ["home", "fragrance"],
+            ["home", "shop"],
             ["home", "categories"],
-            ["home", "search"],
-            ["categories", "shop"],
-            ["search", "shop"],
-            ["filters", "shop"],
-            ["shop", "product"],
+            ["home", "wholesale"],
+            ["fragrance", "catalog"],
+            ["shop", "catalog"],
+            ["categories", "catalog"],
+            ["wholesale", "catalog"],
+            ["catalog", "product"],
+            ["product", "pricing"],
+            ["pricing", "cart"],
             ["product", "cart"],
-            ["cart", "checkout"],
-            ["auth", "checkout"],
-            ["checkout", "order"],
-            ["order", "email"],
+            ["cart", "payment"],
+            ["payment", "order"],
             ["order", "tracking"],
-            ["auth", "account"],
-            ["account", "orders"],
-            ["account", "settings"],
-            ["orders", "tracking"],
+            ["cms", "cmsProducts"],
+            ["cmsProducts", "cmsForm"],
+            ["cmsForm", "cmsStock"],
+            ["cms", "cmsSettings"],
+            ["cmsSettings", "deliveryRules"],
+            ["cms", "cmsOrders"],
+            ["cmsOrders", "cmsStatus"],
+            ["cmsStock", "product"],
+            ["deliveryRules", "cart"],
+            ["order", "cmsOrders"],
+            ["cmsStatus", "tracking"],
         ]
     },
 
@@ -1132,3 +1169,5 @@ export const caseStudies = {
         ]
     },
 }
+
+caseStudies.sparkio = caseStudies.mmselections;

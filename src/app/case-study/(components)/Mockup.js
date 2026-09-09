@@ -58,8 +58,7 @@ export default function Mockup({ screenshots, device }) {
 
                 <div>
                     <p className="max-w-xl text-xs sm:text-sm leading-relaxed text-neutral-400">
-                        A selection of key interfaces from the project, including
-                        lessons, exercises, revision tools, and progress tracking.
+                        A selection of key interfaces from the project, showcasing core user workflows, essential features, and responsive design.
                     </p>
                 </div>
             </div>
@@ -164,7 +163,7 @@ export default function Mockup({ screenshots, device }) {
                             autoFocus
                             onClick={() => setActiveScreenshot(null)}
                             aria-label="Close screenshot preview"
-                            className="absolute right-3 top-3 z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-black/70 text-sm leading-none text-white transition hover:border-[var(--secondary)] hover:text-[var(--secondary)]! focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)]"
+                            className="absolute left-2 top-3 z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-black/70 text-sm leading-none text-white transition hover:border-[var(--secondary)] hover:text-[var(--secondary)]! focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)]"
                         >
                             <RxCross1 />
                         </button>
