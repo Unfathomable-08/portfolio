@@ -106,6 +106,17 @@ export const projects = [
     operatingSystem: "Web",
   },
   {
+    slug: "velto",
+    name: "Velto – CRM",
+    seoTitle: "Velto | Enterprise Sales CRM & Pipeline Platform",
+    description: "A professional sales CRM platform featuring lead scoring, visual pipeline Kanban, multi-channel communication, task automation, and revenue forecasting.",
+    image: "/case-studies/velto/dashboard.png",
+    liveUrl: "https://veltos-crm.vercel.app/",
+    keywords: ["Next.js", "React", "Zustand", "IndexedDB", "Tailwind CSS", "CRM", "Sales Pipeline", "Lead Management", "Kanban"],
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+  },
+  {
     slug: "skytech",
     name: "SkyTech Official Website",
     seoTitle: "SkyTech | Responsive Software Agency Website Experience",
@@ -390,7 +401,7 @@ export const structuredData = {
           name: "What notable full-stack and AI projects has Muhammad delivered?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Key projects include Sable Build (visual website builder with multi-stack code export), Fluentyx (AI-powered language learning platform), Vendra (multi-branch retail POS system), M&M Selections (full-stack e-commerce & custom CMS platform with wholesale pricing and Meezan Bank gateway), and Rag Agent (LangChain RAG assistant).",
+            text: "Key projects include Sable Build (visual website builder with multi-stack code export), Fluentyx (AI-powered language learning platform), Vendra (multi-branch retail POS system), Velto (enterprise sales CRM platform), M&M Selections (full-stack e-commerce & custom CMS platform with wholesale pricing and Meezan Bank gateway), and Rag Agent (LangChain RAG assistant).",
           },
         },
       ],

@@ -46,6 +46,8 @@ Muhammad (known professionally as Dev Muhammad, and online as Unfathomable-08 / 
 
 ## Key Projects
 - **Sable Build**: Drag-and-drop website builder with AI code generation. [Live](https://sablebuild.vercel.app)
+- **Vendra**: Multi-branch retail POS and inventory management system with role-based workflows and IndexedDB browser storage. [Live](https://vendra-pos.vercel.app/)
+- **Velto**: Enterprise sales CRM platform featuring lead scoring, visual pipeline Kanban, multi-channel communication, task automation, and revenue forecasting. [Live](https://veltos-crm.vercel.app/)
 - **Ember & Oak**: Full-stack restaurant platform with real-time ordering and admin portal. [Live](https://emberoak-two.vercel.app)
 - **Awaza**: Social media web and mobile application with live push notifications, real-time chat, and interactions. [Live](https://awaza-social.vercel.app) | [Repo](https://github.com/Unfathomable-08/Awaza-web-app)
 - **Fluentyx**: Arabic learning platform with AI chatbot tutor, translation scoring, and CNN handwritten classification. [Live](https://fluentyx.vercel.app) | [Repo](https://github.com/unfathomable-08/fluentyx)

@@ -1107,6 +1107,131 @@ export const caseStudies = {
         ]
     },
 
+    velto: {
+        device: "laptop",
+        hero: {
+            name: "Velto",
+            description: "A complete sales CRM (Customer Relationship Management) platform built so every page connects into one smooth workflow. It keeps track of leads, deals, visual Kanban pipeline stages, messages, team tasks, and sales forecasting in real time.",
+            images: ["/case-studies/velto/pipeline.png", "/case-studies/velto/dashboard.png"],
+            live: "https://veltos-crm.vercel.app/",
+        },
+        about: {
+            text: [
+                "_Velto_ is built as one connected sales system rather than a bunch of separate basic pages. In real sales work, every step links together: marketing campaigns and lead sources bring in new prospects, qualifying turns them into serious deals, and moving deals across pipeline stages creates automatic tasks and follow-ups.",
+                "At its heart, _Velto_ treats companies and contacts as the main building blocks. One company can have multiple team contacts and several active deals tied to company services. Sales reps can guide deals through New, Qualified, Proposal, Negotiation, and Won stages while saving emails, phone calls, meetings, and inbox messages directly to the customer's history.",
+                "Built for quick and easy testing, the full public demo runs completely inside your browser using IndexedDB storage and Zustand state management. Users can qualify leads, drag deals across the pipeline board, assign team tasks, and view revenue forecasts instantly with zero loading delay or backend setup."
+            ],
+            stack: "Velto is built with Next.js, React, and Tailwind CSS. State management and instant screen updates are handled with Zustand, while browser-based IndexedDB keeps all demo data saved locally without needing a live backend server.",
+            tech: ["Next.js", "React", "Zustand", "IndexedDB"],
+            featureIntro: "A connected sales workspace linking lead qualification, visual pipeline deals, message history, team task assignments, and future revenue forecasts.",
+            features: [
+                "Central dashboard showing won revenue, total pipeline value, win rates, and monthly revenue growth",
+                "Lead management and scoring with source tracking and one-click conversion into sales deals",
+                "Visual Kanban pipeline to move deals across stages from New to Qualified, Proposal, and Won",
+                "Connected customer records linking companies, key contacts, and open opportunities together",
+                "All-in-one communication tracker for emails, phone calls, calendar meetings, and inbox messages",
+                "Task management with personal to-dos, team-wide assignments, and high-priority filters",
+                "Interactive sales calendar showing scheduled calls, upcoming meetings, deadlines, and overdue tasks",
+                "Marketing campaign and lead source tracking to see which channels bring in the most sales",
+                "Clear revenue reports and forecast predictions based on deal size and closing chances",
+                "Automatic workflow rules that assign tasks and send alerts whenever a deal changes stages",
+                "Company service catalog and team member controls managed easily from settings",
+                "Custom automation rules that can be created and adjusted by admin users"
+            ],
+        },
+        screenshots: [
+            {
+                src: "/case-studies/velto/dashboard.png",
+                alt: "Velto CRM executive dashboard",
+                label: "Dashboard",
+                note: "Shows total won revenue, open pipeline value, win rates, and revenue trends at a glance.",
+            },
+            {
+                src: "/case-studies/velto/leads.png",
+                alt: "Velto CRM lead qualification and prospect management",
+                label: "Lead qualification",
+                note: "Collect new leads, see where they came from, track lead scores, and turn them into deals with one click.",
+            },
+            {
+                src: "/case-studies/velto/pipeline.png",
+                alt: "Velto CRM visual Kanban sales pipeline",
+                label: "Visual pipeline",
+                note: "Drag and drop deals between stages from New to Won with live forecast updates and sales rep filters.",
+            },
+            {
+                src: "/case-studies/velto/my-tasks.png",
+                alt: "Velto CRM personal task execution workspace",
+                label: "Actionable tasks",
+                note: "Stay on top of personal to-dos, spot overdue tasks quickly, and connect work directly to active deals.",
+            },
+            {
+                src: "/case-studies/velto/team-task.png",
+                alt: "Velto CRM team task distribution and rep tracking",
+                label: "Team tasks",
+                note: "See task loads across the whole sales team, track completion rates, and keep everyone on schedule.",
+            },
+            {
+                src: "/case-studies/velto/calender.png",
+                alt: "Velto CRM unified sales calendar and schedule",
+                label: "Calender",
+                note: "A clean monthly calendar that puts upcoming calls, meetings, deadlines, and overdue tasks in one place.",
+            }
+        ],
+        workflowNote: "Velto turns sales into one smooth process: marketing campaigns and lead sources bring in leads, qualifying turns them into deals, the visual pipeline tracks sales stages, communications log every interaction, and automated tasks help close deals.",
+        nodes: [
+            node("campaigns", "Campaigns", 10, 80),
+            node("leadSources", "Lead Sources", 10, 220),
+            node("companyContact", "Company & Contacts", 10, 380, true),
+
+            node("leads", "Inbound Leads", 190, 150, true),
+            node("customers", "Customer Accounts", 190, 380),
+
+            node("qualification", "Lead Qualification", 380, 150),
+            node("services", "Services Catalog", 380, 280),
+            node("opportunities", "Opportunities", 380, 420, true),
+
+            node("pipeline", "Sales Pipeline", 570, 280, true),
+            node("communications", "Calls, Emails & Inbox", 570, 420),
+            node("automations", "Workflow Automations", 570, 140),
+
+            node("tasks", "Tasks & Follow-ups", 760, 280, true),
+            node("calendar", "Meetings & Calendar", 760, 420),
+            node("team", "Team & Ownership", 760, 140),
+
+            node("wonDeals", "Closed / Won Deals", 950, 280, true),
+            node("forecast", "Weighted Forecast", 950, 140),
+            node("reports", "Revenue Reports", 950, 420),
+
+            node("dashboard", "Executive Dashboard", 1120, 280, true),
+        ],
+        connections: [
+            ["campaigns", "leads"],
+            ["leadSources", "leads"],
+            ["companyContact", "leads"],
+            ["companyContact", "customers"],
+            ["customers", "opportunities"],
+            ["leads", "qualification"],
+            ["qualification", "opportunities"],
+            ["services", "opportunities"],
+            ["opportunities", "pipeline"],
+            ["pipeline", "automations"],
+            ["pipeline", "communications"],
+            ["communications", "tasks"],
+            ["communications", "calendar"],
+            ["automations", "tasks"],
+            ["pipeline", "tasks"],
+            ["tasks", "team"],
+            ["team", "forecast"],
+            ["tasks", "wonDeals"],
+            ["pipeline", "wonDeals"],
+            ["wonDeals", "forecast"],
+            ["wonDeals", "reports"],
+            ["forecast", "dashboard"],
+            ["reports", "dashboard"],
+            ["wonDeals", "dashboard"],
+        ]
+    },
+
     rag: {
         device: "laptop",
         hero: {

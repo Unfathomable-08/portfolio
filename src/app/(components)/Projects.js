@@ -31,7 +31,7 @@ const projects = [
     apk: null
   },
   {
-    id: 12,
+    id: 3,
     category: ["Website", "Management Systems"],
     title: "Vendra – POS",
     caseStudy: "vendra",
@@ -42,18 +42,18 @@ const projects = [
     apk: null
   },
   {
-    id: 6,
+    id: 4,
     category: ["Website", "Management Systems"],
-    title: "Ember & Oak",
-    caseStudy: "emberoak",
-    desc: "A full-stack restaurant platform with dynamic menu management, table reservations, event booking, and online ordering. Includes a complete admin system for managing operations in real time.",
-    tech: "Next.js, Tailwind CSS, MongoDB, Stripe",
-    img: "/project/emberoak.png",
-    link: "https://emberoak-two.vercel.app",
+    title: "Velto – CRM",
+    caseStudy: "velto",
+    desc: "A full-featured professional CRM (Customer Relationship Management) platform featuring a connected data graph across leads, opportunities, visual pipeline stages, multi-channel communication, tasks, and revenue forecasting.",
+    tech: "Next.js, React, Zustand, IndexedDB",
+    img: "/case-studies/velto/dashboard.png",
+    link: "https://veltos-crm.vercel.app/",
     apk: null
   },
   {
-    id: 3,
+    id: 5,
     category: ["Website", "Mobile Apps"],
     title: "Awaza",
     caseStudy: "awaza",
@@ -64,7 +64,7 @@ const projects = [
     apk: null
   },
   {
-    id: 4,
+    id: 6,
     category: ["AI Agents"],
     title: "TeBre",
     caseStudy: "tebre",
@@ -75,7 +75,7 @@ const projects = [
     apk: null
   },
   {
-    id: 5,
+    id: 7,
     category: ["Website", "Mobile Apps", "AI Agents"],
     title: "Fluentyx",
     caseStudy: "fluentyx",
@@ -86,7 +86,18 @@ const projects = [
     apk: null
   },
   {
-    id: 7,
+    id: 8,
+    category: ["Website", "Management Systems"],
+    title: "Ember & Oak",
+    caseStudy: "emberoak",
+    desc: "A full-stack restaurant platform with dynamic menu management, table reservations, event booking, and online ordering. Includes a complete admin system for managing operations in real time.",
+    tech: "Next.js, Tailwind CSS, MongoDB, Stripe",
+    img: "/project/emberoak.png",
+    link: "https://emberoak-two.vercel.app",
+    apk: null
+  },
+  {
+    id: 9,
     category: ["Website"],
     title: "Glowfarm",
     caseStudy: "glowfarm",
@@ -97,7 +108,7 @@ const projects = [
     apk: null
   },
   {
-    id: 8,
+    id: 10,
     category: ["AI Agents"],
     title: "Rag Agent",
     caseStudy: "rag",
@@ -108,7 +119,7 @@ const projects = [
     apk: null
   },
   {
-    id: 9,
+    id: 11,
     category: ["Website"],
     title: "SkyTech Official Website",
     caseStudy: "skytech",
@@ -119,7 +130,7 @@ const projects = [
     apk: null
   },
   {
-    id: 10,
+    id: 12,
     category: ["Mobile Apps"],
     title: "Expense Tracker",
     caseStudy: "expense-tracker",
@@ -130,7 +141,7 @@ const projects = [
     apk: "https://github.com/Unfathomable-08/Expense-Tracker-React-Native/releases/download/v1.0.0/expense-tracker.apk"
   },
   {
-    id: 11,
+    id: 13,
     category: ["Mobile Apps"],
     title: "Macrozone",
     caseStudy: "macrozone",

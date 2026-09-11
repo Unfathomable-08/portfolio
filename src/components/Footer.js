@@ -25,6 +25,7 @@ export default function Footer() {
     { name: "RAG Agent", href: "/case-study/rag" },
     { name: "SkyTech", href: "/case-study/skytech" },
     { name: "Vendra", href: "/case-study/vendra" },
+    { name: "Velto", href: "/case-study/velto" },
   ];
 
   const legalLinks = [
