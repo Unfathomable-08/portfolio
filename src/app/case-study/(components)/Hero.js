@@ -112,7 +112,7 @@ export default function Hero({ caseStudy, device }) {
                         <div className={`relative overflow-hidden ${isLaptop ? "aspect-video rounded-md" : "aspect-[9/16] rounded-[1rem] sm:rounded-[1.25rem]"}`}>
                             <Image
                                 src={caseStudy.images?.[0]}
-                                alt="Fluentyx vocabulary exercise"
+                                alt={`${caseStudy.name || "Project"} feature screenshot`}
                                 fill
                                 sizes="(min-width: 768px) 220px, 42vw"
                                 className="object-cover"
@@ -124,7 +124,7 @@ export default function Hero({ caseStudy, device }) {
                         <div className={`relative overflow-hidden ${isLaptop ? "aspect-video rounded-md" : "aspect-[9/16] rounded-[1.15rem] sm:rounded-[1.5rem]"}`}>
                             <Image
                                 src={caseStudy.images?.[1]}
-                                alt="Fluentyx learning dashboard"
+                                alt={`${caseStudy.name || "Project"} interface overview`}
                                 fill
                                 priority
                                 sizes="(min-width: 768px) 270px, 52vw"

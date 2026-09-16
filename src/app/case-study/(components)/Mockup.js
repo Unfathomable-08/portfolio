@@ -103,7 +103,7 @@ export default function Mockup({ screenshots, device }) {
                                 <div className={`relative overflow-hidden bg-black ${isLaptop ? "aspect-video rounded-md" : "aspect-[9/16] rounded-[1rem] sm:rounded-[1.15rem]"}`}>
                                     <Image
                                         src={screenshot.src}
-                                        alt={screenshot.alt}
+                                        alt={screenshot.alt || `${screenshot.label || "Case study"} screenshot`}
                                         fill
                                         sizes={isLaptop
                                             ? "(min-width: 1024px) 320px, (min-width: 640px) 68vw, 86vw"
@@ -152,7 +152,7 @@ export default function Mockup({ screenshots, device }) {
                     >
                         <Image
                             src={activeScreenshot.src}
-                            alt={activeScreenshot.alt}
+                            alt={activeScreenshot.alt || `${activeScreenshot.label || "Case study"} preview screenshot`}
                             fill
                             sizes="80vw"
                             className="object-contain"

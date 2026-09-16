@@ -53,7 +53,7 @@ export default function About() {
         viewport={{ once: false, amount: 0.3 }}
         className="flex justify-center items-center relative z-1 transform -translate-y-10 max-md:scale-70 max-lg:scale-90"
       >
-        <Image src="/boy.png" alt="Hacker Illustration" width={400} height={400} />
+        <Image src="/boy.png" alt="Developer Illustration - Dev Muhammad" width={400} height={400} />
       </motion.div>
 
       <DotsBg />

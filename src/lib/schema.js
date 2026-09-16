@@ -206,6 +206,7 @@ export const structuredData = {
       jobTitle: [
         "Fullstack Web Developer",
         "Applied AI Developer",
+        "AI Researcher",
         "Full Stack Developer in Pakistan",
         "Full Stack Developer in Karachi",
         "Next.js & React Specialist",
@@ -225,14 +226,14 @@ export const structuredData = {
         name: "Freelance Full-Stack Web Development, AI Integration, and Remote Engineering Roles",
         description:
           "Available for hire for full-stack web applications, AI agent integration, Next.js development, and contract engineering.",
+        areaServed: [
+          "Worldwide",
+          "Pakistan",
+          "United States",
+          "United Kingdom",
+          "United Arab Emirates",
+        ],
       },
-      areaServed: [
-        "Worldwide",
-        "Pakistan",
-        "United States",
-        "United Kingdom",
-        "United Arab Emirates",
-      ],
       hasOccupation: {
         "@type": "Occupation",
         name: "Full Stack Web & AI Developer",
@@ -258,7 +259,7 @@ export const structuredData = {
         "SQL",
         "React Native",
         "Mobile app development",
-        "React Native",
+        "Applied AI research",
         "AI agents",
         "UI/UX Design",
         "REST APIs",

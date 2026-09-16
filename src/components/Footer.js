@@ -51,7 +51,7 @@ export default function Footer() {
           <Link href="/" className="inline-block">
             <Image
               src="/logo.png"
-              alt="Logo"
+              alt="Dev Muhammad Portfolio Logo"
               width={80}
               height={80}
             />

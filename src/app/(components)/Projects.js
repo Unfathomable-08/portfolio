@@ -228,7 +228,7 @@ export default function Projects() {
             >
               <Image
                 src={project.img}
-                alt={project.title}
+                alt={`${project.title} project preview`}
                 width={400}
                 height={150}
                 className="w-full cursor-pointer aspect-video border border-white/60 object-cover rounded-lg max-md:scale-90"
