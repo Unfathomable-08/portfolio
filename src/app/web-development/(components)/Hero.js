@@ -289,8 +289,7 @@ export default function WebDevHero() {
     <div
       ref={containerRef}
       id="wd-hero"
-      className="relative w-full bg-black text-white"
-      style={{ height: "420vh" }}
+      className="relative h-[280svh] sm:h-[350svh] md:h-[420svh] w-full bg-black text-white"
     >
       {/* Sticky Frame Viewer */}
       <div className="sticky top-0 h-svh w-full flex items-center overflow-hidden bg-black">
@@ -375,7 +374,7 @@ export default function WebDevHero() {
             style={{
               transform: isDesktop
                 ? `translateX(calc(-${easedCenter * 50}% - ${easedCenter * 1.5}rem)) scale(${1 + easedCenter * 0.15})`
-                : `translateY(-${easedCenter * 25}vh)`,
+                : `translateY(-${easedCenter * 25}vh) scale(${1 + easedCenter * 0.35})`,
             }}
           >
             {/* Canvas */}
