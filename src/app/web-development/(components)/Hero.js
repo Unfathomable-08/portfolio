@@ -295,7 +295,7 @@ export default function WebDevHero() {
       {/* Sticky Frame Viewer */}
       <div className="sticky top-0 h-svh w-full flex items-center overflow-hidden bg-black">
         {/* Main grid */}
-        <div className="relative z-20 w-full px-5! md:px-16! lg:px-20! grid md:grid-cols-2 items-center gap-6! md:gap-12! pt-24! pb-16!">
+        <div className="relative z-20 w-full px-3! sm:px-8! md:px-16! lg:px-20! grid md:grid-cols-2 items-center gap-6! md:gap-12! pt-24! pb-16!">
           {/* LEFT — Text content (slides left and fades out on initial scroll) */}
           <div
             className="flex flex-col gap-5! will-change-transform"
@@ -318,7 +318,7 @@ export default function WebDevHero() {
 
             {/* Sub-headline */}
             <p className="text-sm sm:text-base text-[var(--tertiary)] leading-relaxed max-w-xl">
-              From pixel-perfect UIs to robust full-stack architectures — I build
+              From pixel-perfect UIs to robust full-stack architectures, I build
               fast, scalable, SEO-optimised web products using the modern
               JavaScript ecosystem.
             </p>
@@ -374,8 +374,8 @@ export default function WebDevHero() {
             className="relative flex items-center justify-center transition-transform duration-75 ease-out will-change-transform z-30"
             style={{
               transform: isDesktop
-                ? `translateX(calc(-${easedCenter * 50}% - ${easedCenter * 1.5}rem)) scale(${1 + easedCenter * 0.14})`
-                : `translateY(-${easedCenter * 14}vh) scale(${0.86 + easedCenter * 0.12})`,
+                ? `translateX(calc(-${easedCenter * 50}% - ${easedCenter * 1.5}rem)) scale(${1 + easedCenter * 0.15})`
+                : `translateY(-${easedCenter * 25}vh)`,
             }}
           >
             {/* Canvas */}
