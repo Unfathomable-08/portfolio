@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaReact, FaNodeJs, FaGolang } from "react-icons/fa6";
+import { FaReact, FaNodeJs } from "react-icons/fa6";
 import { SiNextdotjs, SiMongodb } from "react-icons/si";
 
 
@@ -20,7 +20,61 @@ const techStack = [
   { label: "Node.js", icon: FaNodeJs, color: "#6BCB77" },
   { label: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { label: "Python", img: "/skills/python.png" },
-  { label: "GoLang", icon: FaGolang, color: "#00ADD8" },
+];
+
+const heroStats = [
+  {
+    id: "experience",
+    label: "Experience",
+    value: "2+",
+    sublabel: "Years building full-stack web applications and digital products.",
+    labelColor: "text-[var(--secondary)]",
+    shadow: "0 0 40px rgba(0,194,255,0.25)",
+    align: "text-left",
+    desktopPosition: { top: "20%", left: "6%" },
+    mobilePosition: { top: "11%", left: "5%" },
+    desktopDelta: { x: -28, y: 0 },
+    mobileDelta: { x: 0, y: -16 },
+  },
+  {
+    id: "projects",
+    label: "Projects",
+    value: "35+",
+    sublabel: "Client websites and production web applications successfully delivered.",
+    labelColor: "text-emerald-400",
+    shadow: "0 0 40px rgba(52,211,153,0.2)",
+    align: "text-right",
+    desktopPosition: { top: "20%", right: "6%" },
+    mobilePosition: { top: "24%", right: "5%" },
+    desktopDelta: { x: 28, y: 0 },
+    mobileDelta: { x: 0, y: -16 },
+  },
+  {
+    id: "tech-stack",
+    label: "Tech Stack",
+    value: "20+",
+    sublabel: "Technologies and modern tech stacks mastered across frontend and backend.",
+    labelColor: "text-violet-400",
+    shadow: "0 0 40px rgba(167,139,250,0.2)",
+    align: "text-left",
+    desktopPosition: { bottom: "16%", left: "6%" },
+    mobilePosition: { bottom: "24%", left: "5%" },
+    desktopDelta: { x: -28, y: 0 },
+    mobileDelta: { x: 0, y: 16 },
+  },
+  {
+    id: "reliability",
+    label: "Trust",
+    value: "100%",
+    sublabel: "On-time milestone delivery with transparent communication and clean code.",
+    labelColor: "text-[var(--secondary)]",
+    shadow: "0 0 40px rgba(0,194,255,0.2)",
+    align: "text-right",
+    desktopPosition: { bottom: "16%", right: "6%" },
+    mobilePosition: { bottom: "11%", right: "5%" },
+    desktopDelta: { x: 28, y: 0 },
+    mobileDelta: { x: 0, y: 16 },
+  },
 ];
 
 export default function WebDevHero() {
@@ -38,7 +92,7 @@ export default function WebDevHero() {
   // Responsive check for desktop transform calculation
   useEffect(() => {
     const checkDesktop = () => {
-      setIsDesktop(window.innerWidth >= 768);
+      setIsDesktop(window.innerWidth >= 1024);
     };
     checkDesktop();
     window.addEventListener("resize", checkDesktop);
@@ -241,7 +295,7 @@ export default function WebDevHero() {
       {/* Sticky Frame Viewer */}
       <div className="sticky top-0 h-svh w-full flex items-center overflow-hidden bg-black">
         {/* Main grid */}
-        <div className="relative z-20 w-full px-5! md:px-16! lg:px-20! grid md:grid-cols-2 items-center gap-12! pt-24! pb-16!">
+        <div className="relative z-20 w-full px-5! md:px-16! lg:px-20! grid md:grid-cols-2 items-center gap-6! md:gap-12! pt-24! pb-16!">
           {/* LEFT — Text content (slides left and fades out on initial scroll) */}
           <div
             className="flex flex-col gap-5! will-change-transform"
@@ -253,7 +307,7 @@ export default function WebDevHero() {
             }}
           >
             {/* Headline */}
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight text-white">
               Crafting{" "}
               <span className="text-[var(--secondary)]!">
                 Exceptional
@@ -263,7 +317,7 @@ export default function WebDevHero() {
             </h1>
 
             {/* Sub-headline */}
-            <p className="text-base sm:text-lg text-[var(--tertiary)] leading-relaxed max-w-xl">
+            <p className="text-sm sm:text-base text-[var(--tertiary)] leading-relaxed max-w-xl">
               From pixel-perfect UIs to robust full-stack architectures — I build
               fast, scalable, SEO-optimised web products using the modern
               JavaScript ecosystem.
@@ -313,30 +367,6 @@ export default function WebDevHero() {
                 View Portfolio
               </Link>
             </div>
-
-            {/* Real Proof Metrics (Instant Conversion on Landing) */}
-            <div className="flex items-center flex-wrap gap-5! sm:gap-7! pt-3! border-t border-white/10 mt-1!">
-              <div className="flex flex-col">
-                <span className="text-xl sm:text-2xl font-black text-white tracking-tight">
-                  2+ <span className="text-[var(--secondary)] text-sm font-bold">Years</span>
-                </span>
-                <span className="text-[11px] text-zinc-400 font-medium">Experience</span>
-              </div>
-              <div className="hidden sm:block w-px h-8 bg-white/10" />
-              <div className="flex flex-col">
-                <span className="text-xl sm:text-2xl font-black text-white tracking-tight">
-                  35+ <span className="text-[var(--secondary)] text-sm font-bold">Delivered</span>
-                </span>
-                <span className="text-[11px] text-zinc-400 font-medium">Projects Done</span>
-              </div>
-              <div className="hidden sm:block w-px h-8 bg-white/10" />
-              <div className="flex flex-col">
-                <span className="text-xl sm:text-2xl font-black text-white tracking-tight">
-                  20+ <span className="text-[var(--secondary)] text-sm font-bold">Tech</span>
-                </span>
-                <span className="text-[11px] text-zinc-400 font-medium">Stacks Mastered</span>
-              </div>
-            </div>
           </div>
 
           {/* RIGHT — Laptop 300 Frames Canvas (Transitions to center on scroll) */}
@@ -345,84 +375,9 @@ export default function WebDevHero() {
             style={{
               transform: isDesktop
                 ? `translateX(calc(-${easedCenter * 50}% - ${easedCenter * 1.5}rem)) scale(${1 + easedCenter * 0.14})`
-                : `translateY(-${easedCenter * 14}vh) scale(${1 + easedCenter * 0.10})`,
+                : `translateY(-${easedCenter * 14}vh) scale(${0.86 + easedCenter * 0.12})`,
             }}
           >
-            {/* Stats — positioned organically using inline style with raw values
-                so each one sits in a genuinely different spot, not a mirrored grid */}
-
-            {/* STAT 1 — top-left area, slightly above and to the left, smaller number */}
-            <div
-              className="absolute z-40 select-none transition-all duration-150 ease-out"
-              style={{
-                top: "10%",
-                left: "-14%",
-                opacity: statsOpacity,
-                transform: `translate(${(1 - statsEased) * -32}px, ${(1 - statsEased) * -20}px) scale(${statsScale})`,
-                pointerEvents: statsPointerEvents,
-              }}
-            >
-              <p className="text-[11px]! font-semibold tracking-[0.18em]! uppercase text-[var(--secondary)] mb-0.5!">Experience</p>
-              <p className="text-5xl! sm:text-6xl! font-black text-white leading-none tracking-tight" style={{ textShadow: "0 0 40px rgba(0,194,255,0.25)" }}>
-                2+
-              </p>
-              <p className="text-[13px]! text-zinc-300 font-medium mt-1!">Years in production</p>
-            </div>
-
-            {/* STAT 2 — upper-right, higher up, biggest number — most prominent */}
-            <div
-              className="absolute z-40 select-none transition-all duration-150 ease-out text-right"
-              style={{
-                top: "-12%",
-                right: "-8%",
-                opacity: statsOpacity,
-                transform: `translate(${(1 - statsEased) * 28}px, ${(1 - statsEased) * -26}px) scale(${statsScale})`,
-                pointerEvents: statsPointerEvents,
-              }}
-            >
-              <p className="text-[11px]! font-semibold tracking-[0.18em]! uppercase text-emerald-400 mb-0.5!">Projects</p>
-              <p className="text-6xl! sm:text-7xl! font-black text-white leading-none tracking-tight" style={{ textShadow: "0 0 40px rgba(52,211,153,0.2)" }}>
-                35+
-              </p>
-              <p className="text-[13px]! text-zinc-300 font-medium mt-1!">Delivered globally</p>
-            </div>
-
-            {/* STAT 3 — bottom-left, pushed further left, mid-size */}
-            <div
-              className="absolute z-40 select-none transition-all duration-150 ease-out"
-              style={{
-                bottom: "8%",
-                left: "-18%",
-                opacity: statsOpacity,
-                transform: `translate(${(1 - statsEased) * -24}px, ${(1 - statsEased) * 22}px) scale(${statsScale})`,
-                pointerEvents: statsPointerEvents,
-              }}
-            >
-              <p className="text-[11px]! font-semibold tracking-[0.18em]! uppercase text-violet-400 mb-0.5!">Tech Stack</p>
-              <p className="text-5xl! sm:text-6xl! font-black text-white leading-none tracking-tight" style={{ textShadow: "0 0 40px rgba(167,139,250,0.2)" }}>
-                20+
-              </p>
-              <p className="text-[13px]! text-zinc-300 font-medium mt-1!">Tools mastered</p>
-            </div>
-
-            {/* STAT 4 — bottom-right, not mirroring stat 3, sits closer to center-bottom */}
-            <div
-              className="absolute z-40 select-none transition-all duration-150 ease-out text-right"
-              style={{
-                bottom: "-10%",
-                right: "-4%",
-                opacity: statsOpacity,
-                transform: `translate(${(1 - statsEased) * 20}px, ${(1 - statsEased) * 28}px) scale(${statsScale})`,
-                pointerEvents: statsPointerEvents,
-              }}
-            >
-              <p className="text-[11px]! font-semibold tracking-[0.18em]! uppercase text-[var(--secondary)] mb-0.5!">Reliability</p>
-              <p className="text-4xl! sm:text-5xl! font-black text-white leading-none tracking-tight" style={{ textShadow: "0 0 40px rgba(0,194,255,0.2)" }}>
-                100%
-              </p>
-              <p className="text-[13px]! text-zinc-300 font-medium mt-1!">On-time delivery</p>
-            </div>
-
             {/* Canvas */}
             <div className="relative w-full max-w-[720px] lg:max-w-[780px] aspect-[16/9] flex items-center justify-center">
               <canvas
@@ -432,6 +387,35 @@ export default function WebDevHero() {
               />
             </div>
           </div>
+        </div>
+
+        {/* FULLSCREEN STATS OVERLAY — Covers the whole screen with zero negative offsets */}
+        <div className="absolute inset-0 pointer-events-none z-40 w-full h-full">
+          {heroStats.map((stat) => (
+            <div
+              key={stat.id}
+              className={`absolute select-none transition-all duration-150 ease-out max-w-[155px] sm:max-w-[200px] md:max-w-[240px] ${stat.align}`}
+              style={{
+                ...(isDesktop ? stat.desktopPosition : stat.mobilePosition),
+                opacity: statsOpacity,
+                transform: `translate(${(1 - statsEased) * (isDesktop ? stat.desktopDelta.x : stat.mobileDelta.x)}px, ${(1 - statsEased) * (isDesktop ? stat.desktopDelta.y : stat.mobileDelta.y)}px) scale(${statsScale})`,
+                pointerEvents: statsPointerEvents,
+              }}
+            >
+              <p className={`text-[10px]! sm:text-[11px]! font-semibold tracking-wider uppercase ${stat.labelColor} mb-0.5!`}>
+                {stat.label}
+              </p>
+              <p
+                className="text-2xl! sm:text-4xl! md:text-5xl! font-bold text-[var(--secondary)]! leading-none tracking-tighter"
+                style={{ textShadow: stat.shadow }}
+              >
+                {stat.value}
+              </p>
+              <p className="text-[10px]! sm:text-[12px]! text-zinc-300 mt-1! leading-snug line-clamp-2 sm:line-clamp-none">
+                {stat.sublabel}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

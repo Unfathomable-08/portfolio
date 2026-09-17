@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import { usePathname } from "next/navigation"
+import NeonTrail from "@/components/ui/NeonTrail"
 import Navbar from "@/components/Navbar"
 import Hero from "@/app/(components)/Hero"
 import About from "@/app/(components)/About"
@@ -35,6 +36,7 @@ export default function Home() {
 
     return (
         <main className="w-screen overflow-x-hidden">
+            <NeonTrail />
             <Navbar />
             <Hero />
             <About />
