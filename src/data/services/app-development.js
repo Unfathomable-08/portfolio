@@ -170,9 +170,9 @@ export const appDevReasons = [
   },
   {
     id: "04",
-    title: "Full Source Code Handover",
+    title: "Full Deliverables Handover",
     description:
-      "Complete Git repository transfer, configuration scripts, and documentation delivered to you upon full project settlement.",
+      "Agreed source code repository transfer, hosting setup, and database access delivered upon full invoice settlement.",
     icon: FaCode,
   },
   {

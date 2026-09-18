@@ -28,10 +28,10 @@ Muhammad (known professionally as Dev Muhammad, and online as Unfathomable-08 / 
 ---
 
 ## Services Offered
-- **Enterprise-Grade Web Development**: Scalable, high-performance web applications built using React, Next.js, and robust backend architectures.
-- **Mobile App Development**: Cross-platform iOS and Android mobile apps engineered with React Native and Expo, featuring offline support, push notifications, and native performance.
+- **Enterprise-Grade Web Development**: Scalable, high-performance web applications built using React, Next.js, and robust backend architectures. URL: https://dev-muhammad.vercel.app/web-development
+- **Mobile App Development**: Cross-platform iOS and Android mobile apps engineered with React Native and Expo, featuring offline support, push notifications, and native performance. URL: https://dev-muhammad.vercel.app/app-development
+- **AI Agents & Automations**: Custom AI agents designed to automate workflows, integrate vector search/RAG pipelines, and process data efficiently. URL: https://dev-muhammad.vercel.app/ai-development
 - **Desktop Software Development**: Cross-platform desktop software development targeting Windows, macOS, and Linux.
-- **AI Agents & Automations**: Custom AI agents designed to automate workflows, integrate vector search/RAG pipelines, and process data efficiently.
 
 ---
 

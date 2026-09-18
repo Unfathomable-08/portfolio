@@ -39,6 +39,7 @@ export default function Services() {
       icon: GiAutomaticSas,
       accent: "AI",
       outcome: "Less manual effort, more scale",
+      link: "/ai-development",
     }
   ];
 

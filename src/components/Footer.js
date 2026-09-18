@@ -14,6 +14,7 @@ export default function Footer() {
     { name: "Contact", href: "/#contact" },
     { name: "Web Development", href: "/web-development" },
     { name: "App Development", href: "/app-development" },
+    { name: "AI Development", href: "/ai-development" },
   ];
 
   const caseStudies = [

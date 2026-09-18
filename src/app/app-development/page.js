@@ -1,17 +1,15 @@
 "use client";
 
-import Hero from "@/app/web-development/(components)/Hero";
-import Services from "@/app/web-development/(components)/Services";
+import Hero from "@/components/services/Hero";
+import Services from "@/components/services/Services";
 import Projects from "@/app/(components)/Projects";
-// import Packages from "@/app/web-development/(components)/Packages";
-import WhyChooseMe from "@/app/web-development/(components)/WhyChooseMe";
+import WhyChooseMe from "@/components/services/WhyChooseMe";
 import FAQ from "@/app/(components)/FAQ";
 import Contact from "@/components/Contact";
 import {
   appDevTechStack,
   appDevStats,
   appDevServices,
-  // appDevPackages,
   appDevReasons,
 } from "@/data/services/app-development";
 import { appDevFAQs } from "@/data/faqs";
@@ -49,17 +47,6 @@ export default function AppDevelopmentPage() {
         ctaLink="/#contact"
       />
       <Projects showTabs={false} defaultTab="Mobile Apps" />
-      {/* Packages section commented out for now */}
-      {/* <Packages
-        id="packages"
-        title="Estimated Packages"
-        subtitle="Packages"
-        note="* Note: These are estimated prices for typical client requirements. The final price depends on your specific requirements, project scope, and features."
-        packages={appDevPackages}
-        ctaText="Get a Quote"
-        ctaLink="/#contact"
-      /> */}
-
       <WhyChooseMe
         id="why-choose-me"
         title="Quality & Reliability"

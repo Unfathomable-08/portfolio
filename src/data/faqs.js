@@ -88,7 +88,7 @@ export const appDevFAQs = [
   {
     question: "Do I receive full ownership and source code handover?",
     answer:
-      "Yes. Upon full settlement of invoices, complete Git repository ownership, documentation, and all configuration files are transferred directly to your GitHub or GitLab account.",
+      "Upon full invoice settlement, you receive your agreed deliverables and access. Full source code repository transfer is provided according to our project agreement (e.g. direct GitHub repository transfer vs. managed app store & cloud deployment access).",
   },
   {
     question: "What post-launch support and warranty are included?",
@@ -96,4 +96,43 @@ export const appDevFAQs = [
       "Every project includes 14 to 21 days of complimentary warranty support following official delivery to quickly resolve any unexpected bugs, device compatibility issues, or edge cases.",
   },
 ];
+
+export const aiDevFAQs = [
+  {
+    question: "What are AI agents and how do they differ from basic chatbots?",
+    answer:
+      "Unlike simple question-and-answer chatbots, AI agents are autonomous goal-oriented programs. They break high-level objectives into tasks, reason through intermediate steps, call external APIs, query live databases, and execute actions automatically without continuous human supervision.",
+  },
+  {
+    question: "How does RAG (Retrieval-Augmented Generation) keep company data secure and hallucination-free?",
+    answer:
+      "RAG connects LLMs to your private proprietary documents (PDFs, docs, databases) by indexing them into secure vector embeddings. When a question is asked, the system retrieves only relevant verified excerpts and forces the LLM to formulate answers strictly from those cited facts, preventing fabricated information.",
+  },
+  {
+    question: "Which AI models and providers do you support?",
+    answer:
+      "I work with premier cloud models (OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini) as well as open-source, locally hosted LLMs (Llama 3, Mistral, DeepSeek) running privately via Ollama or vLLM to maintain full data sovereignty and eliminate recurring API token fees.",
+  },
+  {
+    question: "Can AI agents connect to my existing software, database, or CRM?",
+    answer:
+      "Yes. AI agents are built to interact with existing REST APIs, SQL/NoSQL databases (PostgreSQL, MongoDB), enterprise CRMs (HubSpot, Salesforce, custom CRMs like Velto), and messaging platforms (WhatsApp, Slack, Telegram) via structured function and tool calling.",
+  },
+  {
+    question: "How do you optimize LLM latency and monthly token costs?",
+    answer:
+      "I apply semantic response caching, optimized system prompt engineering, token-budgeted context windows, and smart model routing (directing simpler requests to lighter, ultra-fast models and reserving high-tier models only for complex reasoning).",
+  },
+  {
+    question: "Do I receive full ownership and source code handover?",
+    answer:
+      "Upon full invoice settlement, you receive your agreed deliverables and access. Full source code repository transfer is provided according to our project agreement (e.g. direct GitHub repository transfer vs. managed API deployment & server access).",
+  },
+  {
+    question: "What warranty and post-launch evaluation support is provided?",
+    answer:
+      "I provide 14 to 21 days of post-deployment evaluation support to monitor live performance, tune system prompts, eliminate any edge cases, and ensure deterministic, reliable tool execution.",
+  },
+];
+
 

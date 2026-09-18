@@ -1,17 +1,15 @@
 "use client";
 
-import WebDevHero from "@/app/web-development/(components)/Hero";
-import WebDevServices from "@/app/web-development/(components)/Services";
+import WebDevHero from "@/components/services/Hero";
+import WebDevServices from "@/components/services/Services";
 import Projects from "@/app/(components)/Projects";
-import WebDevPackages from "@/app/web-development/(components)/Packages";
-import WhyChooseMe from "@/app/web-development/(components)/WhyChooseMe";
+import WhyChooseMe from "@/components/services/WhyChooseMe";
 import FAQ from "@/app/(components)/FAQ";
 import Contact from "@/components/Contact";
 import {
   webDevTechStack,
   webDevStats,
   webDevServices,
-  webDevPackages,
   webDevReasons,
 } from "@/data/services/web-development";
 import { webDevFAQs } from "@/data/faqs";
@@ -49,15 +47,6 @@ export default function WebDevelopmentPage() {
         ctaLink="/#contact"
       />
       <Projects showTabs={false} defaultTab="Website" />
-      <WebDevPackages
-        id="packages"
-        title="Estimated Packages"
-        subtitle="Packages"
-        note="* Note: These are estimated prices for typical client requirements. The final price depends on your specific requirements, project scope, and features."
-        packages={webDevPackages}
-        ctaText="Get a Quote"
-        ctaLink="/#contact"
-      />
       <WhyChooseMe
         id="why-choose-me"
         title="Quality & Reliability"

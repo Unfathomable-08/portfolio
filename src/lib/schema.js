@@ -1,4 +1,4 @@
-import { homeFAQs, webDevFAQs, appDevFAQs } from "@/data/faqs";
+import { homeFAQs, webDevFAQs, appDevFAQs, aiDevFAQs } from "@/data/faqs";
 
 export const siteUrl = "https://dev-muhammad.vercel.app";
 
@@ -306,6 +306,19 @@ export const appDevFAQSchema = {
   })),
 };
 
+export const aiDevFAQSchema = {
+  "@type": "FAQPage",
+  "@id": `${siteUrl}/ai-development#faq`,
+  mainEntity: aiDevFAQs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -375,7 +388,7 @@ export const structuredData = {
             description:
               "Cross-platform iOS and Android mobile apps engineered with React Native and Expo, featuring offline support, notifications, and native device performance.",
             provider: { "@id": `${siteUrl}/#person` },
-            url: `${siteUrl}/services`,
+            url: `${siteUrl}/app-development`,
           },
         },
         {
@@ -388,7 +401,7 @@ export const structuredData = {
             description:
               "AI agents that automate tasks, process data, and handle repetitive work using AI tools, APIs, and custom scripts.",
             provider: { "@id": `${siteUrl}/#person` },
-            url: `${siteUrl}/services`,
+            url: `${siteUrl}/ai-development`,
           },
         },
       ],
@@ -643,6 +656,141 @@ export const appDevStructuredData = {
       url: `${siteUrl}/app-development`,
       name: "Featured Mobile App Development Projects",
       description: "Cross-platform mobile applications created with React Native and modern mobile tools by Muhammad.",
+      numberOfItems: projects.length,
+      itemListElement: projects.map((project, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: { "@id": `${siteUrl}/case-study/${project.slug}#project` },
+      })),
+    },
+    ...projects.map(createProjectSchema),
+  ],
+};
+
+export const aiDevStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/ai-development#webpage`,
+      url: `${siteUrl}/ai-development`,
+      name: "AI Development & Autonomous AI Agents in Karachi & Pakistan by Dev Muhammad",
+      description:
+        "Professional AI agent development, RAG knowledge retrieval systems, and LLM automation services in Karachi and worldwide by Dev Muhammad. High-performance LangChain & LangGraph intelligent solutions.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#person` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/ai-development#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "AI Development & AI Agents",
+          item: `${siteUrl}/ai-development`,
+        },
+      ],
+    },
+    webSiteSchema,
+    personSchema,
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/ai-development#service`,
+      name: "AI Development & Autonomous AI Agents in Karachi & Pakistan",
+      serviceType: "Artificial Intelligence Development",
+      provider: { "@id": `${siteUrl}/#person` },
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Karachi",
+        },
+        {
+          "@type": "Country",
+          name: "Pakistan",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Worldwide",
+        },
+      ],
+      description:
+        "Professional AI agent development, RAG systems, and LLM workflow automation engineering by Dev Muhammad. Grounded knowledge retrieval, tool orchestration, and custom AI applications.",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "AI Development Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "AI Automation Workflows",
+              description:
+                "Automating complex, repetitive tasks and manual business operations using intelligent AI pipelines, script orchestration, and automated triggers to save hundreds of operational hours and eliminate bottlenecks.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "RAG Agents / AI Chatbot",
+              description:
+                "Retrieval-Augmented Generation (RAG) agents that connect LLMs directly to your private company documents, datasets, and knowledge bases using vector search (FAISS, Pinecone) to deliver verified, citation-backed answers with zero hallucinations.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Enterprise AI Integration",
+              description:
+                "Integrating cutting-edge AI capabilities into your existing software ecosystems—including CRMs, ERPs, CMS platforms, operational dashboards, websites, and mobile apps to supercharge existing workflows.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "AI Messaging & Social Media Agents",
+              description:
+                "Autonomous 24/7 engagement agents for WhatsApp, email, and social media platforms—automating direct messages, answering customer inquiries, auto-replying to post comments, and qualifying incoming leads.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Multi-Agent Systems",
+              description:
+                "Collaborative multi-agent ecosystems built with LangGraph where specialized agents divide complex workflows into sub-tasks, cross-validate each other's outputs, and execute end-to-end projects with high accuracy.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "AI-Powered Software & Workspaces",
+              description:
+                "Full-scale, standalone desktop workspaces and productivity software suites (like TeBre) powered by local databases, multi-provider AI, specialized editors, and automated file exports tailored to specific industries.",
+            },
+          },
+        ],
+      },
+    },
+    aiDevFAQSchema,
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/ai-development#project-list`,
+      url: `${siteUrl}/ai-development`,
+      name: "Featured AI Development Projects",
+      description: "Autonomous AI agents, RAG systems, and AI-powered platforms created by Muhammad.",
       numberOfItems: projects.length,
       itemListElement: projects.map((project, index) => ({
         "@type": "ListItem",
