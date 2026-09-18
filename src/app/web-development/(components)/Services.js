@@ -2,70 +2,19 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-  FaCartShopping,
-  FaBuilding,
-  FaArrowsRotate,
-  FaLaptopCode,
-  FaLayerGroup,
-  FaRobot,
-  FaArrowRight,
-} from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
-const services = [
-  {
-    id: "01",
-    title: "E-Commerce Development",
-    description:
-      "Custom online stores with product catalogs, shopping cart, checkout, payment integrations, and order management.",
-    icon: FaCartShopping,
-    tags: ["Payment Gateway", "Admin Portal", "Shopping Cart", "Discount & Coupons"],
-  },
-  {
-    id: "02",
-    title: "Business & Corporate Websites",
-    description:
-      "Professional websites designed to showcase your company, build trust, generate leads, and establish your brand online.",
-    icon: FaBuilding,
-    tags: ["Company Profile", "Appointment Booking", "Portfolio & Case Studies", "CRM Integration"],
-  },
-  {
-    id: "03",
-    title: "Revamp of Existing Websites",
-    description:
-      "Redesigning outdated sites with modern UI/UX, mobile responsiveness, clean code, and faster page load speeds.",
-    icon: FaArrowsRotate,
-    tags: ["UI/UX Redesign", "Speed Improvement", "Modern UI", "Feature Upgrades"],
-  },
-  {
-    id: "04",
-    title: "Full-Stack Web Applications",
-    description:
-      "Custom dynamic web applications built with modern frontend, backend APIs, user authentication, and databases.",
-    icon: FaLaptopCode,
-    tags: ["Custom Workflows", "Database Integration", "Real-Time Features", "Third-Party Integrations"],
-  },
-  {
-    id: "05",
-    title: "SaaS & Dashboard Development",
-    description:
-      "Web software, administrative portals, analytics dashboards, and subscription platforms with role-based access.",
-    icon: FaLayerGroup,
-    tags: ["Admin Portal", "Role-Based Access", "Analytics Dashboard", "Subscriptions"],
-  },
-  {
-    id: "06",
-    title: "AI-Powered Web Applications",
-    description:
-      "Integrating AI features into web apps, including conversational chatbots, smart automations, and LLM APIs.",
-    icon: FaRobot,
-    tags: ["LLM Integration", "AI Automation", "AI Agents", "Smart Workflows"],
-  },
-];
+export default function WebDevServices({
+  title,
+  subtitle,
+  services,
+  ctaText,
+  ctaLink,
+  id,
+}) {
 
-export default function WebDevServices() {
   return (
-    <section id="services" className="w-full bg-black py-20! px-4! sm:px-8! md:px-16! lg:px-20! relative border-t border-zinc-900">
+    <section id={id} className="w-full bg-black py-20! px-4! sm:px-8! md:px-16! lg:px-20! relative border-t border-zinc-900">
       {/* Header */}
       <motion.div
         className="text-center mb-10!"
@@ -75,16 +24,16 @@ export default function WebDevServices() {
         viewport={{ once: false, amount: 0.2 }}
       >
         <p className="font-semibold text-xs tracking-[2px] uppercase text-[var(--secondary)]! mb-2!">
-          Services
+          {subtitle}
         </p>
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
-          Web Development Services
+          {title}
         </h2>
       </motion.div>
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6! mt-12!">
-        {services.map((service, index) => {
+        {services?.map((service, index) => {
           const Icon = service.icon;
           return (
             <motion.div
@@ -145,13 +94,14 @@ export default function WebDevServices() {
         viewport={{ once: false, amount: 0.2 }}
       >
         <Link
-          href="/#contact"
+          href={ctaLink}
           className="inline-flex items-center gap-2! px-6! py-2.5! rounded-full font-semibold text-sm bg-[var(--secondary)]! hover:bg-[var(--hover)] transition-all duration-300 text-[var(--primary)]! shadow-[0_0_20px_rgba(0,194,255,0.3)] hover:scale-105"
         >
-          <span>Start a Project</span>
+          <span>{ctaText}</span>
           <FaArrowRight className="text-xs" />
         </Link>
       </motion.div>
     </section>
   );
 }
+

@@ -30,6 +30,7 @@ export default function Services() {
       icon: FaMobile,
       accent: "APP",
       outcome: "High-performance iOS & Android apps",
+      link: "/app-development",
     },
     {
       title: "AI Agents",

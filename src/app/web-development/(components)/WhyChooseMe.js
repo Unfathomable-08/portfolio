@@ -1,63 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FaBoltLightning,
-  FaComments,
-  FaCode,
-  FaShieldHalved,
-  FaLayerGroup,
-  FaClock,
-} from "react-icons/fa6";
-
-const reasons = [
-  {
-    id: "01",
-    title: "Direct Developer Contact",
-    description:
-      "You communicate directly with the developer building your project, ensuring fast feedback, zero miscommunication, and prompt changes.",
-    icon: FaComments,
-  },
-  {
-    id: "02",
-    title: "High Speed & Performance",
-    description:
-      "Clean, lightweight code optimized for fast load times, mobile performance, and high Google PageSpeed scores.",
-    icon: FaBoltLightning,
-  },
-  {
-    id: "03",
-    title: "Full Deliverables Handover",
-    description:
-      "Agreed source code repository transfer, hosting setup, and database access delivered upon full invoice settlement.",
-    icon: FaCode,
-  },
-  {
-    id: "04",
-    title: "Modern Tech Stack",
-    description:
-      "Built with scalable, reliable technologies like React, Next.js, Node.js, and modern databases for long-term stability.",
-    icon: FaLayerGroup,
-  },
-  {
-    id: "05",
-    title: "On-Time Delivery",
-    description:
-      "Structured milestones and regular progress updates ensure your web product is delivered on time according to the agreed plan.",
-    icon: FaClock,
-  },
-  {
-    id: "06",
-    title: "Warranty & Bug-Fix Support",
-    description:
-      "Free bug fixes and error corrections for 14 to 21 days following the delivery date to guarantee everything runs as agreed.",
-    icon: FaShieldHalved,
-  },
-];
-
-export default function WhyChooseMe() {
+export default function WhyChooseMe({
+  title,
+  subtitle,
+  reasons,
+  id,
+}) {
   return (
-    <section id="why-choose-me" className="w-full bg-black py-20! px-4! sm:px-8! md:px-16! lg:px-20! relative border-t border-zinc-900">
+    <section id={id} className="w-full bg-black py-20! px-4! sm:px-8! md:px-16! lg:px-20! relative border-t border-zinc-900">
       {/* Header */}
       <motion.div
         className="text-center mb-10!"
@@ -67,16 +18,17 @@ export default function WhyChooseMe() {
         viewport={{ once: false, amount: 0.2 }}
       >
         <p className="font-semibold text-xs tracking-[2px] uppercase text-[var(--secondary)]! mb-2!">
-          Why Choose Me
+          {subtitle}
         </p>
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
-          Quality & Reliability
+          {title}
         </h2>
       </motion.div>
 
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4! sm:gap-6! max-w-7xl mx-auto!">
-        {reasons.map((item, index) => {
+        {reasons?.map((item, index) => {
+
           const Icon = item.icon;
           return (
             <motion.div
@@ -118,3 +70,4 @@ export default function WhyChooseMe() {
     </section>
   );
 }
+

@@ -1,4 +1,4 @@
-import { homeFAQs, webDevFAQs } from "@/data/faqs";
+import { homeFAQs, webDevFAQs, appDevFAQs } from "@/data/faqs";
 
 export const siteUrl = "https://dev-muhammad.vercel.app";
 
@@ -284,6 +284,19 @@ export const webDevFAQSchema = {
   "@type": "FAQPage",
   "@id": `${siteUrl}/web-development#faq`,
   mainEntity: webDevFAQs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+export const appDevFAQSchema = {
+  "@type": "FAQPage",
+  "@id": `${siteUrl}/app-development#faq`,
+  mainEntity: appDevFAQs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
     acceptedAnswer: {
@@ -595,3 +608,202 @@ export const webDevStructuredData = {
     ...projects.map(createProjectSchema),
   ],
 };
+
+export const appDevStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/app-development#webpage`,
+      url: `${siteUrl}/app-development`,
+      name: "Mobile App Development Services in Karachi & Pakistan by Dev Muhammad",
+      description:
+        "Affordable and professional iOS and Android mobile app development services in Karachi and across Pakistan by Dev Muhammad. Cross-platform React Native & Expo mobile apps.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#person` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/app-development#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Mobile App Development Services",
+          item: `${siteUrl}/app-development`,
+        },
+      ],
+    },
+    webSiteSchema,
+    personSchema,
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/app-development#service`,
+      name: "Mobile App Development Services in Karachi & Pakistan",
+      serviceType: "Mobile App Development",
+      provider: { "@id": `${siteUrl}/#person` },
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Karachi",
+        },
+        {
+          "@type": "Country",
+          name: "Pakistan",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Worldwide",
+        },
+      ],
+      description:
+        "Affordable and professional mobile app development services in Karachi and across Pakistan by Dev Muhammad. High-performance cross-platform iOS & Android mobile applications.",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Mobile App Development Services & Estimated Packages",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            name: "Mobile MVP & Prototype Package",
+            description: "For startups and businesses needing a rapid, functional mobile prototype or MVP.",
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "35000",
+              maxPrice: "80000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            name: "Full-Stack Mobile App Package",
+            description: "For production-ready mobile apps requiring cloud databases, authentication, and APIs.",
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "75000",
+              maxPrice: "180000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            name: "Enterprise & Custom Ecosystem Package",
+            description: "For comprehensive mobile platforms with in-app payments, real-time chat, and store publishing.",
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "150000",
+              maxPrice: "350000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Cross-Platform iOS & Android Apps",
+              description: "Single-codebase mobile applications engineered with React Native and Expo.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "45000",
+              maxPrice: "120000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Native Device Features & Hardware",
+              description: "Direct integration with device hardware including Camera, GPS, Biometrics, and storage.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "25000",
+              maxPrice: "60000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Fluid UI/UX & Mobile Animations",
+              description: "Modern mobile UI design with 60 FPS gesture handling and smooth screen transitions.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "25000",
+              maxPrice: "50000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Offline-First & Cloud Synchronization",
+              description: "Local data storage with offline caching and background synchronization.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "35000",
+              maxPrice: "70000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Push Notifications & Real-Time Sync",
+              description: "Targeted push notifications and live events using Firebase and WebSockets.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "20000",
+              maxPrice: "45000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "App Store & Play Store Deployment",
+              description: "Release builds, signing keys, and publishing to Google Play and Apple App Store.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "20000",
+              maxPrice: "40000",
+              priceCurrency: "PKR",
+            },
+          },
+        ],
+      },
+    },
+    appDevFAQSchema,
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/app-development#project-list`,
+      url: `${siteUrl}/app-development`,
+      name: "Featured Mobile App Development Projects",
+      description: "Cross-platform mobile applications created with React Native and modern mobile tools by Muhammad.",
+      numberOfItems: projects.length,
+      itemListElement: projects.map((project, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: { "@id": `${siteUrl}/case-study/${project.slug}#project` },
+      })),
+    },
+    ...projects.map(createProjectSchema),
+  ],
+};
+

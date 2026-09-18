@@ -12,6 +12,8 @@ export default function Footer() {
     { name: "Experience", href: "/#experience" },
     { name: "Services", href: "/#services" },
     { name: "Contact", href: "/#contact" },
+    { name: "Web Development", href: "/web-development" },
+    { name: "App Development", href: "/app-development" },
   ];
 
   const caseStudies = [
@@ -67,7 +69,7 @@ export default function Footer() {
           <h4 className="text-[var(--secondary)]! text-xs font-semibold tracking-[2px] uppercase mb-4!">
             Navigation
           </h4>
-          <ul className="space-y-2.5! text-sm">
+          <ul className="space-y-1.5! md:space-y-2.5! text-sm">
             {mainLinks.map((link) => (
               <li key={link.name}>
                 <Link
@@ -88,7 +90,7 @@ export default function Footer() {
           </h4>
           <div className="space-y-4!">
             <div>
-              <ul className="space-y-2! text-sm">
+              <ul className="space-y-1! md:space-y-2! text-sm">
                 {caseStudies.map((cs) => (
                   <li key={cs.name}>
                     <Link

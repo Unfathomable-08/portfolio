@@ -63,3 +63,37 @@ export const webDevFAQs = [
       "Minor UI adjustments within the agreed scope must be requested before final delivery. Any new features outside the initial signed scope, or modifications requested after the delivery date, are estimated separately and billed as extra updates.",
   },
 ];
+
+export const appDevFAQs = [
+  {
+    question: "Will the mobile app work on both iOS and Android?",
+    answer:
+      "Yes! Using React Native and Expo, I build a unified, high-performance codebase that compiles into native iOS and Android apps. This ensures native performance, device capabilities, and platform-specific styling while cutting development time and ongoing maintenance costs in half.",
+  },
+  {
+    question: "How does the advance deposit and payment milestone schedule work?",
+    answer:
+      "A 20% to 25% advance deposit confirms scheduling and begins architecture and UI prototyping. The remaining balance is distributed across clear milestone deliverables (such as core screen completion, API integration, and final testing) before final store submission or repository transfer.",
+  },
+  {
+    question: "Do you help publish the app to the Google Play Store and Apple App Store?",
+    answer:
+      "Yes. I provide end-to-end guidance for store submission: configuring app icons, splash screens, generating production signing keys (AAB and IPA builds via Expo EAS), preparing store metadata, and guiding submission through Google Play Console and Apple App Store Connect.",
+  },
+  {
+    question: "Can I test the app on my physical smartphone during development?",
+    answer:
+      "Absolutely. You can test live preview builds directly on your own smartphone using Expo Go or by installing private staging APKs (for Android) and TestFlight builds (for iOS) throughout the development cycle.",
+  },
+  {
+    question: "Do I receive full ownership and source code handover?",
+    answer:
+      "Yes. Upon full settlement of invoices, complete Git repository ownership, documentation, and all configuration files are transferred directly to your GitHub or GitLab account.",
+  },
+  {
+    question: "What post-launch support and warranty are included?",
+    answer:
+      "Every project includes 14 to 21 days of complimentary warranty support following official delivery to quickly resolve any unexpected bugs, device compatibility issues, or edge cases.",
+  },
+];
+

@@ -1,73 +1,72 @@
 "use client";
 
-import WebDevHero from "@/app/web-development/(components)/Hero";
-import WebDevServices from "@/app/web-development/(components)/Services";
+import Hero from "@/app/web-development/(components)/Hero";
+import Services from "@/app/web-development/(components)/Services";
 import Projects from "@/app/(components)/Projects";
-import WebDevPackages from "@/app/web-development/(components)/Packages";
+import Packages from "@/app/web-development/(components)/Packages";
 import WhyChooseMe from "@/app/web-development/(components)/WhyChooseMe";
 import FAQ from "@/app/(components)/FAQ";
 import Contact from "@/components/Contact";
 import {
-  webDevTechStack,
-  webDevStats,
-  webDevServices,
-  webDevPackages,
-  webDevReasons,
-} from "@/data/services/web-development";
-import { webDevFAQs } from "@/data/faqs";
+  appDevTechStack,
+  appDevStats,
+  appDevServices,
+  appDevPackages,
+  appDevReasons,
+} from "@/data/services/app-development";
+import { appDevFAQs } from "@/data/faqs";
 
-export default function WebDevelopmentPage() {
+export default function AppDevelopmentPage() {
   return (
     <main className="w-full overflow-x-clip">
-      <WebDevHero
-        id="wd-hero"
+      <Hero
+        id="app-hero"
         headline={
           <>
-            Crafting{" "}
+            Engineering{" "}
             <span className="text-[var(--secondary)]!">
-              Exceptional
+              High-Performance
             </span>
             <br />
-            Web Experiences
+            Mobile Applications
           </>
         }
-        subheadline="From pixel-perfect UIs to robust full-stack architectures, I build fast, scalable, SEO-optimised web products using the modern JavaScript ecosystem."
-        techStack={webDevTechStack}
-        stats={webDevStats}
-        framesFolder="laptop-frames"
-        totalFrames={150}
-        canvasAlt="3D Laptop Showcase"
+        subheadline="From intuitive, fluid mobile interfaces to production-grade mobile architectures, I build fast, cross-platform iOS & Android apps using React Native and Expo."
+        techStack={appDevTechStack}
+        stats={appDevStats}
+        framesFolder="mobile-frames"
+        totalFrames={70}
+        canvasAlt="3D Mobile Showcase"
         primaryCta={{ text: "Start a Project", href: "/#contact" }}
         secondaryCta={{ text: "View Portfolio", href: "/#projects" }}
       />
-      <WebDevServices
+      <Services
         id="services"
-        title="Web Development Services"
+        title="Mobile App Development Services"
         subtitle="Services"
-        services={webDevServices}
+        services={appDevServices}
         ctaText="Start a Project"
         ctaLink="/#contact"
       />
-      <Projects showTabs={false} defaultTab="Website" />
-      <WebDevPackages
+      <Projects showTabs={false} defaultTab="Mobile Apps" />
+      <Packages
         id="packages"
         title="Estimated Packages"
         subtitle="Packages"
         note="* Note: These are estimated prices for typical client requirements. The final price depends on your specific requirements, project scope, and features."
-        packages={webDevPackages}
+        packages={appDevPackages}
         ctaText="Get a Quote"
         ctaLink="/#contact"
       />
+
       <WhyChooseMe
         id="why-choose-me"
         title="Quality & Reliability"
         subtitle="Why Choose Me"
-        reasons={webDevReasons}
+        reasons={appDevReasons}
       />
-      <FAQ data={webDevFAQs} />
+      <FAQ data={appDevFAQs} />
       <Contact />
     </main>
   );
 }
-
-
