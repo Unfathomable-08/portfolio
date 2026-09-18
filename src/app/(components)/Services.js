@@ -13,6 +13,7 @@ export default function Services() {
       icon: SiChromewebstore,
       accent: "WEB",
       outcome: "Fast, stable, SEO-ready products",
+      link: "/web-development",
     },
     {
       title: "Desktop Software Development",
@@ -121,7 +122,7 @@ export default function Services() {
 
               <div style={{ marginTop: "16px" }}>
                 <Link
-                  href="/contact"
+                  href={service.link || "/contact"}
                   className="bg-[var(--secondary)] hover:bg-[var(--hover)] rounded font-medium py-1! p-6!"
                   style={{
                     border: "1px solid rgba(0, 194, 255, 0.45)",

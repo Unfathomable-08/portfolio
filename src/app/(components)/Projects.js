@@ -153,21 +153,35 @@ const projects = [
   },
 ];
 
-export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState(categories[0]);
+export default function Projects({ showTabs = true, defaultTab = "Website" } = {}) {
+  const [activeCategory, setActiveCategory] = useState(defaultTab);
   const visibleProjects = projects.filter(
     (project) => project.category.includes(activeCategory)
   );
 
   return (
     <div id="projects" className="min-h-svh w-full bg-[var(--primary)] px-3! pb-16! md:px-20!">
-      <h2 className="sm:text-2xl text-xl md:text-3xl font-bold text-white pt-15! pb-8! text-center">My Projects</h2>
-
-      <div
-        role="tablist"
-        aria-label="Project categories"
-        className="mx-auto mb-10! flex flex-wrap w-fit max-w-full gap-1 rounded-lg border border-white/35 bg-black/30 p-1.5! shadow-[0_12px_40px_rgba(0,0,0,0.22)]"
+      <motion.div
+        className="text-center mb-16! pt-24!"
+        initial={{ opacity: 0, y: -25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
+        <p className="font-semibold text-xs tracking-[2px] uppercase text-[var(--secondary)]! mb-2!">
+          Projects
+        </p>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
+          My Projects
+        </h2>
+      </motion.div>
+
+      {showTabs && (
+        <div
+          role="tablist"
+          aria-label="Project categories"
+          className="mx-auto mb-10! flex flex-wrap w-fit max-w-full gap-1 rounded-lg border border-white/35 bg-black/30 p-1.5! shadow-[0_12px_40px_rgba(0,0,0,0.22)]"
+        >
         {categories.map((category) => {
           const isActive = activeCategory === category;
           const projectCount = projects.filter(
@@ -202,6 +216,7 @@ export default function Projects() {
           );
         })}
       </div>
+      )}
 
       <motion.div
         layout

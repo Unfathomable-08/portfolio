@@ -13,6 +13,7 @@ import Experience from "@/app/(components)/WorkEx"
 import FAQ from "@/app/(components)/FAQ"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
+import { structuredData } from "@/lib/schema"
 
 export default function Home() {
     const pathname = usePathname();
@@ -36,6 +37,12 @@ export default function Home() {
 
     return (
         <main className="w-screen overflow-x-hidden">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+                }}
+            />
             <NeonTrail />
             <Navbar />
             <Hero />

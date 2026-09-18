@@ -3,40 +3,14 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const faqs = [
-  {
-    question: "Who is Dev Muhammad?",
-    answer:
-      "Muhammad (known online as Dev Muhammad and Unfathomable-08) is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan. With over 2 years of professional experience and 35+ delivered projects, he builds high-performance Next.js web applications, scalable backend architectures, and intelligent AI automation agents for businesses worldwide.",
-    srOnly: "dev Muhammad, developer muhammad, Unfathomable-08, unfathomable_08",
-  },
-  {
-    question: "What technical stack does developer Muhammad specialize in?",
-    answer:
-      "He specializes in full-stack web and AI engineering: React, Next.js, Node.js, Express, Python (Flask, FastAPI), MongoDB, SQL, and Tailwind CSS, paired with modern AI frameworks including PyTorch, LangChain, FAISS, and vector database integrations.",
-    srOnly: "full stack developer in pakistan, next.js developer karachi",
-  },
-  {
-    question: "Can I hire developer Muhammad for freelance or remote contract roles?",
-    answer:
-      "Yes, Dev Muhammad is actively available for freelance contracts, custom web application development, AI agent integration, and full-time remote engineering positions worldwide.",
-    srOnly: "hire developer in pakistan, freelance web developer karachi",
-  },
-  {
-    question: "Where is developer Muhammad located?",
-    answer:
-      "Dev Muhammad is based in Karachi, Sindh, Pakistan, and collaborates seamlessly with remote teams, startups, and enterprise clients across Pakistan, the United States, the UK, the UAE, and internationally.",
-    srOnly: "developer in karachi, developer in pakistan",
-  },
-  {
-    question: "What notable full-stack and AI projects has Muhammad delivered?",
-    answer:
-      "Key projects include Sable Build (visual website builder with multi-stack code export), Fluentyx (AI-powered language learning platform), Vendra (multi-branch retail POS system), Velto (enterprise sales CRM platform), M&M Selections (full-stack e-commerce & custom CMS platform with wholesale pricing and Meezan Bank gateway), and Rag Agent (LangChain RAG assistant).",
-    srOnly: "Unfathomable-08 projects, dev muhammad portfolio projects",
-  },
-];
+import { homeFAQs } from "@/data/faqs";
 
-export default function FAQ() {
+export default function FAQ({
+  data = homeFAQs,
+  title = "Frequently Asked Questions",
+  subtitle = "Questions",
+  id = "faq",
+} = {}) {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -45,7 +19,7 @@ export default function FAQ() {
 
   return (
     <section
-      id="faq"
+      id={id}
       className="w-full bg-[var(--primary)] px-5! md:px-20! py-16! relative"
     >
       <motion.div
@@ -58,18 +32,18 @@ export default function FAQ() {
         <p
           className="font-semibold text-xs tracking-[2px] uppercase text-[var(--secondary)]! mb-2!"
         >
-          Questions
+          {subtitle}
         </p>
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
-          Frequently Asked Questions
+          {title}
         </h2>
       </motion.div>
 
       <div className="max-w-3xl mx-auto! space-y-3!">
-        {faqs.map((faq, index) => {
+        {data.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
-            <div
+            <motion.div
               key={index}
               className="rounded-xl relative z-1 border bg-[var(--primary)] transition-colors duration-200"
               style={{
@@ -77,6 +51,10 @@ export default function FAQ() {
                   ? "rgba(0, 194, 255, 0.55)"
                   : "rgba(0, 194, 255, 0.25)",
               }}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.05 }}
+              viewport={{ once: false, amount: 0.15 }}
             >
               <button
                 onClick={() => toggleFAQ(index)}
@@ -111,7 +89,7 @@ export default function FAQ() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           );
         })}
       </div>

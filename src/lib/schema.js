@@ -1,3 +1,5 @@
+import { homeFAQs, webDevFAQs } from "@/data/faqs";
+
 export const siteUrl = "https://dev-muhammad.vercel.app";
 
 export const projects = [
@@ -145,6 +147,152 @@ export const createProjectSchema = (project) => ({
   inLanguage: "en",
 });
 
+export const webSiteSchema = {
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  url: siteUrl,
+  name: "Dev Muhammad Portfolio",
+  alternateName: [
+    "Dev Muhammad",
+    "dev Muhammad",
+    "developer muhammad",
+    "Muhammad Portfolio",
+    "Unfathomable",
+    "Unfathomable-08",
+    "Unfathomable_08",
+    "unfathomable08",
+  ],
+  description:
+    "Portfolio of Dev Muhammad, a full-stack web and applied AI developer based in Karachi, Pakistan.",
+  publisher: { "@id": `${siteUrl}/#person` },
+  author: { "@id": `${siteUrl}/#person` },
+  inLanguage: "en",
+};
+
+export const personSchema = {
+  "@type": "Person",
+  "@id": `${siteUrl}/#person`,
+  name: "Muhammad",
+  alternateName: [
+    "Dev Muhammad",
+    "dev Muhammad",
+    "developer muhammad",
+    "Unfathomable",
+    "Unfathomable-08",
+    "Unfathomable_08",
+    "unfathomable08",
+    "Muhammad Abasi",
+  ],
+  identifier: "Unfathomable-08",
+  url: siteUrl,
+  image: [
+    `${siteUrl}/og-square.png`,
+    `${siteUrl}/og.png`,
+    `${siteUrl}/boy.png`,
+  ],
+  jobTitle: [
+    "Fullstack Web Developer",
+    "Applied AI Developer",
+    "AI Researcher",
+    "Full Stack Developer in Pakistan",
+    "Full Stack Developer in Karachi",
+    "Next.js & React Specialist",
+  ],
+  description:
+    "From building modern full-stack web applications to training intelligent AI models and autonomous agents, Dev Muhammad (Unfathomable-08) is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan. Available for freelance contracts, custom web applications, and full-time remote roles.",
+  email: "mailto:muhammad124711@gmail.com",
+  telephone: "+92 328 2279743",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Karachi",
+    addressRegion: "Sindh",
+    addressCountry: "Pakistan",
+  },
+  seeks: {
+    "@type": "Demand",
+    name: "Freelance Full-Stack Web Development, AI Integration, and Remote Engineering Roles",
+    description:
+      "Available for hire for full-stack web applications, AI agent integration, Next.js development, and contract engineering.",
+    areaServed: [
+      "Worldwide",
+      "Pakistan",
+      "United States",
+      "United Kingdom",
+      "United Arab Emirates",
+    ],
+  },
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Full Stack Web & AI Developer",
+    occupationalCategory: "15-1254.00",
+    skills:
+      "Next.js, React, React Native, Node.js, Express.js, Python, Applied AI, MongoDB, SQL, Mobile App Development",
+  },
+  sameAs: [
+    "https://github.com/Unfathomable-08",
+    "https://x.com/unfathomable_08",
+    "https://instagram.com/unfathomable_08",
+    "https://linkedin.com/in/muhammad-abasi-6b6884350",
+  ],
+  knowsAbout: [
+    "Full-stack web development",
+    "Applied artificial intelligence",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Express.js",
+    "Python",
+    "MongoDB",
+    "SQL",
+    "React Native",
+    "Mobile app development",
+    "Applied AI research",
+    "AI agents",
+    "UI/UX Design",
+    "REST APIs",
+    "Tailwind CSS",
+  ],
+  worksFor: [
+    {
+      "@type": "Organization",
+      name: "TechDxon",
+      url: "https://techdxon.com",
+    },
+    {
+      "@type": "Organization",
+      name: "Techno Rivals",
+      url: "https://techno-rivals.com",
+    },
+  ],
+  hasOfferCatalog: { "@id": `${siteUrl}/#services` },
+};
+
+export const homeFAQSchema = {
+  "@type": "FAQPage",
+  "@id": `${siteUrl}/#faq`,
+  mainEntity: homeFAQs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+export const webDevFAQSchema = {
+  "@type": "FAQPage",
+  "@id": `${siteUrl}/web-development#faq`,
+  mainEntity: webDevFAQs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -161,124 +309,8 @@ export const structuredData = {
       primaryImageOfPage: { "@id": `${siteUrl}/#profile-image` },
       inLanguage: "en",
     },
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      url: siteUrl,
-      name: "Dev Muhammad Portfolio",
-      alternateName: [
-        "Dev Muhammad",
-        "dev Muhammad",
-        "developer muhammad",
-        "Muhammad Portfolio",
-        "Unfathomable",
-        "Unfathomable-08",
-        "Unfathomable_08",
-        "unfathomable08",
-      ],
-      description:
-        "Portfolio of Dev Muhammad, a full-stack web and applied AI developer based in Karachi, Pakistan.",
-      publisher: { "@id": `${siteUrl}/#person` },
-      author: { "@id": `${siteUrl}/#person` },
-      inLanguage: "en",
-    },
-    {
-      "@type": "Person",
-      "@id": `${siteUrl}/#person`,
-      name: "Muhammad",
-      alternateName: [
-        "Dev Muhammad",
-        "dev Muhammad",
-        "developer muhammad",
-        "Unfathomable",
-        "Unfathomable-08",
-        "Unfathomable_08",
-        "unfathomable08",
-        "Muhammad Abasi",
-      ],
-      identifier: "Unfathomable-08",
-      url: siteUrl,
-      image: [
-        `${siteUrl}/og-square.png`,
-        `${siteUrl}/og.png`,
-        `${siteUrl}/boy.png`,
-      ],
-      jobTitle: [
-        "Fullstack Web Developer",
-        "Applied AI Developer",
-        "AI Researcher",
-        "Full Stack Developer in Pakistan",
-        "Full Stack Developer in Karachi",
-        "Next.js & React Specialist",
-      ],
-      description:
-        "From building modern full-stack web applications to training intelligent AI models and autonomous agents, Dev Muhammad (Unfathomable-08) is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan. Available for freelance contracts, custom web applications, and full-time remote roles.",
-      email: "mailto:muhammad124711@gmail.com",
-      telephone: "+92 328 2279743",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Karachi",
-        addressRegion: "Sindh",
-        addressCountry: "Pakistan",
-      },
-      seeks: {
-        "@type": "Demand",
-        name: "Freelance Full-Stack Web Development, AI Integration, and Remote Engineering Roles",
-        description:
-          "Available for hire for full-stack web applications, AI agent integration, Next.js development, and contract engineering.",
-        areaServed: [
-          "Worldwide",
-          "Pakistan",
-          "United States",
-          "United Kingdom",
-          "United Arab Emirates",
-        ],
-      },
-      hasOccupation: {
-        "@type": "Occupation",
-        name: "Full Stack Web & AI Developer",
-        occupationalCategory: "15-1254.00",
-        skills:
-          "Next.js, React, React Native, Node.js, Express.js, Python, Applied AI, MongoDB, SQL, Mobile App Development",
-      },
-      sameAs: [
-        "https://github.com/Unfathomable-08",
-        "https://x.com/unfathomable_08",
-        "https://instagram.com/unfathomable_08",
-        "https://linkedin.com/in/muhammad-abasi-6b6884350",
-      ],
-      knowsAbout: [
-        "Full-stack web development",
-        "Applied artificial intelligence",
-        "React",
-        "Next.js",
-        "Node.js",
-        "Express.js",
-        "Python",
-        "MongoDB",
-        "SQL",
-        "React Native",
-        "Mobile app development",
-        "Applied AI research",
-        "AI agents",
-        "UI/UX Design",
-        "REST APIs",
-        "Tailwind CSS",
-      ],
-      worksFor: [
-        {
-          "@type": "Organization",
-          name: "TechDxon",
-          url: "https://techdxon.com",
-        },
-        {
-          "@type": "Organization",
-          name: "Techno Rivals",
-          url: "https://techno-rivals.com",
-        },
-      ],
-      hasOfferCatalog: { "@id": `${siteUrl}/#services` },
-    },
+    webSiteSchema,
+    personSchema,
     {
       "@type": "ImageObject",
       "@id": `${siteUrl}/#profile-image`,
@@ -304,7 +336,7 @@ export const structuredData = {
             description:
               "High-performance, scalable websites built with React, Next.js, and robust back-end architectures.",
             provider: { "@id": `${siteUrl}/#person` },
-            url: `${siteUrl}/services`,
+            url: `${siteUrl}/web-development`,
           },
         },
         {
@@ -361,51 +393,204 @@ export const structuredData = {
         item: { "@id": `${siteUrl}/case-study/${project.slug}#project` },
       })),
     },
+    homeFAQSchema,
+    ...projects.map(createProjectSchema),
+  ],
+};
+
+export const webDevStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@type": "FAQPage",
-      "@id": `${siteUrl}/#faq`,
-      mainEntity: [
+      "@type": "WebPage",
+      "@id": `${siteUrl}/web-development#webpage`,
+      url: `${siteUrl}/web-development`,
+      name: "Web Development Services in Karachi & Pakistan by Dev Muhammad",
+      description:
+        "Affordable and professional web development services in Karachi and across Pakistan by Dev Muhammad. High-speed business websites, e-commerce stores, and custom web applications.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#person` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/web-development#breadcrumb`,
+      itemListElement: [
         {
-          "@type": "Question",
-          name: "Who is Dev Muhammad?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Muhammad (known online as Dev Muhammad and Unfathomable-08) is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan. With over 2 years of professional experience and 35+ delivered projects, he builds high-performance Next.js web applications, scalable backend architectures, and intelligent AI automation agents for businesses worldwide.",
-          },
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
         },
         {
-          "@type": "Question",
-          name: "What technical stack does developer Muhammad specialize in?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "He specializes in full-stack web and AI engineering: React, Next.js, Node.js, Express, Python (Flask, FastAPI), MongoDB, SQL, and Tailwind CSS, paired with modern AI frameworks including PyTorch, LangChain, FAISS, and vector database integrations.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I hire developer Muhammad for freelance or remote contract roles?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes, Dev Muhammad is actively available for freelance contracts, custom web application development, AI agent integration, and full-time remote engineering positions worldwide.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Where is developer Muhammad located?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Dev Muhammad is based in Karachi, Sindh, Pakistan, and collaborates seamlessly with remote teams, startups, and enterprise clients across Pakistan, the United States, the UK, the UAE, and internationally.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What notable full-stack and AI projects has Muhammad delivered?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Key projects include Sable Build (visual website builder with multi-stack code export), Fluentyx (AI-powered language learning platform), Vendra (multi-branch retail POS system), Velto (enterprise sales CRM platform), M&M Selections (full-stack e-commerce & custom CMS platform with wholesale pricing and Meezan Bank gateway), and Rag Agent (LangChain RAG assistant).",
-          },
+          "@type": "ListItem",
+          position: 2,
+          name: "Web Development Services",
+          item: `${siteUrl}/web-development`,
         },
       ],
+    },
+    webSiteSchema,
+    personSchema,
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/web-development#service`,
+      name: "Web Development Services in Karachi & Pakistan",
+      serviceType: "Web Development",
+      provider: { "@id": `${siteUrl}/#person` },
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Karachi",
+        },
+        {
+          "@type": "Country",
+          name: "Pakistan",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Worldwide",
+        },
+      ],
+      description:
+        "Affordable and professional web development services in Karachi and across Pakistan by Dev Muhammad. High-speed business websites, e-commerce stores, and custom web applications.",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Web Development Services & Estimated Packages",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            name: "Websites & Stores Package",
+            description: "For corporate websites, revamping existing sites, and custom online stores.",
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "15000",
+              maxPrice: "80000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            name: "Web Apps & AI Package",
+            description: "For dynamic web platforms, custom backend architectures, and AI integrations.",
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "40000",
+              maxPrice: "150000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            name: "SaaS & Dashboards Package",
+            description: "For custom cloud software, multi-tenant SaaS, and data analytics dashboards.",
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "100000",
+              maxPrice: "300000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "E-Commerce Development",
+              description: "Custom online stores with product catalogs, shopping cart, checkout, payment integrations, and order management.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "35000",
+              maxPrice: "80000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Business & Corporate Websites",
+              description: "Professional websites designed to showcase your company, build trust, generate leads, and establish your brand online.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "25000",
+              maxPrice: "70000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Revamp of Existing Websites",
+              description: "Redesigning outdated sites with modern UI/UX, mobile responsiveness, clean code, and faster page load speeds.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "15000",
+              maxPrice: "50000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Full-Stack Web Applications",
+              description: "Custom dynamic web applications built with modern frontend, backend APIs, user authentication, and databases.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "50000",
+              maxPrice: "150000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "SaaS & Dashboard Development",
+              description: "Web software, administrative portals, analytics dashboards, and subscription platforms with role-based access.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "100000",
+              maxPrice: "300000",
+              priceCurrency: "PKR",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "AI-Powered Web Applications",
+              description: "Integrating AI features into web apps, including conversational chatbots, smart automations, and LLM APIs.",
+            },
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: "40000",
+              maxPrice: "140000",
+              priceCurrency: "PKR",
+            },
+          },
+        ],
+      },
+    },
+    webDevFAQSchema,
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/web-development#project-list`,
+      url: `${siteUrl}/web-development`,
+      name: "Featured Web Development Projects",
+      description: "Full-stack web applications, e-commerce platforms, and websites created by Muhammad.",
+      numberOfItems: projects.length,
+      itemListElement: projects.map((project, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: { "@id": `${siteUrl}/case-study/${project.slug}#project` },
+      })),
     },
     ...projects.map(createProjectSchema),
   ],

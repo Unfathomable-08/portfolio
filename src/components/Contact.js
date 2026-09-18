@@ -52,8 +52,24 @@ export default function Contact() {
   };
 
   return (
-    <div id='contact' className="min-h-svh w-full bg-[var(--primary)] flex items-center justify-center px-5! md:px-20! py-20!">
+    <div id='contact' className="min-h-svh w-full bg-[var(--primary)] flex flex-col items-center justify-center px-5! md:px-20! py-20!">
+      <motion.div
+        className="text-center mb-12!"
+        initial={{ opacity: 0, y: -25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        <p className="font-semibold text-xs tracking-[2px] uppercase text-[var(--secondary)]! mb-2!">
+          Contact Me
+        </p>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
+          Get in Touch
+        </h2>
+      </motion.div>
+
       <div className="max-w-5xl w-full mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 items-center">
+
         {/* Contact Info */}
         <motion.div
           className="text-white"
@@ -66,11 +82,11 @@ export default function Contact() {
           }}
         >
           <motion.h2
-            className="text-2xl sm:text-3xl font-bold mb-3! text-center lg:text-left"
+            className="text-xl sm:text-2xl font-medium italic mb-3! text-[var(--secondary)]! text-center lg:text-left"
             variants={fadeVariant}
             custom={0.2}
           >
-            Get in <span>Touch</span>
+            Feel Free to Reach Out
           </motion.h2>
           <motion.p
             className="mb-3! pb-3! text-gray-300"

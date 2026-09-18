@@ -2,7 +2,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next"
 import { ScreenSizeProvider } from "./ScreenContext";
-import { structuredData } from "@/lib/schema";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -91,12 +90,7 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-XLRTPWED97');
           `}
         </Script>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
-          }}
-        />
+
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="Y7EkvICXUQUp40MdDpDtw1lN_Pwn1rHZK_K5ZG1SKeo" />
       </head>
