@@ -469,53 +469,15 @@ export const webDevStructuredData = {
         "Affordable and professional web development services in Karachi and across Pakistan by Dev Muhammad. High-speed business websites, e-commerce stores, and custom web applications.",
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Web Development Services & Estimated Packages",
+        name: "Web Development Services",
         itemListElement: [
-          {
-            "@type": "Offer",
-            name: "Websites & Stores Package",
-            description: "For corporate websites, revamping existing sites, and custom online stores.",
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "15000",
-              maxPrice: "80000",
-              priceCurrency: "PKR",
-            },
-          },
-          {
-            "@type": "Offer",
-            name: "Web Apps & AI Package",
-            description: "For dynamic web platforms, custom backend architectures, and AI integrations.",
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "40000",
-              maxPrice: "150000",
-              priceCurrency: "PKR",
-            },
-          },
-          {
-            "@type": "Offer",
-            name: "SaaS & Dashboards Package",
-            description: "For custom cloud software, multi-tenant SaaS, and data analytics dashboards.",
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "100000",
-              maxPrice: "300000",
-              priceCurrency: "PKR",
-            },
-          },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
               name: "E-Commerce Development",
-              description: "Custom online stores with product catalogs, shopping cart, checkout, payment integrations, and order management.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "35000",
-              maxPrice: "80000",
-              priceCurrency: "PKR",
+              description:
+                "Custom online stores with product catalogs, shopping cart, checkout, payment integrations, and order management.",
             },
           },
           {
@@ -523,13 +485,8 @@ export const webDevStructuredData = {
             itemOffered: {
               "@type": "Service",
               name: "Business & Corporate Websites",
-              description: "Professional websites designed to showcase your company, build trust, generate leads, and establish your brand online.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "25000",
-              maxPrice: "70000",
-              priceCurrency: "PKR",
+              description:
+                "Professional websites designed to showcase your company, build trust, generate leads, and establish your brand online.",
             },
           },
           {
@@ -537,13 +494,8 @@ export const webDevStructuredData = {
             itemOffered: {
               "@type": "Service",
               name: "Revamp of Existing Websites",
-              description: "Redesigning outdated sites with modern UI/UX, mobile responsiveness, clean code, and faster page load speeds.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "15000",
-              maxPrice: "50000",
-              priceCurrency: "PKR",
+              description:
+                "Redesigning outdated sites with modern UI/UX, mobile responsiveness, clean code, and faster page load speeds.",
             },
           },
           {
@@ -551,13 +503,8 @@ export const webDevStructuredData = {
             itemOffered: {
               "@type": "Service",
               name: "Full-Stack Web Applications",
-              description: "Custom dynamic web applications built with modern frontend, backend APIs, user authentication, and databases.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "50000",
-              maxPrice: "150000",
-              priceCurrency: "PKR",
+              description:
+                "Custom dynamic web applications built with modern frontend, backend APIs, user authentication, and databases.",
             },
           },
           {
@@ -565,13 +512,8 @@ export const webDevStructuredData = {
             itemOffered: {
               "@type": "Service",
               name: "SaaS & Dashboard Development",
-              description: "Web software, administrative portals, analytics dashboards, and subscription platforms with role-based access.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "100000",
-              maxPrice: "300000",
-              priceCurrency: "PKR",
+              description:
+                "Web software, administrative portals, analytics dashboards, and subscription platforms with role-based access.",
             },
           },
           {
@@ -579,13 +521,8 @@ export const webDevStructuredData = {
             itemOffered: {
               "@type": "Service",
               name: "AI-Powered Web Applications",
-              description: "Integrating AI features into web apps, including conversational chatbots, smart automations, and LLM APIs.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "40000",
-              maxPrice: "140000",
-              priceCurrency: "PKR",
+              description:
+                "Integrating AI features into web apps, including conversational chatbots, smart automations, and LLM APIs.",
             },
           },
         ],
@@ -667,123 +604,33 @@ export const appDevStructuredData = {
         "Affordable and professional mobile app development services in Karachi and across Pakistan by Dev Muhammad. High-performance cross-platform iOS & Android mobile applications.",
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Mobile App Development Services & Estimated Packages",
+        name: "Mobile App Development Services",
         itemListElement: [
           {
             "@type": "Offer",
-            name: "Mobile MVP & Prototype Package",
-            description: "For startups and businesses needing a rapid, functional mobile prototype or MVP.",
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "35000",
-              maxPrice: "80000",
-              priceCurrency: "PKR",
-            },
-          },
-          {
-            "@type": "Offer",
-            name: "Full-Stack Mobile App Package",
-            description: "For production-ready mobile apps requiring cloud databases, authentication, and APIs.",
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "75000",
-              maxPrice: "180000",
-              priceCurrency: "PKR",
-            },
-          },
-          {
-            "@type": "Offer",
-            name: "Enterprise & Custom Ecosystem Package",
-            description: "For comprehensive mobile platforms with in-app payments, real-time chat, and store publishing.",
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "150000",
-              maxPrice: "350000",
-              priceCurrency: "PKR",
+            itemOffered: {
+              "@type": "Service",
+              name: "Android App for Play Store",
+              description:
+                "Native-feel Android applications tailored for Google Play Store compliance, high performance, Material Design standards, and smooth compatibility across various Android devices and screen sizes.",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Cross-Platform iOS & Android Apps",
-              description: "Single-codebase mobile applications engineered with React Native and Expo.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "45000",
-              maxPrice: "120000",
-              priceCurrency: "PKR",
+              name: "iOS App for App Store",
+              description:
+                "Premium iOS applications built in accordance with Apple's Human Interface Guidelines and App Store submission standards, with smooth animations, TestFlight beta testing, and App Store launch support.",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Native Device Features & Hardware",
-              description: "Direct integration with device hardware including Camera, GPS, Biometrics, and storage.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "25000",
-              maxPrice: "60000",
-              priceCurrency: "PKR",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Fluid UI/UX & Mobile Animations",
-              description: "Modern mobile UI design with 60 FPS gesture handling and smooth screen transitions.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "25000",
-              maxPrice: "50000",
-              priceCurrency: "PKR",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Offline-First & Cloud Synchronization",
-              description: "Local data storage with offline caching and background synchronization.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "35000",
-              maxPrice: "70000",
-              priceCurrency: "PKR",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Push Notifications & Real-Time Sync",
-              description: "Targeted push notifications and live events using Firebase and WebSockets.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "20000",
-              maxPrice: "45000",
-              priceCurrency: "PKR",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "App Store & Play Store Deployment",
-              description: "Release builds, signing keys, and publishing to Google Play and Apple App Store.",
-            },
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              minPrice: "20000",
-              maxPrice: "40000",
-              priceCurrency: "PKR",
+              name: "Cross-Platform Apps",
+              description:
+                "High-performance cross-platform mobile apps built with React Native and Expo, delivering single-codebase efficiency, fast loading, and uniform native performance across both iOS and Android.",
             },
           },
         ],

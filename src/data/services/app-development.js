@@ -3,16 +3,14 @@ import { RiSupabaseLine } from "react-icons/ri";
 import {
   FaReact,
   FaNodeJs,
+  FaAndroid,
+  FaApple,
   FaMobileScreenButton,
-  FaSliders,
-  FaPalette,
-  FaDatabase,
-  FaBell,
-  FaRocket,
   FaComments,
   FaBoltLightning,
   FaLayerGroup,
   FaCode,
+  FaRocket,
   FaShieldHalved,
 } from "react-icons/fa6";
 
@@ -82,51 +80,27 @@ export const appDevStats = [
 export const appDevServices = [
   {
     id: "01",
-    title: "Cross-Platform iOS & Android Apps",
+    title: "Android App for Play Store",
     description:
-      "Single-codebase mobile applications engineered with React Native and Expo that run flawlessly on both Apple iOS and Android devices.",
-    icon: FaMobileScreenButton,
-    tags: ["React Native", "Expo", "iOS & Android", "Single Codebase"],
+      "Native-feel Android applications tailored for Google Play Store compliance, high performance, Material Design standards, and smooth compatibility across various Android devices and screen sizes.",
+    icon: FaAndroid,
+    tags: ["Google Play Store", "Android SDK", "Material Design", "Release & Signing"],
   },
   {
     id: "02",
-    title: "Native Device Features & Hardware",
+    title: "iOS App for App Store",
     description:
-      "Direct integration with device hardware including Camera, GPS/Location, Biometric Authentication, Accelerometer, and Local Storage.",
-    icon: FaSliders,
-    tags: ["Camera API", "GPS & Maps", "Biometrics", "Device Storage"],
+      "Premium iOS applications built in accordance with Apple's Human Interface Guidelines and App Store submission standards, with smooth animations, TestFlight beta testing, and App Store launch support.",
+    icon: FaApple,
+    tags: ["Apple App Store", "iOS Guidelines", "TestFlight", "App Store Connect"],
   },
   {
     id: "03",
-    title: "Fluid UI/UX & Mobile Animations",
+    title: "Cross-Platform Apps",
     description:
-      "Modern mobile UI design with 60 FPS gesture handling, haptic feedback, theme switching (dark/light), and smooth screen transitions.",
-    icon: FaPalette,
-    tags: ["Gesture Handler", "60 FPS Animations", "Dark/Light Mode", "Responsive Layouts"],
-  },
-  {
-    id: "04",
-    title: "Offline-First & Cloud Synchronization",
-    description:
-      "Robust local data storage with offline caching and background synchronization when network connectivity is restored.",
-    icon: FaDatabase,
-    tags: ["AsyncStorage", "SQLite / Realm", "Offline Cache", "Background Sync"],
-  },
-  {
-    id: "05",
-    title: "Push Notifications & Real-Time Sync",
-    description:
-      "Targeted push notifications, instant messaging, and real-time live events using Firebase Cloud Messaging (FCM) and WebSockets.",
-    icon: FaBell,
-    tags: ["FCM Push Notifications", "Real-Time Chat", "Live Events", "In-App Alerts"],
-  },
-  {
-    id: "06",
-    title: "App Store & Play Store Deployment",
-    description:
-      "Full assistance with release builds, signing certificates, store compliance, screenshots, and publishing to Google Play & Apple App Store.",
-    icon: FaRocket,
-    tags: ["Google Play Store", "Apple App Store", "EAS Build", "Release Management"],
+      "High-performance cross-platform mobile apps built with React Native and Expo, delivering single-codebase efficiency, fast loading, and uniform native performance across both iOS and Android.",
+    icon: FaMobileScreenButton,
+    tags: ["React Native", "Expo", "Single Codebase", "iOS & Android"],
   },
 ];
 
