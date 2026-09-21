@@ -5,12 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const categories = ["Website", "Mobile Apps", "AI Agents", "Management Systems"];
+const categories = ["All", "Website", "Mobile Apps", "AI Agents", "Management Systems"];
 
 const projects = [
   {
     id: 1,
-    category: ["Website"],
+    category: ["All", "Website"],
     title: "Sable Build",
     caseStudy: "sablebuild",
     desc: "A drag-and-drop website builder that lets users create apps visually and export production-ready frontend and backend code in preffered frameworks with preffered database. Includes AI assistance for code generation and suggestions.",
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     id: 2,
-    category: ["Website"],
+    category: ["All", "Website"],
     title: "M&M Selections",
     caseStudy: "mmselections",
     desc: "A modern full-stack e-commerce store and admin CMS. Features multi-variant products, separate wholesale pricing, dynamic delivery fee & time settings, order tracking, and Meezan Bank payment gateway.",
@@ -32,7 +32,7 @@ const projects = [
   },
   {
     id: 3,
-    category: ["Website", "Management Systems"],
+    category: ["All", "Website", "Management Systems", "Software"],
     title: "Vendra – POS",
     caseStudy: "vendra",
     desc: "A multi-branch retail management system that connects point-of-sale, inventory, purchasing, customers, staff, promotions, and reporting in one role-aware workspace.",
@@ -43,7 +43,7 @@ const projects = [
   },
   {
     id: 4,
-    category: ["Website", "Management Systems"],
+    category: ["All", "Website", "Management Systems", "Software"],
     title: "Velto – CRM",
     caseStudy: "velto",
     desc: "A full-featured professional CRM (Customer Relationship Management) platform featuring a connected data graph across leads, opportunities, visual pipeline stages, multi-channel communication, tasks, and revenue forecasting.",
@@ -54,7 +54,7 @@ const projects = [
   },
   {
     id: 5,
-    category: ["Website", "Mobile Apps"],
+    category: ["All", "Website", "Mobile Apps"],
     title: "Awaza",
     caseStudy: "awaza",
     desc: "A fully functional social media PWA built with Next.js, firebase and mongodb. It has features like live push notifications, real-time chat, follow system, and full post interactions. Built for a smooth, app-like experience across devices with modern scalable architecture.",
@@ -65,18 +65,7 @@ const projects = [
   },
   {
     id: 6,
-    category: ["AI Agents"],
-    title: "TeBre",
-    caseStudy: "tebre",
-    desc: "An AI-assisted Electron workspace for ebook agencies to manage books, edit and polish manuscripts, create outlines and content, generate covers, and export KDP-ready files.",
-    tech: "React, Electron, Node.js, SQLite, Multi-provider AI",
-    img: "/case-studies/tebre/manuscript.png",
-    link: null,
-    apk: null
-  },
-  {
-    id: 7,
-    category: ["Website", "Mobile Apps", "AI Agents"],
+    category: ["All", "Website", "Mobile Apps", "AI Agents"],
     title: "Fluentyx",
     caseStudy: "fluentyx",
     desc: "An Arabic learning platform built with Next.js featuring leaderboard, lesson revision algorithm, AI tutor chatbot, translation marking system, and pytorch built CNN-based handwritten alphabet classification.",
@@ -86,8 +75,19 @@ const projects = [
     apk: null
   },
   {
+    id: 7,
+    category: ["All", "AI Agents", "Software"],
+    title: "TeBre",
+    caseStudy: "tebre",
+    desc: "An AI-assisted Electron workspace for ebook agencies to manage books, edit and polish manuscripts, create outlines and content, generate covers, and export KDP-ready files.",
+    tech: "React, Electron, Node.js, SQLite, Multi-provider AI",
+    img: "/case-studies/tebre/manuscript.png",
+    link: null,
+    apk: null
+  },
+  {
     id: 8,
-    category: ["Website", "Management Systems"],
+    category: ["All", "Website", "Management Systems"],
     title: "Ember & Oak",
     caseStudy: "emberoak",
     desc: "A full-stack restaurant platform with dynamic menu management, table reservations, event booking, and online ordering. Includes a complete admin system for managing operations in real time.",
@@ -98,7 +98,7 @@ const projects = [
   },
   {
     id: 9,
-    category: ["Website"],
+    category: ["All", "Website"],
     title: "Glowfarm",
     caseStudy: "glowfarm",
     desc: "GlowFarm showcases ethereal lighting products through jaw-dropping animations: theme switching, dynamic light effects, and interactive hover effects that feel alive. Developed with Next.js and Framer Motion.",
@@ -109,7 +109,7 @@ const projects = [
   },
   {
     id: 10,
-    category: ["AI Agents"],
+    category: ["All", "AI Agents"],
     title: "Rag Agent",
     caseStudy: "rag",
     desc: "A Retrieval-Augmented Generation (RAG) agent built using LangChain and Hugging Face models. It allows users to ask questions about a specific document or dataset, leveraging vector databases for efficient retrieval and LLMs for generating accurate responses.",
@@ -120,7 +120,7 @@ const projects = [
   },
   {
     id: 11,
-    category: ["Website"],
+    category: ["All", "Website"],
     title: "SkyTech Official Website",
     caseStudy: "skytech",
     desc: "An official business website developed for a software house during my internship. This project involved building a multi-section React site with animations using AOS, styled manually with vanilla CSS, and integrated with EmailJS for contact form submissions. The site is fully responsive and production-ready.",
@@ -131,7 +131,7 @@ const projects = [
   },
   {
     id: 12,
-    category: ["Mobile Apps"],
+    category: ["All", "Mobile Apps"],
     title: "Expense Tracker",
     caseStudy: "expense-tracker",
     desc: "A simple mobile finance app for recording income and expenses, organizing transactions by wallet, and reviewing spending through weekly, monthly, and yearly charts.",
@@ -142,7 +142,7 @@ const projects = [
   },
   {
     id: 13,
-    category: ["Mobile Apps"],
+    category: ["All", "Mobile Apps"],
     title: "Macrozone",
     caseStudy: "macrozone",
     desc: "A lightweight nutrition tracker built while learning React Native. It records meals, totals daily calories and macros, and supports reminders and sharing.",
@@ -153,7 +153,7 @@ const projects = [
   },
 ];
 
-export default function Projects({ showTabs = true, defaultTab = "Website" } = {}) {
+export default function Projects({ showTabs = true, defaultTab = "All" } = {}) {
   const [activeCategory, setActiveCategory] = useState(defaultTab);
   const visibleProjects = projects.filter(
     (project) => project.category.includes(activeCategory)

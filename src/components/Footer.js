@@ -5,16 +5,10 @@ import Image from "next/image";
 
 export default function Footer() {
   const mainLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/#about" },
-    { name: "Skills", href: "/#skills" },
-    { name: "Projects", href: "/#projects" },
-    { name: "Experience", href: "/#experience" },
-    { name: "Services", href: "/#services" },
-    { name: "Contact", href: "/#contact" },
     { name: "Web Development", href: "/web-development" },
     { name: "App Development", href: "/app-development" },
     { name: "AI Development", href: "/ai-development" },
+    { name: "Software Development", href: "/software-development" },
   ];
 
   const caseStudies = [
@@ -68,7 +62,7 @@ export default function Footer() {
         {/* Col 2: Main Navigation */}
         <div className="lg:col-span-2">
           <h4 className="text-[var(--secondary)]! text-xs font-semibold tracking-[2px] uppercase mb-4!">
-            Navigation
+            Services
           </h4>
           <ul className="space-y-1.5! md:space-y-2.5! text-sm">
             {mainLinks.map((link) => (

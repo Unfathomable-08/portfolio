@@ -22,6 +22,7 @@ export default function Services() {
       icon: FaLaptop,
       accent: "DESKTOP",
       outcome: "Fast, stable, SEO-ready products",
+      link: "/software-development",
     },
     {
       title: "Mobile App Development",

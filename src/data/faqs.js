@@ -135,4 +135,38 @@ export const aiDevFAQs = [
   },
 ];
 
+export const softwareDevFAQs = [
+  {
+    question: "Which operating systems do your software applications support?",
+    answer:
+      "I engineer cross-platform desktop applications that run reliably across Windows (10/11), macOS (Intel & Apple Silicon), and Linux distributions using Electron and modern desktop runtimes.",
+  },
+  {
+    question: "Can the software work completely offline without an internet connection?",
+    answer:
+      "Yes. Using local embedded database engines like SQLite and IndexedDB, your software functions 100% offline with zero latency, and can automatically synchronize with cloud databases once network connectivity is restored.",
+  },
+  {
+    question: "Can you connect desktop software to hardware peripherals (printers, scanners)?",
+    answer:
+      "Yes. Desktop software built with Electron and Node.js can directly interface with USB, serial, and local network devices including ESC/POS thermal receipt printers, barcode/QR scanners, cash drawers, and industrial weighing scales.",
+  },
+  {
+    question: "How does the advance deposit and payment milestone schedule work?",
+    answer:
+      "A 20% to 25% advance deposit confirms scheduling and initiates architecture planning and UI prototyping. The balance is tied to clear deliverable milestones (core modules, hardware testing, installer creation) before final release handover.",
+  },
+  {
+    question: "Do I receive full ownership and source code handover?",
+    answer:
+      "Upon full invoice settlement, you receive complete deliverables including full source code repository transfer, production installer builds (exe, dmg, deb), database scripts, and deployment instructions.",
+  },
+  {
+    question: "What warranty and bug-fix support is included after delivery?",
+    answer:
+      "Every project includes 14 to 21 days of complimentary warranty support following the delivery date to swiftly resolve any edge cases, OS-specific quirks, or performance adjustments.",
+  },
+];
+
+
 

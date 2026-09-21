@@ -1,4 +1,4 @@
-import { homeFAQs, webDevFAQs, appDevFAQs, aiDevFAQs } from "@/data/faqs";
+import { homeFAQs, webDevFAQs, appDevFAQs, aiDevFAQs, softwareDevFAQs } from "@/data/faqs";
 
 export const siteUrl = "https://dev-muhammad.vercel.app";
 
@@ -319,6 +319,19 @@ export const aiDevFAQSchema = {
   })),
 };
 
+export const softwareDevFAQSchema = {
+  "@type": "FAQPage",
+  "@id": `${siteUrl}/software-development#faq`,
+  mainEntity: softwareDevFAQs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -369,13 +382,13 @@ export const structuredData = {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            "@id": `${siteUrl}/#desktop-development`,
-            name: "Desktop Software Development",
-            serviceType: "Cross-platform desktop software development",
+            "@id": `${siteUrl}/#software-development`,
+            name: "Desktop Software Development & Management Systems",
+            serviceType: "Cross-platform desktop software development and business systems",
             description:
-              "Desktop software development for Windows, macOS, and Linux.",
+              "Cross-platform desktop software for Windows, macOS, and Linux, custom POS, and enterprise CRM systems engineered with Electron, React, and local databases.",
             provider: { "@id": `${siteUrl}/#person` },
-            url: `${siteUrl}/services`,
+            url: `${siteUrl}/software-development`,
           },
         },
         {
@@ -791,6 +804,141 @@ export const aiDevStructuredData = {
       url: `${siteUrl}/ai-development`,
       name: "Featured AI Development Projects",
       description: "Autonomous AI agents, RAG systems, and AI-powered platforms created by Muhammad.",
+      numberOfItems: projects.length,
+      itemListElement: projects.map((project, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: { "@id": `${siteUrl}/case-study/${project.slug}#project` },
+      })),
+    },
+    ...projects.map(createProjectSchema),
+  ],
+};
+
+export const softwareDevStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/software-development#webpage`,
+      url: `${siteUrl}/software-development`,
+      name: "Desktop Software Development & Management Systems in Karachi & Pakistan by Dev Muhammad",
+      description:
+        "Professional desktop software development, custom POS systems, enterprise CRM platforms, and cross-platform Electron applications in Karachi and worldwide by Dev Muhammad.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#person` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/software-development#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Software Development Services",
+          item: `${siteUrl}/software-development`,
+        },
+      ],
+    },
+    webSiteSchema,
+    personSchema,
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/software-development#service`,
+      name: "Desktop Software Development & Management Systems in Karachi & Pakistan",
+      serviceType: "Software Development",
+      provider: { "@id": `${siteUrl}/#person` },
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Karachi",
+        },
+        {
+          "@type": "Country",
+          name: "Pakistan",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Worldwide",
+        },
+      ],
+      description:
+        "Professional desktop software development, custom POS systems, enterprise CRM platforms, and cross-platform Electron applications in Karachi and worldwide by Dev Muhammad.",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Software Development Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Cross-Platform Desktop Apps",
+              description:
+                "Native-feel desktop software for Windows, macOS, and Linux built using Electron, modern JavaScript, and local runtimes with rapid performance and auto-updates.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Enterprise Management Systems (POS & CRM)",
+              description:
+                "Custom retail POS, inventory control, and enterprise sales CRM platforms (like Vendra and Velto) with multi-branch synchronization and role-based workflows.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Internal Tools & Automation Software",
+              description:
+                "Bespoke operational tools and workspaces that streamline administrative operations, file batch processing, employee reporting, and business automation.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Offline-First & Local Database Solutions",
+              description:
+                "Mission-critical desktop software built with local database engines (SQLite, IndexedDB) that remain 100% operational offline and sync seamlessly to the cloud.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "AI-Powered Desktop Workspaces",
+              description:
+                "Standalone desktop software infused with local and cloud AI models (like TeBre)—enabling intelligent manuscript editing, local document analysis, and smart file generation.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Hardware Integration & System Migration",
+              description:
+                "Refactoring legacy software systems and connecting desktop applications to hardware peripherals including thermal receipt printers, barcode scanners, and external REST APIs.",
+            },
+          },
+        ],
+      },
+    },
+    softwareDevFAQSchema,
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/software-development#project-list`,
+      url: `${siteUrl}/software-development`,
+      name: "Featured Software Development Projects",
+      description: "Desktop applications, POS systems, CRM suites, and management systems created by Muhammad.",
       numberOfItems: projects.length,
       itemListElement: projects.map((project, index) => ({
         "@type": "ListItem",
