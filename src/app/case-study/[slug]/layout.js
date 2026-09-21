@@ -80,8 +80,8 @@ export default async function CaseStudyLayout({ children, params }) {
                     {
                         "@type": "ListItem",
                         position: 2,
-                        name: "Projects",
-                        item: `https://dev-muhammad.vercel.app/projects`,
+                        name: "Portfolio",
+                        item: `https://dev-muhammad.vercel.app/portfolio`,
                     },
                     {
                         "@type": "ListItem",

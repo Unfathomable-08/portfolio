@@ -263,7 +263,60 @@ export const personSchema = {
       name: "Techno Rivals",
       url: "https://techno-rivals.com",
     },
+    {
+      "@type": "ProfessionalService",
+      name: "Dev Muhammad — Web & AI Development Services Karachi",
+      "@id": `${siteUrl}/#business`,
+    },
   ],
+  hasOfferCatalog: { "@id": `${siteUrl}/#services` },
+};
+
+export const localBusinessSchema = {
+  "@type": ["ProfessionalService", "LocalBusiness"],
+  "@id": `${siteUrl}/#business`,
+  name: "Dev Muhammad — Web & AI Development Services Karachi",
+  alternateName: [
+    "Developer Muhammad",
+    "Dev Muhammad",
+    "Muhammad Web Development Services",
+    "Best Developer in Karachi",
+    "Developer in Karachi",
+    "Full Stack Developer Karachi",
+  ],
+  image: `${siteUrl}/og-square.png`,
+  url: siteUrl,
+  telephone: "+92 328 2279743",
+  currenciesAccepted: "PKR, USD",
+  paymentAccepted: "Cash, Bank Transfer, Meezan Bank, JazzCash, Easypaisa",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Karachi",
+    addressLocality: "Karachi",
+    addressRegion: "Sindh",
+    postalCode: "75500",
+    addressCountry: "PK",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 24.8607,
+    longitude: 67.0011,
+  },
+  areaServed: [
+    { "@type": "City", name: "Karachi" },
+    { "@type": "Country", name: "Pakistan" },
+    { "@type": "AdministrativeArea", name: "Worldwide" },
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "21:00",
+    },
+  ],
+  founder: { "@id": `${siteUrl}/#person` },
+  provider: { "@id": `${siteUrl}/#person` },
   hasOfferCatalog: { "@id": `${siteUrl}/#services` },
 };
 
@@ -350,6 +403,7 @@ export const structuredData = {
     },
     webSiteSchema,
     personSchema,
+    localBusinessSchema,
     {
       "@type": "ImageObject",
       "@id": `${siteUrl}/#profile-image`,
@@ -421,8 +475,8 @@ export const structuredData = {
     },
     {
       "@type": "ItemList",
-      "@id": `${siteUrl}/projects#project-list`,
-      url: `${siteUrl}/projects`,
+      "@id": `${siteUrl}/portfolio#project-list`,
+      url: `${siteUrl}/portfolio`,
       name: "Featured development projects",
       description: "Full-stack applications, AI tools, ecommerce platforms, and animated web experiences created by Muhammad.",
       numberOfItems: projects.length,
@@ -471,6 +525,7 @@ export const webDevStructuredData = {
     },
     webSiteSchema,
     personSchema,
+    localBusinessSchema,
     {
       "@type": "Service",
       "@id": `${siteUrl}/web-development#service`,
@@ -606,6 +661,7 @@ export const appDevStructuredData = {
     },
     webSiteSchema,
     personSchema,
+    localBusinessSchema,
     {
       "@type": "Service",
       "@id": `${siteUrl}/app-development#service`,
@@ -714,6 +770,7 @@ export const aiDevStructuredData = {
     },
     webSiteSchema,
     personSchema,
+    localBusinessSchema,
     {
       "@type": "Service",
       "@id": `${siteUrl}/ai-development#service`,
@@ -849,6 +906,7 @@ export const softwareDevStructuredData = {
     },
     webSiteSchema,
     personSchema,
+    localBusinessSchema,
     {
       "@type": "Service",
       "@id": `${siteUrl}/software-development#service`,

@@ -11,7 +11,10 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const getPath = (item) => {
-    return item === "Home" ? "/" : `/#${item.toLowerCase()}`;
+    if (item === "Home") return "/";
+    if (item === "Projects") return "/portfolio";
+    if (item === "About") return "/about";
+    return `/#${item.toLowerCase()}`;
   };
 
   return (

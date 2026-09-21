@@ -21,6 +21,9 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
 User-agent: Bingbot
 Allow: /
 
@@ -30,3 +33,4 @@ Host: https://dev-muhammad.vercel.app
 # Sitemaps & Machine-Readable Context
 Sitemap: https://dev-muhammad.vercel.app/sitemap.xml
 # LLM Context: https://dev-muhammad.vercel.app/llms.txt
+# Services Scope: https://dev-muhammad.vercel.app/services.md
