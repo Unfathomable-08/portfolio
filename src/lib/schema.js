@@ -1,4 +1,5 @@
 import { homeFAQs, webDevFAQs, appDevFAQs, aiDevFAQs, softwareDevFAQs } from "@/data/faqs";
+import { blogs } from "@/data/blogs";
 
 export const siteUrl = "https://dev-muhammad.vercel.app";
 
@@ -1006,5 +1007,157 @@ export const softwareDevStructuredData = {
     },
     ...projects.map(createProjectSchema),
   ],
+};
+
+export const createBlogSchema = (blog) => {
+  const blogUrl = `${siteUrl}/blogs/${blog.url}`;
+  const imageUrl = blog.image?.startsWith("http")
+    ? blog.image
+    : `${siteUrl}${blog.image || "/og.png"}`;
+
+  return {
+    "@type": ["BlogPosting", "Article", "TechArticle"],
+    "@id": `${blogUrl}#article`,
+    name: blog.name,
+    headline: blog.name,
+    description: blog.description,
+    url: blogUrl,
+    mainEntityOfPage: `${blogUrl}#webpage`,
+    image: imageUrl,
+    datePublished: blog.date,
+    dateModified: blog.date,
+    author: { "@id": `${siteUrl}/#person` },
+    creator: { "@id": `${siteUrl}/#person` },
+    publisher: {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Muhammad",
+      url: siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/og-square.png`,
+      },
+    },
+    keywords: Array.isArray(blog.tags) ? blog.tags.join(", ") : undefined,
+    articleSection: Array.isArray(blog.tags) && blog.tags.length > 0 ? blog.tags[0] : "Web Development",
+    inLanguage: "en",
+    timeRequired: `PT${blog.readTime || 10}M`,
+  };
+};
+
+export const blogsStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${siteUrl}/blogs#webpage`,
+      url: `${siteUrl}/blogs`,
+      name: "Engineering Blog & Tech Insights | Dev Muhammad",
+      description:
+        "Deep-dive technical articles, architectural guides, and actionable checklists on full-stack web development, AI integration, and software engineering by Dev Muhammad.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      breadcrumb: { "@id": `${siteUrl}/blogs#breadcrumb` },
+      about: { "@id": `${siteUrl}/#person` },
+      mainEntity: { "@id": `${siteUrl}/blogs#blog-list` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/blogs#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blogs",
+          item: `${siteUrl}/blogs`,
+        },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/blogs#blog-list`,
+      url: `${siteUrl}/blogs`,
+      name: "Muhammad's Technical Articles & Engineering Notes",
+      description: "Technical articles, guides, and hiring checklists authored by Dev Muhammad.",
+      numberOfItems: blogs.length,
+      itemListElement: blogs.map((blog, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: blog.name,
+        url: `${siteUrl}/blogs/${blog.url}`,
+        item: { "@id": `${siteUrl}/blogs/${blog.url}#article` },
+      })),
+    },
+    webSiteSchema,
+    personSchema,
+    ...blogs.map(createBlogSchema),
+  ],
+};
+
+export const createBlogDetailStructuredData = (blog) => {
+  const pageUrl = `${siteUrl}/blogs/${blog.url}`;
+  const breadcrumbId = `${pageUrl}#breadcrumb`;
+  const imageUrl = blog.image?.startsWith("http")
+    ? blog.image
+    : `${siteUrl}${blog.image || "/og.png"}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: `${blog.name} | Dev Muhammad`,
+        description: blog.description,
+        isPartOf: { "@id": `${siteUrl}/#website` },
+        breadcrumb: { "@id": breadcrumbId },
+        primaryImageOfPage: { "@id": `${pageUrl}#primaryimage` },
+        mainEntity: { "@id": `${pageUrl}#article` },
+        about: { "@id": `${siteUrl}/#person` },
+        inLanguage: "en",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": breadcrumbId,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blogs",
+            item: `${siteUrl}/blogs`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: blog.name,
+            item: pageUrl,
+          },
+        ],
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `${pageUrl}#primaryimage`,
+        url: imageUrl,
+        contentUrl: imageUrl,
+        caption: blog.name,
+      },
+      createBlogSchema(blog),
+      webSiteSchema,
+      personSchema,
+    ],
+  };
 };
 

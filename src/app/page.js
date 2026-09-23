@@ -10,6 +10,7 @@ import Skills from "@/app/(components)/Skills"
 import Projects from "@/app/(components)/Projects"
 import Services from "@/app/(components)/Services"
 import Experience from "@/app/(components)/WorkEx"
+import Blogs from "@/app/(components)/Blogs"
 import FAQ from "@/app/(components)/FAQ"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
@@ -51,6 +52,7 @@ export default function Home() {
             <Projects />
             <Experience />
             <Services />
+            <Blogs />
             <FAQ />
             <Contact />
             <Footer />

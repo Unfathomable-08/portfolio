@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
+const navItems = ["Home", "About", "Skills", "Projects", "Blogs", "Contact"];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,6 +14,7 @@ export default function Navbar() {
     if (item === "Home") return "/";
     if (item === "Projects") return "/portfolio";
     if (item === "About") return "/about";
+    if (item === "Blogs") return "/blogs";
     return `/#${item.toLowerCase()}`;
   };
 
