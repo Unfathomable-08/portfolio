@@ -21,6 +21,16 @@ export const blogs = [
     readTime: 16,
     file: "/blogs/02.md"
   },
+  {
+    name: "Why Facebook Ads Fail for Pakistani Small Businesses",
+    description: "Ads send people to a Facebook page or a WhatsApp number. They forget you. Why the click dies in Pakistan, and what actually turns ads into repeat orders.",
+    tags: ["Ads", "Marketing", "Business"],
+    url: "why-facebook-ads-fails-in-pakistan-without-website",
+    image: "/blogs/thumbnails/03.png",
+    date: "2026-10-03",
+    readTime: 20,
+    file: "/blogs/03.md"
+  }
 ];
 
 // Helper to fetch the raw markdown content for a given blog .md file
