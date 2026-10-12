@@ -1,33 +1,33 @@
 export const homeFAQs = [
   {
-    question: "Who is Developer Muhammad?",
+    question: "What types of projects do you build and deliver?",
     answer:
-      "Developer Muhammad (known online as Dev Muhammad and Unfathomable-08) is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan. With over 2 years of professional experience and 35+ delivered projects, he builds high-performance Next.js web applications, scalable backend architectures, and intelligent AI automation agents for businesses worldwide.",
-    srOnly: "dev Muhammad, developer muhammad, Unfathomable-08, unfathomable_08",
+      "I engineer custom full-stack web applications, cross-platform mobile apps, autonomous AI agents & automations, and desktop software. This includes high-converting landing pages, multi-variant e-commerce stores with payment gateways (like Meezan Bank), SaaS platforms, enterprise POS and CRM systems, internal business tools, and custom RAG knowledge base assistants.",
+    srOnly: "web development services, mobile app development, ai agents automation, custom software",
   },
   {
-    question: "What technical stack does developer Muhammad specialize in?",
+    question: "How long does a website or application take to build?",
     answer:
-      "He specializes in full-stack web and AI engineering: React, Next.js, Node.js, Express, Python (Flask, FastAPI), MongoDB, SQL, and Tailwind CSS, paired with modern AI frameworks including PyTorch, LangChain, FAISS, and vector database integrations.",
-    srOnly: "full stack developer in pakistan, next.js developer karachi",
+      "Timelines depend directly on project scope and technical complexity. Standard websites and landing pages typically take 2 to 3 weeks to complete. For complex full-stack web applications, custom SaaS platforms, e-commerce stores, or mobile apps, delivery can take 6 to 8 weeks depending on custom backend architecture, third-party integrations, and testing requirements.",
+    srOnly: "website delivery timeline, how long to build web application",
   },
   {
-    question: "Can I hire developer Muhammad for freelance or remote contract roles?",
+    question: "Do I receive 100% full ownership of the source code?",
     answer:
-      "Yes, Dev Muhammad is actively available for freelance contracts, custom web application development, AI agent integration, and full-time remote engineering positions worldwide.",
-    srOnly: "hire developer in pakistan, freelance web developer karachi",
+      "Deliverable rights and access are granted upon full invoice settlement and depend on what is explicitly agreed in the initial contract. Full raw source code repository transfers (such as a direct GitHub repository handover) are provided for custom code packages, while other packages include managed platform deployment, CMS administration, and domain ownership. All terms are defined upfront before kickoff with zero unexpected vendor lock-in.",
+    srOnly: "source code ownership, github repository transfer, code handover",
   },
   {
-    question: "Where is developer Muhammad located?",
+    question: "How does the deposit and payment schedule work?",
     answer:
-      "Dev Muhammad is based in Karachi, Sindh, Pakistan, and collaborates seamlessly with remote teams, startups, and enterprise clients across Pakistan, the United States, the UK, the UAE, and internationally.",
-    srOnly: "developer in karachi, developer in pakistan",
+      "A 20% to 25% advance deposit is standard to confirm scheduling and initiate development. The remaining balance is payable upon project completion and verification of agreed features before final handover of files or live production access. For large or enterprise projects, the remaining balance can be divided across clear milestone deliverables.",
+    srOnly: "payment terms, advance deposit, milestone payments freelance developer",
   },
   {
-    question: "What notable full-stack and AI projects has Muhammad delivered?",
+    question: "What warranty and bug-fix support is included after delivery?",
     answer:
-      "Key projects include Sable Build (visual website builder with multi-stack code export), Fluentyx (AI-powered language learning platform), Vendra (multi-branch retail POS system), Velto (enterprise sales CRM platform), M&M Selections (full-stack e-commerce & custom CMS platform with wholesale pricing and Meezan Bank gateway), and Rag Agent (LangChain RAG assistant).",
-    srOnly: "Unfathomable-08 projects, dev muhammad portfolio projects",
+      "We provide complimentary bug fixes and error corrections for any issues originating on our end for 14 days on small projects and 21 days on large projects following the official delivery date. Once the warranty period expires, any subsequent maintenance, new features, or modifications are estimated separately as billable updates.",
+    srOnly: "bug fix warranty, post launch support, maintenance",
   },
 ];
 

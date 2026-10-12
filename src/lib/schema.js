@@ -354,7 +354,6 @@ export const localBusinessSchema = {
     "Developer Muhammad",
     "Dev Muhammad",
     "Muhammad Web Development Services",
-    "Best Developer in Karachi",
     "Developer in Karachi",
     "Full Stack Developer Karachi",
   ],
