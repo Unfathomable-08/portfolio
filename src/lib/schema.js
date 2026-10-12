@@ -63,7 +63,7 @@ export const projects = [
   {
     slug: "tebre",
     name: "TeBre",
-    seoTitle: "TeBre | AI-Assisted Ebook Production Desktop Software",
+    seoTitle: "TeBre | AI-Assisted Ebook Production Desktop Software for Agencies",
     description: "An Electron desktop workspace that helps ebook agencies manage, write, polish, design, and export KDP-ready books.",
     image: "/case-studies/tebre/dashboard.png",
     keywords: ["Electron", "React", "SQLite", "AI writing", "Ebook production", "Amazon KDP"],
@@ -100,7 +100,7 @@ export const projects = [
   {
     slug: "vendra",
     name: "Vendra",
-    seoTitle: "Vendra | Multi-Branch Retail POS & Inventory System",
+    seoTitle: "Vendra | Multi-Branch Retail POS & Inventory System for Shops in Pakistan",
     description: "A retail operations platform connecting point-of-sale, inventory, purchasing, customers, staff, branches, and performance reporting.",
     image: "/case-studies/vendra/dashboard.png",
     liveUrl: "https://vendra-pos.vercel.app/",
@@ -146,6 +146,34 @@ export const createProjectSchema = (project) => ({
   founder: { "@id": `${siteUrl}/#person` },
   keywords: project.keywords.join(", "),
   inLanguage: "en",
+  ...(project.slug === "mmselections"
+    ? {
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "5",
+          reviewCount: "1",
+          bestRating: "5",
+          worstRating: "1",
+        },
+        review: [
+          {
+            "@type": "Review",
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: "5",
+              bestRating: "5",
+              worstRating: "1",
+            },
+            author: {
+              "@type": "Organization",
+              name: "M&M Selections",
+            },
+            reviewBody:
+              "Muhammad built our store and admin panel, including products, wholesale pricing, and an additional fragrance section. Smooth handover, and the shop is live.",
+          },
+        ],
+      }
+    : {}),
 });
 
 export const webSiteSchema = {
@@ -273,6 +301,51 @@ export const personSchema = {
   hasOfferCatalog: { "@id": `${siteUrl}/#services` },
 };
 
+export const clientReviews = [
+  {
+    "@type": "Review",
+    "@id": `${siteUrl}/#review-1`,
+    itemReviewed: { "@id": `${siteUrl}/#business` },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    author: {
+      "@type": "Person",
+      name: "Junaid Hanif",
+    },
+    reviewBody:
+      "Hired Muhammad for the website. Clear communication, delivered what we agreed upon, and I'd work with him again.",
+  },
+  {
+    "@type": "Review",
+    "@id": `${siteUrl}/#review-2`,
+    itemReviewed: { "@id": `${siteUrl}/#business` },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    author: {
+      "@type": "Organization",
+      name: "M&M Selections",
+    },
+    reviewBody:
+      "Muhammad built our store and admin panel, including products, wholesale pricing, and an additional fragrance section. Smooth handover, and the shop is live.",
+  },
+];
+
+export const clientAggregateRating = {
+  "@type": "AggregateRating",
+  ratingValue: "5",
+  reviewCount: "2",
+  bestRating: "5",
+  worstRating: "1",
+};
+
 export const localBusinessSchema = {
   "@type": ["ProfessionalService", "LocalBusiness"],
   "@id": `${siteUrl}/#business`,
@@ -288,6 +361,7 @@ export const localBusinessSchema = {
   image: `${siteUrl}/og-square.png`,
   url: siteUrl,
   telephone: "+92 328 2279743",
+  priceRange: "$$",
   currenciesAccepted: "PKR, USD",
   paymentAccepted: "Cash, Bank Transfer, Meezan Bank, JazzCash, Easypaisa",
   address: {
@@ -316,6 +390,8 @@ export const localBusinessSchema = {
       closes: "21:00",
     },
   ],
+  aggregateRating: clientAggregateRating,
+  review: clientReviews,
   founder: { "@id": `${siteUrl}/#person` },
   provider: { "@id": `${siteUrl}/#person` },
   hasOfferCatalog: { "@id": `${siteUrl}/#services` },

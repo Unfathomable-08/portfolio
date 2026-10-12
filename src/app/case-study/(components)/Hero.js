@@ -12,6 +12,10 @@ export default function Hero({ caseStudy, device }) {
     const right = caseStudy?.right;
     const isLaptop = device === "laptop";
 
+    const rawName = caseStudy?.name || "";
+    const displayName = rawName.split("|")[0].trim();
+    const seoSubtitle = rawName.split("|").slice(1).join("|").trim();
+
     return (
         <section
             id="home"
@@ -55,7 +59,10 @@ export default function Hero({ caseStudy, device }) {
                         transition={{ duration: 0.65 }}
                         className="text-[clamp(3rem,8vw,6rem)] font-extrabold leading-[0.85] sm:leading-[0.76] tracking-[-0.05em] text-white"
                     >
-                        {caseStudy.name}
+                        {displayName}
+                        {seoSubtitle && (
+                            <span className="sr-only"> | {seoSubtitle}</span>
+                        )}
                     </motion.h1>
 
                     <motion.div
@@ -66,6 +73,12 @@ export default function Hero({ caseStudy, device }) {
                         <p className="max-w-xl text-xs leading-6 text-neutral-400 sm:text-sm sm:leading-7 md:text-[15px]">
                             {caseStudy.description}
                         </p>
+
+                        {caseStudy.result && (
+                            <div className="mt-4! flex items-start gap-2.5 rounded-lg border border-[var(--secondary)]/30 bg-[var(--secondary)]/10 px-3.5! py-2! text-xs font-medium text-white backdrop-blur-md">
+                                <span className="text-gray-200">{caseStudy.result}</span>
+                            </div>
+                        )}
                     </motion.div>
 
                     <div className="mt-8! flex flex-wrap gap-3">

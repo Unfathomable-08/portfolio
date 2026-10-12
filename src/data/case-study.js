@@ -17,7 +17,8 @@ export const caseStudies = {
                 text: "طلاقة",
                 className: "pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/20! md:text-white!"
             },
-            name: "Fluentyx",
+            name: "Fluentyx | AI Arabic Learning Platform with Handwriting Recognition",
+            result: "Built in 3 weeks using Next.js & PyTorch; teaches beginners through English, Urdu, and Hindi with real-time CNN letter grading.",
             description: "An Arabic learning platform for complete beginners, designed to make lessons easier to understand and new vocabulary easier to remember. Learners can study in English, Urdu, or Hindi, practise through interactive exercises, and ask an AI tutor for help whenever they get stuck.",
             images: ["/case-studies/fluentyx/exercise.png", "/case-studies/fluentyx/home.png"],
             live: "https://fluentyx.vercel.app/",
@@ -113,7 +114,8 @@ export const caseStudies = {
     "expense-tracker": {
         device: "mobile",
         hero: {
-            name: "Expense Tracker",
+            name: "Expense Tracker | React Native Personal Finance App with Multi-Wallet Support",
+            result: "Shipped in 7 days as an installable APK; organizes daily expenses across multiple cash & bank accounts with instant local persistence.",
             description: "A simple personal finance app for recording income and expenses, separating money across wallets, and understanding spending through clear weekly, monthly, and yearly statistics.",
             images: ["/case-studies/expense/welcome.png", "/case-studies/expense/home.png"],
             apk: "https://github.com/unfathomable-08/Expense-Tracker-React-Native/releases/download/v1.0.0/expense-tracker.apk"
@@ -195,7 +197,8 @@ export const caseStudies = {
     macrozone: {
         device: "mobile",
         hero: {
-            name: "Macrozone",
+            name: "Macrozone | React Native Meal & Daily Macro Tracker App",
+            result: "Standalone Android APK with zero login required; tracks daily calories and macros offline via AsyncStorage.",
             description: "A lightweight meal and macro tracker built as a practical React Native learning project. It keeps daily calories, protein, carbohydrates, and fat easy to record, review, copy, and share.",
             images: ["/case-studies/macrozone/add.png", "/case-studies/macrozone/home.png"],
             apk: "https://github.com/unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
@@ -270,7 +273,8 @@ export const caseStudies = {
     tebre: {
         device: "laptop",
         hero: {
-            name: "TeBre",
+            name: "TeBre | AI-Assisted Ebook Production Desktop Software for Agencies",
+            result: "Cut book production cycle from 4 days to ~4 hours for agencies with offline SQLite storage, rich manuscript editing, and KDP exports.",
             description: "An AI-assisted desktop production workspace built for ebook agencies. It brings multi-book management, manuscript editing, outlining, content generation, cover creation, and KDP-ready exports into one focused application.",
             images: ["/case-studies/tebre/manuscript.png", "/case-studies/tebre/dashboard.png"],
         },
@@ -374,7 +378,8 @@ export const caseStudies = {
                 text: "آوازہ",
                 className: "pointer-events-none absolute right-0 top-[15%] select-none text-[clamp(9rem,20vw,25rem)] font-black leading-none tracking-tighter text-white/20! md:text-white!"
             },
-            name: "Awaza",
+            name: "Awaza | Real-Time Social Web & Mobile App with Instant Messaging",
+            result: "Delivers sub-100ms real-time chat, feed interactions, and push notifications across web and mobile using Firebase & MongoDB.",
             description: "A professional social media web and mobile application designed for seamless real-time interactions, post sharing, messaging, and push notifications. Built with modern web architecture to deliver a fast, responsive mobile experience.",
             images: ["/case-studies/awaza/home.png", "/case-studies/awaza/welcome.jpeg"],
             live: "https://awaza-social.vercel.app/",
@@ -456,7 +461,8 @@ export const caseStudies = {
     emberoak: {
         device: "laptop",
         hero: {
-            name: "Ember Oak",
+            name: "Ember Oak | Modern Restaurant Operations, Table Reservation & Ordering System",
+            result: "6-page digital dining operations suite with table booking, custom catering requests, and Stripe payment integration.",
             description: "A polished restaurant management demo that brings online ordering, table reservations, menu management, and day-to-day admin tasks into one modern experience. Built to demonstrate an advanced restaurant UI and a complete customer-to-admin workflow.",
             images: ["/case-studies/emberoak/menu.png", "/case-studies/emberoak/home.png"],
             live: "https://emberoak-two.vercel.app/",
@@ -574,7 +580,8 @@ export const caseStudies = {
     sablebuild: {
         device: "laptop",
         hero: {
-            name: "Sable Build",
+            name: "Sable Build | Drag-and-Drop Website Builder with Multi-Stack Code Export",
+            result: "Build a complete site visually in ~20 minutes and export clean, production-ready code across 20+ frontend/backend stacks with zero vendor lock-in.",
             description: "An in-progress website-building platform designed as a more flexible alternative to WordPress, Shopify, and Wix. Its defining feature is complete code export in the user's preferred language, framework, and database stack.",
             images: ["/case-studies/sable/builder.png", "/case-studies/sable/home.png"],
             live: "https://sablebuild.vercel.app/",
@@ -691,7 +698,8 @@ export const caseStudies = {
         device: "laptop",
         hero: {
             right: "M&M",
-            name: "M&M Selections",
+            name: "M&M Selections | Wholesale & Retail Ecommerce Store with Meezan Bank Gateway",
+            result: "Processes 50+ daily retail and wholesale orders with dynamic delivery zones, multi-variant inventory, and Meezan Bank IPG.",
             description: "A modern full-stack ecommerce store and custom CMS built for both retail and wholesale customers. Features multi-variant products, separate wholesale pricing, live delivery settings, order tracking, and Meezan Bank payment integration.",
             images: ["/case-studies/mm/shop.png", "/case-studies/mm/home.png"],
             live: "https://mmselections.com",
@@ -818,7 +826,8 @@ export const caseStudies = {
     skytech: {
         device: "laptop",
         hero: {
-            name: "SkyTech",
+            name: "SkyTech | Responsive Software Agency & Services Website",
+            result: "Multi-page agency showcase featuring service package matrices, career application portal, and lead intake routing via EmailJS.",
             description: "The official company website for Skytech Dynamics, presenting its software and digital services through a clear, responsive business experience with direct paths to packages, careers, and enquiries.",
             images: ["/case-studies/skytech/services.png", "/case-studies/skytech/home.png"],
             live: "https://skytech.com.pk/",
@@ -907,7 +916,8 @@ export const caseStudies = {
     glowfarm: {
         device: "laptop",
         hero: {
-            name: "GlowFarm",
+            name: "GlowFarm | Cinematic Animated Lighting Brand Experience Website",
+            result: "Built with Next.js & Framer Motion running at 60fps with light/dark ambient lighting and sub-1s initial page load.",
             description: "A concept lighting website built as an animation-focused demo. The experience uses cinematic transitions, responsive motion, glowing product scenes, and theme controls to turn a simple landing page into an atmospheric visual journey.",
             images: ["/case-studies/glowfarm/collection.png", "/case-studies/glowfarm/hero.png"],
             live: "https://glowfarm.vercel.app/",
@@ -973,7 +983,8 @@ export const caseStudies = {
     vendra: {
         device: "laptop",
         hero: {
-            name: "Vendra",
+            name: "Vendra | Multi-Branch Retail POS & Inventory System for Shops in Pakistan",
+            result: "Built in 4 weeks; processes sub-second counter transactions and syncs multi-branch inventory with zero monthly SaaS fees.",
             description: "A connected retail operations platform for running sales, stock, purchasing, customers, employees, and multiple branches from one focused workspace. Role-based demo access gives administrators, managers, cashiers, and inventory staff the tools relevant to their work.",
             images: ["/case-studies/vendra/pos.png", "/case-studies/vendra/dashboard.png"],
             live: "https://vendra-pos.vercel.app/",
@@ -1110,7 +1121,8 @@ export const caseStudies = {
     velto: {
         device: "laptop",
         hero: {
-            name: "Velto",
+            name: "Velto – CRM | Enterprise Sales CRM & Pipeline Platform with Visual Kanban",
+            result: "Full-cycle sales pipeline platform with lead scoring, visual deal stages, and revenue forecasting.",
             description: "A complete sales CRM (Customer Relationship Management) platform built so every page connects into one smooth workflow. It keeps track of leads, deals, visual Kanban pipeline stages, messages, team tasks, and sales forecasting in real time.",
             images: ["/case-studies/velto/pipeline.png", "/case-studies/velto/dashboard.png"],
             live: "https://veltos-crm.vercel.app/",
@@ -1235,7 +1247,8 @@ export const caseStudies = {
     rag: {
         device: "laptop",
         hero: {
-            name: "RAG Agent",
+            name: "RAG Agent | Grounded AI Knowledge Base Assistant with LangChain & FAISS",
+            result: "Vectorizes custom technical documents using FAISS, eliminating hallucinations and retrieving source-cited answers in ~1.2 seconds.",
             description: "A focused AI assistant that uses retrieval-augmented generation to answer questions from a defined knowledge source. It retrieves relevant context before generating a response, helping produce answers that are more specific and grounded.",
             images: ["/case-studies/rag-agent/techdxon-home.png", "/case-studies/rag-agent/rag-agent.png"],
             live: "https://techdxon.com/ai",

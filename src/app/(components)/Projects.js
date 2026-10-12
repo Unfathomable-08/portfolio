@@ -13,7 +13,7 @@ const projects = [
     category: ["All", "Website"],
     title: "Sable Build",
     caseStudy: "sablebuild",
-    desc: "A drag-and-drop website builder that lets users create apps visually and export production-ready frontend and backend code in preffered frameworks with preffered database. Includes AI assistance for code generation and suggestions.",
+    desc: "A drag-and-drop website builder that lets users create apps visually and export production-ready frontend and backend code in preferred frameworks with preferred database. Includes AI assistance for code generation and suggestions.",
     tech: "20+ technologies, MERN, Python, Golang, etc",
     img: "/project/sable.png",
     link: "https://sablebuild.vercel.app",
