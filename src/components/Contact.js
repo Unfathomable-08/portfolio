@@ -167,7 +167,7 @@ export default function Contact() {
             }}
           >
             {[
-              ["twitter", "https://twitter.com/unfathomable_08"],
+              ["twitter", "https://x.com/unfathomable_08"],
               ["instagram", "https://instagram.com/unfathomable_08"],
               ["whatsapp", "https://wa.me/+923282279743"],
               ["linkedin-in", "https://linkedin.com/in/muhammad-abasi-6b6884350"],

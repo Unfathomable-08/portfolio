@@ -138,7 +138,7 @@ const projects = [
     tech: "React Native, Expo, Firebase, Cloudinary",
     img: "/project/expense-tracker.png",
     link: null,
-    apk: "https://github.com/Unfathomable-08/Expense-Tracker-React-Native/releases/download/v1.0.0/expense-tracker.apk"
+    apk: "https://github.com/unfathomable-08/Expense-Tracker-React-Native/releases/download/v1.0.0/expense-tracker.apk"
   },
   {
     id: 13,
@@ -149,7 +149,7 @@ const projects = [
     tech: "React Native, Expo, AsyncStorage, Expo APIs",
     img: "/project/macrozone.png",
     link: null,
-    apk: "https://github.com/Unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
+    apk: "https://github.com/unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
   },
 ];
 
@@ -251,7 +251,7 @@ export default function Projects({ showTabs = true, defaultTab = "All" } = {}) {
             </Link>
             <div className="p-4! flex flex-col justify-between h-full">
               <div>
-                <h2 className="sm:text-xl font-semibold text-white mb-3!">{project.title}</h2>
+                <h3 className="sm:text-xl font-semibold text-white mb-3!">{project.title}</h3>
                 <p className="text-sm text-gray-300 mb-3!">{project.desc}</p>
                 <div className="flex flex-wrap gap-2 text-xs mb-3!">
                   {project.tech.split(',').map((tech, idx) => (

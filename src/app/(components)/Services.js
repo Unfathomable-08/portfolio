@@ -113,12 +113,12 @@ export default function Services() {
                 </div>
               </div>
 
-              <h2
+              <h3
                 className="font-bold"
                 style={{ marginTop: "16px", marginBottom: "8px", fontSize: "18px" }}
               >
                 {service.title}
-              </h2>
+              </h3>
               <p className="text-sm" style={{ color: "var(--tertiary)", lineHeight: "1.7" }}>
                 {service.description}
               </p>

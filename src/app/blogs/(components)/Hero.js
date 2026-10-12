@@ -54,9 +54,9 @@ export default function Hero({ blog }) {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white leading-[1.15] tracking-tight mb-6! drop-shadow-lg">
+          <p className="text-3xl sm:text-5xl md:text-6xl font-black text-white leading-[1.15] tracking-tight mb-6! drop-shadow-lg">
             {blog?.name}
-          </h1>
+          </p>
 
           {/* Description Subtitle */}
           {blog?.description && (

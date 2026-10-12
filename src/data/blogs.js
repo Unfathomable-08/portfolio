@@ -8,6 +8,7 @@ export const blogs = [
     url: "things-to-check-before-hiring-web-developer-pakistan",
     image: "/blogs/thumbnails/01.png",
     date: "2026-09-23",
+    lastModified: "2026-10-13",
     readTime: 20,
     file: "/blogs/01.md"
   },
@@ -18,6 +19,7 @@ export const blogs = [
     url: "how-much-does-a-website-cost-in-pakistan",
     image: "/blogs/thumbnails/02.png",
     date: "2026-09-23",
+    lastModified: "2026-10-13",
     readTime: 16,
     file: "/blogs/02.md"
   },
@@ -28,6 +30,7 @@ export const blogs = [
     url: "why-facebook-ads-fails-in-pakistan-without-website",
     image: "/blogs/thumbnails/03.png",
     date: "2026-10-03",
+    lastModified: "2026-10-13",
     readTime: 20,
     file: "/blogs/03.md"
   }

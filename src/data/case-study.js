@@ -116,7 +116,7 @@ export const caseStudies = {
             name: "Expense Tracker",
             description: "A simple personal finance app for recording income and expenses, separating money across wallets, and understanding spending through clear weekly, monthly, and yearly statistics.",
             images: ["/case-studies/expense/welcome.png", "/case-studies/expense/home.png"],
-            apk: "https://github.com/Unfathomable-08/Expense-Tracker-React-Native/releases/download/v1.0.0/expense-tracker.apk"
+            apk: "https://github.com/unfathomable-08/Expense-Tracker-React-Native/releases/download/v1.0.0/expense-tracker.apk"
         },
         about: {
             text: [
@@ -198,7 +198,7 @@ export const caseStudies = {
             name: "Macrozone",
             description: "A lightweight meal and macro tracker built as a practical React Native learning project. It keeps daily calories, protein, carbohydrates, and fat easy to record, review, copy, and share.",
             images: ["/case-studies/macrozone/add.png", "/case-studies/macrozone/home.png"],
-            apk: "https://github.com/Unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
+            apk: "https://github.com/unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
         },
         about: {
             text: [

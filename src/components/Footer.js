@@ -36,7 +36,7 @@ export default function Footer() {
     { name: "WhatsApp", icon: "whatsapp", href: "https://wa.me/+923282279743" },
     { name: "Instagram", icon: "instagram", href: "https://instagram.com/unfathomable_08" },
     { name: "Facebook", icon: "facebook-f", href: "https://facebook.com/unfathomable08" },
-    { name: "Twitter", icon: "x-twitter", href: "https://twitter.com/unfathomable_08" },
+    { name: "Twitter", icon: "x-twitter", href: "https://x.com/unfathomable_08" },
     { name: "LinkedIn", icon: "linkedin-in", href: "https://linkedin.com/in/muhammad-abasi-6b6884350" }
   ];
 
@@ -165,9 +165,123 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="pt-6! text-sm underline">
-            <a href="https://www.designrush.com/agency/website-design-development" target="_blank" className="hover:text-[var(--secondary)]! transition-colors duration-200 break-all">DesignRush Verified Agency</a>
-          </div>
+          
+          <div className="mt-6! scale-70 origin-left">
+              <div data-designrush-widget data-agency-id="127132" data-style="dark" aria-label="DesignRush agency reviews section" />
+              <a
+                href="https://www.designrush.com/agency/profile/dev-muhammad#reviews"
+                target="_blank"
+                style={{
+                  position: "relative",
+                  display: "block",
+                  boxSizing: "border-box",
+                  width: "188px",
+                  height: "74px",
+                  backgroundImage:
+                    "url(https://www.designrush.com/topbest/images/svg/widgets/agency-reviews/bg-dark.svg?v=3)",
+                  backgroundRepeat: "no-repeat",
+                  borderRadius: "3px",
+                  margin: "0 auto",
+                  textDecoration: "none",
+                }}
+                id="dr-agency-reviews-widget"
+                aria-label="Visit dev-muhammad reviews on DesignRush"
+              >
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "13px",
+                    right: "13px",
+                    fontFamily: "Outfit",
+                    fontSize: "20.5px",
+                    fontWeight: 700,
+                    lineHeight: "17px",
+                    textAlign: "left",
+                    color: "#fff",
+                    letterSpacing: "0.03em",
+                  }}
+                >
+                  REVIEW US
+                </span>
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "32px",
+                    right: "13px",
+                    display: "flex",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: "Outfit",
+                      fontSize: "12px",
+                      fontWeight: 400,
+                      lineHeight: "17px",
+                      textAlign: "left",
+                      color: "#fff",
+                      marginRight: "3px",
+                    }}
+                  >
+                    ON
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: "Outfit",
+                      fontSize: "11px",
+                      fontWeight: 700,
+                      lineHeight: "17px",
+                      textAlign: "left",
+                      color: "#fff",
+                      letterSpacing: "0.07em",
+                    }}
+                  >
+                    DESIGNRUSH
+                  </span>
+                </span>
+                <span
+                  style={{
+                    fontFamily: "Outfit",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                    lineHeight: "17px",
+                    textAlign: "left",
+                    color: "#fff",
+                    letterSpacing: "0.07em",
+                  }}
+                >
+                  <span style={{ width: "14px" }}>
+                    <img
+                      src="https://www.designrush.com/topbest/images/svg/widgets/agency-reviews/components/star-dark-full.svg?v=3"
+                      alt="star"
+                    />
+                  </span>
+                  <span style={{ width: "14px" }}>
+                    <img
+                      src="https://www.designrush.com/topbest/images/svg/widgets/agency-reviews/components/star-dark-full.svg?v=3"
+                      alt="star"
+                    />
+                  </span>
+                  <span style={{ width: "14px" }}>
+                    <img
+                      src="https://www.designrush.com/topbest/images/svg/widgets/agency-reviews/components/star-dark-full.svg?v=3"
+                      alt="star"
+                    />
+                  </span>
+                  <span style={{ width: "14px" }}>
+                    <img
+                      src="https://www.designrush.com/topbest/images/svg/widgets/agency-reviews/components/star-dark-full.svg?v=3"
+                      alt="star"
+                    />
+                  </span>
+                  <span style={{ width: "14px" }}>
+                    <img
+                      src="https://www.designrush.com/topbest/images/svg/widgets/agency-reviews/components/star-dark-full.svg?v=3"
+                      alt="star"
+                    />
+                  </span>
+                </span>
+              </a>
+            </div>
         </div>
       </div>
 

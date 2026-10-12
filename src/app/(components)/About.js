@@ -21,10 +21,10 @@ export default function About() {
           <span>Available for Freelance & Contracts ({currentYear})</span>
         </div>
 
-        <h3 className="font-semibold text-2xl md:text-3xl pb-3! text-white">
+        <h2 className="font-semibold text-2xl md:text-3xl pb-3! text-white">
           Hi, I'm Muhammad,
           <span className="sr-only"> (Unfathomable-08 / unfathomable_08)</span>
-        </h3>
+        </h2>
 
         <p className="text-md max-lg:text-sm text-[var(--tertiary)] mb-4!">
           Muhammad is a Full-Stack Web & Applied AI Developer based in Karachi, Pakistan, with over 2 years of professional experience and 35+ delivered projects. Specializing in React, Next.js, Node.js, Python, and autonomous AI agents, he engineers scalable, high-performance web applications and intelligent systems for clients worldwide.

@@ -230,7 +230,7 @@ export const personSchema = {
       "Next.js, React, React Native, Node.js, Express.js, Python, Applied AI, MongoDB, SQL, Mobile App Development",
   },
   sameAs: [
-    "https://github.com/Unfathomable-08",
+    "https://github.com/unfathomable-08",
     "https://x.com/unfathomable_08",
     "https://instagram.com/unfathomable_08",
     "https://linkedin.com/in/muhammad-abasi-6b6884350",
@@ -1009,6 +1009,48 @@ export const softwareDevStructuredData = {
   ],
 };
 
+export function extractBlogFAQs(markdown) {
+  if (!markdown) return [];
+  const faqSectionMatch = markdown.match(
+    /##\s*FAQ\s*([\s\S]*?)(?:---|\n\*(?:Muhammad|October|September)|\n#|$)/i
+  );
+  if (!faqSectionMatch) return [];
+
+  const faqText = faqSectionMatch[1];
+  const items = [];
+  const regex = /\*\*(.*?)\*\*\s*(?:\\|\s)*\n+([\s\S]*?)(?=(?:\n\s*\*\*|$))/g;
+  let match;
+  while ((match = regex.exec(faqText)) !== null) {
+    const question = match[1].replace(/\\/g, "").trim();
+    let answer = match[2].trim();
+    answer = answer
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+      .replace(/\*\*/g, "")
+      .replace(/\\\s*/g, " ")
+      .trim();
+    if (question && answer) {
+      items.push({ question, answer });
+    }
+  }
+  return items;
+}
+
+export const createBlogFAQSchema = (blogUrl, faqs) => {
+  if (!faqs || faqs.length === 0) return null;
+  return {
+    "@type": "FAQPage",
+    "@id": `${blogUrl}#faq`,
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+};
+
 export const createBlogSchema = (blog, content = "") => {
   const blogUrl = `${siteUrl}/blogs/${blog.url}`;
   const imageUrl = blog.image?.startsWith("http")
@@ -1025,7 +1067,7 @@ export const createBlogSchema = (blog, content = "") => {
     mainEntityOfPage: `${blogUrl}#webpage`,
     image: imageUrl,
     datePublished: blog.date,
-    dateModified: blog.date,
+    dateModified: blog.lastModified || blog.date,
     author: { "@id": `${siteUrl}/#person` },
     creator: { "@id": `${siteUrl}/#person` },
     publisher: {
@@ -1108,57 +1150,63 @@ export const createBlogDetailStructuredData = (blog, content = "") => {
     ? blog.image
     : `${siteUrl}${blog.image || "/og.png"}`;
 
+  const faqs = extractBlogFAQs(content);
+  const faqSchema = createBlogFAQSchema(pageUrl, faqs);
+
+  const graph = [
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: `${blog.name} | Dev Muhammad`,
+      description: blog.description,
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      breadcrumb: { "@id": breadcrumbId },
+      primaryImageOfPage: { "@id": `${pageUrl}#primaryimage` },
+      mainEntity: { "@id": `${pageUrl}#article` },
+      about: { "@id": `${siteUrl}/#person` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": breadcrumbId,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blogs",
+          item: `${siteUrl}/blogs`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: blog.name,
+          item: pageUrl,
+        },
+      ],
+    },
+    {
+      "@type": "ImageObject",
+      "@id": `${pageUrl}#primaryimage`,
+      url: imageUrl,
+      contentUrl: imageUrl,
+      caption: blog.name,
+    },
+    createBlogSchema(blog, content),
+    ...(faqSchema ? [faqSchema] : []),
+    webSiteSchema,
+    personSchema,
+  ];
+
   return {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": `${pageUrl}#webpage`,
-        url: pageUrl,
-        name: `${blog.name} | Dev Muhammad`,
-        description: blog.description,
-        isPartOf: { "@id": `${siteUrl}/#website` },
-        breadcrumb: { "@id": breadcrumbId },
-        primaryImageOfPage: { "@id": `${pageUrl}#primaryimage` },
-        mainEntity: { "@id": `${pageUrl}#article` },
-        about: { "@id": `${siteUrl}/#person` },
-        inLanguage: "en",
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": breadcrumbId,
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: siteUrl,
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Blogs",
-            item: `${siteUrl}/blogs`,
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: blog.name,
-            item: pageUrl,
-          },
-        ],
-      },
-      {
-        "@type": "ImageObject",
-        "@id": `${pageUrl}#primaryimage`,
-        url: imageUrl,
-        contentUrl: imageUrl,
-        caption: blog.name,
-      },
-      createBlogSchema(blog, content),
-      webSiteSchema,
-      personSchema,
-    ],
+    "@graph": graph,
   };
 };
 
