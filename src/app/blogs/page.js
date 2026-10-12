@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { blogs } from "@/data/blogs";
+import { blogsStructuredData } from "@/lib/schema";
 
 export default function BlogsPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -45,6 +46,12 @@ export default function BlogsPage() {
 
   return (
     <main className="w-screen overflow-x-hidden bg-[var(--primary)] text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogsStructuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
 
       {/* Hero Section */}

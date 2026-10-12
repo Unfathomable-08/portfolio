@@ -1009,7 +1009,7 @@ export const softwareDevStructuredData = {
   ],
 };
 
-export const createBlogSchema = (blog) => {
+export const createBlogSchema = (blog, content = "") => {
   const blogUrl = `${siteUrl}/blogs/${blog.url}`;
   const imageUrl = blog.image?.startsWith("http")
     ? blog.image
@@ -1042,6 +1042,7 @@ export const createBlogSchema = (blog) => {
     articleSection: Array.isArray(blog.tags) && blog.tags.length > 0 ? blog.tags[0] : "Web Development",
     inLanguage: "en",
     timeRequired: `PT${blog.readTime || 10}M`,
+    ...(content ? { articleBody: content } : {}),
   };
 };
 
@@ -1100,7 +1101,7 @@ export const blogsStructuredData = {
   ],
 };
 
-export const createBlogDetailStructuredData = (blog) => {
+export const createBlogDetailStructuredData = (blog, content = "") => {
   const pageUrl = `${siteUrl}/blogs/${blog.url}`;
   const breadcrumbId = `${pageUrl}#breadcrumb`;
   const imageUrl = blog.image?.startsWith("http")
@@ -1154,7 +1155,7 @@ export const createBlogDetailStructuredData = (blog) => {
         contentUrl: imageUrl,
         caption: blog.name,
       },
-      createBlogSchema(blog),
+      createBlogSchema(blog, content),
       webSiteSchema,
       personSchema,
     ],

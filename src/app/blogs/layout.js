@@ -1,4 +1,4 @@
-import { blogsStructuredData, siteUrl } from "@/lib/schema";
+import { siteUrl } from "@/lib/schema";
 
 export const metadata = {
   title: "Engineering Blog & Tech Insights | Dev Muhammad",
@@ -55,15 +55,5 @@ export const metadata = {
 };
 
 export default function BlogsLayout({ children }) {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(blogsStructuredData).replace(/</g, "\\u003c"),
-        }}
-      />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }

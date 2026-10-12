@@ -1,5 +1,6 @@
 import { blogs } from "@/data/blogs";
 import { siteUrl, createBlogDetailStructuredData } from "@/lib/schema";
+import { getBlogContent } from "@/lib/blogServer";
 
 const getBlog = (slug) => blogs.find((b) => b.url === slug);
 
@@ -72,7 +73,8 @@ export default async function BlogDetailLayout({ children, params }) {
 
   if (!blog) return children;
 
-  const jsonLd = createBlogDetailStructuredData(blog);
+  const content = getBlogContent(blog.file);
+  const jsonLd = createBlogDetailStructuredData(blog, content);
 
   return (
     <>
