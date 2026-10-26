@@ -128,6 +128,17 @@ export const projects = [
     liveUrl: "https://skytech.com.pk",
     keywords: ["React", "Vanilla CSS", "EmailJS", "AOS", "Business website"],
   },
+  {
+    slug: "auraseo",
+    name: "AuraSEO",
+    seoTitle: "AuraSEO | Next-Gen Technical SEO, AEO & GEO Analyzer Tool",
+    description: "A comprehensive 6-page SEO analyzer tool built with React, TanStack, Lighthouse, Puppeteer, and Node.js to audit crawlability, capture device viewports, inspect backlinks, and score issues for SEO, AEO, and GEO.",
+    image: "/case-studies/seo/overview.png",
+    liveUrl: "https://auraseo.onrender.com",
+    keywords: ["React", "TanStack", "Lighthouse", "Puppeteer", "Node.js", "SEO Analyzer", "AEO", "GEO", "Core Web Vitals", "Crawl Architecture"],
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+  },
 ];
 
 export const createProjectSchema = (project) => ({

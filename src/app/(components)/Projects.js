@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const categories = ["All", "Website", "Mobile Apps", "AI Agents", "Management Systems"];
+const categories = ["All", "Website", "Mobile Apps", "AI Agents", "Software", "SaaS"];
 
 const projects = [
   {
     id: 1,
-    category: ["All", "Website"],
-    title: "Sable Build",
+    category: ["All", "Website", "SaaS"],
+    title: "Sable Build (WordPress Alternative)",
     caseStudy: "sablebuild",
     desc: "A drag-and-drop website builder that lets users create apps visually and export production-ready frontend and backend code in preferred frameworks with preferred database. Includes AI assistance for code generation and suggestions.",
     tech: "20+ technologies, MERN, Python, Golang, etc",
@@ -20,9 +20,20 @@ const projects = [
     apk: null
   },
   {
+    id: 5,
+    category: ["All", "Website", "SaaS"],
+    title: "AuraSEO (SEO Analyzer)",
+    caseStudy: "auraseo",
+    desc: "A 6-page SEO analyzer tool that crawls internal pages, captures multi-device screenshots via Puppeteer, runs Google Lighthouse, and benchmarks SEO, AEO, and GEO readiness with weighted issue impact scoring.",
+    tech: "React, Tanstack, Lighthouse, Puppeteer, Node.js",
+    img: "/project/auraseo.png",
+    link: "https://auraseo.onrender.com",
+    apk: null
+  },
+  {
     id: 2,
     category: ["All", "Website"],
-    title: "M&M Selections",
+    title: "M&M Selections (E-commerce Store)",
     caseStudy: "mmselections",
     desc: "A modern full-stack e-commerce store and admin CMS. Features multi-variant products, separate wholesale pricing, dynamic delivery fee & time settings, order tracking, and Meezan Bank payment gateway.",
     tech: "Next.js, MongoDB, Zustand, Meezan Bank, Tailwind CSS",
@@ -31,9 +42,20 @@ const projects = [
     apk: null
   },
   {
+    id: 8,
+    category: ["All", "AI Agents", "Software"],
+    title: "TeBre (Ebook Agency Software)",
+    caseStudy: "tebre",
+    desc: "An AI-assisted Electron workspace for ebook agencies to manage books, edit and polish manuscripts, create outlines and content, generate covers, and export KDP-ready files.",
+    tech: "React, Electron, Node.js, SQLite, Multi-provider AI",
+    img: "/case-studies/tebre/manuscript.png",
+    link: null,
+    apk: null
+  },
+  {
     id: 3,
     category: ["All", "Website", "Management Systems", "Software"],
-    title: "Vendra – POS",
+    title: "Vendra – POS (Point Of Sale)",
     caseStudy: "vendra",
     desc: "A multi-branch retail management system that connects point-of-sale, inventory, purchasing, customers, staff, promotions, and reporting in one role-aware workspace.",
     tech: "Next.js, React, Zustand, IndexedDB",
@@ -44,7 +66,7 @@ const projects = [
   {
     id: 4,
     category: ["All", "Website", "Management Systems", "Software"],
-    title: "Velto – CRM",
+    title: "Velto – CRM (Management System)",
     caseStudy: "velto",
     desc: "A full-featured professional CRM (Customer Relationship Management) platform featuring a connected data graph across leads, opportunities, visual pipeline stages, multi-channel communication, tasks, and revenue forecasting.",
     tech: "Next.js, React, Zustand, IndexedDB",
@@ -53,9 +75,9 @@ const projects = [
     apk: null
   },
   {
-    id: 5,
+    id: 6,
     category: ["All", "Website", "Mobile Apps"],
-    title: "Awaza",
+    title: "Awaza (Social Media Platform)",
     caseStudy: "awaza",
     desc: "A fully functional social media PWA built with Next.js, firebase and mongodb. It has features like live push notifications, real-time chat, follow system, and full post interactions. Built for a smooth, app-like experience across devices with modern scalable architecture.",
     tech: "Next.js, Firebase, MongoDB",
@@ -64,9 +86,9 @@ const projects = [
     apk: null
   },
   {
-    id: 6,
-    category: ["All", "Website", "Mobile Apps", "AI Agents"],
-    title: "Fluentyx",
+    id: 7,
+    category: ["All", "Website", "Mobile Apps", "AI Agents", "SaaS"],
+    title: "Fluentyx (Arabic Learning Platform)",
     caseStudy: "fluentyx",
     desc: "An Arabic learning platform built with Next.js featuring leaderboard, lesson revision algorithm, AI tutor chatbot, translation marking system, and pytorch built CNN-based handwritten alphabet classification.",
     tech: "Next.js, PyTorch, LangChain, Hugging Face, Tailwind CSS",
@@ -75,20 +97,9 @@ const projects = [
     apk: null
   },
   {
-    id: 7,
-    category: ["All", "AI Agents", "Software"],
-    title: "TeBre",
-    caseStudy: "tebre",
-    desc: "An AI-assisted Electron workspace for ebook agencies to manage books, edit and polish manuscripts, create outlines and content, generate covers, and export KDP-ready files.",
-    tech: "React, Electron, Node.js, SQLite, Multi-provider AI",
-    img: "/case-studies/tebre/manuscript.png",
-    link: null,
-    apk: null
-  },
-  {
-    id: 8,
-    category: ["All", "Website", "Management Systems"],
-    title: "Ember & Oak",
+    id: 9,
+    category: ["All", "Website", "Management Systems", "Software"],
+    title: "Ember & Oak (Restaurant Management)",
     caseStudy: "emberoak",
     desc: "A full-stack restaurant platform with dynamic menu management, table reservations, event booking, and online ordering. Includes a complete admin system for managing operations in real time.",
     tech: "Next.js, Tailwind CSS, MongoDB, Stripe",
@@ -97,9 +108,9 @@ const projects = [
     apk: null
   },
   {
-    id: 9,
+    id: 10,
     category: ["All", "Website"],
-    title: "Glowfarm",
+    title: "Glowfarm (Lighting Products)",
     caseStudy: "glowfarm",
     desc: "GlowFarm showcases ethereal lighting products through jaw-dropping animations: theme switching, dynamic light effects, and interactive hover effects that feel alive. Developed with Next.js and Framer Motion.",
     tech: "Next.js, Tailwind CSS, Framer Motion",
@@ -108,9 +119,9 @@ const projects = [
     apk: null
   },
   {
-    id: 10,
+    id: 11,
     category: ["All", "AI Agents"],
-    title: "Rag Agent",
+    title: "Rag Agent (AI Chatbot)",
     caseStudy: "rag",
     desc: "A Retrieval-Augmented Generation (RAG) agent built using LangChain and Hugging Face models. It allows users to ask questions about a specific document or dataset, leveraging vector databases for efficient retrieval and LLMs for generating accurate responses.",
     tech: "Python, LangChain, Hugging Face, FAISS",
@@ -119,9 +130,9 @@ const projects = [
     apk: null
   },
   {
-    id: 11,
+    id: 12,
     category: ["All", "Website"],
-    title: "SkyTech Official Website",
+    title: "SkyTech (Official Business Website)",
     caseStudy: "skytech",
     desc: "An official business website developed for a software house during my internship. This project involved building a multi-section React site with animations using AOS, styled manually with vanilla CSS, and integrated with EmailJS for contact form submissions. The site is fully responsive and production-ready.",
     tech: "React, Vanilla CSS, EmailJS, AOS",
@@ -130,9 +141,9 @@ const projects = [
     apk: null
   },
   {
-    id: 12,
+    id: 13,
     category: ["All", "Mobile Apps"],
-    title: "Expense Tracker",
+    title: "Expense Tracker (Simple Mobile App)",
     caseStudy: "expense-tracker",
     desc: "A simple mobile finance app for recording income and expenses, organizing transactions by wallet, and reviewing spending through weekly, monthly, and yearly charts.",
     tech: "React Native, Expo, Firebase, Cloudinary",
@@ -141,9 +152,9 @@ const projects = [
     apk: "https://github.com/unfathomable-08/Expense-Tracker-React-Native/releases/download/v1.0.0/expense-tracker.apk"
   },
   {
-    id: 13,
+    id: 14,
     category: ["All", "Mobile Apps"],
-    title: "Macrozone",
+    title: "Macrozone (Nutrition Tracker App)",
     caseStudy: "macrozone",
     desc: "A lightweight nutrition tracker built while learning React Native. It records meals, totals daily calories and macros, and supports reminders and sharing.",
     tech: "React Native, Expo, AsyncStorage, Expo APIs",
@@ -152,6 +163,20 @@ const projects = [
     apk: "https://github.com/unfathomable-08/Macrozone/releases/download/v1.0.0/macrozone.apk"
   },
 ];
+
+function formatProjectTitle(title) {
+  const match = title.match(/^(.*?)\s*\((.*?)\)$/);
+
+  if (match) {
+    return (
+      <>
+        <span>{match[1].trim()}</span>{" "}
+        <span className="text-xs sm:text-sm font-normal text-white!">({match[2].trim()})</span>
+      </>
+    );
+  }
+  return title;
+}
 
 export default function Projects({ showTabs = true, defaultTab = "All" } = {}) {
   const [activeCategory, setActiveCategory] = useState(defaultTab);
@@ -182,40 +207,38 @@ export default function Projects({ showTabs = true, defaultTab = "All" } = {}) {
           aria-label="Project categories"
           className="mx-auto mb-10! flex flex-wrap w-fit max-w-full gap-1 rounded-lg border border-white/35 bg-black/30 p-1.5! shadow-[0_12px_40px_rgba(0,0,0,0.22)]"
         >
-        {categories.map((category) => {
-          const isActive = activeCategory === category;
-          const projectCount = projects.filter(
-            (project) => project.category.includes(category)
-          ).length;
+          {categories.map((category) => {
+            const isActive = activeCategory === category;
+            const projectCount = projects.filter(
+              (project) => project.category.includes(category)
+            ).length;
 
-          return (
-            <button
-              key={category}
-              id={`projects-tab-${category.toLowerCase().replaceAll(" ", "-")}`}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              aria-controls="projects-panel"
-              onClick={() => setActiveCategory(category)}
-              className={`group cursor-pointer flex shrink-0 items-center gap-2 rounded-sm md:rounded-md px-3! py-2! md:py-2.5! text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)] sm:px-4! ${
-                isActive
-                  ? "bg-[var(--secondary)] text-[#071014] shadow-[0_0_24px_rgba(0,194,255,0.18)]"
-                  : "text-gray-300 bg-[var(--primary)] border border-white/0 hover:border-[var(--secondary)]/35 hover:text-white"
-              }`}
-            >
-              <span className={isActive ? "text-[#071014]" : "text-inherit"}>{category}</span>
-              <span
-                aria-hidden="true"
-                className={`rounded-full w-4 h-4 flex justify-center items-center text-[10px] leading-none ${
-                  isActive ? "bg-[#071014]/25 text-[#071014]" : "bg-white/25 text-gray-400"
-                }`}
+            return (
+              <button
+                key={category}
+                id={`projects-tab-${category.toLowerCase().replaceAll(" ", "-")}`}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                aria-controls="projects-panel"
+                onClick={() => setActiveCategory(category)}
+                className={`group cursor-pointer flex shrink-0 items-center gap-2 rounded-sm md:rounded-md px-3! py-2! md:py-2.5! text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--secondary)] sm:px-4! ${isActive
+                    ? "bg-[var(--secondary)] text-[#071014] shadow-[0_0_24px_rgba(0,194,255,0.18)]"
+                    : "text-gray-300 bg-[var(--primary)] border border-white/0 hover:border-[var(--secondary)]/35 hover:text-white"
+                  }`}
               >
-                {projectCount}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+                <span className={isActive ? "text-[#071014]" : "text-inherit"}>{category}</span>
+                <span
+                  aria-hidden="true"
+                  className={`rounded-full w-4 h-4 flex justify-center items-center text-[10px] leading-none ${isActive ? "bg-[#071014]/25 text-[#071014]" : "bg-white/25 text-gray-400"
+                    }`}
+                >
+                  {projectCount}
+                </span>
+              </button>
+            );
+          })}
+        </div>
       )}
 
       <motion.div
@@ -226,71 +249,73 @@ export default function Projects({ showTabs = true, defaultTab = "All" } = {}) {
         className="max-md:px-2! grid grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2"
       >
         <AnimatePresence mode="popLayout">
-        {visibleProjects.map((project, index) => (
-          <motion.div
-            layout
-            key={project.id}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: index * 0.07 }}
-            className="rounded-xl shadow-lg overflow-hidden bg-[#1e1e1e] grid sm:grid-cols-2 p-4! items-center sm:gap-4"
-          >
-            <Link
-              href={`/case-study/${project.caseStudy}`}
-              aria-label={`View ${project.title} case study`}
-              className="block cursor-pointer rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
+          {visibleProjects.map((project, index) => (
+            <motion.div
+              layout
+              key={project.id}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: index * 0.07 }}
+              className="rounded-xl shadow-lg overflow-hidden bg-[#1e1e1e] grid grid-cols-1 sm:grid-cols-2 p-4! sm:p-5! items-center sm:gap-4"
             >
-              <Image
-                src={project.img}
-                alt={`${project.title} project preview`}
-                width={400}
-                height={150}
-                className="w-full cursor-pointer aspect-video border border-white/60 object-cover rounded-lg max-md:scale-90"
-              />
-            </Link>
-            <div className="p-4! flex flex-col justify-between h-full">
-              <div>
-                <h3 className="sm:text-xl font-semibold text-white mb-3!">{project.title}</h3>
-                <p className="text-sm text-gray-300 mb-3!">{project.desc}</p>
-                <div className="flex flex-wrap gap-2 text-xs mb-3!">
-                  {project.tech.split(',').map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-[var(--secondary)]/20 border py-[3px]! px-3! border-[var(--secondary)] rounded-full"
-                    >
-                      {tech.trim()}
-                    </span>
-                  ))}
+              <h3 className="col-span-full text-center text-base sm:text-xl font-semibold text-[var(--secondary)]!">
+                {formatProjectTitle(project.title)}
+              </h3>
+              <Link
+                href={`/case-study/${project.caseStudy}`}
+                aria-label={`View ${project.title} case study`}
+                className="block cursor-pointer rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--secondary)]"
+              >
+                <Image
+                  src={project.img}
+                  alt={`${project.title} project preview`}
+                  width={400}
+                  height={150}
+                  className="w-full cursor-pointer aspect-video border border-white/60 object-cover rounded-lg max-md:scale-95"
+                />
+              </Link>
+              <div className="p-2! sm:p-4! flex flex-col justify-between h-full">
+                <div>
+                  <p className="text-sm text-gray-300 mb-3!">{project.desc}</p>
+                  <div className="flex flex-wrap gap-2 text-xs mb-3!">
+                    {project.tech.split(',').map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="bg-[var(--secondary)]/20 border py-[3px]! px-3! border-[var(--secondary)] rounded-full"
+                      >
+                        {tech.trim()}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2 mt-3! font-medium">
+                  <Link
+                    href={`/case-study/${project.caseStudy}`}
+                    className="max-sm:text-sm border py-1.5! px-2.5! text-sm rounded-sm border-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] hover:text-[#071014] transition"
+                  >
+                    Case Study
+                  </Link>
+                  {project.link && project.link !== null && <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-sm rounded-sm border py-1.5! px-2.5! border-[var(--secondary)] hover:bg-[var(--hover)] transition`}
+                  >
+                    Live Demo
+                  </a>}
+                  {project.apk && project.apk !== null && <a
+                    href={project.apk}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-sm rounded-sm border py-1.5! px-2! border-[var(--secondary)] hover:bg-[var(--hover)] transition`}
+                  >
+                    Download APK
+                  </a>}
                 </div>
               </div>
-              <div className="flex flex-wrap gap-2 mt-3! font-medium">
-                <Link
-                  href={`/case-study/${project.caseStudy}`}
-                  className="max-sm:text-sm border py-1.5! px-2.5! text-sm rounded-sm border-[var(--secondary)] bg-[var(--hover)] hover:bg-[var(--secondary)] hover:text-[#071014] transition"
-                >
-                  Case Study
-                </Link>
-                {project.link && project.link !== null && <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-sm rounded-sm border py-1.5! px-2.5! border-[var(--secondary)] hover:bg-[var(--hover)] transition`}
-                >
-                  Live Demo
-                </a>}
-                {project.apk && project.apk !== null && <a
-                  href={project.apk}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-sm rounded-sm border py-1.5! px-2! border-[var(--secondary)] hover:bg-[var(--hover)] transition`}
-                >
-                  Download APK
-                </a>}
-              </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
         </AnimatePresence>
       </motion.div>
     </div>

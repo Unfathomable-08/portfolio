@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next"
 import { ScreenSizeProvider } from "./ScreenContext";
@@ -11,6 +11,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const bricolageGrotesque = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
 });
 
@@ -95,7 +100,7 @@ export default function RootLayout({ children }) {
         <meta name="google-site-verification" content="Y7EkvICXUQUp40MdDpDtw1lN_Pwn1rHZK_K5ZG1SKeo" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bricolageGrotesque.variable} antialiased`}
       >
         <ScreenSizeProvider>
           {children}

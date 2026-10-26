@@ -1306,6 +1306,127 @@ export const caseStudies = {
             ["model", "answer"],
         ]
     },
-}
 
-caseStudies.sparkio = caseStudies.mmselections;
+    auraseo: {
+        device: "laptop",
+        hero: {
+            right: "AURA",
+            name: "AuraSEO | Next-Gen Technical SEO, AEO & GEO Analyzer Tool",
+            result: "Comprehensive 6-page audit tool that crawls pages, captures multi-device screenshots via Puppeteer, runs Lighthouse, and benchmarks SEO, AEO & GEO readiness with weighted impact scoring.",
+            description: "A comprehensive SEO analyzer tool engineered to audit websites across traditional Search Engine Optimization (SEO), Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO). It crawls internal pages, captures multi-device viewports via Puppeteer, runs Google Lighthouse, analyzes backlink equity, and scores multiple issues based on their specific impact on site health.",
+            images: ["/case-studies/seo/overview.png", "/case-studies/seo/landing.png"],
+            live: "https://auraseo.onrender.com",
+        },
+        about: {
+            text: [
+                "_AuraSEO_ is a specialized _SEO_ _analyzer_ _tool_ built to evaluate modern web applications across traditional search, _Answer_ _Engine_ _Optimization_ (AEO), and _Generative_ _Engine_ _Optimization_ (GEO). Rather than relying on external AI models, AuraSEO operates as a high-performance deterministic audit engine that inspects whether a website is properly prepared for both conventional search crawlers and modern conversational search agents such as _ChatGPT_ _Search_ , _Perplexity_ _AI_ , _Claude_ _Search_ , and _Google_ _AI_ _Overviews_ .",
+                "The tool organizes its complete analysis across _6_ _dedicated_ _pages_ : _Overview_ , _AI_ _Readiness_ , _Site_ _Health_ , _Performance_ , _Backlinks_ , and _Issues_ . During an audit, an asynchronous crawler discovers and traverses internal paths, measures HTTP response codes, and records response latency per URL. In parallel, headless _Puppeteer_ captures automated full-page screenshots across desktop and mobile viewports, while an integrated _Google_ _Lighthouse_ engine evaluates Core Web Vitals, server _TTFB_ (Time to First Byte), and render-blocking scripts.",
+                "AuraSEO also inspects critical frontier directives—verifying AI bot permissions in _robots.txt_ (GPTBot, ClaudeBot, PerplexityBot, Google-Extended), checking for machine-readable _/llms.txt_ indexes, and extracting structured _Schema.org_ _JSON-LD_ entity graphs. It maps off-page link equity across unique referring root domains and anchor text distributions. Finally, the _Issues_ engine evaluates all discovered bottlenecks and applies a weighted _marking_ _system_ based on how heavily each factor impacts its respective area, generating an overall health radar breakdown."
+            ],
+            stack: "The frontend is built with React and TanStack for responsive state management and view routing, styled with Tailwind CSS. The backend is powered by Node.js, running an asynchronous page crawler, Google Lighthouse for performance diagnostics, Puppeteer for automated multi-device screenshots (desktop and mobile viewports), and custom parsing algorithms for robots.txt rules, /llms.txt indexes, Schema.org entity graphs, and backlink signals.",
+            tech: ["React", "TanStack", "Puppeteer", "Node.js"],
+            featureIntro: "A 6-page technical audit and analysis tool designed to crawl pages, test performance, capture device screenshots, inspect backlink equity, and benchmark AEO and GEO readiness.",
+            features: [
+                "Full 6-page diagnostic audit suite: Overview, AI Readiness, Site Health, Performance, Backlinks, and Issues",
+                "Dedicated SEO analyzer tool with focused checks for traditional SEO, AEO, and GEO readiness",
+                "Asynchronous page crawler that traverses internal links, detecting 3xx redirects and 4xx/5xx HTTP errors",
+                "Real-time crawl latency timeline and response time distribution histogram per crawled URL",
+                "Automated multi-device screenshot capture powered by Puppeteer across Desktop (1920x1080) and Mobile viewports",
+                "Headless Google Lighthouse engine measuring Speed Index (100/100), server TTFB, and render-blocking scripts",
+                "AI Readiness & AEO verification checking robots.txt permissions for GPTBot, ClaudeBot, PerplexityBot, and Google-Extended",
+                "Token-efficient /llms.txt markdown index detection and validation for AI engine discovery",
+                "Structured Schema.org JSON-LD entity graph analyzer validating brand, author, and product microdata",
+                "Domain authority and backlink profile diagnostics mapping unique referring root domains and citations",
+                "Citation context and natural anchor text distribution analysis with social platform filtering",
+                "Automated directive validation for robots.txt rules, XML sitemaps, and machine-readable agent indexes",
+                "Multi-issue diagnostic engine that detects errors and calculates weighted markings based on impact severity",
+                "5-axis radar chart synthesizing On-Page SEO, Backlinks, Technical SEO, AEO, and Performance into an overall health score"
+            ],
+        },
+        screenshots: [
+            {
+                src: "/case-studies/seo/landing.png",
+                alt: "AuraSEO modern search intelligence landing page",
+                label: "Product Landing",
+                note: "A sleek, dark luminous landing page introducing the SEO, AEO, and GEO audit tool with instant URL input.",
+            },
+            {
+                src: "/case-studies/seo/overview.png",
+                alt: "AuraSEO overall health score and multi-axis radar chart audit overview",
+                label: "Audit Overview & Radar",
+                note: "Synthesizes On-Page, Backlinks, Technical, AEO, and Performance into a radar score alongside Puppeteer device preview frames.",
+            },
+            {
+                src: "/case-studies/seo/ai-readiness.png",
+                alt: "AuraSEO AI readiness and Answer Engine Optimization (AEO) diagnostic",
+                label: "AI Readiness & AEO",
+                note: "Audits AI crawler permissions (GPTBot, ClaudeBot, PerplexityBot), /llms.txt index, and Schema.org entity graphs.",
+            },
+            {
+                src: "/case-studies/seo/site-health.png",
+                alt: "AuraSEO crawl architecture and server health monitor",
+                label: "Crawl Architecture",
+                note: "Crawls internal paths, monitors HTTP status codes, plots response time histograms per URL, and checks sitemaps.",
+            },
+            {
+                src: "/case-studies/seo/performance.png",
+                alt: "AuraSEO Google Lighthouse speed index and performance diagnostics",
+                label: "Page Speed & Vitals",
+                note: "Runs Lighthouse to measure 100/100 Speed Index, server TTFB, and captures dual desktop/mobile Puppeteer renders.",
+            },
+            {
+                src: "/case-studies/seo/backlinks.png",
+                alt: "AuraSEO backlink profile and link equity analyzer",
+                label: "Backlink Profile & Equity",
+                note: "Evaluates domain authority, inbound backlink counts, referring root domains, and anchor text distribution.",
+            }
+        ],
+        workflowNote: "A target URL is submitted to the audit engine, which runs an async page crawler, Puppeteer device capture, Google Lighthouse, backlink analysis, and AEO directive checks in parallel. All detected issues are weighted by their impact to compute category markings and the final health radar score.",
+        nodes: [
+            node("input", "Target URL Input", 20, 260, true),
+            node("dispatcher", "Audit Orchestrator", 230, 260, true),
+
+            node("crawler", "Async Page Crawler", 450, 50, true),
+            node("puppeteer", "Puppeteer Device Render", 450, 150),
+            node("aeoEngine", "AEO & Directives Analyzer", 450, 250, true),
+            node("lighthouse", "Google Lighthouse Engine", 450, 350, true),
+            node("backlinkEngine", "Backlinks & Equity", 450, 460, true),
+
+            node("statusLatency", "HTTP & Latency Timeline", 700, 20),
+            node("deviceScreenshots", "Desktop & Mobile Captures", 700, 110),
+            node("llmRules", "robots.txt & /llms.txt", 700, 200),
+            node("entityGraph", "Schema.org JSON-LD", 700, 260),
+            node("vitals", "Core Web Vitals & TTFB", 700, 340),
+            node("refDomains", "Referring Domains & Equity", 700, 430),
+
+            node("issuesEngine", "Issues & Impact Scoring", 940, 260, true),
+            node("radar", "Radar Health Score", 1180, 200, true),
+            node("report", "6-Page Audit Report", 1180, 320, true),
+        ],
+        connections: [
+            ["input", "dispatcher"],
+            ["dispatcher", "crawler"],
+            ["dispatcher", "puppeteer"],
+            ["dispatcher", "aeoEngine"],
+            ["dispatcher", "lighthouse"],
+            ["dispatcher", "backlinkEngine"],
+
+            ["crawler", "statusLatency"],
+            ["puppeteer", "deviceScreenshots"],
+            ["aeoEngine", "llmRules"],
+            ["aeoEngine", "entityGraph"],
+            ["lighthouse", "vitals"],
+            ["backlinkEngine", "refDomains"],
+
+            ["statusLatency", "issuesEngine"],
+            ["deviceScreenshots", "issuesEngine"],
+            ["llmRules", "issuesEngine"],
+            ["entityGraph", "issuesEngine"],
+            ["vitals", "issuesEngine"],
+            ["refDomains", "issuesEngine"],
+
+            ["issuesEngine", "radar"],
+            ["issuesEngine", "report"],
+        ]
+    },
+}

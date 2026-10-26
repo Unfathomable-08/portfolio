@@ -23,6 +23,7 @@ export default function Footer() {
     { name: "SkyTech", href: "/case-study/skytech" },
     { name: "Vendra", href: "/case-study/vendra" },
     { name: "Velto", href: "/case-study/velto" },
+    { name: "AuraSEO", href: "/case-study/auraseo" },
   ];
 
   const legalLinks = [
@@ -42,7 +43,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-[var(--primary)] text-white border-t border-white/10 pt-16! pb-10! px-5! sm:px-10! md:px-20! relative overflow-hidden">
-      <div className="max-w-7xl mx-auto! grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-10 lg:gap-12 mb-8! md:mb-14!">
+      <div className="max-w-7xl mx-auto! grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-10 lg:gap-12 mb-6! md:mb-10!">
         {/* Col 1: Brand / Logo */}
         <div className="lg:col-span-3">
           <Link href="/" className="inline-block">
@@ -85,7 +86,7 @@ export default function Footer() {
           </h4>
           <div className="space-y-4!">
             <div>
-              <ul className="space-y-1! md:space-y-2! text-sm">
+              <ul className="space-y-1! md:space-y-1.5! text-sm">
                 {caseStudies.map((cs) => (
                   <li key={cs.name}>
                     <Link
