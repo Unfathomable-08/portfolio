@@ -1,4 +1,4 @@
-import { homeFAQs, webDevFAQs, appDevFAQs, aiDevFAQs, softwareDevFAQs } from "@/data/faqs";
+import { homeFAQs, webDevFAQs, appDevFAQs, aiDevFAQs, softwareDevFAQs, pricingFAQs } from "@/data/faqs";
 import { blogs } from "@/data/blogs";
 
 export const siteUrl = "https://dev-muhammad.vercel.app";
@@ -463,6 +463,19 @@ export const softwareDevFAQSchema = {
   "@type": "FAQPage",
   "@id": `${siteUrl}/software-development#faq`,
   mainEntity: softwareDevFAQs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+export const pricingFAQSchema = {
+  "@type": "FAQPage",
+  "@id": `${siteUrl}/pricing#faq`,
+  mainEntity: pricingFAQs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
     acceptedAnswer: {
@@ -1294,5 +1307,244 @@ export const createBlogDetailStructuredData = (blog, content = "") => {
     "@context": "https://schema.org",
     "@graph": graph,
   };
+};
+
+export const pricingStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/pricing#webpage`,
+      url: `${siteUrl}/pricing`,
+      name: "Transparent Project Pricing & Cost Calculator | Dev Muhammad",
+      description:
+        "Interactive project pricing explorer and cost estimator by Dev Muhammad. Transparent, fixed project-based pricing for websites, e-commerce stores, iOS & Android mobile apps, POS, and CRM systems in Karachi, Pakistan & worldwide.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      breadcrumb: { "@id": `${siteUrl}/pricing#breadcrumb` },
+      about: { "@id": `${siteUrl}/#person` },
+      mainEntity: { "@id": `${siteUrl}/pricing#pricing-catalog` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/pricing#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Pricing",
+          item: `${siteUrl}/pricing`,
+        },
+      ],
+    },
+    webSiteSchema,
+    personSchema,
+    localBusinessSchema,
+    {
+      "@type": "OfferCatalog",
+      "@id": `${siteUrl}/pricing#pricing-catalog`,
+      name: "Development Pricing & Project Cost Catalog",
+      description:
+        "Transparent project-based pricing packages for custom website development, mobile application engineering, POS systems, and enterprise management software.",
+      url: `${siteUrl}/pricing`,
+      numberOfItems: 11,
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Single Vendor E-Commerce Store",
+            description:
+              "Modern e-commerce store with product catalog, shopping cart, checkout, payment gateway, and easy-to-use admin portal.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "22000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Multi-Vendor Marketplace",
+            description:
+              "Full-scale multi-vendor marketplace platform with merchant portals, automated payouts, super admin control, and customer accounts.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "45000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Business & Corporate Website",
+            description:
+              "High-performance company profile website with interactive lead capture, mobile responsiveness, and modern animations.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "20000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Restaurant Showcase & Food Ordering Website",
+            description:
+              "Digital food menu showcase, online food ordering flow, table reservations, and kitchen/order admin portal.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "15000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Personal & Portfolio Website",
+            description:
+              "High-impact portfolio website showcasing projects, skills, case studies, and collaboration contact forms.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "10000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "High-Conversion Landing Page",
+            description:
+              "Conversion-optimized single-page website with video hero, testimonials, WhatsApp lead integration, and smooth scroll animations.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "10000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Cross-Platform Mobile Shopping App (iOS & Android)",
+            description:
+              "React Native shopping app for both Android and iOS with catalog, cart, push notifications, and admin panel.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "40000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Mobile Booking & Appointment App",
+            description:
+              "Cross-platform mobile application with service listings, scheduling calendar, slot booking, and client notifications.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "35000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Retail POS & Inventory Management System",
+            description:
+              "Point of Sale software with barcode scanning, thermal printer receipt support, multi-counter sync, and inventory reporting.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "50000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Enterprise Sales CRM & Pipeline Platform",
+            description:
+              "Lead tracking, visual sales pipeline Kanban, task reminders, role-based permissions, and revenue forecasting.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "50000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Custom Enterprise Resource Planning (ERP)",
+            description:
+              "Modular enterprise management architecture covering inventory, HR/payroll, accounting, procurement, and multi-location management.",
+            provider: { "@id": `${siteUrl}/#person` },
+            url: `${siteUrl}/pricing`,
+          },
+          price: "70000",
+          priceCurrency: "PKR",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: `${siteUrl}/pricing`,
+          seller: { "@id": `${siteUrl}/#person` },
+        },
+      ],
+    },
+    pricingFAQSchema,
+  ],
 };
 
