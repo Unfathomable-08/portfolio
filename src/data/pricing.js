@@ -138,75 +138,75 @@ export const pricingFeatures = {
   ],
 
   "website.business.informational": [
-    { "id": "res-design", "label": "Modern Responsive Business Website", "price": 15000, "required": true, "description": "Professional brand-aligned responsive corporate identity website." },
-    { "id": "core-pages", "label": "Core Pages (Home, About, Services, Contact)", "price": 5000, "required": true, "description": "Complete set of high-impact foundational company pages." },
-    { "id": "contact-form", "label": "Interactive Lead Capture & Contact Form", "price": 0, "required": true, "description": "Interactive lead inquiry form with spam protection and inbox alerts." },
-    { "id": "pages-choice", "label": "Upto 7-15 Pages of Your Choice", "price": 0, "required": true, "description": "Tailored page structure designed specifically around your business offerings." },
-    { "id": "mobile-responsive", "label": "100% Mobile & Tablet Optimized", "price": 0, "required": true, "description": "Fluid adaptive design delivering pixel-perfect layout on all screen sizes." },
-    { "id": "domain", "label": "1-Year Custom Domain (.com)", "price": 3000, "required": false, "description": "1 year custom .com domain registration with DNS setup and SSL." },
-    { "id": "free-hosting", "label": "Lifetime FREE Hosting", "price": 0, "required": false, "description": "Reliable high-speed lifetime cloud hosting included." },
-    { "id": "domain-ownership", "label": "Domain Ownership", "price": 0, "required": false, "description": "100% full domain ownership registered in your name." },
-    { "id": "production-code", "label": "Production-Ready Codebase", "price": 0, "required": false, "description": "Clean, optimized, and maintainable production-grade code repository." },
-    { "id": "whatsapp-chat", "label": "WhatsApp Chat & Direct Inquiry Button", "price": 0, "required": false, "description": "Direct WhatsApp widget for instant customer inquiries." },
-    { "id": "social-media", "label": "Social Media Links & Feed Integration", "price": 0, "required": false, "description": "Embed corporate social handles and profile links." },
-    { "id": "google-maps", "label": "Interactive Google Map & Location Pins", "price": 0, "required": false, "description": "Embedded interactive map showing physical office locations." },
-    { "id": "animations-3d", "label": "3D Look & Advance Animations", "price": 5000, "required": false, "description": "Modern 3D visual depth, interactive hover effects, and Framer Motion micro-interactions." },
-    { "id": "elite-animations", "label": "Extraordinary 3D Look & Exceptional Animations", "price": 12000, "required": false, "description": "Bespoke high-end 3D immersion, custom shaders/WebGL, and state-of-the-art cinematic UI animations." },
-    { "id": "source-code", "label": "Full Source Code Ownership", "price": 5000, "required": false, "description": "Full clean source repository ownership with documentation." },
-    { "id": "basic-seo", "label": "On-Page SEO & Google Indexing", "price": 3500, "required": false, "description": "Local business structured schema and target keyword optimization." },
-    { "id": "google-business", "label": "Google Business Profile Setup", "price": 1500, "required": false, "description": "Official Google Business profile creation and map verification." }
+    { "id": "res-design", "label": "Modern Responsive Business Website", "price": 15000, "required": true },
+    { "id": "core-pages", "label": "Core Pages (Home, About, Services, Contact)", "price": 5000, "required": true },
+    { "id": "contact-form", "label": "Interactive Lead Capture & Contact Form", "price": 0, "required": true },
+    { "id": "pages-choice", "label": "Upto 7-15 Pages of Your Choice", "price": 0, "required": true },
+    { "id": "mobile-responsive", "label": "100% Mobile & Tablet Optimized", "price": 0, "required": true },
+    { "id": "domain", "label": "1-Year Custom Domain (.com)", "price": 3000, "required": false },
+    { "id": "free-hosting", "label": "Lifetime FREE Hosting", "price": 0, "required": false },
+    { "id": "domain-ownership", "label": "Domain Ownership", "price": 0, "required": false },
+    { "id": "production-code", "label": "Production-Ready Codebase", "price": 0, "required": false },
+    { "id": "whatsapp-chat", "label": "WhatsApp Chat & Direct Inquiry Button", "price": 0, "required": false },
+    { "id": "social-media", "label": "Social Media Links & Feed Integration", "price": 0, "required": false },
+    { "id": "google-maps", "label": "Interactive Google Map & Location Pins", "price": 0, "required": false },
+    { "id": "animations-3d", "label": "3D Look & Advance Animations", "price": 5000, "required": false },
+    { "id": "elite-animations", "label": "Extraordinary 3D Look & Exceptional Animations", "price": 12000, "required": false },
+    { "id": "source-code", "label": "Full Source Code Ownership", "price": 5000, "required": false },
+    { "id": "basic-seo", "label": "On-Page SEO & Google Indexing", "price": 3500, "required": false },
+    { "id": "google-business", "label": "Google Business Profile Setup", "price": 1500, "required": false }
   ],
 
   "website.business.with-booking": [
-    { "id": "res-design", "label": "Modern Responsive Business Website", "price": 15000, "required": true, "description": "Professional brand-aligned responsive corporate identity website." },
-    { "id": "core-pages", "label": "Core Pages (Home, About, Services, Contact)", "price": 5000, "required": true, "description": "Complete set of high-impact foundational company pages." },
-    { "id": "booking-sys", "label": "Interactive Booking & Appointment System", "price": 5000, "required": true, "description": "Interactive appointment scheduling engine with time slot management." },
-    { "id": "contact-form", "label": "Interactive Lead Capture & Contact Form", "price": 0, "required": true, "description": "Inquiry form with instant email alerts and notifications." },
-    { "id": "pages-choice", "label": "Upto 7-15 Pages of Your Choice", "price": 0, "required": true, "description": "Tailored page structure designed specifically around your business offerings." },
-    { "id": "mobile-responsive", "label": "100% Mobile & Tablet Optimized", "price": 0, "required": true, "description": "Fluid adaptive design delivering pixel-perfect layout on all screen sizes." },
-    { "id": "domain", "label": "1-Year Custom Domain (.com)", "price": 3000, "required": false, "description": "1 year custom .com domain registration with DNS setup and SSL." },
-    { "id": "free-hosting", "label": "Lifetime FREE Hosting", "price": 0, "required": false, "description": "Reliable high-speed lifetime cloud hosting included." },
-    { "id": "domain-ownership", "label": "Domain Ownership", "price": 0, "required": false, "description": "100% full domain ownership registered in your name." },
-    { "id": "production-code", "label": "Production-Ready Codebase", "price": 0, "required": false, "description": "Clean, optimized, and maintainable production-grade code repository." },
-    { "id": "whatsapp-chat", "label": "WhatsApp Chat & Direct Inquiry Button", "price": 0, "required": false, "description": "Direct WhatsApp widget for instant customer inquiries." },
-    { "id": "social-media", "label": "Social Media Links & Feed Integration", "price": 0, "required": false, "description": "Embed corporate social handles and profile links." },
-    { "id": "google-maps", "label": "Interactive Google Map & Location Pins", "price": 0, "required": false, "description": "Embedded interactive map showing physical office locations." },
-    { "id": "animations-3d", "label": "3D Look & Advance Animations", "price": 5000, "required": false, "description": "Modern 3D visual depth, interactive hover effects, and Framer Motion micro-interactions." },
-    { "id": "elite-animations", "label": "Extraordinary 3D Look & Exceptional Animations", "price": 12000, "required": false, "description": "Bespoke high-end 3D immersion, custom shaders/WebGL, and state-of-the-art cinematic UI animations." },
-    { "id": "source-code", "label": "Full Source Code Ownership", "price": 5000, "required": false, "description": "Full clean source repository ownership with documentation." },
-    { "id": "basic-seo", "label": "On-Page SEO & Google Indexing", "price": 3500, "required": false, "description": "Local business structured schema and target keyword optimization." },
-    { "id": "google-business", "label": "Google Business Profile Setup & Optimization", "price": 1500, "required": false, "description": "Official Google Business profile creation and map verification." }
+    { "id": "res-design", "label": "Modern Responsive Business Website", "price": 15000, "required": true },
+    { "id": "core-pages", "label": "Core Pages (Home, About, Services, Contact)", "price": 5000, "required": true },
+    { "id": "booking-sys", "label": "Interactive Booking & Appointment System", "price": 5000, "required": true },
+    { "id": "contact-form", "label": "Interactive Lead Capture & Contact Form", "price": 0, "required": true },
+    { "id": "pages-choice", "label": "Upto 7-15 Pages of Your Choice", "price": 0, "required": true },
+    { "id": "mobile-responsive", "label": "100% Mobile & Tablet Optimized", "price": 0, "required": true },
+    { "id": "domain", "label": "1-Year Custom Domain (.com)", "price": 3000, "required": false },
+    { "id": "free-hosting", "label": "Lifetime FREE Hosting", "price": 0, "required": false },
+    { "id": "domain-ownership", "label": "Domain Ownership", "price": 0, "required": false },
+    { "id": "production-code", "label": "Production-Ready Codebase", "price": 0, "required": false },
+    { "id": "whatsapp-chat", "label": "WhatsApp Chat & Direct Inquiry Button", "price": 0, "required": false },
+    { "id": "social-media", "label": "Social Media Links & Feed Integration", "price": 0, "required": false },
+    { "id": "google-maps", "label": "Interactive Google Map & Location Pins", "price": 0, "required": false },
+    { "id": "animations-3d", "label": "3D Look & Advance Animations", "price": 5000, "required": false },
+    { "id": "elite-animations", "label": "Extraordinary 3D Look & Exceptional Animations", "price": 12000, "required": false },
+    { "id": "source-code", "label": "Full Source Code Ownership", "price": 5000, "required": false },
+    { "id": "basic-seo", "label": "On-Page SEO & Google Indexing", "price": 3500, "required": false },
+    { "id": "google-business", "label": "Google Business Profile Setup & Optimization", "price": 1500, "required": false }
   ],
 
   "website.business.with-portal": [
-    { "id": "res-design", "label": "Executive Corporate Website", "price": 15000, "required": true, "description": "Executive responsive agency website with private portal gateway." },
-    { "id": "portal-dash", "label": "Client Portal Login & Secure Dashboard", "price": 15000, "required": true, "description": "Password-protected client area with tailored project status dashboard." },
-    { "id": "core-pages", "label": "Core Pages (Home, Services, Case Studies, Contact)", "price": 5000, "required": true, "description": "Public corporate pages for brand positioning and sales pitch." },
-    { "id": "progress-track", "label": "Project Progress & Milestone Tracking", "price": 5000, "required": true, "description": "Interactive milestone timeline and status bar per client project." },
-    { "id": "pages-choice", "label": "Upto 10-20 Pages of Your Choice", "price": 0, "required": true, "description": "Extended website and portal architecture tailored to your service structure." },
-    { "id": "mobile-responsive", "label": "100% Mobile & Tablet Optimized", "price": 0, "required": true, "description": "Flawless mobile and desktop responsiveness across the public site and portal." },
-    { "id": "domain", "label": "1-Year Custom Domain (.com)", "price": 3000, "required": false, "description": "1-year custom .com domain registration with SSL." },
-    { "id": "free-hosting", "label": "Lifetime FREE Hosting", "price": 0, "required": false, "description": "Dedicated cloud setup to reliably power website and portal authentication." },
-    { "id": "domain-ownership", "label": "Domain Ownership", "price": 0, "required": false, "description": "100% full domain ownership registered in your name." },
-    { "id": "production-code", "label": "Production-Ready Codebase", "price": 0, "required": false, "description": "Clean, optimized, and maintainable production-grade code repository." },
-    { "id": "whatsapp-chat", "label": "WhatsApp Chat & Direct Inquiry Button", "price": 0, "required": false, "description": "Direct WhatsApp contact for quick customer support and inquiries." },
-    { "id": "social-media", "label": "Social Media Links & Feed Integration", "price": 0, "required": false, "description": "Embed corporate social handles and profile links." },
-    { "id": "google-maps", "label": "Interactive Google Map & Location Pins", "price": 0, "required": false, "description": "Embedded interactive map showing office locations." },
-    { "id": "animations-3d", "label": "3D Look & Advance Animations", "price": 5000, "required": false, "description": "Modern 3D visual depth, interactive hover effects, and Framer Motion micro-interactions." },
-    { "id": "elite-animations", "label": "Extraordinary 3D Look & Exceptional Animations", "price": 10000, "required": false, "description": "Bespoke high-end 3D immersion, custom shaders/WebGL, and state-of-the-art cinematic UI animations." },
-    { "id": "source-code", "label": "Full Source Code Ownership", "price": 5000, "required": false, "description": "Complete proprietary repository codebase with full commercial license." },
-    { "id": "file-sharing", "label": "Secure Cloud File Sharing & Document Hub", "price": 4000, "required": false, "description": "Secure bidirectional file uploads, deliverables, and brief attachments." },
-    { "id": "inv-mgmt", "label": "Client Invoicing & Payment Status Tracking", "price": 4000, "required": false, "description": "Generate, view, and download PDF client invoices and payment records." },
-    { "id": "seo", "label": "On-Page & Technical Business SEO", "price": 2500, "required": false, "description": "Corporate structured data schema, sitemaps, and search engine optimization." },
-    { "id": "google-business", "label": "Google Business Profile Setup & Optimization", "price": 1500, "required": false, "description": "Official Google Business Profile setup and local map optimization." }
+    { "id": "res-design", "label": "Executive Corporate Website", "price": 15000, "required": true },
+    { "id": "portal-dash", "label": "Client Portal Login & Secure Dashboard", "price": 15000, "required": true },
+    { "id": "core-pages", "label": "Core Pages (Home, Services, Case Studies, Contact)", "price": 5000, "required": true },
+    { "id": "progress-track", "label": "Project Progress & Milestone Tracking", "price": 5000, "required": true },
+    { "id": "pages-choice", "label": "Upto 10-20 Pages of Your Choice", "price": 0, "required": true },
+    { "id": "mobile-responsive", "label": "100% Mobile & Tablet Optimized", "price": 0, "required": true },
+    { "id": "domain", "label": "1-Year Custom Domain (.com)", "price": 3000, "required": false },
+    { "id": "free-hosting", "label": "Lifetime FREE Hosting", "price": 0, "required": false },
+    { "id": "domain-ownership", "label": "Domain Ownership", "price": 0, "required": false },
+    { "id": "production-code", "label": "Production-Ready Codebase", "price": 0, "required": false },
+    { "id": "whatsapp-chat", "label": "WhatsApp Chat & Direct Inquiry Button", "price": 0, "required": false },
+    { "id": "social-media", "label": "Social Media Links & Feed Integration", "price": 0, "required": false },
+    { "id": "google-maps", "label": "Interactive Google Map & Location Pins", "price": 0, "required": false },
+    { "id": "animations-3d", "label": "3D Look & Advance Animations", "price": 5000, "required": false },
+    { "id": "elite-animations", "label": "Extraordinary 3D Look & Exceptional Animations", "price": 10000, "required": false },
+    { "id": "source-code", "label": "Full Source Code Ownership", "price": 5000, "required": false },
+    { "id": "file-sharing", "label": "Secure Cloud File Sharing & Document Hub", "price": 4000, "required": false },
+    { "id": "inv-mgmt", "label": "Client Invoicing & Payment Status Tracking", "price": 4000, "required": false },
+    { "id": "seo", "label": "On-Page & Technical Business SEO", "price": 2500, "required": false },
+    { "id": "google-business", "label": "Google Business Profile Setup & Optimization", "price": 1500, "required": false }
   ],
 
   "website.restaurant.menu-only": [
-    { "id": "res-showcase", "label": "Modern Restaurant Showcase Website", "price": 10000, "required": true, "description": "Appetizing responsive layout showcasing your restaurant's story, ambiance, and food highlights." },
-    { "id": "digital-menu", "label": "Interactive Categorized Digital Food Menu", "price": 5000, "required": true, "description": "Clean categorized food menu with photos, descriptions, portion sizes, and clear pricing." },
-    { "id": "pages-food", "label": "Upto 5-10 Pages of Your Choice", "price": 0, "required": true, "description": "Custom designed pages (Home, Story, Menu categories, Ambience, Contact)." },
-    { "id": "contact-hours", "label": "Contact, Opening Hours & Location Info", "price": 0, "required": true, "description": "Clear opening hours, phone numbers, table reservation contact, and address details." },
-    { "id": "mobile-responsive", "label": "100% Mobile & Tablet Optimized", "price": 0, "required": true, "description": "Fast-loading mobile-first user experience for on-the-go food browsing." },
+    { "id": "res-showcase", "label": "Modern Restaurant Showcase Website", "price": 10000, "required": true },
+    { "id": "digital-menu", "label": "Interactive Categorized Digital Food Menu", "price": 5000, "required": true },
+    { "id": "pages-food", "label": "Upto 5-10 Pages of Your Choice", "price": 0, "required": true },
+    { "id": "contact-hours", "label": "Contact, Opening Hours & Location Info", "price": 0, "required": true },
+    { "id": "mobile-responsive", "label": "100% Mobile & Tablet Optimized", "price": 0, "required": true },
     { "id": "domain", "label": "1-Year Custom Domain (.com)", "price": 3000, "required": false },
     { "id": "free-hosting", "label": "Lifetime FREE Hosting", "price": 0, "required": false },
     { "id": "domain-ownership", "label": "Domain Ownership", "price": 0, "required": false },
@@ -261,22 +261,23 @@ export const pricingFeatures = {
   ],
 
   "website.portfolio.personal": [
-    { "id": "res-design", "label": "Modern Responsive Portfolio UI", "price": 7000, "required": true, "description": "Pixel-perfect bespoke portfolio design highlighting your skills, bio, and experience." },
-    { "id": "project-showcase", "label": "Projects Showcase with Live Links & Tags", "price": 3000, "required": true, "description": "Interactive project gallery with live demo links, tech stack badges, and github repos." },
-    { "id": "core-sections", "label": "About, Skills, Experience & CV Download", "price": 0, "required": true, "description": "Dedicated sections for your journey, career timeline, tech stack, and downloadable resume." },
-    { "id": "contact-form", "label": "Interactive Contact & Collaboration Form", "price": 0, "required": true, "description": "Direct inquiry form for freelance clients, recruiters, and collaborators." },
-    { "id": "mobile-responsive", "label": "100% Mobile & Tablet Optimized", "price": 0, "required": true, "description": "Fast-loading mobile-first user experience optimized for recruiter review." },
-    { "id": "domain", "label": "1-Year Custom Domain (.com)", "price": 3000, "required": false, "description": "Custom personal .com domain registration with DNS setup and SSL." },
-    { "id": "case-studies", "label": "Separate Case Study Detail Pages", "price": 3000, "required": false, "description": "In-depth dedicated case study pages detailing problem, solution, architecture, and live results." },
-    { "id": "advance-animations", "label": "3D Look, Micro-Interactions & Advance Animations", "price": 2500, "required": false, "description": "Smooth scroll, magnetic cursor effects, dynamic 3D cards, and fluid Framer Motion transitions." },
-    { "id": "source-code", "label": "Full Source Code Ownership", "price": 1500, "required": false, "description": "Complete clean Next.js/React GitHub repository handoff." },
-    { "id": "free-hosting", "label": "Lifetime FREE Hosting", "price": 0, "required": false, "description": "Zero-cost lifetime hosting setup with global CDN and automated CI/CD deployments." },
-    { "id": "domain-ownership", "label": "Domain Ownership", "price": 0, "required": false, "description": "100% full personal domain ownership registered in your name." },
-    { "id": "production-code", "label": "Production-Ready Codebase", "price": 0, "required": false, "description": "Clean, performant, and SEO-optimized code ready for high traffic." },
-    { "id": "whatsapp-chat", "label": "WhatsApp Direct Chat & Outreach Button", "price": 0, "required": false, "description": "Direct WhatsApp contact link for instant hiring and client outreach." },
-    { "id": "social-media", "label": "Social Links (GitHub, LinkedIn, Twitter/X, Dribbble)", "price": 0, "required": false, "description": "Connected social profile badges and portfolio cross-links." },
-    { "id": "seo", "label": "Personal Branding SEO & Google Search Indexing", "price": 0, "required": false, "description": "Search engine optimization and structured metadata to rank your personal brand on Google." }
+    { "id": "res-design", "label": "Modern Responsive Portfolio UI", "price": 7000, "required": true },
+    { "id": "project-showcase", "label": "Projects Showcase with Live Links & Tags", "price": 3000, "required": true },
+    { "id": "core-sections", "label": "About, Skills, Experience & CV Download", "price": 0, "required": true },
+    { "id": "contact-form", "label": "Interactive Contact & Collaboration Form", "price": 0, "required": true },
+    { "id": "mobile-responsive", "label": "100% Mobile & Tablet Optimized", "price": 0, "required": true },
+    { "id": "domain", "label": "1-Year Custom Domain (.com)", "price": 3000, "required": false },
+    { "id": "case-studies", "label": "Separate Case Study Detail Pages", "price": 3000, "required": false },
+    { "id": "advance-animations", "label": "3D Look, Micro-Interactions & Advance Animations", "price": 2500, "required": false },
+    { "id": "source-code", "label": "Full Source Code Ownership", "price": 1500, "required": false },
+    { "id": "free-hosting", "label": "Lifetime FREE Hosting", "price": 0, "required": false },
+    { "id": "domain-ownership", "label": "Domain Ownership", "price": 0, "required": false },
+    { "id": "production-code", "label": "Production-Ready Codebase", "price": 0, "required": false },
+    { "id": "whatsapp-chat", "label": "WhatsApp Direct Chat & Outreach Button", "price": 0, "required": false },
+    { "id": "social-media", "label": "Social Links (GitHub, LinkedIn, Twitter/X, Dribbble)", "price": 0, "required": false },
+    { "id": "seo", "label": "Personal Branding SEO & Google Search Indexing", "price": 0, "required": false }
   ],
+
   "website.landing-page.simple": [
     { "id": "landing-design", "label": "Landing Page Design", "price": 6000, "required": true },
     { "id": "hero-cta", "label": "Hero + CTA", "price": 2000, "required": true },
@@ -290,6 +291,7 @@ export const pricingFeatures = {
     { "id": "domain", "label": "Domain", "price": 3000, "required": false },
     { "id": "shared-host", "label": "Shared Hosting", "price": 8000, "required": false  }
   ],
+
   "website.landing-page.advanced": [
     { "id": "landing-design", "label": "Landing Page Design", "price": 6000, "required": true },
     { "id": "hero-feat-test", "label": "Hero+Features+Testimonials", "price": 5000, "required": true },
@@ -303,6 +305,7 @@ export const pricingFeatures = {
     { "id": "domain", "label": "Domain", "price": 3000, "required": false },
     { "id": "shared-host", "label": "Shared Hosting", "price": 8000, "required": false  }
   ],
+
   "mobile-app.ecommerce-app.android": [
     { "id": "app-design", "label": "App Design & Navigation", "price": 20000, "required": true },
     { "id": "prod-cat", "label": "Product Catalog", "price": 8000, "required": true },
@@ -317,6 +320,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 15000, "required": false },
     { "id": "play-store", "label": "Play Store Publishing", "price": 3000, "required": false  }
   ],
+
   "mobile-app.ecommerce-app.both-platforms": [
     { "id": "cross-plat-app", "label": "Cross-Platform App (React Native)", "price": 35000, "required": true },
     { "id": "prod-cat", "label": "Product Catalog", "price": 10000, "required": true },
@@ -331,6 +335,7 @@ export const pricingFeatures = {
     { "id": "play-store", "label": "Play Store Publishing", "price": 3000, "required": false },
     { "id": "app-store", "label": "App Store Publishing", "price": 5000, "required": false  }
   ],
+
   "mobile-app.business-app.android": [
     { "id": "app-design", "label": "App Design & Navigation", "price": 15000, "required": true },
     { "id": "comp-info", "label": "Company Info & Services", "price": 5000, "required": true },
@@ -342,6 +347,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 12000, "required": false },
     { "id": "play-store", "label": "Play Store Publishing", "price": 3000, "required": false  }
   ],
+
   "mobile-app.business-app.both-platforms": [
     { "id": "cross-plat", "label": "Cross-Platform App", "price": 25000, "required": true },
     { "id": "comp-info", "label": "Company Info & Services", "price": 6000, "required": true },
@@ -353,6 +359,7 @@ export const pricingFeatures = {
     { "id": "play-store", "label": "Play Store", "price": 3000, "required": false },
     { "id": "app-store", "label": "App Store", "price": 5000, "required": false  }
   ],
+
   "mobile-app.booking-app.android": [
     { "id": "app-design", "label": "App Design", "price": 15000, "required": true },
     { "id": "service-list", "label": "Service Listing", "price": 5000, "required": true },
@@ -364,6 +371,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 12000, "required": false },
     { "id": "play-store", "label": "Play Store", "price": 3000, "required": false  }
   ],
+
   "mobile-app.booking-app.both-platforms": [
     { "id": "cross-plat", "label": "Cross-Platform App", "price": 25000, "required": true },
     { "id": "service-list", "label": "Service Listing", "price": 6000, "required": true },
@@ -375,6 +383,7 @@ export const pricingFeatures = {
     { "id": "play-store", "label": "Play Store", "price": 3000, "required": false },
     { "id": "app-store", "label": "App Store", "price": 5000, "required": false  }
   ],
+
   "mobile-app.food-app.single-restaurant": [
     { "id": "app-design", "label": "App Design", "price": 20000, "required": true },
     { "id": "dig-menu", "label": "Digital Menu", "price": 6000, "required": true },
@@ -387,6 +396,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 15000, "required": false },
     { "id": "play-store", "label": "Play Store", "price": 3000, "required": false  }
   ],
+
   "mobile-app.food-app.multi-restaurant": [
     { "id": "app-design", "label": "App Design", "price": 35000, "required": true },
     { "id": "rest-list", "label": "Restaurant Listing", "price": 10000, "required": true },
@@ -401,6 +411,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 25000, "required": false },
     { "id": "play-store", "label": "Play Store", "price": 3000, "required": false  }
   ],
+
   "mobile-app.custom-app.android": [
     { "id": "custom-design", "label": "Custom App Design & Architecture", "price": 25000, "required": true },
     { "id": "core-dev", "label": "Core Feature Development", "price": 15000, "required": true },
@@ -412,6 +423,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 15000, "required": false },
     { "id": "play-store", "label": "Play Store", "price": 3000, "required": false  }
   ],
+
   "mobile-app.custom-app.both-platforms": [
     { "id": "cross-plat-app", "label": "Cross-Platform App (React Native)", "price": 40000, "required": true },
     { "id": "core-dev", "label": "Core Feature Development", "price": 20000, "required": true },
@@ -423,6 +435,7 @@ export const pricingFeatures = {
     { "id": "play-store", "label": "Play Store", "price": 3000, "required": false },
     { "id": "app-store", "label": "App Store", "price": 5000, "required": false  }
   ],
+
   "desktop.pos.single-terminal": [
     { "id": "pos-win", "label": "POS Application Windows", "price": 25000, "required": true },
     { "id": "prod-inv", "label": "Product & Inventory Management", "price": 10000, "required": true },
@@ -436,6 +449,7 @@ export const pricingFeatures = {
     { "id": "data-export", "label": "Data Export Excel/PDF", "price": 4000, "required": false },
     { "id": "source-code", "label": "Source Code", "price": 15000, "required": false  }
   ],
+
   "desktop.pos.multi-terminal": [
     { "id": "pos-app", "label": "POS Application", "price": 25000, "required": true },
     { "id": "inv-mgmt", "label": "Inventory Management", "price": 10000, "required": true },
@@ -449,6 +463,7 @@ export const pricingFeatures = {
     { "id": "data-export", "label": "Data Export", "price": 4000, "required": false },
     { "id": "source-code", "label": "Source Code", "price": 20000, "required": false  }
   ],
+
   "desktop.inventory.basic": [
     { "id": "inv-win", "label": "Inventory Application Windows", "price": 20000, "required": true },
     { "id": "prod-cat", "label": "Product & Category Management", "price": 8000, "required": true },
@@ -460,6 +475,7 @@ export const pricingFeatures = {
     { "id": "barcode", "label": "Barcode Support", "price": 5000, "required": false },
     { "id": "source-code", "label": "Source Code", "price": 12000, "required": false  }
   ],
+
   "desktop.inventory.advanced": [
     { "id": "adv-inv", "label": "Advanced Inventory App", "price": 20000, "required": true },
     { "id": "prod-cat", "label": "Product & Category Management", "price": 8000, "required": true },
@@ -472,6 +488,7 @@ export const pricingFeatures = {
     { "id": "export", "label": "Export", "price": 4000, "required": false },
     { "id": "source-code", "label": "Source Code", "price": 15000, "required": false  }
   ],
+
   "desktop.custom-desktop.windows": [
     { "id": "win-dev", "label": "Windows App Development", "price": 25000, "required": true },
     { "id": "core-dev", "label": "Core Feature Development", "price": 15000, "required": true },
@@ -483,6 +500,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 15000, "required": false },
     { "id": "installer", "label": "Installer Package", "price": 3000, "required": false  }
   ],
+
   "desktop.custom-desktop.cross-platform": [
     { "id": "cross-plat-dev", "label": "Cross-Platform App", "price": 35000, "required": true },
     { "id": "core-dev", "label": "Core Feature Development", "price": 18000, "required": true },
@@ -493,6 +511,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 20000, "required": false },
     { "id": "installer-both", "label": "Installer Win+Mac", "price": 5000, "required": false  }
   ],
+
   "internal.erp.small": [
     { "id": "erp-plat", "label": "ERP Platform & Architecture", "price": 30000, "required": true },
     { "id": "user-mgmt", "label": "User Management & Roles", "price": 10000, "required": true },
@@ -507,6 +526,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 25000, "required": false },
     { "id": "vps-host", "label": "1 Year VPS Hosting", "price": 25000, "required": false  }
   ],
+
   "internal.erp.medium": [
     { "id": "ent-erp", "label": "Enterprise ERP Platform", "price": 50000, "required": true },
     { "id": "adv-users", "label": "Advanced User Management", "price": 15000, "required": true },
@@ -520,6 +540,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 35000, "required": false },
     { "id": "vps-host", "label": "1 Year VPS Hosting", "price": 25000, "required": false  }
   ],
+
   "internal.crm.basic": [
     { "id": "crm-plat", "label": "CRM Platform", "price": 20000, "required": true },
     { "id": "lead-mgmt", "label": "Contact & Lead Management", "price": 8000, "required": true },
@@ -531,6 +552,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 15000, "required": false },
     { "id": "vps-host", "label": "VPS Hosting", "price": 25000, "required": false  }
   ],
+
   "internal.crm.advanced": [
     { "id": "adv-crm", "label": "Advanced CRM Platform", "price": 25000, "required": true },
     { "id": "lead-mgmt", "label": "Contact & Lead Management", "price": 10000, "required": true },
@@ -543,6 +565,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 20000, "required": false, "description": "Full enterprise CRM repository." },
     { "id": "vps-host", "label": "VPS Hosting", "price": 25000, "required": false, "description": "1-year high performance cloud VPS."  }
   ],
+
   "internal.management.basic": [
     { "id": "dash-design", "label": "Dashboard Design & Architecture", "price": 15000, "required": true, "description": "Clean modern administrative interface built with React/Next.js." },
     { "id": "core-data", "label": "Core Data Management", "price": 8000, "required": true, "description": "CRUD data tables with search, sorting, and pagination." },
@@ -553,6 +576,7 @@ export const pricingFeatures = {
     { "id": "source-code", "label": "Source Code", "price": 12000, "required": false, "description": "Clean Next.js dashboard repository." },
     { "id": "vps-host", "label": "VPS Hosting", "price": 25000, "required": false, "description": "1-year cloud hosting server."  }
   ],
+
   "internal.management.advanced": [
     { "id": "adv-dash", "label": "Advanced Dashboard", "price": 20000, "required": true, "description": "High-scale control center engineered for operations & monitoring." },
     { "id": "complex-data", "label": "Complex Data Management", "price": 12000, "required": true, "description": "Relational data tables with inline editing, batch actions, and filters." },
