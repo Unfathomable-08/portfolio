@@ -12,7 +12,7 @@ export default function PricingHero() {
   };
 
   return (
-    <section className="relative h-svh w-full bg-[var(--primary)] flex flex-col items-center justify-center overflow-hidden px-5!">
+    <section className="relative min-h-[45svh] md:h-svh w-full bg-[var(--primary)] flex flex-col items-center justify-center overflow-hidden px-5!">
       {/* Background Dot Grid */}
       <div className="absolute inset-0 bg-dots opacity-70 pointer-events-none" />
 

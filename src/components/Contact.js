@@ -82,7 +82,7 @@ export default function Contact() {
           }}
         >
           <motion.h2
-            className="text-xl sm:text-2xl font-medium italic mb-3! text-[var(--secondary)]! text-center lg:text-left"
+            className="text-xl sm:text-2xl font-bold mb-3! text-[var(--secondary)]!"
             variants={fadeVariant}
             custom={0.2}
           >
