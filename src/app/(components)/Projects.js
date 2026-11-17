@@ -38,7 +38,7 @@ const projects = [
     desc: "A modern full-stack e-commerce store and admin CMS. Features multi-variant products, separate wholesale pricing, dynamic delivery fee & time settings, order tracking, and Meezan Bank payment gateway.",
     tech: "Next.js, MongoDB, Zustand, Meezan Bank, Tailwind CSS",
     img: "/project/mmselections.png",
-    link: 'https://mmselections.com',
+    link: 'https://mmselections.vercel.app',
     apk: null
   },
   {

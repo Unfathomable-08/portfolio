@@ -76,7 +76,7 @@ export const projects = [
     seoTitle: "M&M Selections | Full-Stack Ecommerce & CMS With Wholesale & Meezan Gateway",
     description: "A modern full-stack e-commerce store and admin CMS with multi-variant products, wholesale pricing, dynamic delivery settings, order tracking, and Meezan Bank payment gateway.",
     image: "/case-studies/mm/home.png",
-    liveUrl: "https://mmselections.com",
+    liveUrl: "https://mmselections.vercel.app",
     keywords: ["Next.js", "MongoDB", "Zustand", "Meezan Bank", "Ecommerce CMS", "Wholesale Pricing", "Order Tracking"],
   },
   {

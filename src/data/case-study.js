@@ -702,7 +702,7 @@ export const caseStudies = {
             result: "Processes 50+ daily retail and wholesale orders with dynamic delivery zones, multi-variant inventory, and Meezan Bank IPG.",
             description: "A modern full-stack ecommerce store and custom CMS built for both retail and wholesale customers. Features multi-variant products, separate wholesale pricing, live delivery settings, order tracking, and Meezan Bank payment integration.",
             images: ["/case-studies/mm/shop.png", "/case-studies/mm/home.png"],
-            live: "https://mmselections.com",
+            live: "https://mmselections.vercel.app",
         },
         about: {
             text: [
